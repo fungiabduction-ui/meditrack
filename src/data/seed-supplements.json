@@ -1,0 +1,598 @@
+{
+  "version": 1,
+  "exportedAt": "2026-06-18T00:00:00.000Z",
+  "supplements": [
+    {
+      "id": "a0000000-0000-4000-8000-000000000001",
+      "name": "KSM-66 Ashwagandha Extract",
+      "brand": "Nootropics Depot",
+      "category": "adaptogen",
+      "description": "Extracto de raíz de Ashwagandha (Withania somnifera), adaptógeno full-spectrum para manejo de estrés, relajación y rendimiento.",
+      "form": "cápsulas vegetarianas",
+      "presentation": "frasco 60 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Extracto de raíz KSM-66 Ashwagandha",
+          "form": "estandarizado 5% withanolides, full-spectrum, Green Chemistry",
+          "amount": 300,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Reduce estrés y cortisol; promueve relajación y bienestar; mejora cognición, foco y memoria; soporta fuerza muscular, endurance y recuperación; efectos antiinflamatorios y antioxidantes. Efectos completos en 1-2 semanas.",
+      "instructions": "1 cápsula por noche, con o sin comida",
+      "certifications": ["Non-GMO", "USDA Organic", "Gluten-Free", "GMP"],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 1,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": "night",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-000000000002",
+      "name": "PrimaVie Purified Shilajit",
+      "brand": "Nootropics Depot",
+      "category": "supplement",
+      "description": "Resina purificada PrimaVie rica en ácidos fúlvicos y minerales del Himalaya. Mejora rendimiento físico, reduce fatiga, soporta función mitocondrial y producción de ATP.",
+      "form": "cápsulas",
+      "presentation": "frasco 60 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "PrimaVie Shilajit purificado",
+          "form": "ácidos fúlvicos, minerales traza, dibenzo-alfa-pironas",
+          "amount": 250,
+          "unit": "mg",
+          "brand": "PrimaVie®"
+        }
+      ],
+      "benefits": "Aumenta energía física, endurance y recuperación; propiedades antioxidantes y antiinflamatorias; reduce fatiga y estrés; soporta salud celular y respuesta adrenal. Efectos completos en 1-2 semanas.",
+      "instructions": "1 cápsula por la mañana, con o sin comida",
+      "certifications": ["cGMP", "FDA registered", "ISO terceros"],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 1,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-000000000003",
+      "name": "Tongkat Ali (2% Eurycomanone)",
+      "brand": "Nootropics Depot",
+      "category": "herb",
+      "description": "Extracto de raíz de Tongkat Ali (Eurycoma longifolia) full-spectrum, estandarizado a 2% eurycomanone, para vitalidad y fuerza.",
+      "form": "cápsulas",
+      "presentation": "frasco 60 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Extracto de raíz Tongkat Ali",
+          "form": "full-spectrum, estandarizado 2% eurycomanone",
+          "amount": 200,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Promueve testosterona, libido, masa muscular y endurance; reduce estrés y fatiga; mejora humor, energía y motivación. Efectos completos en 3-4 semanas.",
+      "instructions": "1 cápsula diaria con comida",
+      "certifications": ["cGMP", "ISO terceros"],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4] },
+      "defaultDose": 1,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-000000000004",
+      "name": "Tongkat Ali (10% Eurycomanone)",
+      "brand": "Nootropics Depot",
+      "category": "herb",
+      "description": "Extracto de raíz de Tongkat Ali (Eurycoma longifolia) estandarizado a 10% eurycomanone, para vitalidad, testosterona y rendimiento físico.",
+      "form": "tabletas",
+      "presentation": "frasco 60 tabletas",
+      "activeIngredients": [
+        {
+          "name": "Extracto de raíz Tongkat Ali",
+          "form": "estandarizado 10% eurycomanone",
+          "amount": 100,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Soporta testosterona, libido, masa muscular, endurance, energía y motivación; mejora rendimiento físico y bienestar. Efectos completos en 3-4 semanas.",
+      "instructions": "1 tableta diaria, con o sin comida",
+      "certifications": ["cGMP", "FDA registered", "ISO terceros"],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4] },
+      "defaultDose": 1,
+      "doseUnit": "tabletas",
+      "doseStep": 1,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-000000000005",
+      "name": "Cistanche tubulosa 700mg",
+      "brand": "Nootropics Depot",
+      "category": "herb",
+      "description": "Suplemento de espectro completo de Cistanche tubulosa (polvo de planta entera), estandarizado en glucósidos feniletanoides. Soporte a vitalidad, equilibrio hormonal y función cognitiva.",
+      "form": "cápsulas vegetales (hipromelosa)",
+      "presentation": "frasco 60 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Cistanche tubulosa",
+          "form": "polvo de planta entera, 5% Equinacósido (Echinacoside), 1% Acetósido (Verbascoside)",
+          "amount": 700,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Apoyo a recuperación muscular y resistencia física; mejora de claridad mental y enfoque; soporte a vitalidad y equilibrio hormonal; acción antioxidante celular.",
+      "instructions": "1 cápsula diaria con comida",
+      "warnings": "Consultar con profesional de la salud antes de usar, especialmente en embarazo, lactancia o si se toman medicamentos.",
+      "certifications": ["Non-GMO", "Gluten-Free", "cGMP"],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 1,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-000000000006",
+      "name": "Probiotics 200 Billion CFU",
+      "brand": "NatureBell",
+      "category": "supplement",
+      "description": "Fórmula digestiva 5-en-1: probióticos (40 cepas, 200 mil millones CFU), postbióticos, prebióticos, enzimas digestivas y fibra dietaria. Soporte completo al microbioma intestinal.",
+      "form": "cápsulas vegetarianas",
+      "presentation": "envase 240 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Mezcla probiótica y postbiótica (200 mil millones CFU)",
+          "form": "40 cepas: Bacillus spp., Bifidobacterium spp., Lactobacillus spp., Saccharomyces spp.",
+          "amount": 450,
+          "unit": "mg"
+        },
+        {
+          "name": "Mezcla prebiótica",
+          "form": "psyllium, fibra de acacia Senegal, inulina (raíz de achicoria)",
+          "amount": 150,
+          "unit": "mg"
+        },
+        {
+          "name": "Enzimas digestivas",
+          "form": "bromelina, papaína, amilasa, proteasa, lipasa",
+          "amount": 50,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Harina de arroz, estearato de magnesio, dióxido de silicio, celulosa vegetal (cápsula)",
+      "benefits": "Soporte a digestión y absorción de nutrientes; equilibrio de microbiota intestinal; reduce hinchazón; aporta fibra y enzimas complementarias.",
+      "instructions": "2 cápsulas diarias con alimentos",
+      "certifications": ["Non-GMO", "Gluten-Free", "Sin soja", "Sin lácteos", "GMP"],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 2,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-000000000007",
+      "name": "Fadogia Agrestis + Tongkat Ali",
+      "brand": "NatureBell",
+      "category": "supplement",
+      "description": "Fórmula 2-en-1 de alta concentración: 600mg Fadogia Agrestis (extracto tallo 20:1) + 400mg Tongkat Ali (extracto raíz 200:1). Soporte a rendimiento atlético, energía y salud masculina.",
+      "form": "cápsulas vegetarianas",
+      "presentation": "envase 240 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Fadogia Agrestis",
+          "form": "extracto de tallo 20:1",
+          "amount": 600,
+          "unit": "mg"
+        },
+        {
+          "name": "Tongkat Ali (Eurycoma longifolia)",
+          "form": "extracto de raíz 200:1, Indonesia",
+          "amount": 400,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Soporte a rendimiento atlético, energía, resistencia y salud masculina; posible soporte a testosterona (uso tradicional).",
+      "instructions": "2 cápsulas diarias (porción completa)",
+      "certifications": ["Non-GMO", "Gluten-Free", "Sin soja", "Sin lácteos", "cGMP"],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4] },
+      "defaultDose": 2,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-000000000008",
+      "name": "Omega-3 Fish Oil Triple Strength",
+      "brand": "Viva Naturals",
+      "category": "supplement",
+      "description": "Aceite de pescado Omega-3 de alta concentración en forma de triglicéridos re-esterificados (rTG) para máxima biodisponibilidad. Certificación IFOS por lote.",
+      "form": "cápsulas blandas (softgels)",
+      "presentation": "envase 90 softgels",
+      "activeIngredients": [
+        {
+          "name": "EPA (ácido eicosapentaenoico)",
+          "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+          "amount": 1500,
+          "unit": "mg"
+        },
+        {
+          "name": "DHA (ácido docosahexaenoico)",
+          "form": "triglicéridos re-esterificados (rTG)",
+          "amount": 568,
+          "unit": "mg"
+        },
+        {
+          "name": "DPA (ácido docosapentaenoico)",
+          "form": "triglicéridos re-esterificados (rTG)",
+          "amount": 50,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Gelatina de pescado (tilapia), glicerina, agua purificada, tocoferoles mixtos (antioxidantes)",
+      "benefits": "Soporte cardiovascular; acción antiinflamatoria sistémica; apoyo a función cerebral y neurológica; salud visual; niveles saludables de triglicéridos; soporte articular.",
+      "instructions": "2 cápsulas diarias con alimentos para optimizar absorción",
+      "warnings": "Contiene pescado. Consultar profesional en embarazo, lactancia o uso de anticoagulantes.",
+      "certifications": ["IFOS", "GMP", "Non-GMO", "Gluten-Free", "Sin lácteos"],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 2,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": "midday",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-000000000009",
+      "name": "Ubiquinol 100mg",
+      "brand": "Nutricost",
+      "category": "supplement",
+      "description": "Ubiquinol (forma reducida y activa de CoQ10) de alta biodisponibilidad con materia prima Kaneka Ubiquinol® japonesa. Soporte cardiovascular y producción de energía celular.",
+      "form": "cápsulas blandas (softgels)",
+      "presentation": "frasco 120 softgels",
+      "activeIngredients": [
+        {
+          "name": "Ubiquinol",
+          "form": "forma reducida activa de CoQ10",
+          "amount": 100,
+          "unit": "mg",
+          "brand": "Kaneka Ubiquinol®"
+        }
+      ],
+      "excipients": "Aceite MCT, gelatina, glicerina, palmitato de ascorbilo, agua purificada, cera de abejas, lecitina de girasol, suspensión de annato en aceite de girasol",
+      "benefits": "Apoya salud cardiovascular; mejora producción de ATP; ayuda a reducir fatiga; soporte antioxidante; puede favorecer recuperación muscular.",
+      "instructions": "1 softgel al día con comida que contenga grasa",
+      "certifications": ["Non-GMO", "Gluten-Free", "NSF", "GMP"],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 1,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-00000000000a",
+      "name": "PQQ 20mg",
+      "brand": "Nutricost",
+      "category": "supplement",
+      "description": "Pirroloquinolina Quinona (PQQ) en dosis de 20mg — la dosis utilizada en estudios clínicos. Soporte mitocondrial, antioxidante celular y función cognitiva.",
+      "form": "cápsulas vegetales (hipromelosa)",
+      "presentation": "frasco 60 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Pirroloquinolina Quinona (PQQ)",
+          "form": "pura, alta pureza",
+          "amount": 20,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Harina de arroz, hipromelosa (cápsula vegetal)",
+      "benefits": "Favorece biogénesis mitocondrial; soporte antioxidante celular; apoyo a memoria, concentración y claridad mental; contribuye a producción de ATP; posible mejora de sensibilidad a la insulina.",
+      "instructions": "1 cápsula diaria con 240-350 ml de agua, preferentemente con comida",
+      "warnings": "Consultar profesional antes de usar en embarazo, lactancia o si se toman medicamentos.",
+      "certifications": ["Vegano", "Gluten-Free", "Non-GMO", "GMP", "FDA registered", "ISO terceros"],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 1,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-00000000000b",
+      "name": "Mega D3 & MK-7",
+      "brand": "NOW Foods",
+      "category": "vitamin",
+      "description": "Combinación de Vitamina D3 (5.000 IU) y Vitamina K2 como MK-7 (MenaQ7® 180 mcg) para soporte óseo, cardiovascular y metabolismo del calcio.",
+      "form": "cápsulas vegetarianas",
+      "presentation": "frasco 60 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Vitamina D3",
+          "form": "Colecalciferol",
+          "amount": 5000,
+          "unit": "IU",
+          "source": "lanolina"
+        },
+        {
+          "name": "Vitamina K2 (MK-7)",
+          "form": "Menaquinona-7",
+          "amount": 180,
+          "unit": "mcg",
+          "brand": "MenaQ7®"
+        }
+      ],
+      "excipients": "Celulosa microcristalina, hipromelosa, almidón modificado, maltodextrina, dióxido de silicio",
+      "benefits": "Soporte óseo y dental; salud cardiovascular; metabolismo adecuado del calcio; apoyo inmune (D3); formación de huesos fuertes. MK-7 dirige el calcio a los huesos evitando acumulación en arterias.",
+      "instructions": "1 cápsula diaria con comida que contenga grasa",
+      "warnings": "Consultar profesional si se toman anticoagulantes o se tiene alguna condición médica.",
+      "certifications": ["Non-GMO", "Kosher", "GMP", "Sin soja"],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 1,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-00000000000c",
+      "name": "Methylated B Complex",
+      "brand": "NatureBell",
+      "category": "vitamin",
+      "description": "Complejo vitamínico B 12-en-1 con formas bioactivas y metiladas (metilfolato + metilcobalamina) más vitaminas C, E, inositol y colina. Alta biodisponibilidad.",
+      "form": "cápsulas vegetarianas",
+      "presentation": "envase 240 cápsulas",
+      "activeIngredients": [
+        { "name": "Vitamina C (Acerola)", "form": "ácido ascórbico natural", "amount": 45, "unit": "mg" },
+        { "name": "Vitamina E", "form": "tocoferol mixto", "amount": 18, "unit": "mg" },
+        { "name": "Tiamina (B1)", "form": "tiamina HCl", "amount": 100, "unit": "mg" },
+        { "name": "Riboflavina (B2)", "form": "Riboflavina-5-fosfato (R5P)", "amount": 30, "unit": "mg" },
+        { "name": "Niacina (B3)", "form": "niacinamida", "amount": 50, "unit": "mg" },
+        { "name": "Ácido pantoténico (B5)", "form": "pantotenato de calcio", "amount": 50, "unit": "mg" },
+        { "name": "Vitamina B6", "form": "Piridoxal-5-fosfato (P5P)", "amount": 20, "unit": "mg" },
+        { "name": "Biotina (B7)", "form": "D-Biotina", "amount": 2000, "unit": "mcg" },
+        { "name": "Folato (B9)", "form": "L-Metilfolato (Methyl Folate)", "amount": 1000, "unit": "mcg" },
+        { "name": "Vitamina B12", "form": "Metilcobalamina", "amount": 1000, "unit": "mcg" },
+        { "name": "Colina", "form": "bitartrato de colina", "amount": 30, "unit": "mg" },
+        { "name": "Inositol", "form": "mio-inositol", "amount": 20, "unit": "mg" }
+      ],
+      "excipients": "Harina de arroz, celulosa vegetal (cápsula). Libre de soja, lácteos, gluten, trigo, huevos, pescado.",
+      "benefits": "Soporte energético y metabólico; apoyo al sistema inmune; formas metiladas para alta absorción; reduce homocisteína; soporte prenatal y postnatal.",
+      "instructions": "2 cápsulas al día con alimentos",
+      "certifications": ["Non-GMO", "Gluten-Free", "Sin soja", "GMP"],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 2,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-00000000000d",
+      "name": "Omega-3 TG",
+      "brand": "Innovanaturals",
+      "category": "supplement",
+      "description": "Omega-3 en forma de triglicéridos (TG) con certificaciones IFOS y GOED 5 estrellas. Alta concentración EPA+DHA, libre de contaminantes y metales pesados.",
+      "form": "cápsulas",
+      "activeIngredients": [
+        {
+          "name": "EPA (ácido eicosapentaenoico)",
+          "form": "triglicéridos (TG)",
+          "amount": 1440,
+          "unit": "mg"
+        },
+        {
+          "name": "DHA (ácido docosahexaenoico)",
+          "form": "triglicéridos (TG)",
+          "amount": 960,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Potente efecto antiinflamatorio; mejora salud cardiovascular; contribuye a salud cerebral y del sistema nervioso; soporte inmunológico; reduce triglicéridos; alivia dolores articulares; mejora memoria y visión.",
+      "instructions": "4 cápsulas diarias con las comidas principales (o 2+2)",
+      "certifications": ["IFOS 5 estrellas", "GOED 5 estrellas", "Gluten-Free"],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 4,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": "midday",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-00000000000e",
+      "name": "DHEA 100mg",
+      "brand": "NatureBell",
+      "category": "hormone",
+      "description": "DHEA (dehidroepiandrosterona) micronizado de alta potencia y absorción. Fuente vegetal pura. Soporte a energía, metabolismo, envejecimiento saludable y función cerebral.",
+      "form": "cápsulas vegetarianas",
+      "presentation": "envase 240 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "DHEA (Dehidroepiandrosterona)",
+          "form": "micronizado, fuente vegetal",
+          "amount": 100,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Harina de arroz, celulosa vegetal (cápsula). Non-GMO, libre de soja, lácteos, gluten.",
+      "benefits": "Soporte energético, metabólico y antioxidante; promueve envejecimiento saludable; soporte hormonal general.",
+      "instructions": "2 cápsulas al día con alimentos",
+      "warnings": "Consultar profesional antes de usar, especialmente si se tienen condiciones médicas preexistentes o se utilizan medicamentos. No exceder la dosis recomendada.",
+      "certifications": ["Non-GMO", "Gluten-Free", "GMP"],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 2,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-00000000000f",
+      "name": "Clomifeno Citrato 50mg",
+      "brand": "Genozym",
+      "category": "medication",
+      "description": "SERM (modulador selectivo de receptores de estrógeno). Uso off-label en hombres con hipogonadismo secundario para estimular producción endógena de testosterona (vía LH/FSH) preservando fertilidad.",
+      "form": "comprimidos recubiertos",
+      "presentation": "envase 20-60 comprimidos",
+      "activeIngredients": [
+        {
+          "name": "Clomifeno citrato",
+          "form": "SERM — estimulante del eje hipotálamo-hipófisis-gónadas",
+          "amount": 50,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Croscarmelosa sódica, estearato de magnesio y excipientes farmacéuticos estándar.",
+      "benefits": "Aumenta LH y FSH endógenas; eleva testosterona sin suprimir eje hormonal; preserva espermatogénesis y fertilidad.",
+      "instructions": "Según prescripción médica. Uso off-label en hombres: generalmente 25-50mg diarios o en días alternos bajo supervisión.",
+      "warnings": "Medicamento de venta bajo receta. Requiere monitoreo periódico de testosterona, estradiol y hematocrito. Posibles efectos: visión borrosa, cambios de humor, cefaleas, ginecomastia. No usar sin indicación profesional.",
+      "certifications": [],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 1,
+      "doseUnit": "comprimidos",
+      "doseStep": 1,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-000000000010",
+      "name": "Cabergolina 0.5mg",
+      "brand": "Lactamax",
+      "category": "medication",
+      "description": "Agonista dopaminérgico D2 de acción prolongada. Reduce eficazmente los niveles de prolactina sérica. Indicado para hiperprolactinemia y prolactinomas.",
+      "form": "comprimidos",
+      "presentation": "envase 2-8 comprimidos",
+      "activeIngredients": [
+        {
+          "name": "Cabergolina",
+          "form": "agonista selectivo de receptores dopaminérgicos D2",
+          "amount": 0.5,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Lactosa, celulosa microcristalina, estearato de magnesio.",
+      "benefits": "Reducción efectiva y sostenida de prolactina sérica; acción prolongada permite dosificación semanal.",
+      "instructions": "Hiperprolactinemia: 0.5mg/semana en 1-2 tomas, ajustando según respuesta clínica y niveles de prolactina.",
+      "warnings": "Solo bajo supervisión médica. Puede causar náuseas, mareos, hipotensión ortostática, cefalea y somnolencia. Uso prolongado puede asociarse a fibrosis valvular cardíaca. Requiere seguimiento clínico periódico.",
+      "certifications": [],
+      "schedule": { "kind": "fixed_interval", "intervalDays": 7, "alertDaysBefore": 1 },
+      "defaultDose": 1,
+      "doseUnit": "comprimidos",
+      "doseStep": 0.5,
+      "timing": "evening",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-000000000011",
+      "name": "Testenat Depot Enantato 250mg",
+      "brand": "Landerlan Gold",
+      "category": "medication",
+      "description": "Enantato de testosterona inyectable (éster de acción prolongada). Terapia de reemplazo hormonal (TRT) para hombres con hipogonadismo diagnosticado. 250mg/ml, vial 10ml.",
+      "form": "solución inyectable intramuscular (vial)",
+      "presentation": "vial 10ml / 250mg por ml",
+      "activeIngredients": [
+        {
+          "name": "Enantato de testosterona",
+          "form": "éster de acción prolongada, liberación sostenida",
+          "amount": 250,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Aceite vehicular (aceite de semilla de uva o similar) y excipientes farmacéuticos.",
+      "benefits": "Mantiene niveles séricos de testosterona durante varios días; restaura vitalidad, masa muscular, libido y bienestar en hombres con hipogonadismo.",
+      "instructions": "Dosis y frecuencia según indicación médica y controles de laboratorio. Administración intramuscular.",
+      "warnings": "Medicamento controlado — solo bajo prescripción médica. Requiere monitoreo de testosterona, hematocrito, perfil lipídico y función prostática. Puede causar supresión del eje hormonal, acné, ginecomastia, retención de líquidos y eventos cardiovasculares.",
+      "certifications": [],
+      "schedule": { "kind": "fixed_interval", "intervalDays": 7, "alertDaysBefore": 2 },
+      "defaultDose": 0.4,
+      "doseUnit": "ml",
+      "doseStep": 0.05,
+      "timing": "evening",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "a0000000-0000-4000-8000-000000000012",
+      "name": "GHK-Cu (Péptido de Cobre)",
+      "brand": "Revolution Pharma",
+      "category": "other",
+      "description": "Péptido GHK-Cu (Glicil-L-Histidil-L-Lisina-Cobre) liofilizado para uso subcutáneo. Regeneración tisular, estimulación de colágeno y elastina, anti-envejecimiento y cicatrización. Polvo liofilizado 50mg/vial.",
+      "form": "polvo liofilizado para inyección subcutánea (vial)",
+      "presentation": "vial 50mg",
+      "activeIngredients": [
+        {
+          "name": "GHK-Cu",
+          "form": "Glicil-L-Histidil-L-Lisina-Cobre, péptido de cobre tripeptídico",
+          "amount": 50,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Regeneración tisular; estimulación de síntesis de colágeno y elastina; efecto antiaging; mejora de calidad capilar y textura de piel; cicatrización.",
+      "instructions": "1-2mg/día vía subcutánea, reconstituido con agua bacteriostática. Rotar sitios de inyección.",
+      "warnings": "Uso bajo supervisión médica. No aprobado por FDA para inyección. Evidencia clínica limitada en humanos para uso inyectable. Incertidumbre sobre pureza y esterilidad del producto.",
+      "certifications": [],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 1,
+      "doseUnit": "mg",
+      "doseStep": 0.5,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    }
+  ]
+}
