@@ -53,6 +53,7 @@ export type Supplement = {
   timing: TimingSlot | null
   nextDue?: string // ISO8601, solo para fixed_interval, calculado post-log
   active: boolean
+  inStock?: boolean   // undefined/true = con stock; false = sin stock (se oscurece y no aparece en pendientes)
   createdAt: string
   updatedAt: string
   version: number

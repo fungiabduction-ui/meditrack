@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "exportedAt": "2026-06-18T00:00:00.000Z",
+  "supplements": [
+    {
+      "id": "8bc572e8-662f-4410-9e1c-5e51f10a4f08",
+      "name": "Melatol 3mg",
+      "brand": "Gramon",
+      "category": "medication",
+      "description": "Inductor del sueño / regulador del ciclo sueño-vigilia. Melatonina sintética 3 mg por comprimido.",
+      "form": "comprimidos recubiertos",
+      "presentation": "Envase con 60 comprimidos",
+      "activeIngredients": [
+        {
+          "name": "Melatonina",
+          "form": "sintética",
+          "amount": 3,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Celulosa microcristalina, croscarmelosa sódica, estearato de magnesio, dióxido de silicio, colorantes (amarillo quinoleína, azul patente V), opadry.",
+      "benefits": "Alteraciones del sueño (insomnio ocasional). Jet-lag (viajes transmeridianos).",
+      "instructions": "1 comprimido 30-60 minutos antes de dormir. Máximo uso a corto plazo.",
+      "warnings": "Consultar médico si embarazo, lactancia, niños, enfermedades autoinmunes, depresión o uso de otros medicamentos. No conducir hasta conocer efecto.",
+      "certifications": [],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 1,
+      "doseUnit": "comp.",
+      "doseStep": 1,
+      "timing": "night",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    }
+  ]
+}

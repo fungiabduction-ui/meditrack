@@ -1,4 +1,4 @@
-import { StorageSchema } from '../schema/types'
+import type { StorageSchema } from '../schema/types'
 import { StorageSchemaSchema } from '../schema/zod-schemas'
 import { computeChecksum } from './checksum'
 import { migrate, createFreshSchema, CURRENT_VERSION } from './migrations'
@@ -27,11 +27,15 @@ export function read(): StorageSchema {
 }
 
 export function write(schema: StorageSchema): void {
+  const now = new Date().toISOString()
+  // Parse through Zod to get canonical key order — must match what read() returns
+  // so that computeChecksum produces the same value on both sides
+  const prep = { ...schema, _version: CURRENT_VERSION, _updatedAt: now, _checksum: '' }
+  const canonical = StorageSchemaSchema.safeParse(prep)
+  const data = canonical.success ? canonical.data : (prep as StorageSchema)
   const updated: StorageSchema = {
-    ...schema,
-    _version: CURRENT_VERSION,
-    _updatedAt: new Date().toISOString(),
-    _checksum: computeChecksum({ supplements: schema.supplements, dailyLogs: schema.dailyLogs }),
+    ...data,
+    _checksum: computeChecksum({ supplements: data.supplements, dailyLogs: data.dailyLogs }),
   }
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(updated))

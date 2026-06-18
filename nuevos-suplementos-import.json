@@ -1,0 +1,223 @@
+{
+  "version": 1,
+  "exportedAt": "2026-06-18T00:00:00.000Z",
+  "supplements": [
+    {
+      "id": "a89e6913-c393-4329-b363-e44003fc1117",
+      "name": "Creatina Monohidrato",
+      "brand": "Star Nutrition",
+      "category": "supplement",
+      "description": "Creatina monohidrato pura 100%, sin aditivos. Aumenta la reserva de fosfocreatina intramuscular para mejorar fuerza, potencia y rendimiento en ejercicios explosivos.",
+      "form": "polvo micronizado",
+      "presentation": "Pote 1 kg (200 porciones de 5g)",
+      "activeIngredients": [
+        {
+          "name": "Creatina Monohidrato",
+          "form": "monohidrato",
+          "amount": 5000,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Aumento de fuerza y potencia en ejercicios de alta intensidad. Mejora la recuperación entre series. Contribuye a la hipertrofia muscular.",
+      "instructions": "1 medida (5g) disuelta en 200-300ml de agua o jugo. Sin fase de carga: 3-5g/día. Con fase de carga: 20g/día divididos en 4 tomas por 5 días, luego mantenimiento 5g/día.",
+      "warnings": "Hidratarse bien (mínimo 2L de agua/día). Consultar médico si hay antecedentes de enfermedad renal. La fase de carga puede causar leve retención hídrica inicial.",
+      "certifications": [],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 1,
+      "doseUnit": "medida (5g)",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "e1e34a83-217f-4ebe-b61d-b7b21485be43",
+      "name": "EPH 100",
+      "brand": "KN Nutrition",
+      "category": "supplement",
+      "description": "Termogénico estimulante con extracto de efedra (Ma Huang) de alta concentración + blend de estimulantes. Para quema de grasa y supresión del apetito.",
+      "form": "cápsulas",
+      "presentation": "Frasco 60 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Extracto de Efedra (Ma Huang)",
+          "form": "extracto estandarizado",
+          "amount": 100,
+          "unit": "mg"
+        },
+        {
+          "name": "EPH 100 Proprietary Blend",
+          "form": "blend de estimulantes (cafeína, sinefrina, guaraná y otros)",
+          "amount": 700,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Termogénesis aumentada. Supresión del apetito. Aumento de energía y foco para entrenamiento.",
+      "instructions": "1 cápsula con el desayuno. No exceder 2 cápsulas por día. No tomar después de las 14h para no interferir con el sueño. Ciclar: 8 semanas ON / 4 semanas OFF.",
+      "warnings": "PRODUCTO ESTIMULANTE FUERTE. No usar si hay problemas cardíacos, hipertensión, diabetes, hipertiroidismo, trastornos psiquiátricos o ansiedad. No combinar con IMAO, antidepresivos ni estimulantes adicionales. No apto para mujeres embarazadas o en lactancia. No conducir si hay sensación de mareo. La efedra puede ser restringida o prohibida en competiciones deportivas (verificar con WADA/AFAD).",
+      "certifications": [],
+      "schedule": { "kind": "as_needed" },
+      "defaultDose": 1,
+      "doseUnit": "caps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "3e9a024b-1794-4824-a7e1-ece14d94b0ac",
+      "name": "Shilajit Extract",
+      "brand": "BulkSupplements",
+      "category": "adaptogen",
+      "description": "Extracto purificado de shilajit (resina mineral del Himalaya) en polvo. Rico en ácido fúlvico, ácido húmico y más de 84 minerales traza. Adaptógeno potente.",
+      "form": "polvo",
+      "presentation": "Bolsa 100g",
+      "activeIngredients": [
+        {
+          "name": "Extracto de Shilajit",
+          "form": "purificado y estandarizado (ácido fúlvico)",
+          "amount": 1,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Soporte energético mitocondrial (transportador de electrones vía ácido fúlvico). Potencial soporte en niveles de testosterona. Mejora la biodisponibilidad de otros nutrientes. Adaptógeno para resistencia al estrés.",
+      "instructions": "500mg (punta de cuchara pequeña) disuelta en agua tibia o leche. Tomar en ayunas o con el desayuno. Ciclar: 2-3 meses ON / 2-4 semanas OFF.",
+      "warnings": "Usar exclusivamente producto purificado (el shilajit crudo puede contener metales pesados). Puede interactuar con hipoglucemiantes. Consultar médico si hay hiperuricemia. Sabor y color fuertes, naturales del producto.",
+      "certifications": [],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 500,
+      "doseUnit": "mg",
+      "doseStep": 250,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "507f011e-2aa9-4449-871a-5c837c04a1fe",
+      "name": "NMN Powder",
+      "brand": "BulkSupplements",
+      "category": "supplement",
+      "description": "Nicotinamida Mononucleótido (NMN) en polvo. Precursor directo del NAD+. Soporte en la vía de sirtuin, metabolismo energético y potencial anti-envejecimiento celular.",
+      "form": "polvo",
+      "presentation": "Bolsa 25g o 100g",
+      "activeIngredients": [
+        {
+          "name": "NMN (Nicotinamida Mononucleótido)",
+          "form": "beta-NMN purificado",
+          "amount": 1,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Precursor del NAD+ para soporte mitocondrial y energético. Activación de sirtuinas (SIRT1/SIRT3). Potencial mejora de resistencia insulínica y función cognitiva. Anti-envejecimiento celular.",
+      "instructions": "500mg (punta de cuchara pequeña aprox.) disuelta en agua fría o a temperatura ambiente (evitar agua caliente). Tomar en ayunas o con el desayuno temprano. Almacenar en lugar fresco, seco y sin luz.",
+      "warnings": "Evitar dosis altas sin supervisión médica. Puede potenciar efectos de medicamentos que afecten el metabolismo del NAD+. No hay datos suficientes en embarazo/lactancia.",
+      "certifications": [],
+      "schedule": { "kind": "weekdays", "days": [0, 1, 2, 3, 4, 5, 6] },
+      "defaultDose": 500,
+      "doseUnit": "mg",
+      "doseStep": 250,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "32f6470a-cad5-4644-9437-ee3c7f9d32a4",
+      "name": "Lipodrene",
+      "brand": "Hi-Tech Pharmaceuticals",
+      "category": "supplement",
+      "description": "Termogénico y quemador de grasa de alto espectro con efedra, cafeína y blend estimulante que incluye DMHA (2-aminoisoheptano). Uno de los termogénicos más potentes del mercado.",
+      "form": "comprimidos",
+      "presentation": "Frasco 90 comprimidos",
+      "activeIngredients": [
+        {
+          "name": "Extracto de Efedra (Ma Huang)",
+          "form": "extracto estandarizado",
+          "amount": 25,
+          "unit": "mg"
+        },
+        {
+          "name": "Cafeína Anhidra",
+          "form": "anhidra",
+          "amount": 100,
+          "unit": "mg"
+        },
+        {
+          "name": "Lipodrene Proprietary Blend",
+          "form": "blend (DMHA/2-aminoisoheptano, PEA, sinefrina, acacia rigidula, yohimbina, EGCG, naringenin y otros)",
+          "amount": 560,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Termogénesis potente. Supresión del apetito. Mejora del enfoque y energía para entrenamiento. Movilización de grasa vía beta-oxidación.",
+      "instructions": "1 comprimido con el desayuno. Máximo 2 comprimidos/día (separados por al menos 4h). No tomar después de las 13h. Ciclar: 8 semanas ON / 4 semanas OFF. No combinar con otros estimulantes.",
+      "warnings": "PRODUCTO ESTIMULANTE MUY FUERTE (efedra + cafeína + DMHA). No usar si hay problemas cardíacos, hipertensión, diabetes, hipertiroidismo, ansiedad o trastornos psiquiátricos. No usar con IMAO, antidepresivos, estimulantes adicionales ni alcohol. No conducir si hay mareo o palpitaciones. El DMHA puede estar prohibido en competiciones deportivas (WADA). Producto importado — consultar legalidad en Argentina.",
+      "certifications": [],
+      "schedule": { "kind": "as_needed" },
+      "defaultDose": 1,
+      "doseUnit": "comp.",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    },
+    {
+      "id": "2f43e770-3a1a-43cd-b803-6d02f944e1a4",
+      "name": "Premium Whey Protein",
+      "brand": "Star Nutrition",
+      "category": "supplement",
+      "description": "Proteína de suero de leche (WPC 80 + WPI) con perfil completo de aminoácidos esenciales. Alta concentración proteica y bajo contenido de carbohidratos y grasas.",
+      "form": "polvo (varios sabores)",
+      "presentation": "Pote 2 kg (~57 porciones) o 1 kg (~33 porciones)",
+      "activeIngredients": [
+        {
+          "name": "Proteína de Suero (WPC 80 / WPI)",
+          "form": "concentrado + isolado de suero de leche",
+          "amount": 25,
+          "unit": "g"
+        },
+        {
+          "name": "L-Leucina (BCAA)",
+          "form": "L-Leucina",
+          "amount": 2.7,
+          "unit": "g"
+        },
+        {
+          "name": "L-Isoleucina (BCAA)",
+          "form": "L-Isoleucina",
+          "amount": 1.5,
+          "unit": "g"
+        },
+        {
+          "name": "L-Valina (BCAA)",
+          "form": "L-Valina",
+          "amount": 1.4,
+          "unit": "g"
+        }
+      ],
+      "excipients": "Cocoa en polvo (sabor chocolate), lecitina de girasol, sucralosa, acesulfamo-K, sabores naturales y artificiales (varían según sabor).",
+      "benefits": "Soporte a la síntesis proteica muscular (MPS). Recuperación post-entrenamiento. Fuente de BCAAs de rápida absorción. Bajo aporte calórico relativo a la proteína.",
+      "instructions": "1 medida (30g) en 250-300ml de agua fría o leche. Tomar post-entrenamiento o como suplemento proteico entre comidas. Agitar bien en shaker.",
+      "warnings": "Contiene derivados de leche — no apto para intolerantes severos a lactosa o alérgicos a proteínas lácteas. No reemplaza una dieta balanceada.",
+      "certifications": [],
+      "schedule": { "kind": "as_needed" },
+      "defaultDose": 1,
+      "doseUnit": "medida (30g)",
+      "doseStep": 0.5,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    }
+  ]
+}

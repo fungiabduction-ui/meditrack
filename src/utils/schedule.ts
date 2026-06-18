@@ -1,4 +1,4 @@
-import { Supplement } from '../schema/types'
+import type { Supplement } from '../schema/types'
 import { getLocalDateStr, parseLocalDate } from './date'
 
 export function isScheduledToday(s: Supplement, dateStr: string): boolean {

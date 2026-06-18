@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "exportedAt": "2026-06-18T00:00:00.000Z",
+  "supplements": [
+    {
+      "id": "455105e2-7dd3-4e85-b1da-4b03252afa41",
+      "name": "GHK-Cu (Péptido de Cobre)",
+      "brand": "Revolution Pharma",
+      "category": "other",
+      "description": "Péptido GHK-Cu (Glicil-L-Histidil-L-Lisina-Cobre) para regeneración tisular, reparación de piel, estimulación de colágeno y elastina, anti-envejecimiento, mejora de cabello y cicatrización.",
+      "form": "polvo liofilizado para inyección subcutánea",
+      "presentation": "Vial 50 mg",
+      "activeIngredients": [
+        {
+          "name": "GHK-Cu",
+          "form": "péptido de cobre (GHK-Cu)",
+          "amount": 16.667,
+          "unit": "mg",
+          "source": "síntesis química"
+        }
+      ],
+      "benefits": "Mejora de la calidad de la piel, regeneración tisular y antiaging. Estimulación de colágeno y elastina. Cicatrización y calidad capilar.",
+      "instructions": "0.1 ml vía subcutánea con aguja de insulina. Reconstituido en 3 ml de agua bacteriostática (vial 50 mg → 16.67 mg/ml). Dosis 0.1 ml = 1.67 mg.",
+      "warnings": "Uso bajo supervisión médica. No aprobado por FDA para inyección en humanos. Incertidumbre sobre pureza, concentración real y esterilidad del producto. Evidencia clínica limitada en humanos para uso inyectable.",
+      "certifications": [],
+      "schedule": { "kind": "as_needed" },
+      "defaultDose": 0.1,
+      "doseUnit": "ml",
+      "doseStep": 0.05,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T00:00:00.000Z",
+      "updatedAt": "2026-06-18T00:00:00.000Z",
+      "version": 0
+    }
+  ]
+}

@@ -1,10 +1,12 @@
-import { DailyLog } from '../../schema/types'
+import type { DailyLog } from '../../schema/types'
 import { formatTimestamp } from '../../utils/date'
 import { MetabolicSummary } from './MetabolicSummary'
+import { useStore } from '../../store'
 
 type Props = { log: DailyLog }
 
 export function DayTimeline({ log }: Props) {
+  const supplements = useStore(s => s.supplements)
   const sorted = [...log.entries].sort((a, b) => a.timestamp.localeCompare(b.timestamp))
   const total = sorted.length + log.skipped.length
   const adherence = total > 0 ? Math.round((sorted.length / total) * 100) : 100
@@ -32,7 +34,12 @@ export function DayTimeline({ log }: Props) {
                 <div className="bg-slate-800 rounded-xl px-3 py-2.5">
                   <div className="flex justify-between items-start">
                     <div>
-                      <p className="text-white text-sm font-medium">{e.supplementSnapshot.name}</p>
+                      <div className="flex items-center gap-2">
+                        <p className="text-white text-sm font-medium">{e.supplementSnapshot.name}</p>
+                        {!supplements[e.supplementId]?.active && (
+                          <span className="text-slate-500 text-xs bg-slate-700 px-1.5 py-0.5 rounded">eliminado</span>
+                        )}
+                      </div>
                       <p className="text-slate-400 text-xs mt-0.5">
                         {e.quantity} {e.doseUnit}
                       </p>

@@ -1,4 +1,4 @@
-import { StorageSchema } from '../schema/types'
+import type { StorageSchema } from '../schema/types'
 import { computeChecksum } from './checksum'
 
 export const CURRENT_VERSION = 1
@@ -27,6 +27,7 @@ export function migrate(version: number, data: unknown): StorageSchema {
     if (raw.supplements && typeof raw.supplements === 'object') {
       migrated.supplements = raw.supplements as StorageSchema['supplements']
     }
+    migrated._checksum = computeChecksum({ supplements: migrated.supplements, dailyLogs: migrated.dailyLogs })
     return migrated
   }
   throw new Error(`Unknown schema version: ${version}`)

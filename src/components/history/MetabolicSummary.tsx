@@ -1,4 +1,4 @@
-import { LogEntry } from '../../schema/types'
+import type { LogEntry } from '../../schema/types'
 
 type Props = { entries: LogEntry[] }
 

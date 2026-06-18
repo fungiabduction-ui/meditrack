@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Supplement, ActiveIngredient, Schedule, TimingSlot, UnitType } from '../../schema/types'
+import type { Supplement, ActiveIngredient, Schedule, TimingSlot, UnitType } from '../../schema/types'
 import { Modal } from '../shared/Modal'
 import { useStore } from '../../store'
 

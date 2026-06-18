@@ -4,37 +4,52 @@ import { Modal } from '../shared/Modal'
 import { DoseInput } from '../shared/DoseInput'
 import { useStore } from '../../store'
 import type { Supplement } from '../../schema/types'
-import { formatTimestamp } from '../../utils/date'
+import { formatTimestamp, getLocalHHMM } from '../../utils/date'
 
-type LogModal = { supplement: Supplement; qty: number }
+type LogModal = { supplement: Supplement; qty: number; time: string }
 type EditModal = { entryId: string; currentTs: string; value: string }
 
+function offsetDate(base: string, days: number): string {
+  const d = new Date(`${base}T12:00:00`)
+  d.setDate(d.getDate() + days)
+  return d.toISOString().slice(0, 10)
+}
+
 export function TodayView() {
-  const { today, groups, takenIds, takenEntries, alerts, scheduledCount, takenCount, logItem, editTimestamp } = useToday()
+  const [selectedDate, setSelectedDate] = useState(() => {
+    const d = new Date()
+    return d.toISOString().slice(0, 10)
+  })
+  const { today, isToday, groups, takenIds, takenEntries, alerts, scheduledCount, takenCount, logItem, editTimestamp, removeEntry } = useToday(selectedDate)
   const supplements = useStore(s => s.supplements)
 
   const [logModal, setLogModal] = useState<LogModal | null>(null)
   const [editModal, setEditModal] = useState<EditModal | null>(null)
+  const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
   const [search, setSearch] = useState('')
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const searchRef = useRef<HTMLInputElement>(null)
 
   const adherence = scheduledCount > 0 ? Math.round((takenCount / scheduledCount) * 100) : 100
 
-  const dateLabel = new Date().toLocaleDateString('es-AR', {
+  const dateLabel = new Date(`${selectedDate}T12:00:00`).toLocaleDateString('es-AR', {
     weekday: 'long', day: 'numeric', month: 'long'
   })
 
   // Todos los suplementos activos para la búsqueda
   const activeSups = useMemo(
-    () => Object.values(supplements).filter(s => s.active),
+    () => Object.values(supplements).filter(s => s.active && s.inStock !== false),
     [supplements]
   )
 
   const searchResults = useMemo(() => {
     if (!search.trim()) return []
     const q = search.toLowerCase()
-    return activeSups.filter(s => s.name.toLowerCase().includes(q)).slice(0, 5)
+    return activeSups.filter(s =>
+      s.name.toLowerCase().includes(q)
+      || (s.brand ?? '').toLowerCase().includes(q)
+      || s.activeIngredients.some(i => i.name.toLowerCase().includes(q))
+    ).slice(0, 5)
   }, [search, activeSups])
 
   // Píldoras de pendientes (scheduled hoy, no tomados aún)
@@ -57,10 +72,12 @@ export function TodayView() {
     setEditModal(null)
   }
 
+  const defaultTime = () => isToday ? getLocalHHMM() : '12:00'
+
   const selectResult = (s: Supplement) => {
     setSearch('')
     setDropdownOpen(false)
-    setLogModal({ supplement: s, qty: s.defaultDose })
+    setLogModal({ supplement: s, qty: s.defaultDose, time: defaultTime() })
   }
 
   // Cerrar dropdown al hacer click fuera
@@ -79,14 +96,33 @@ export function TodayView() {
       {/* header */}
       <div className="px-4 pt-6 pb-3">
         <div className="flex justify-between items-start mb-1">
-          <h1 className="text-lg font-bold text-white capitalize">{dateLabel}</h1>
-          {scheduledCount > 0 && (
-            <span className={`text-xs font-bold px-2 py-0.5 rounded-full border ${
-              adherence === 100
-                ? 'text-green-400 bg-green-400/10 border-green-400/20'
-                : 'text-sky-400 bg-sky-400/10 border-sky-400/20'
-            }`}>{adherence}%</span>
-          )}
+          <div className="flex items-center gap-2">
+            <button
+              onClick={() => setSelectedDate(d => offsetDate(d, -1))}
+              className="w-7 h-7 flex items-center justify-center rounded-lg bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition-colors text-sm"
+            >‹</button>
+            <h1 className="text-lg font-bold text-white capitalize">{dateLabel}</h1>
+            <button
+              onClick={() => setSelectedDate(d => offsetDate(d, 1))}
+              disabled={isToday}
+              className="w-7 h-7 flex items-center justify-center rounded-lg bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700 transition-colors text-sm disabled:opacity-20 disabled:cursor-not-allowed"
+            >›</button>
+          </div>
+          <div className="flex items-center gap-2 flex-shrink-0">
+            {!isToday && (
+              <button
+                onClick={() => setSelectedDate(today)}
+                className="text-xs text-sky-400 underline"
+              >Hoy</button>
+            )}
+            {scheduledCount > 0 && (
+              <span className={`text-xs font-bold px-2 py-0.5 rounded-full border ${
+                adherence === 100
+                  ? 'text-green-400 bg-green-400/10 border-green-400/20'
+                  : 'text-sky-400 bg-sky-400/10 border-sky-400/20'
+              }`}>{adherence}%</span>
+            )}
+          </div>
         </div>
         <p className="text-slate-500 text-xs mb-3">{takenCount} de {scheduledCount} registrados</p>
 
@@ -157,7 +193,7 @@ export function TodayView() {
             {pendingSupplements.map(s => (
               <button
                 key={s.id}
-                onClick={() => setLogModal({ supplement: s, qty: s.defaultDose })}
+                onClick={() => setLogModal({ supplement: s, qty: s.defaultDose, time: defaultTime() })}
                 className="flex items-center gap-1.5 bg-slate-800 border border-slate-700 hover:border-slate-500 rounded-full px-3 py-1.5 text-xs text-slate-300 transition-colors"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-slate-500 flex-shrink-0" />
@@ -188,12 +224,28 @@ export function TodayView() {
                     {e.timestampEditedFrom && (
                       <span className="text-slate-600 text-xs line-through">{formatTimestamp(e.timestampEditedFrom)}</span>
                     )}
-                    <button
-                      onClick={() => openEdit(e.id, e.timestamp)}
-                      className="text-sky-400 text-xs underline"
-                    >
-                      {formatTimestamp(e.timestamp)}
-                    </button>
+                    {isToday ? (
+                      <button onClick={() => openEdit(e.id, e.timestamp)} className="text-sky-400 text-xs underline">
+                        {formatTimestamp(e.timestamp)}
+                      </button>
+                    ) : (
+                      <span className="text-slate-500 text-xs">{formatTimestamp(e.timestamp)}</span>
+                    )}
+                    {confirmDelete === e.id ? (
+                      <>
+                        <button
+                          onClick={() => { removeEntry(e.id); setConfirmDelete(null) }}
+                          className="text-red-400 text-xs font-semibold"
+                        >
+                          ¿Borrar?
+                        </button>
+                        <button onClick={() => setConfirmDelete(null)} className="text-slate-500 text-xs">✕</button>
+                      </>
+                    ) : (
+                      <button onClick={() => setConfirmDelete(e.id)} className="text-slate-600 hover:text-red-400 text-xs transition-colors">
+                        🗑
+                      </button>
+                    )}
                   </div>
                 </div>
               ))}
@@ -222,8 +274,17 @@ export function TodayView() {
               min={logModal.supplement.doseStep}
               onChange={qty => setLogModal(m => m ? { ...m, qty } : null)}
             />
+            <div>
+              <p className="text-slate-500 text-xs mb-1.5">Hora de toma</p>
+              <input
+                type="time"
+                value={logModal.time}
+                onChange={e => setLogModal(m => m ? { ...m, time: e.target.value } : null)}
+                className="w-full bg-slate-700 text-white rounded-xl px-4 py-2.5 text-center text-lg outline-none"
+              />
+            </div>
             <button
-              onClick={() => { logItem(logModal.supplement.id, logModal.qty); setLogModal(null) }}
+              onClick={() => { logItem(logModal.supplement.id, logModal.qty, logModal.time); setLogModal(null) }}
               className="w-full bg-green-600 hover:bg-green-500 text-white rounded-xl py-3 font-semibold transition-colors"
             >
               Confirmar — {logModal.qty} {logModal.supplement.doseUnit}

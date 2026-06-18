@@ -1,6 +1,6 @@
 import { useMemo } from 'react'
 import { useStore } from '../store'
-import { Supplement, LogEntry } from '../schema/types'
+import type { Supplement, LogEntry } from '../schema/types'
 import { getLocalDateStr } from '../utils/date'
 import { isScheduledToday, isAlertActive } from '../utils/schedule'
 
@@ -16,25 +16,28 @@ const TIMING_LABELS: Record<string, string> = {
   evening: 'Tarde-noche', night: 'Noche',
 }
 
-export function useToday() {
+export function useToday(date?: string) {
   const supplements = useStore(s => s.supplements)
   const dailyLogs = useStore(s => s.dailyLogs)
   const addLogEntry = useStore(s => s.addLogEntry)
   const editLogTimestamp = useStore(s => s.editLogTimestamp)
+  const removeLogEntry = useStore(s => s.removeLogEntry)
 
   const today = getLocalDateStr()
-  const todayLog = dailyLogs[today]
+  const activeDate = date ?? today
+  const isToday = activeDate === today
+  const todayLog = dailyLogs[activeDate]
   const takenEntries: LogEntry[] = todayLog?.entries ?? []
   const takenIds = new Set(takenEntries.map(e => e.supplementId))
 
   const active = useMemo(
-    () => Object.values(supplements).filter(s => s.active),
+    () => Object.values(supplements).filter(s => s.active && s.inStock !== false),
     [supplements]
   )
 
   const scheduledToday = useMemo(
-    () => active.filter(s => isScheduledToday(s, today)),
-    [active, today]
+    () => active.filter(s => isScheduledToday(s, activeDate)),
+    [active, activeDate]
   )
 
   const asNeeded = useMemo(
@@ -59,9 +62,18 @@ export function useToday() {
   const takenCount = takenIds.size
 
   return {
-    today, groups, asNeeded, takenIds, takenEntries, todayLog,
+    today, activeDate, isToday, groups, asNeeded, takenIds, takenEntries, todayLog,
     alerts, scheduledCount, takenCount,
-    logItem: (supplementId: string, quantity: number) => addLogEntry(supplementId, quantity),
-    editTimestamp: (entryId: string, newTimestamp: string) => editLogTimestamp(today, entryId, newTimestamp),
+    logItem: (supplementId: string, quantity: number, time?: string) => {
+      if (time) {
+        const [y, mo, d] = activeDate.split('-').map(Number)
+        const [h, mi] = time.split(':').map(Number)
+        const ts = new Date(y, mo - 1, d, h, mi, 0, 0).toISOString()
+        return addLogEntry(supplementId, quantity, ts)
+      }
+      return addLogEntry(supplementId, quantity)
+    },
+    editTimestamp: (entryId: string, newTimestamp: string) => editLogTimestamp(activeDate, entryId, newTimestamp),
+    removeEntry: (entryId: string) => removeLogEntry(activeDate, entryId),
   }
 }

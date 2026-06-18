@@ -1,8 +1,14 @@
 import { useState } from 'react'
-import { Supplement } from '../../schema/types'
+import type { Supplement } from '../../schema/types'
 import { useStore } from '../../store'
 
-type Props = { supplement: Supplement; onEdit: () => void }
+type Props = {
+  supplement: Supplement
+  onEdit: () => void
+  selectable?: boolean
+  selected?: boolean
+  onToggleSelect?: () => void
+}
 
 function scheduleLabel(s: Supplement): string {
   const { schedule } = s
@@ -15,25 +21,37 @@ function scheduleLabel(s: Supplement): string {
   return 'A demanda'
 }
 
-export function SupplementCard({ supplement: s, onEdit }: Props) {
+export function SupplementCard({ supplement: s, onEdit, selectable, selected, onToggleSelect }: Props) {
   const [open, setOpen] = useState(false)
   const deactivate = useStore(st => st.deactivateSupplement)
+  const setInStock = useStore(st => st.setInStock)
   const [confirming, setConfirming] = useState(false)
+  const inStock = s.inStock !== false
 
   return (
-    <div className="bg-slate-800 rounded-xl overflow-hidden">
+    <div className={`bg-slate-800 rounded-xl overflow-hidden transition-opacity ${inStock ? '' : 'opacity-50'}`}>
       {/* header row */}
-      <button onClick={() => setOpen(v => !v)} className="w-full text-left px-4 py-3 flex items-start justify-between gap-3">
+      <button
+        onClick={selectable ? onToggleSelect : () => setOpen(v => !v)}
+        className="w-full text-left px-4 py-3 flex items-start gap-3"
+      >
+        {selectable && (
+          <div className={`w-5 h-5 rounded-full border-2 flex items-center justify-center flex-shrink-0 mt-0.5 transition-colors ${
+            selected ? 'bg-sky-500 border-sky-500' : 'border-slate-500'
+          }`}>
+            {selected && <span className="text-white text-xs font-bold">✓</span>}
+          </div>
+        )}
         <div className="flex-1 min-w-0">
           <p className="text-white font-semibold truncate">{s.name}</p>
           {s.brand && <p className="text-slate-500 text-xs">{s.brand}</p>}
           <p className="text-slate-400 text-xs mt-0.5">{s.defaultDose} {s.doseUnit} · {scheduleLabel(s)}</p>
         </div>
-        <span className="text-slate-500 mt-1">{open ? '▲' : '▼'}</span>
+        {!selectable && <span className="text-slate-500 mt-1">{open ? '▲' : '▼'}</span>}
       </button>
 
       {/* detail */}
-      {open && (
+      {open && !selectable && (
         <div className="border-t border-slate-700 px-4 pb-4 space-y-4">
 
           {s.description && (
@@ -124,13 +142,23 @@ export function SupplementCard({ supplement: s, onEdit }: Props) {
           </div>
 
           {/* actions */}
-          <div className="flex gap-2 pt-1">
+          <div className="flex gap-2 pt-1 flex-wrap">
             <button onClick={onEdit} className="flex-1 border border-sky-600 text-sky-400 rounded-lg py-2 text-sm hover:bg-sky-600/10 transition-colors">
               Editar
             </button>
+            <button
+              onClick={() => setInStock(s.id, !inStock)}
+              className={`flex-1 rounded-lg py-2 text-sm transition-colors border ${
+                inStock
+                  ? 'border-slate-600 text-slate-400 hover:border-slate-400'
+                  : 'border-emerald-600/60 text-emerald-400 hover:bg-emerald-600/10'
+              }`}
+            >
+              {inStock ? 'Sin stock' : 'Con stock'}
+            </button>
             {!confirming
               ? <button onClick={() => setConfirming(true)} className="flex-1 border border-red-600/50 text-red-400 rounded-lg py-2 text-sm hover:bg-red-600/10 transition-colors">
-                  Desactivar
+                  Eliminar
                 </button>
               : <button onClick={() => { deactivate(s.id); setConfirming(false) }} className="flex-1 bg-red-600 text-white rounded-lg py-2 text-sm">
                   ¿Confirmar?

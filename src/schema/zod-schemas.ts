@@ -45,6 +45,7 @@ export const SupplementSchema = z.object({
   timing: z.enum(['morning', 'midday', 'afternoon', 'evening', 'night']).nullable(),
   nextDue: z.string().optional(),
   active: z.boolean(),
+  inStock: z.boolean().optional(),
   createdAt: z.string(),
   updatedAt: z.string(),
   version: z.number().int().nonnegative(),

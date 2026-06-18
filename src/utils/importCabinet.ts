@@ -7,7 +7,7 @@ export function importCabinet(
   existing: Record<string, Supplement>,
 ): { toAdd: SupplementInput[]; skipped: string[] } {
   const seen = new Set(
-    Object.values(existing).map(s => dedupeKey(s.name, s.brand))
+    Object.values(existing).filter(s => s.active).map(s => dedupeKey(s.name, s.brand))
   )
 
   const toAdd: SupplementInput[] = []

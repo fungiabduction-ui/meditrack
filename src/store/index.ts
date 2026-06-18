@@ -14,7 +14,9 @@ type Store = {
   deactivateSupplement: (id: string) => void
   addLogEntry: (supplementId: string, quantity: number, timestamp?: string) => LogEntry
   editLogTimestamp: (date: string, entryId: string, newTimestamp: string) => void
+  removeLogEntry: (date: string, entryId: string) => void
   sealPastDays: () => void
+  setInStock: (id: string, val: boolean) => void
 }
 
 function commitWrite(set: (s: Partial<Store>) => void, schema: StorageSchema) {
@@ -28,6 +30,8 @@ export const useStore = create<Store>((set, get) => ({
 
   init: () => {
     const schema = read()
+    // Repair: rewrite with canonical key order so checksum always matches
+    try { write(schema) } catch { /* ignore — state is loaded regardless */ }
     set({ supplements: schema.supplements, dailyLogs: schema.dailyLogs })
   },
 
@@ -114,6 +118,14 @@ export const useStore = create<Store>((set, get) => ({
     commitWrite(set, { ...read(), dailyLogs })
   },
 
+  removeLogEntry: (date, entryId) => {
+    const log = get().dailyLogs[date]
+    if (!log) return
+    const entries = log.entries.filter(e => e.id !== entryId)
+    const dailyLogs = { ...get().dailyLogs, [date]: { ...log, entries, updatedAt: new Date().toISOString() } }
+    commitWrite(set, { ...read(), dailyLogs })
+  },
+
   sealPastDays: () => {
     const today = getLocalDateStr()
     const logs = get().dailyLogs
@@ -139,5 +151,12 @@ export const useStore = create<Store>((set, get) => ({
       })
     )
     commitWrite(set, { ...read(), dailyLogs: { ...logs, ...updated } })
+  },
+
+  setInStock: (id, val) => {
+    const prev = get().supplements[id]
+    if (!prev) return
+    const supplements = { ...get().supplements, [id]: { ...prev, inStock: val, updatedAt: new Date().toISOString() } }
+    commitWrite(set, { ...read(), supplements })
   },
 }))

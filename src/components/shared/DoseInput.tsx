@@ -12,11 +12,7 @@ export function DoseInput({ value, unit, step, min = 0, onChange }: Props) {
   const dec = () => onChange(Math.max(min, parseFloat((value - step).toFixed(6))))
   const inc = () => onChange(parseFloat((value + step).toFixed(6)))
 
-  const quickpicks = step <= 0.25
-    ? [0.25, 0.5, 1, 2, 3, 4]
-    : step <= 0.5
-    ? [0.5, 1, 2, 3, 4]
-    : [1, 2, 3, 4]
+  const quickpicks = [0.25, 0.5, 1, 2, 3, 4]
 
   return (
     <div className="space-y-3">
