@@ -1,8 +1,8 @@
 {
   "_version": 1,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-18T16:05:26.156Z",
-  "_checksum": "9101c2c6",
+  "_updatedAt": "2026-06-18T16:59:25.000Z",
+  "_checksum": "008c121a",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -1215,13 +1215,201 @@
           "doseUnit": "cáps",
           "timestamp": "2026-06-18T05:00:00.000Z",
           "recordedAt": "2026-06-18T14:30:11.395Z"
+        },
+        {
+          "id": "81e5e1de-5641-46d7-adf8-adfc966abea6",
+          "supplementId": "675619f0-9702-42c0-a5aa-4a043f9033f7",
+          "supplementSnapshot": {
+            "name": "Shilajit Extract",
+            "doseUnit": "mg",
+            "category": "adaptogen",
+            "activeIngredients": [
+              {
+                "name": "Extracto de Shilajit",
+                "form": "purificado y estandarizado (ácido fúlvico)",
+                "amount": 1,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1000,
+          "doseUnit": "mg",
+          "timestamp": "2026-06-18T16:55:00.000Z",
+          "recordedAt": "2026-06-18T16:55:37.985Z"
+        },
+        {
+          "id": "5c9f4c6f-6994-4c30-b63e-1b4b0af13b7a",
+          "supplementId": "be516b47-20aa-4f1a-8182-e32f3e0b8b9c",
+          "supplementSnapshot": {
+            "name": "NMN Powder",
+            "doseUnit": "mg",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "NMN (Nicotinamida Mononucleótido)",
+                "form": "beta-NMN purificado",
+                "amount": 1,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1000,
+          "doseUnit": "mg",
+          "timestamp": "2026-06-18T16:55:00.000Z",
+          "recordedAt": "2026-06-18T16:55:51.839Z"
+        },
+        {
+          "id": "9dd018c5-29d8-4267-929b-05dc0d37c748",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-18T16:56:00.000Z",
+          "recordedAt": "2026-06-18T16:56:35.771Z"
+        },
+        {
+          "id": "e31e0d8a-b7ca-41b6-b996-ea6758f07a98",
+          "supplementId": "8a6ac53c-5f38-4055-899d-5b5f77915005",
+          "supplementSnapshot": {
+            "name": "Methylated B Complex",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina C (Acerola)",
+                "form": "ácido ascórbico natural",
+                "amount": 45,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina E",
+                "form": "tocoferol mixto",
+                "amount": 18,
+                "unit": "mg"
+              },
+              {
+                "name": "Tiamina (B1)",
+                "form": "tiamina HCl",
+                "amount": 100,
+                "unit": "mg"
+              },
+              {
+                "name": "Riboflavina (B2)",
+                "form": "Riboflavina-5-fosfato (R5P)",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Niacina (B3)",
+                "form": "niacinamida",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Ácido pantoténico (B5)",
+                "form": "pantotenato de calcio",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina B6",
+                "form": "Piridoxal-5-fosfato (P5P)",
+                "amount": 20,
+                "unit": "mg"
+              },
+              {
+                "name": "Biotina (B7)",
+                "form": "D-Biotina",
+                "amount": 2000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Folato (B9)",
+                "form": "L-Metilfolato (Methyl Folate)",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Vitamina B12",
+                "form": "Metilcobalamina",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Colina",
+                "form": "bitartrato de colina",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Inositol",
+                "form": "mio-inositol",
+                "amount": 20,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-18T16:57:00.000Z",
+          "recordedAt": "2026-06-18T16:57:08.409Z"
+        },
+        {
+          "id": "0123eb89-55f0-4024-8412-d6d8d0ee2c8c",
+          "supplementId": "e15cc4fd-ad88-40ec-8cd1-cd1aa39a8479",
+          "supplementSnapshot": {
+            "name": "DHEA 100mg",
+            "doseUnit": "cáps",
+            "category": "hormone",
+            "activeIngredients": [
+              {
+                "name": "DHEA (Dehidroepiandrosterona)",
+                "form": "micronizado, fuente vegetal",
+                "amount": 100,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 0.5,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-18T16:59:00.000Z",
+          "recordedAt": "2026-06-18T16:59:24.998Z"
         }
       ],
       "skipped": [],
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-18T13:48:36.285Z",
-      "updatedAt": "2026-06-18T14:30:11.395Z"
+      "updatedAt": "2026-06-18T16:59:24.998Z"
     },
     "2026-06-17": {
       "id": "a99a4fe0-866a-4202-9992-c7af3b2d3fb6",
