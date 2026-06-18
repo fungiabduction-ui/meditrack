@@ -1,4 +1,4 @@
-import type { StorageSchema, DailyLog, DailySymptoms } from '../schema/types'
+import type { StorageSchema, DailyLog, DailySymptoms, BloodWorkEntry } from '../schema/types'
 
 export type AnalysisExport = {
   exportedAt: string
@@ -17,7 +17,7 @@ export type AnalysisExport = {
     rate: number
   }
   weeklyAverages: Partial<Record<keyof DailySymptoms, number>>
-  bloodWork: unknown[]
+  bloodWork: BloodWorkEntry[]
 }
 
 type DayExport = {
@@ -131,7 +131,7 @@ export function buildAnalysisExport(schema: StorageSchema, from: string, to: str
     days,
     compliance: { totalScheduled, totalLogged, rate },
     weeklyAverages,
-    bloodWork: [],
+    bloodWork: (schema.bloodWork ?? []).filter(e => e.date >= from && e.date <= to).sort((a, b) => a.date.localeCompare(b.date)),
   }
 }
 
