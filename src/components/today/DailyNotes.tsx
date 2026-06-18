@@ -109,7 +109,8 @@ export function DailyNotes({ dateStr, notes, isToday }: Props) {
               }
               onKeyDown={handleKeyDown}
               placeholder={editing ? 'editando…' : 'escribir nota…'}
-              className="flex-1 bg-transparent text-slate-300 font-mono text-xs outline-none placeholder:text-slate-700"
+              className="flex-1 bg-transparent text-slate-300 font-mono outline-none placeholder:text-slate-700"
+              style={{ fontSize: '16px' }}
             />
             {editing && (
               <button
