@@ -6,6 +6,7 @@ import { useStore } from '../../store'
 import type { Supplement } from '../../schema/types'
 import { formatTimestamp, getLocalHHMM } from '../../utils/date'
 import { DailyNotes } from './DailyNotes'
+import { DailySymptoms } from './DailySymptoms'
 
 type LogModal = { supplement: Supplement; qty: number; time: string }
 type EditModal = { entryId: string; currentTs: string; value: string }
@@ -266,6 +267,10 @@ export function TodayView() {
       )}
 
       <DailyNotes dateStr={selectedDate} notes={todayNotes} isToday={isToday} />
+
+      <div className="px-4 mt-4">
+        <DailySymptoms key={selectedDate} dateStr={selectedDate} isToday={isToday} />
+      </div>
 
       {/* modal de log */}
       <Modal open={!!logModal} onClose={() => setLogModal(null)} title={logModal?.supplement.name ?? ''}>
