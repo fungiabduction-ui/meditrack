@@ -7,7 +7,7 @@ beforeEach(() => localStorage.clear())
 describe('read', () => {
   it('returns fresh schema when storage is empty', () => {
     const s = read()
-    expect(s._version).toBe(1)
+    expect(s._version).toBe(2)
     expect(s.supplements).toEqual({})
   })
 })
