@@ -56,6 +56,7 @@ export const LogEntrySchema = z.object({
   supplementId: z.string().uuid(),
   supplementSnapshot: z.object({
     name: z.string(),
+    brand: z.string().optional(),
     doseUnit: z.string(),
     category: SupplementSchema.shape.category,
     activeIngredients: z.array(ActiveIngredientSchema),
@@ -76,6 +77,17 @@ export const DayNoteSchema = z.object({
   editedAt: z.string().optional(),
 })
 
+export const DailySymptomsSchema = z.object({
+  energy: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)]),
+  libido: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)]),
+  sleep: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)]),
+  recovery: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)]),
+  mood: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)]),
+  erectionQuality: z.union([z.literal(1), z.literal(2), z.literal(3), z.literal(4), z.literal(5)]),
+  nippleSensitivity: z.boolean(),
+  orgasms: z.number().int().min(0),
+})
+
 export const DailyLogSchema = z.object({
   id: z.string().uuid(),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
@@ -86,6 +98,7 @@ export const DailyLogSchema = z.object({
     reason: z.string().optional(),
   })),
   notes: z.array(DayNoteSchema).default([]),
+  symptoms: DailySymptomsSchema.optional(),
   sealed: z.boolean(),
   checksum: z.string(),
   createdAt: z.string(),

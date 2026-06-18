@@ -61,6 +61,7 @@ export type Supplement = {
 
 export type SupplementSnapshot = {
   name: string
+  brand?: string
   doseUnit: string
   category: SupplementCategory
   activeIngredients: ActiveIngredient[]
@@ -92,12 +93,24 @@ export type SkippedItem = {
   reason?: string
 }
 
+export type DailySymptoms = {
+  energy: 1 | 2 | 3 | 4 | 5
+  libido: 1 | 2 | 3 | 4 | 5
+  sleep: 1 | 2 | 3 | 4 | 5
+  recovery: 1 | 2 | 3 | 4 | 5
+  mood: 1 | 2 | 3 | 4 | 5
+  erectionQuality: 1 | 2 | 3 | 4 | 5
+  nippleSensitivity: boolean
+  orgasms: number
+}
+
 export type DailyLog = {
   id: string
   date: string  // YYYY-MM-DD
   entries: LogEntry[]
   skipped: SkippedItem[]
   notes: DayNote[]
+  symptoms?: DailySymptoms
   sealed: boolean
   checksum: string
   createdAt: string
