@@ -1,8 +1,8 @@
 {
   "_version": 1,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-18T16:59:25.000Z",
-  "_checksum": "008c121a",
+  "_updatedAt": "2026-06-18T17:01:53.944Z",
+  "_checksum": "1dd5b80e",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -1055,6 +1055,36 @@
       "createdAt": "2026-06-18T15:11:45.722Z",
       "updatedAt": "2026-06-18T15:11:45.722Z",
       "version": 0
+    },
+    "4fe9e257-e7be-4a34-8082-9680a6b3adbd": {
+      "id": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+      "name": "Metformina AP",
+      "brand": "DBI",
+      "category": "medication",
+      "description": "",
+      "form": "Comprimidos",
+      "presentation": "100",
+      "activeIngredients": [
+        {
+          "name": "Metformina",
+          "form": "",
+          "amount": 1000,
+          "unit": "mg"
+        }
+      ],
+      "instructions": "",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "Ud",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T17:01:35.312Z",
+      "updatedAt": "2026-06-18T17:01:35.312Z",
+      "version": 0
     }
   },
   "dailyLogs": {
@@ -1403,13 +1433,35 @@
           "doseUnit": "cáps",
           "timestamp": "2026-06-18T16:59:00.000Z",
           "recordedAt": "2026-06-18T16:59:24.998Z"
+        },
+        {
+          "id": "51047e8e-ee46-4c8f-8699-318bcbdbb0ca",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-18T17:01:00.000Z",
+          "recordedAt": "2026-06-18T17:01:53.942Z"
         }
       ],
       "skipped": [],
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-18T13:48:36.285Z",
-      "updatedAt": "2026-06-18T16:59:24.998Z"
+      "updatedAt": "2026-06-18T17:01:53.942Z"
     },
     "2026-06-17": {
       "id": "a99a4fe0-866a-4202-9992-c7af3b2d3fb6",
