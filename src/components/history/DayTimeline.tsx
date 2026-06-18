@@ -1,5 +1,6 @@
 import type { DailyLog } from '../../schema/types'
 import { formatTimestamp } from '../../utils/date'
+import { computeWellbeingScore } from '../../utils/wellbeing'
 import { MetabolicSummary } from './MetabolicSummary'
 import { useStore } from '../../store'
 
@@ -10,16 +11,20 @@ export function DayTimeline({ log }: Props) {
   const sorted = [...log.entries].sort((a, b) => a.timestamp.localeCompare(b.timestamp))
   const total = sorted.length + log.skipped.length
   const adherence = total > 0 ? Math.round((sorted.length / total) * 100) : 100
+  const wellbeingScore = log.symptoms ? computeWellbeingScore(log.symptoms) : null
 
   return (
     <div className="space-y-4">
       {/* stats */}
-      <div className="flex gap-3">
+      <div className="flex gap-2 flex-wrap">
         <span className="bg-green-500/20 text-green-400 text-xs px-2 py-1 rounded-full">{sorted.length} tomados</span>
         {log.skipped.length > 0 && (
           <span className="bg-red-500/20 text-red-400 text-xs px-2 py-1 rounded-full">{log.skipped.length} omitidos</span>
         )}
         {log.sealed && <span className="bg-slate-700 text-slate-400 text-xs px-2 py-1 rounded-full">🔒 sellado</span>}
+        {wellbeingScore !== null && (
+          <span className="bg-violet-500/20 text-violet-400 text-xs px-2 py-1 rounded-full">⚡ {wellbeingScore}/100</span>
+        )}
         <span className="bg-slate-700 text-slate-400 text-xs px-2 py-1 rounded-full ml-auto">{adherence}%</span>
       </div>
 
@@ -40,6 +45,9 @@ export function DayTimeline({ log }: Props) {
                           <span className="text-slate-500 text-xs bg-slate-700 px-1.5 py-0.5 rounded">eliminado</span>
                         )}
                       </div>
+                      {e.supplementSnapshot.brand && (
+                        <p className="text-slate-500 text-xs">{e.supplementSnapshot.brand}</p>
+                      )}
                       <p className="text-slate-400 text-xs mt-0.5">
                         {e.quantity} {e.doseUnit}
                       </p>
