@@ -51,7 +51,7 @@ export function DailyNotes({ dateStr, notes, isToday }: Props) {
       <div className="bg-[#020617] border border-slate-800 rounded-xl overflow-hidden">
         <div ref={listRef} className="px-3 pt-3 pb-1 font-mono text-xs leading-relaxed max-h-48 overflow-y-auto">
           {notes.length === 0 && (
-            <p className="text-slate-700 mb-2">sin notas aún…</p>
+            <p className="text-green-900 mb-2">sin notas aún…</p>
           )}
           {notes.map(n => (
             <div
@@ -64,8 +64,8 @@ export function DailyNotes({ dateStr, notes, isToday }: Props) {
                 setActiveNote(activeNote === n.id ? null : n.id)
               }}
             >
-              <span className="text-slate-600 flex-shrink-0">[{formatTimestamp(n.timestamp)}]</span>
-              <span className="flex-1 break-words text-slate-400">{n.text}</span>
+              <span className="text-green-800 flex-shrink-0">[{formatTimestamp(n.timestamp)}]</span>
+              <span className="flex-1 break-words text-green-400">{n.text}</span>
               {isToday && activeNote === n.id && (
                 <span className="flex gap-2 flex-shrink-0 ml-1">
                   {confirmDelete === n.id ? (
@@ -99,7 +99,7 @@ export function DailyNotes({ dateStr, notes, isToday }: Props) {
 
         {isToday && (
           <div className="border-t border-slate-800 flex items-center gap-2 px-3 py-2">
-            <span className="text-sky-400 font-mono text-sm flex-shrink-0">›</span>
+            <span className="text-green-500 font-mono text-sm flex-shrink-0">›</span>
             <input
               ref={inputRef}
               value={editing ? editing.text : input}
@@ -109,19 +109,19 @@ export function DailyNotes({ dateStr, notes, isToday }: Props) {
               }
               onKeyDown={handleKeyDown}
               placeholder={editing ? 'editando…' : 'escribir nota…'}
-              className="flex-1 bg-transparent text-slate-300 font-mono outline-none placeholder:text-slate-700"
+              className="flex-1 bg-transparent text-green-400 font-mono outline-none placeholder:text-green-900"
               style={{ fontSize: '16px' }}
             />
             {editing && (
               <button
                 onClick={() => { setEditing(null); setActiveNote(null) }}
-                className="text-slate-600 text-xs"
+                className="text-green-900 text-xs"
               >✕</button>
             )}
             <button
               onClick={submit}
               disabled={!(editing ? editing.text.trim() : input.trim())}
-              className="text-slate-600 hover:text-sky-400 text-xs font-mono disabled:opacity-30 transition-colors"
+              className="text-green-800 hover:text-green-400 text-xs font-mono disabled:opacity-30 transition-colors"
             >↵</button>
           </div>
         )}
