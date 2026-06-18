@@ -39,7 +39,7 @@ export function CabinetView() {
           setToast({ message: `Archivo inválido: ${msg}`, type: 'error' })
           return
         }
-        const { toAdd, skipped } = importCabinet(result.data, supplements)
+        const { toAdd, skipped } = importCabinet(result.data, useStore.getState().supplements)
         toAdd.forEach(s => addSupplement(s))
         const added = toAdd.length
         const p = (count: number, word: string) => `${count} ${word}${count !== 1 ? 's' : ''}`
@@ -82,6 +82,7 @@ export function CabinetView() {
           <button
             onClick={handleExport}
             disabled={active.length === 0}
+            title="Exporta suplementos activos como JSON"
             className="bg-slate-700 hover:bg-slate-600 text-slate-200 rounded-lg px-3 py-2 text-sm font-medium transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
           >
             Exportar
