@@ -110,3 +110,9 @@ export type StorageSchema = {
   dailyLogs: Record<string, DailyLog>
   migrations: MigrationRecord[]
 }
+
+export type CabinetExport = {
+  version: 1
+  exportedAt: string
+  supplements: Supplement[]
+}

@@ -96,3 +96,9 @@ export const StorageSchemaSchema = z.object({
     appliedAt: z.string(),
   })),
 })
+
+export const CabinetExportSchema = z.object({
+  version: z.literal(1),
+  exportedAt: z.string(),
+  supplements: z.array(SupplementSchema),
+})
