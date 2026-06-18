@@ -4,6 +4,7 @@ import { useStorageHealth } from './hooks/useStorageHealth'
 import { TodayView } from './components/today/TodayView'
 import { CabinetView } from './components/cabinet/CabinetView'
 import { HistoryView } from './components/history/HistoryView'
+import { AnalysisView } from './components/analysis/AnalysisView'
 import { SettingsView } from './components/settings/SettingsView'
 
 class ErrorBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {
@@ -23,12 +24,13 @@ class ErrorBoundary extends Component<{ children: ReactNode }, { error: Error | 
   }
 }
 
-type Tab = 'today' | 'cabinet' | 'history' | 'settings'
+type Tab = 'today' | 'cabinet' | 'history' | 'analysis' | 'settings'
 
 const NAV: { id: Tab; label: string; icon: string }[] = [
   { id: 'today', label: 'Hoy', icon: '◎' },
   { id: 'cabinet', label: 'Botiquín', icon: '⬡' },
   { id: 'history', label: 'Historial', icon: '≡' },
+  { id: 'analysis', label: 'Análisis', icon: '∿' },
   { id: 'settings', label: 'Config', icon: '⚙️' },
 ]
 
@@ -55,6 +57,7 @@ export function App() {
           {tab === 'today' && <TodayView />}
           {tab === 'cabinet' && <CabinetView />}
           {tab === 'history' && <HistoryView />}
+          {tab === 'analysis' && <AnalysisView />}
           {tab === 'settings' && <SettingsView />}
         </main>
         <nav className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-md bg-slate-900/95 backdrop-blur border-t border-slate-800 flex">
