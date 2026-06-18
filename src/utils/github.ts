@@ -50,13 +50,7 @@ async function ghFetch(method: string, url: string, token: string, body?: unknow
     'Content-Type': 'application/json',
     Accept: 'application/vnd.github.v3+json',
   }
-  const init: RequestInit = { method, headers, body: body ? JSON.stringify(body) : undefined }
-  try {
-    return await fetch(url, init)
-  } catch {
-    const proxy = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`
-    return fetch(proxy, init)
-  }
+  return fetch(url, { method, headers, body: body ? JSON.stringify(body) : undefined })
 }
 
 export type GhTestResult = { ok: boolean; message: string }
