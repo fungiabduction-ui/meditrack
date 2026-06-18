@@ -135,7 +135,7 @@ export const useStore = create<Store>((set, get) => ({
           supplementName: s.name,
           reason: 'missed',
         }))
-        return [date, { ...log, sealed: true, skipped: newSkipped, updatedAt: new Date().toISOString() }]
+        return [date, { ...log, sealed: true, skipped: [...log.skipped, ...newSkipped], updatedAt: new Date().toISOString() }]
       })
     )
     commitWrite(set, { ...read(), dailyLogs: { ...logs, ...updated } })
