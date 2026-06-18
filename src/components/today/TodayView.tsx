@@ -1,25 +1,48 @@
-import { useState } from 'react'
+import { useState, useMemo, useRef, useEffect } from 'react'
 import { useToday } from '../../hooks/useToday'
-import { TimeGroup } from './TimeGroup'
 import { Modal } from '../shared/Modal'
 import { DoseInput } from '../shared/DoseInput'
-import { Supplement } from '../../schema/types'
+import { useStore } from '../../store'
+import type { Supplement } from '../../schema/types'
 import { formatTimestamp } from '../../utils/date'
 
 type LogModal = { supplement: Supplement; qty: number }
 type EditModal = { entryId: string; currentTs: string; value: string }
 
 export function TodayView() {
-  const { today, groups, asNeeded, takenIds, takenEntries, alerts, scheduledCount, takenCount, logItem, editTimestamp } = useToday()
+  const { today, groups, takenIds, takenEntries, alerts, scheduledCount, takenCount, logItem, editTimestamp } = useToday()
+  const supplements = useStore(s => s.supplements)
+
   const [logModal, setLogModal] = useState<LogModal | null>(null)
-  const [asNeededOpen, setAsNeededOpen] = useState(false)
   const [editModal, setEditModal] = useState<EditModal | null>(null)
+  const [search, setSearch] = useState('')
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+  const searchRef = useRef<HTMLInputElement>(null)
 
   const adherence = scheduledCount > 0 ? Math.round((takenCount / scheduledCount) * 100) : 100
 
   const dateLabel = new Date().toLocaleDateString('es-AR', {
     weekday: 'long', day: 'numeric', month: 'long'
   })
+
+  // Todos los suplementos activos para la búsqueda
+  const activeSups = useMemo(
+    () => Object.values(supplements).filter(s => s.active),
+    [supplements]
+  )
+
+  const searchResults = useMemo(() => {
+    if (!search.trim()) return []
+    const q = search.toLowerCase()
+    return activeSups.filter(s => s.name.toLowerCase().includes(q)).slice(0, 5)
+  }, [search, activeSups])
+
+  // Píldoras de pendientes (scheduled hoy, no tomados aún)
+  const pendingSupplements = useMemo(() => {
+    const pending: Supplement[] = []
+    for (const g of groups) pending.push(...g.items.filter(s => !takenIds.has(s.id)))
+    return pending
+  }, [groups, takenIds])
 
   const openEdit = (entryId: string, currentTs: string) => {
     setEditModal({ entryId, currentTs, value: formatTimestamp(currentTs) })
@@ -34,20 +57,86 @@ export function TodayView() {
     setEditModal(null)
   }
 
+  const selectResult = (s: Supplement) => {
+    setSearch('')
+    setDropdownOpen(false)
+    setLogModal({ supplement: s, qty: s.defaultDose })
+  }
+
+  // Cerrar dropdown al hacer click fuera
+  useEffect(() => {
+    const handler = (e: MouseEvent) => {
+      if (searchRef.current && !searchRef.current.closest('.search-wrap')?.contains(e.target as Node)) {
+        setDropdownOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handler)
+    return () => document.removeEventListener('mousedown', handler)
+  }, [])
+
   return (
     <div className="flex flex-col pb-24 min-h-full">
       {/* header */}
-      <div className="px-4 pt-6 pb-2">
+      <div className="px-4 pt-6 pb-3">
         <div className="flex justify-between items-start mb-1">
           <h1 className="text-lg font-bold text-white capitalize">{dateLabel}</h1>
-          <span className="text-green-400 font-bold">{adherence}%</span>
+          {scheduledCount > 0 && (
+            <span className={`text-xs font-bold px-2 py-0.5 rounded-full border ${
+              adherence === 100
+                ? 'text-green-400 bg-green-400/10 border-green-400/20'
+                : 'text-sky-400 bg-sky-400/10 border-sky-400/20'
+            }`}>{adherence}%</span>
+          )}
         </div>
-        <p className="text-slate-400 text-sm">{takenCount} de {scheduledCount} tomados</p>
+        <p className="text-slate-500 text-xs mb-3">{takenCount} de {scheduledCount} registrados</p>
+
+        {/* progress bar */}
+        {scheduledCount > 0 && (
+          <div className="h-1 bg-slate-800 rounded-full overflow-hidden mb-4">
+            <div
+              className="h-full bg-gradient-to-r from-sky-600 to-sky-400 rounded-full transition-all duration-500"
+              style={{ width: `${adherence}%` }}
+            />
+          </div>
+        )}
+
+        {/* buscador */}
+        <div className="search-wrap relative">
+          <div className="flex items-center gap-2 bg-white rounded-xl px-3 py-2.5 shadow-lg shadow-black/30">
+            <span className="text-slate-400 text-sm">🔍</span>
+            <input
+              ref={searchRef}
+              value={search}
+              onChange={e => { setSearch(e.target.value); setDropdownOpen(true) }}
+              onFocus={() => { if (search) setDropdownOpen(true) }}
+              placeholder="Buscar y registrar…"
+              className="flex-1 bg-transparent text-slate-800 text-sm outline-none placeholder:text-slate-400"
+            />
+            {search && (
+              <button onClick={() => { setSearch(''); setDropdownOpen(false) }} className="text-slate-400 text-xs">✕</button>
+            )}
+          </div>
+          {dropdownOpen && searchResults.length > 0 && (
+            <div className="absolute top-full left-0 right-0 mt-1 bg-white rounded-xl shadow-xl shadow-black/40 overflow-hidden z-10">
+              {searchResults.map(s => (
+                <button
+                  key={s.id}
+                  onClick={() => selectResult(s)}
+                  className="w-full flex items-center gap-3 px-3 py-2.5 hover:bg-slate-50 border-b border-slate-100 last:border-0 text-left"
+                >
+                  <span className={`w-2 h-2 rounded-full flex-shrink-0 ${takenIds.has(s.id) ? 'bg-green-500' : 'bg-slate-300'}`} />
+                  <span className="text-slate-800 text-sm font-medium flex-1">{s.name}</span>
+                  <span className="text-slate-400 text-xs">{s.defaultDose} {s.doseUnit}</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
       </div>
 
-      {/* alerts */}
+      {/* alertas */}
       {alerts.map(s => (
-        <div key={s.id} className="mx-4 mt-3 bg-slate-800 border border-red-500/30 rounded-xl p-3">
+        <div key={s.id} className="mx-4 mb-2 bg-slate-800 border border-red-500/30 rounded-xl p-3">
           <p className="text-red-400 text-xs font-semibold uppercase tracking-wide">⚠ Recordatorio</p>
           <p className="text-white font-medium mt-1">{s.name}</p>
           {s.nextDue && (
@@ -60,34 +149,42 @@ export function TodayView() {
         </div>
       ))}
 
-      {/* groups */}
-      <div className="px-4 mt-4 space-y-5">
-        {groups.length === 0 && (
-          <p className="text-slate-500 text-center py-12">No hay ítems programados para hoy.</p>
-        )}
-        {groups.map(g => (
-          <TimeGroup
-            key={g.slot}
-            group={g}
-            takenIds={takenIds}
-            takenEntries={takenEntries}
-            onLog={s => setLogModal({ supplement: s, qty: s.defaultDose })}
-          />
-        ))}
-      </div>
+      {/* pendientes */}
+      {pendingSupplements.length > 0 && (
+        <div className="px-4 mb-4">
+          <p className="text-slate-500 text-xs uppercase tracking-widest mb-2 px-1">Pendientes hoy</p>
+          <div className="flex flex-wrap gap-2">
+            {pendingSupplements.map(s => (
+              <button
+                key={s.id}
+                onClick={() => setLogModal({ supplement: s, qty: s.defaultDose })}
+                className="flex items-center gap-1.5 bg-slate-800 border border-slate-700 hover:border-slate-500 rounded-full px-3 py-1.5 text-xs text-slate-300 transition-colors"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-slate-500 flex-shrink-0" />
+                {s.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
 
-      {/* taken entries with edit option */}
+      {/* tomados hoy */}
       {takenEntries.length > 0 && (
-        <div className="px-4 mt-5">
-          <p className="text-slate-500 text-xs uppercase tracking-widest mb-2 px-1">Registro de hoy</p>
-          <div className="space-y-1">
-            {takenEntries
-              .slice()
+        <div className="px-4">
+          <p className="text-slate-500 text-xs uppercase tracking-widest mb-2 px-1">Tomados</p>
+          <div className="space-y-2">
+            {[...takenEntries]
               .sort((a, b) => a.timestamp.localeCompare(b.timestamp))
               .map(e => (
-                <div key={e.id} className="flex items-center justify-between py-1.5 px-2">
-                  <span className="text-slate-300 text-sm">{e.supplementSnapshot.name} · {e.quantity} {e.doseUnit}</span>
-                  <div className="flex items-center gap-2">
+                <div key={e.id} className="flex items-center gap-3 bg-slate-800 border border-slate-700 rounded-xl px-3 py-2.5">
+                  <div className="w-5 h-5 rounded-full bg-green-500/15 flex items-center justify-center flex-shrink-0">
+                    <span className="text-green-400 text-xs">✓</span>
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <p className="text-white text-sm font-medium truncate">{e.supplementSnapshot.name}</p>
+                    <p className="text-slate-500 text-xs">{e.quantity} {e.doseUnit}</p>
+                  </div>
+                  <div className="flex items-center gap-2 flex-shrink-0">
                     {e.timestampEditedFrom && (
                       <span className="text-slate-600 text-xs line-through">{formatTimestamp(e.timestampEditedFrom)}</span>
                     )}
@@ -104,19 +201,16 @@ export function TodayView() {
         </div>
       )}
 
-      {/* as_needed button */}
-      {asNeeded.length > 0 && (
-        <div className="px-4 mt-4">
-          <button
-            onClick={() => setAsNeededOpen(true)}
-            className="w-full border border-slate-700 text-slate-400 rounded-xl py-3 text-sm hover:bg-slate-800 transition-colors"
-          >
-            + Registrar ítem a demanda
-          </button>
+      {/* empty state */}
+      {takenEntries.length === 0 && pendingSupplements.length === 0 && (
+        <div className="flex-1 flex items-center justify-center py-16">
+          <p className="text-slate-600 text-sm text-center">
+            Buscá un suplemento arriba para registrarlo.
+          </p>
         </div>
       )}
 
-      {/* log modal */}
+      {/* modal de log */}
       <Modal open={!!logModal} onClose={() => setLogModal(null)} title={logModal?.supplement.name ?? ''}>
         {logModal && (
           <div className="space-y-4">
@@ -138,23 +232,7 @@ export function TodayView() {
         )}
       </Modal>
 
-      {/* as_needed modal */}
-      <Modal open={asNeededOpen} onClose={() => setAsNeededOpen(false)} title="Registrar a demanda">
-        <div className="space-y-2">
-          {asNeeded.map(s => (
-            <button
-              key={s.id}
-              onClick={() => { setAsNeededOpen(false); setLogModal({ supplement: s, qty: s.defaultDose }) }}
-              className="w-full text-left bg-slate-700 hover:bg-slate-600 rounded-xl p-3 transition-colors"
-            >
-              <p className="text-white font-medium">{s.name}</p>
-              <p className="text-slate-400 text-xs mt-0.5">{s.defaultDose} {s.doseUnit}</p>
-            </button>
-          ))}
-        </div>
-      </Modal>
-
-      {/* edit timestamp modal */}
+      {/* modal editar timestamp */}
       <Modal open={!!editModal} onClose={() => setEditModal(null)} title="Editar hora">
         {editModal && (
           <div className="space-y-4">
