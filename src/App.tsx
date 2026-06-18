@@ -1,4 +1,4 @@
-import { useEffect, useState, Component, ReactNode } from 'react'
+import { useEffect, useState, Component, type ReactNode } from 'react'
 import { useStore } from './store'
 import { useStorageHealth } from './hooks/useStorageHealth'
 import { TodayView } from './components/today/TodayView'

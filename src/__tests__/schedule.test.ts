@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import { isScheduledToday, calcNextDue, isAlertActive } from '../utils/schedule'
-import { Supplement } from '../schema/types'
+import type { Supplement } from '../schema/types'
 
 const base: Supplement = {
   id: '00000000-0000-0000-0000-000000000001',

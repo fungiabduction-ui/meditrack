@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach } from 'vitest'
-import { read, write, STORAGE_KEY } from '../storage/persistence'
+import { read, write } from '../storage/persistence'
 import { createFreshSchema } from '../storage/migrations'
 
 beforeEach(() => localStorage.clear())

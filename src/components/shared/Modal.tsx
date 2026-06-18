@@ -1,4 +1,4 @@
-import { useEffect, ReactNode } from 'react'
+import { useEffect, type ReactNode } from 'react'
 
 type Props = {
   open: boolean

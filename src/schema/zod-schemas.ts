@@ -89,8 +89,8 @@ export const StorageSchemaSchema = z.object({
   _createdAt: z.string(),
   _updatedAt: z.string(),
   _checksum: z.string(),
-  supplements: z.record(SupplementSchema),
-  dailyLogs: z.record(DailyLogSchema),
+  supplements: z.record(z.string(), SupplementSchema),
+  dailyLogs: z.record(z.string(), DailyLogSchema),
   migrations: z.array(z.object({
     from: z.number(),
     to: z.number(),
