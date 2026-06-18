@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import type { Supplement, LogEntry, DailyLog, StorageSchema, SkippedItem, DayNote } from '../schema/types'
+import type { Supplement, LogEntry, DailyLog, StorageSchema, SkippedItem, DayNote, DailySymptoms } from '../schema/types'
 import { read, write } from '../storage/persistence'
 import { generateId } from '../utils/id'
 import { getLocalDateStr } from '../utils/date'
@@ -20,6 +20,7 @@ type Store = {
   addDayNote: (dateStr: string, text: string) => void
   editDayNote: (dateStr: string, noteId: string, text: string) => void
   removeDayNote: (dateStr: string, noteId: string) => void
+  updateSymptoms: (dateStr: string, symptoms: DailySymptoms) => void
 }
 
 function commitWrite(set: (s: Partial<Store>) => void, schema: StorageSchema) {
@@ -76,6 +77,7 @@ export const useStore = create<Store>((set, get) => ({
       supplementId,
       supplementSnapshot: {
         name: s.name,
+        brand: s.brand,
         doseUnit: s.doseUnit,
         category: s.category,
         activeIngredients: s.activeIngredients,
@@ -189,6 +191,16 @@ export const useStore = create<Store>((set, get) => ({
     const now = new Date().toISOString()
     const notes = (log.notes ?? []).filter(n => n.id !== noteId)
     const dailyLogs = { ...get().dailyLogs, [dateStr]: { ...log, notes, updatedAt: now } }
+    commitWrite(set, { ...read(), dailyLogs })
+  },
+
+  updateSymptoms: (dateStr, symptoms) => {
+    const now = new Date().toISOString()
+    const existing = get().dailyLogs[dateStr]
+    const log: DailyLog = existing
+      ? { ...existing, symptoms, updatedAt: now }
+      : { id: generateId(), date: dateStr, entries: [], skipped: [], notes: [], symptoms, sealed: false, checksum: '', createdAt: now, updatedAt: now }
+    const dailyLogs = { ...get().dailyLogs, [dateStr]: log }
     commitWrite(set, { ...read(), dailyLogs })
   },
 }))

@@ -73,6 +73,30 @@ describe('deactivateSupplement', () => {
   })
 })
 
+describe('addLogEntry — brand snapshot', () => {
+  it('captura brand del suplemento en el snapshot', () => {
+    const s = useStore.getState().addSupplement({
+      name: 'Melatol', brand: 'NOW Foods', category: 'supplement', description: '', form: 'cáps',
+      activeIngredients: [], instructions: '1/noche', certifications: [],
+      schedule: { kind: 'as_needed' },
+      defaultDose: 1, doseUnit: 'cáps', doseStep: 1, timing: 'night',
+    })
+    const entry = useStore.getState().addLogEntry(s.id, 1)
+    expect(entry.supplementSnapshot.brand).toBe('NOW Foods')
+  })
+
+  it('brand es undefined si el suplemento no tiene marca', () => {
+    const s = useStore.getState().addSupplement({
+      name: 'Sin Marca', category: 'supplement', description: '', form: 'cáps',
+      activeIngredients: [], instructions: '1/día', certifications: [],
+      schedule: { kind: 'as_needed' },
+      defaultDose: 1, doseUnit: 'cáps', doseStep: 1, timing: null,
+    })
+    const entry = useStore.getState().addLogEntry(s.id, 1)
+    expect(entry.supplementSnapshot.brand).toBeUndefined()
+  })
+})
+
 describe('sealPastDays', () => {
   it('marca como missed los weekday supplements no logueados en días pasados', async () => {
     // Crear suplemento programado todos los días
