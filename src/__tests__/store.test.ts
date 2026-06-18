@@ -88,7 +88,7 @@ describe('sealPastDays', () => {
     const { read, write } = await import('../storage/persistence')
     const schema = read()
     schema.dailyLogs[yesterday] = {
-      id: crypto.randomUUID(), date: yesterday, entries: [], skipped: [],
+      id: crypto.randomUUID(), date: yesterday, entries: [], skipped: [], notes: [],
       sealed: false, checksum: '', createdAt: new Date().toISOString(), updatedAt: new Date().toISOString(),
     }
     write(schema)
@@ -123,7 +123,7 @@ describe('sealPastDays', () => {
         quantity: 4, doseUnit: 'cáps',
         timestamp: `${yesterday}T13:00:00.000Z`, recordedAt: `${yesterday}T13:00:00.000Z`,
       }],
-      skipped: [], sealed: false, checksum: '',
+      skipped: [], notes: [], sealed: false, checksum: '',
       createdAt: new Date().toISOString(), updatedAt: new Date().toISOString(),
     }
     write(schema)
@@ -141,7 +141,7 @@ describe('sealPastDays', () => {
     const { read, write } = await import('../storage/persistence')
     const schema = read()
     schema.dailyLogs[yesterday] = {
-      id: crypto.randomUUID(), date: yesterday, entries: [], skipped: [],
+      id: crypto.randomUUID(), date: yesterday, entries: [], skipped: [], notes: [],
       sealed: true, checksum: '', createdAt: new Date().toISOString(), updatedAt: new Date().toISOString(),
     }
     write(schema)

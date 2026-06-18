@@ -79,6 +79,13 @@ export type LogEntry = {
   recordedAt: string         // cuándo se presionó el botón — nunca editable
 }
 
+export type DayNote = {
+  id: string
+  text: string
+  timestamp: string
+  editedAt?: string
+}
+
 export type SkippedItem = {
   supplementId: string
   supplementName: string
@@ -90,6 +97,7 @@ export type DailyLog = {
   date: string  // YYYY-MM-DD
   entries: LogEntry[]
   skipped: SkippedItem[]
+  notes: DayNote[]
   sealed: boolean
   checksum: string
   createdAt: string

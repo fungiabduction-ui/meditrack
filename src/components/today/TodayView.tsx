@@ -5,6 +5,7 @@ import { DoseInput } from '../shared/DoseInput'
 import { useStore } from '../../store'
 import type { Supplement } from '../../schema/types'
 import { formatTimestamp, getLocalHHMM } from '../../utils/date'
+import { DailyNotes } from './DailyNotes'
 
 type LogModal = { supplement: Supplement; qty: number; time: string }
 type EditModal = { entryId: string; currentTs: string; value: string }
@@ -22,6 +23,7 @@ export function TodayView() {
   })
   const { today, isToday, groups, takenIds, takenEntries, alerts, scheduledCount, takenCount, logItem, editTimestamp, removeEntry } = useToday(selectedDate)
   const supplements = useStore(s => s.supplements)
+  const dailyLogs = useStore(s => s.dailyLogs)
 
   const [logModal, setLogModal] = useState<LogModal | null>(null)
   const [editModal, setEditModal] = useState<EditModal | null>(null)
@@ -31,6 +33,7 @@ export function TodayView() {
   const searchRef = useRef<HTMLInputElement>(null)
 
   const adherence = scheduledCount > 0 ? Math.round((takenCount / scheduledCount) * 100) : 100
+  const todayNotes = dailyLogs[selectedDate]?.notes ?? []
 
   const dateLabel = new Date(`${selectedDate}T12:00:00`).toLocaleDateString('es-AR', {
     weekday: 'long', day: 'numeric', month: 'long'
@@ -261,6 +264,8 @@ export function TodayView() {
           </p>
         </div>
       )}
+
+      <DailyNotes dateStr={selectedDate} notes={todayNotes} isToday={isToday} />
 
       {/* modal de log */}
       <Modal open={!!logModal} onClose={() => setLogModal(null)} title={logModal?.supplement.name ?? ''}>

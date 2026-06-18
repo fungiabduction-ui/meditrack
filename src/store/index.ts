@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import type { Supplement, LogEntry, DailyLog, StorageSchema, SkippedItem } from '../schema/types'
+import type { Supplement, LogEntry, DailyLog, StorageSchema, SkippedItem, DayNote } from '../schema/types'
 import { read, write } from '../storage/persistence'
 import { generateId } from '../utils/id'
 import { getLocalDateStr } from '../utils/date'
@@ -17,6 +17,9 @@ type Store = {
   removeLogEntry: (date: string, entryId: string) => void
   sealPastDays: () => void
   setInStock: (id: string, val: boolean) => void
+  addDayNote: (dateStr: string, text: string) => void
+  editDayNote: (dateStr: string, noteId: string, text: string) => void
+  removeDayNote: (dateStr: string, noteId: string) => void
 }
 
 function commitWrite(set: (s: Partial<Store>) => void, schema: StorageSchema) {
@@ -88,7 +91,7 @@ export const useStore = create<Store>((set, get) => ({
     const updatedLog: DailyLog = existing
       ? { ...existing, entries: [...existing.entries, entry], updatedAt: now.toISOString() }
       : {
-          id: generateId(), date: dateStr, entries: [entry], skipped: [],
+          id: generateId(), date: dateStr, entries: [entry], skipped: [], notes: [],
           sealed: false, checksum: '', createdAt: now.toISOString(), updatedAt: now.toISOString(),
         }
 
@@ -158,5 +161,34 @@ export const useStore = create<Store>((set, get) => ({
     if (!prev) return
     const supplements = { ...get().supplements, [id]: { ...prev, inStock: val, updatedAt: new Date().toISOString() } }
     commitWrite(set, { ...read(), supplements })
+  },
+
+  addDayNote: (dateStr, text) => {
+    const now = new Date().toISOString()
+    const note: DayNote = { id: generateId(), text, timestamp: now }
+    const existing = get().dailyLogs[dateStr]
+    const log: DailyLog = existing
+      ? { ...existing, notes: [...(existing.notes ?? []), note], updatedAt: now }
+      : { id: generateId(), date: dateStr, entries: [], skipped: [], notes: [note], sealed: false, checksum: '', createdAt: now, updatedAt: now }
+    const dailyLogs = { ...get().dailyLogs, [dateStr]: log }
+    commitWrite(set, { ...read(), dailyLogs })
+  },
+
+  editDayNote: (dateStr, noteId, text) => {
+    const log = get().dailyLogs[dateStr]
+    if (!log) return
+    const now = new Date().toISOString()
+    const notes = (log.notes ?? []).map(n => n.id === noteId ? { ...n, text, editedAt: now } : n)
+    const dailyLogs = { ...get().dailyLogs, [dateStr]: { ...log, notes, updatedAt: now } }
+    commitWrite(set, { ...read(), dailyLogs })
+  },
+
+  removeDayNote: (dateStr, noteId) => {
+    const log = get().dailyLogs[dateStr]
+    if (!log) return
+    const now = new Date().toISOString()
+    const notes = (log.notes ?? []).filter(n => n.id !== noteId)
+    const dailyLogs = { ...get().dailyLogs, [dateStr]: { ...log, notes, updatedAt: now } }
+    commitWrite(set, { ...read(), dailyLogs })
   },
 }))

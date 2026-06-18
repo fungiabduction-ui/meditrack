@@ -18,7 +18,7 @@ export function SettingsView() {
   const [ghCfg, setGhCfg] = useState<GhConfig | null>(loadGhConfig)
   const [tokenInput, setTokenInput] = useState(() => loadGhConfig()?.token ? '••••••••••••••••' : '')
   const [tokenDirty, setTokenDirty] = useState(false)
-  const [repo, setRepo] = useState(() => loadGhConfig()?.repo ?? '')
+  const [repo, setRepo] = useState(() => loadGhConfig()?.repo ?? 'fungiabduction-ui/meditrack')
   const [showToken, setShowToken] = useState(false)
   const [ghStatus, setGhStatus] = useState<{ ok: boolean; msg: string } | null>(null)
   const [loading, setLoading] = useState<string | null>(null)
@@ -269,16 +269,16 @@ export function SettingsView() {
               <button
                 onClick={handlePush}
                 disabled={!!loading}
-                className="bg-sky-700 hover:bg-sky-600 disabled:opacity-50 text-white text-xs font-bold py-2.5 rounded-lg transition-colors"
+                className="bg-sky-700 hover:bg-sky-600 disabled:opacity-50 text-white text-[10px] font-bold py-2.5 rounded-lg transition-colors"
               >
-                {loading === 'push' ? '…' : '⬆ Push'}
+                {loading === 'push' ? '…' : 'GUARDAR'}
               </button>
               <button
                 onClick={handlePull}
                 disabled={!!loading}
-                className="bg-slate-700 hover:bg-slate-600 disabled:opacity-50 text-slate-200 text-xs font-bold py-2.5 rounded-lg transition-colors border border-slate-600"
+                className="bg-slate-700 hover:bg-slate-600 disabled:opacity-50 text-slate-200 text-[10px] font-bold py-2.5 rounded-lg transition-colors border border-slate-600"
               >
-                {loading === 'pull' ? '…' : '⬇ Pull'}
+                {loading === 'pull' ? '…' : 'RESTABLECER'}
               </button>
               <button
                 onClick={handleTest}
