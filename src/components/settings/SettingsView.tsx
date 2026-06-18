@@ -4,9 +4,9 @@ import { read, write } from '../../storage/persistence'
 import { createFreshSchema } from '../../storage/migrations'
 import { StorageSchemaSchema } from '../../schema/zod-schemas'
 import {
-  saveGhConfig, loadGhConfig, ghTest, ghPush, ghPull,
+  saveGhConfig, loadGhConfig, ghTest, ghPush, ghPull, ghBackup, ghListBackups, ghRestoreBackup,
 } from '../../utils/github'
-import type { GhConfig } from '../../utils/github'
+import type { GhConfig, GhBackupFile } from '../../utils/github'
 
 type Toast = { msg: string; ok: boolean }
 
@@ -22,6 +22,8 @@ export function SettingsView() {
   const [showToken, setShowToken] = useState(false)
   const [ghStatus, setGhStatus] = useState<{ ok: boolean; msg: string } | null>(null)
   const [loading, setLoading] = useState<string | null>(null)
+  const [backupList, setBackupList] = useState<GhBackupFile[] | null>(null)
+  const [backupLoading, setBackupLoading] = useState(false)
   const [toast, setToast] = useState<Toast | null>(null)
   const [resetPhrase, setResetPhrase] = useState('')
   const [resetOpen, setResetOpen] = useState(false)
@@ -42,7 +44,10 @@ export function SettingsView() {
     const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' })
     const a = document.createElement('a')
     a.href = URL.createObjectURL(blob)
-    a.download = `meditrack-full-${new Date().toISOString().slice(0, 10)}.json`
+    const n = new Date()
+    const pad = (v: number) => String(v).padStart(2, '0')
+    const ts = `${pad(n.getDate())}_${pad(n.getMonth() + 1)}_${n.getFullYear()}_${pad(n.getHours())}${pad(n.getMinutes())}${pad(n.getSeconds())}`
+    a.download = `meditrack-backup - ${ts}.json`
     a.click()
     URL.revokeObjectURL(a.href)
     showToast('Backup exportado')
@@ -105,6 +110,56 @@ export function SettingsView() {
       showToast((err as Error).message, false)
     }
     setLoading(null)
+  }
+
+  async function handleBackup() {
+    const cfg = loadGhConfig()
+    if (!cfg) { showToast('Configurá GitHub primero', false); return }
+    setLoading('backup')
+    try {
+      const schema = read()
+      const path = await ghBackup(cfg, schema)
+      showToast(`Backup guardado: ${path}`)
+      setBackupList(null)
+    } catch (err) {
+      showToast((err as Error).message, false)
+    }
+    setLoading(null)
+  }
+
+  async function handleListBackups() {
+    const cfg = loadGhConfig()
+    if (!cfg) { showToast('Configurá GitHub primero', false); return }
+    setBackupLoading(true)
+    try {
+      const files = await ghListBackups(cfg)
+      setBackupList(files)
+    } catch (err) {
+      showToast((err as Error).message, false)
+    }
+    setBackupLoading(false)
+  }
+
+  async function handleRestoreBackup(path: string) {
+    const cfg = loadGhConfig()
+    if (!cfg) return
+    if (!confirm(`¿Restaurar backup "${path.split('/').pop()}"? Se perderán los datos actuales.`)) return
+    setBackupLoading(true)
+    try {
+      const data = await ghRestoreBackup(cfg, path)
+      const result = StorageSchemaSchema.safeParse(data)
+      if (!result.success) {
+        showToast(`Datos inválidos: ${result.error.issues[0]?.message}`, false)
+        setBackupLoading(false)
+        return
+      }
+      write(result.data)
+      init()
+      showToast('Backup restaurado ✓')
+    } catch (err) {
+      showToast((err as Error).message, false)
+    }
+    setBackupLoading(false)
   }
 
   async function handlePull() {
@@ -265,7 +320,7 @@ export function SettingsView() {
               Guardar configuración
             </button>
 
-            <div className="grid grid-cols-3 gap-2 pt-1">
+            <div className="grid grid-cols-2 gap-2 pt-1">
               <button
                 onClick={handlePush}
                 disabled={!!loading}
@@ -280,13 +335,51 @@ export function SettingsView() {
               >
                 {loading === 'pull' ? '…' : 'RESTABLECER'}
               </button>
+            </div>
+            <div className="grid grid-cols-2 gap-2">
+              <button
+                onClick={handleBackup}
+                disabled={!!loading}
+                className="bg-violet-900/60 hover:bg-violet-800/60 disabled:opacity-50 text-violet-300 text-[10px] font-bold py-2.5 rounded-lg transition-colors border border-violet-800"
+              >
+                {loading === 'backup' ? '…' : '📦 BACKUP'}
+              </button>
               <button
                 onClick={handleTest}
                 disabled={!!loading}
-                className="bg-emerald-900/60 hover:bg-emerald-800/60 disabled:opacity-50 text-emerald-400 text-xs font-bold py-2.5 rounded-lg transition-colors border border-emerald-800"
+                className="bg-emerald-900/60 hover:bg-emerald-800/60 disabled:opacity-50 text-emerald-400 text-[10px] font-bold py-2.5 rounded-lg transition-colors border border-emerald-800"
               >
-                {loading === 'test' ? '…' : '✓ Test'}
+                {loading === 'test' ? '…' : '✓ TEST'}
               </button>
+            </div>
+
+            {/* listado de backups GitHub */}
+            <div>
+              <button
+                onClick={handleListBackups}
+                disabled={backupLoading}
+                className="text-slate-500 text-xs underline disabled:opacity-50"
+              >
+                {backupLoading ? 'Cargando…' : 'Ver backups en GitHub'}
+              </button>
+              {backupList !== null && (
+                <div className="mt-2 space-y-1">
+                  {backupList.length === 0 && (
+                    <p className="text-slate-600 text-xs">Sin backups todavía.</p>
+                  )}
+                  {backupList.map(f => (
+                    <div key={f.path} className="flex items-center justify-between gap-2 bg-slate-900 border border-slate-700 rounded-lg px-3 py-1.5">
+                      <span className="text-slate-400 text-[10px] font-mono truncate">{f.name}</span>
+                      <button
+                        onClick={() => handleRestoreBackup(f.path)}
+                        className="flex-shrink-0 text-sky-400 text-[10px] font-bold hover:text-sky-300"
+                      >
+                        Restaurar
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
         </div>

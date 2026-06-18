@@ -116,6 +116,57 @@ export async function ghPush(cfg: GhConfig, data: unknown): Promise<void> {
   saveLastSync(cfg)
 }
 
+export type GhBackupFile = { name: string; path: string; sha: string }
+
+export async function ghBackup(cfg: GhConfig, data: unknown): Promise<string> {
+  const token = decToken(cfg.token)
+  if (!token || !cfg.repo) throw new Error('GitHub no configurado')
+
+  const now = new Date()
+  const pad = (v: number) => String(v).padStart(2, '0')
+  const ts = `${now.getFullYear()}${pad(now.getMonth() + 1)}${pad(now.getDate())}-${pad(now.getHours())}${pad(now.getMinutes())}${pad(now.getSeconds())}`
+  const path = `backups/meditrack-${ts}.json`
+  const content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))))
+
+  const r = await ghFetch('PUT', `https://api.github.com/repos/${cfg.repo}/contents/${path}`, token, {
+    message: `MediTrack backup · ${ts}`,
+    content,
+  })
+  if (!r.ok) {
+    const e = await r.json().catch(() => ({ message: r.statusText })) as { message: string }
+    throw new Error(e.message)
+  }
+  return path
+}
+
+export async function ghListBackups(cfg: GhConfig): Promise<GhBackupFile[]> {
+  const token = decToken(cfg.token)
+  if (!token || !cfg.repo) throw new Error('GitHub no configurado')
+
+  const r = await ghFetch('GET', `https://api.github.com/repos/${cfg.repo}/contents/backups`, token)
+  if (r.status === 404) return []
+  if (!r.ok) {
+    const e = await r.json().catch(() => ({ message: r.statusText })) as { message: string }
+    throw new Error(e.message)
+  }
+  const files = await r.json() as { name: string; path: string; sha: string }[]
+  return files.filter(f => f.name.endsWith('.json')).reverse()
+}
+
+export async function ghRestoreBackup(cfg: GhConfig, path: string): Promise<unknown> {
+  const token = decToken(cfg.token)
+  if (!token || !cfg.repo) throw new Error('GitHub no configurado')
+
+  const r = await ghFetch('GET', `https://api.github.com/repos/${cfg.repo}/contents/${path}`, token)
+  if (!r.ok) {
+    const e = await r.json().catch(() => ({ message: r.statusText })) as { message: string }
+    throw new Error(e.message)
+  }
+  const d = await r.json() as { content: string }
+  const decoded = decodeURIComponent(escape(atob(d.content.replace(/\n/g, ''))))
+  return JSON.parse(decoded)
+}
+
 export async function ghPull(cfg: GhConfig): Promise<unknown> {
   const token = decToken(cfg.token)
   if (!token || !cfg.repo) throw new Error('GitHub no configurado')
