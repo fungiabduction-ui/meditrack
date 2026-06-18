@@ -192,6 +192,4 @@ La dedup es por `name|brand` considerando solo suplementos activos (los soft-del
 
 ## Notas clínicas del usuario
 
-Ver `C:\Users\JET\Desktop\SALUD\CLAUDE.md` para contexto médico completo.  
-Paciente masculino, nacido 20/12/1986. Hipogonadismo. Hiperprolactinemia.  
-Los suplementos son parte de un protocolo de optimización hormonal.
+Ver `C:\Users\JET\Desktop\SALUD\CLAUDE.md` para contexto médico completo.
