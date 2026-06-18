@@ -1,8 +1,8 @@
 {
   "_version": 1,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-18T17:01:53.944Z",
-  "_checksum": "1dd5b80e",
+  "_updatedAt": "2026-06-18T20:16:26.329Z",
+  "_checksum": "b02af45e",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -1455,13 +1455,58 @@
           "doseUnit": "Ud",
           "timestamp": "2026-06-18T17:01:00.000Z",
           "recordedAt": "2026-06-18T17:01:53.942Z"
+        },
+        {
+          "id": "f47b625e-a8c2-49bc-b8fc-3fdfe5e90aa3",
+          "supplementId": "b813883e-e61d-42d9-8787-55330721c26f",
+          "supplementSnapshot": {
+            "name": "Tongkat Ali (2% Eurycomanone)",
+            "doseUnit": "cáps",
+            "category": "herb",
+            "activeIngredients": [
+              {
+                "name": "Extracto de raíz Tongkat Ali",
+                "form": "full-spectrum, estandarizado 2% eurycomanone",
+                "amount": 200,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-18T20:16:00.000Z",
+          "recordedAt": "2026-06-18T20:16:10.240Z"
+        },
+        {
+          "id": "7edc094d-409d-48af-b860-30a4b4ce055f",
+          "supplementId": "784eff85-1b12-4ad5-a7c2-273edf5108ad",
+          "supplementSnapshot": {
+            "name": "Creatina Monohidrato",
+            "doseUnit": "medida (5g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Creatina Monohidrato",
+                "form": "monohidrato",
+                "amount": 5000,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "medida (5g)",
+          "timestamp": "2026-06-18T20:16:00.000Z",
+          "recordedAt": "2026-06-18T20:16:26.327Z"
         }
       ],
       "skipped": [],
+      "notes": [],
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-18T13:48:36.285Z",
-      "updatedAt": "2026-06-18T17:01:53.942Z"
+      "updatedAt": "2026-06-18T20:16:26.327Z"
     },
     "2026-06-17": {
       "id": "a99a4fe0-866a-4202-9992-c7af3b2d3fb6",
@@ -1768,6 +1813,7 @@
         }
       ],
       "skipped": [],
+      "notes": [],
       "sealed": true,
       "checksum": "",
       "createdAt": "2026-06-18T14:10:19.444Z",
