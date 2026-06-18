@@ -123,6 +123,25 @@ export type MigrationRecord = {
   appliedAt: string
 }
 
+export type BloodMarker =
+  | 'tTotal'
+  | 'tLibre'
+  | 'e2'
+  | 'shbg'
+  | 'lh'
+  | 'fsh'
+  | 'hematocrito'
+  | 'psa'
+  | 'prolactina'
+
+export type BloodWorkEntry = {
+  id: string
+  date: string
+  values: Partial<Record<BloodMarker, number>>
+  notes?: string
+  createdAt: string
+}
+
 export type StorageSchema = {
   _version: number
   _createdAt: string
@@ -131,6 +150,7 @@ export type StorageSchema = {
   supplements: Record<string, Supplement>
   dailyLogs: Record<string, DailyLog>
   migrations: MigrationRecord[]
+  bloodWork: BloodWorkEntry[]
 }
 
 export type CabinetExport = {
