@@ -1,5 +1,6 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import { useStore } from '../store'
+import { getLocalDateStr } from '../utils/date'
 
 beforeEach(() => {
   localStorage.clear()
@@ -50,7 +51,7 @@ describe('editLogTimestamp', () => {
       defaultDose: 1, doseUnit: 'cáps', doseStep: 1, timing: 'morning',
     })
     const entry = useStore.getState().addLogEntry(s.id, 1)
-    const today = entry.timestamp.slice(0, 10)
+    const today = getLocalDateStr(new Date(entry.timestamp))
     const newTs = '2026-06-17T08:00:00.000Z'
     useStore.getState().editLogTimestamp(today, entry.id, newTs)
     const updatedEntry = useStore.getState().dailyLogs[today].entries.find(e => e.id === entry.id)!

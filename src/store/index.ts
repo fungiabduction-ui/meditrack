@@ -62,7 +62,7 @@ export const useStore = create<Store>((set, get) => ({
     if (!s) throw new Error(`Supplement not found: ${supplementId}`)
     const now = new Date()
     const ts = timestamp ?? now.toISOString()
-    const dateStr = ts.slice(0, 10)
+    const dateStr = getLocalDateStr(new Date(ts))
 
     const entry: LogEntry = {
       id: generateId(),
