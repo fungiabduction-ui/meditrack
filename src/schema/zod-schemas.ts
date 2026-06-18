@@ -1,5 +1,17 @@
 import { z } from 'zod'
 
+const zBloodMarker = z.enum([
+  'tTotal', 'tLibre', 'e2', 'shbg', 'lh', 'fsh', 'hematocrito', 'psa', 'prolactina',
+] as const)
+
+const zBloodWorkEntry = z.object({
+  id: z.string(),
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  values: z.record(zBloodMarker, z.number().nonnegative()).partial(),
+  notes: z.string().optional(),
+  createdAt: z.string(),
+})
+
 export const UnitTypeSchema = z.enum(['IU', 'mcg', 'mg', 'ml', 'g', 'caps', 'custom'])
 
 export const ActiveIngredientSchema = z.object({
@@ -117,6 +129,7 @@ export const StorageSchemaSchema = z.object({
     to: z.number(),
     appliedAt: z.string(),
   })),
+  bloodWork: z.array(zBloodWorkEntry).default([]),
 })
 
 export const CabinetExportSchema = z.object({
