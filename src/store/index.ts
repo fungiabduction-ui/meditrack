@@ -1,9 +1,9 @@
 import { create } from 'zustand'
-import { Supplement, LogEntry, DailyLog, StorageSchema } from '../schema/types'
+import type { Supplement, LogEntry, DailyLog, StorageSchema, SkippedItem } from '../schema/types'
 import { read, write } from '../storage/persistence'
 import { generateId } from '../utils/id'
 import { getLocalDateStr } from '../utils/date'
-import { calcNextDue } from '../utils/schedule'
+import { calcNextDue, isScheduledToday } from '../utils/schedule'
 
 type Store = {
   supplements: Record<string, Supplement>
@@ -117,10 +117,26 @@ export const useStore = create<Store>((set, get) => ({
   sealPastDays: () => {
     const today = getLocalDateStr()
     const logs = get().dailyLogs
+    const supplements = get().supplements
+    const active = Object.values(supplements).filter(s => s.active)
     const toSeal = Object.entries(logs).filter(([date, log]) => date < today && !log.sealed)
     if (toSeal.length === 0) return
+
     const updated = Object.fromEntries(
-      toSeal.map(([date, log]) => [date, { ...log, sealed: true, updatedAt: new Date().toISOString() }])
+      toSeal.map(([date, log]) => {
+        const loggedIds = new Set(log.entries.map(e => e.supplementId))
+        const missed = active.filter(s =>
+          s.schedule.kind === 'weekdays' &&
+          isScheduledToday(s, date) &&
+          !loggedIds.has(s.id)
+        )
+        const newSkipped: SkippedItem[] = missed.map(s => ({
+          supplementId: s.id,
+          supplementName: s.name,
+          reason: 'missed',
+        }))
+        return [date, { ...log, sealed: true, skipped: newSkipped, updatedAt: new Date().toISOString() }]
+      })
     )
     commitWrite(set, { ...read(), dailyLogs: { ...logs, ...updated } })
   },
