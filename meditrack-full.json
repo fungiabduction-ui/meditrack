@@ -1,8 +1,8 @@
 {
   "_version": 2,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-19T04:12:32.896Z",
-  "_checksum": "6347c02f",
+  "_updatedAt": "2026-06-19T04:56:53.245Z",
+  "_checksum": "2e989252",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -1983,6 +1983,29 @@
           "doseUnit": "Ud",
           "timestamp": "2026-06-19T04:12:00.000Z",
           "recordedAt": "2026-06-19T04:12:32.892Z"
+        },
+        {
+          "id": "c410bfc2-77c0-472f-a433-d55d1334ba5e",
+          "supplementId": "d52cd471-687a-4737-8c6f-cae1f4b605e5",
+          "supplementSnapshot": {
+            "name": "Cabergolina 0.5mg",
+            "brand": "Lactamax",
+            "doseUnit": "comprimidos",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Cabergolina",
+                "form": "agonista selectivo de receptores dopaminérgicos D2",
+                "amount": 0.5,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 0.5,
+          "doseUnit": "comprimidos",
+          "timestamp": "2026-06-19T04:56:00.000Z",
+          "recordedAt": "2026-06-19T04:56:53.242Z"
         }
       ],
       "skipped": [],
@@ -1990,7 +2013,7 @@
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-19T04:12:32.892Z",
-      "updatedAt": "2026-06-19T04:12:32.892Z"
+      "updatedAt": "2026-06-19T04:56:53.242Z"
     }
   },
   "migrations": [],
