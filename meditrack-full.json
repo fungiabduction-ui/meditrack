@@ -1,8 +1,8 @@
 {
   "_version": 2,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-19T04:59:11.604Z",
-  "_checksum": "1db7da5e",
+  "_updatedAt": "2026-06-19T05:33:53.360Z",
+  "_checksum": "9dcd03cf",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -1085,6 +1085,63 @@
       "createdAt": "2026-06-18T17:01:35.312Z",
       "updatedAt": "2026-06-18T17:01:35.312Z",
       "version": 0
+    },
+    "e86d8a9c-e003-4989-8698-71a3b73e5ba5": {
+      "id": "e86d8a9c-e003-4989-8698-71a3b73e5ba5",
+      "name": "HMB",
+      "brand": "Natural Whey Suplementos",
+      "category": "supplement",
+      "description": "HMB (Beta-hidroxi-beta-metilbutirato) es un metabolito del aminoácido esencial leucina. Actúa como un potente escudo anticatabólico que frena la destrucción muscular, reduce el daño post-entrenamiento y optimiza los tiempos de recuperación, favoreciendo el mantenimiento de la masa magra",
+      "form": "Polvo",
+      "activeIngredients": [
+        {
+          "name": "HMB (Beta-hidroxi-beta-metilbutirato)",
+          "form": "",
+          "amount": 1000,
+          "unit": "mg"
+        }
+      ],
+      "instructions": "",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "gr",
+      "doseStep": 1,
+      "timing": "morning",
+      "active": true,
+      "createdAt": "2026-06-19T05:30:58.142Z",
+      "updatedAt": "2026-06-19T05:30:58.142Z",
+      "version": 0
+    },
+    "276c265c-030c-4a2b-bae0-476739cf2817": {
+      "id": "276c265c-030c-4a2b-bae0-476739cf2817",
+      "name": "Magnesio citrato tribásico anhidro",
+      "category": "supplement",
+      "description": "El citrato de magnesio tribásico anhidro es una sal de magnesio altamente biodisponible compuesta por ácido cítrico y magnesio. Se utiliza como suplemento dietario y aditivo alimentario (E 345) por su rápida absorción y eficacia.Usos y BeneficiosSalud Muscular y Nerviosa: Previene calambres, apoya la función neuromuscular y ayuda a reducir la fatiga.\n\nDigestión: En dosis adecuadas, funciona como un laxante osmótico que atrae agua a los intestinos, ablandando las heces y aliviando el estreñimiento ocasional.\n\nDescanso y Estrés: Promueve la relajación, ayudando a disminuir el estrés, la ansiedad y mejorando la calidad del sueño.\n\nSalud Ósea: Contribuye a fijar el calcio en los huesos y fortalece la estructura ósea.",
+      "form": "",
+      "activeIngredients": [
+        {
+          "name": "Magnesio citrato tribásico anhidro",
+          "form": "",
+          "amount": 1000,
+          "unit": "mg"
+        }
+      ],
+      "instructions": "",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "gr",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-19T05:33:40.510Z",
+      "updatedAt": "2026-06-19T05:33:40.510Z",
+      "version": 0
     }
   },
   "dailyLogs": {
@@ -2053,6 +2110,51 @@
           "doseUnit": "ml",
           "timestamp": "2026-06-19T05:05:00.000Z",
           "recordedAt": "2026-06-19T04:59:11.603Z"
+        },
+        {
+          "id": "cf725f68-b8fb-4f12-995e-a0a0bc1a9b10",
+          "supplementId": "e86d8a9c-e003-4989-8698-71a3b73e5ba5",
+          "supplementSnapshot": {
+            "name": "HMB",
+            "brand": "Natural Whey Suplementos",
+            "doseUnit": "gr",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "HMB (Beta-hidroxi-beta-metilbutirato)",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 2,
+          "doseUnit": "gr",
+          "timestamp": "2026-06-19T05:31:00.000Z",
+          "recordedAt": "2026-06-19T05:31:15.389Z"
+        },
+        {
+          "id": "11ba7776-3400-480a-bb64-c3a7d709c77b",
+          "supplementId": "276c265c-030c-4a2b-bae0-476739cf2817",
+          "supplementSnapshot": {
+            "name": "Magnesio citrato tribásico anhidro",
+            "doseUnit": "gr",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Magnesio citrato tribásico anhidro",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "gr",
+          "timestamp": "2026-06-19T05:33:00.000Z",
+          "recordedAt": "2026-06-19T05:33:53.358Z"
         }
       ],
       "skipped": [],
@@ -2060,7 +2162,7 @@
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-19T04:12:32.892Z",
-      "updatedAt": "2026-06-19T04:59:11.603Z"
+      "updatedAt": "2026-06-19T05:33:53.358Z"
     }
   },
   "migrations": [],
