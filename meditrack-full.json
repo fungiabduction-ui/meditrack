@@ -1,8 +1,8 @@
 {
   "_version": 1,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-18T22:49:10.324Z",
-  "_checksum": "86abd9c8",
+  "_updatedAt": "2026-06-19T02:00:37.415Z",
+  "_checksum": "5a032ee4",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -1587,14 +1587,54 @@
           "doseUnit": "cáps",
           "timestamp": "2026-06-18T22:49:00.000Z",
           "recordedAt": "2026-06-18T22:49:10.321Z"
+        },
+        {
+          "id": "1dcdc191-0dc9-4d51-a659-35e4cc26778d",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-19T02:00:00.000Z",
+          "recordedAt": "2026-06-19T02:00:37.411Z"
         }
       ],
       "skipped": [],
-      "notes": [],
+      "notes": [
+        {
+          "id": "b76c42c7-4a68-4ab8-9efe-8fed0c9b382b",
+          "text": "Hoy me levanté y algo no estaba. Sin erecciones matutinas, lo noté enseguida. Intenté masturbarme y mi pene no respondía como siempre — se mojó, sentí que había excitación, pero no se ponía duro. Raro. No me había pasado antes.  Lo que sí me llamó la atención, y eso fue positivo, es que la mastodontia del pezón derecho — esa sensibilidad que tengo desde chico, hace más de veinte años — estaba al mínimo. Casi nada. Como si algo hubiera cambiado ahí de un día para el otro.  Un día extraño. Me apliqué la testosterona ayer, corté el clomifeno al mismo tiempo, y hoy el cuerpo me habló diferente. No me asusté, entiendo que es una transición, que el sistema está recalibrándose. Pero lo sentí. El cuerpo en pausa, buscando su nuevo punto de equilibrio.",
+          "timestamp": "2026-06-18T23:07:53.804Z"
+        }
+      ],
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-18T13:48:36.285Z",
-      "updatedAt": "2026-06-18T22:49:10.321Z"
+      "updatedAt": "2026-06-19T02:00:37.411Z"
     },
     "2026-06-17": {
       "id": "a99a4fe0-866a-4202-9992-c7af3b2d3fb6",
