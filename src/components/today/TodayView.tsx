@@ -226,12 +226,12 @@ export function TodayView() {
             <p className="text-slate-500 text-xs uppercase tracking-widest">Tomados</p>
             <div className="flex gap-1">
               <button
-                onClick={() => setSortMode('chronological')}
+                onClick={() => { setSortMode('chronological'); setConfirmDelete(null) }}
                 className={`text-sm px-1 rounded transition-colors ${sortMode === 'chronological' ? 'text-white' : 'text-slate-600 hover:text-slate-400'}`}
                 title="Orden cronológico"
               >🕐</button>
               <button
-                onClick={() => setSortMode('grouped')}
+                onClick={() => { setSortMode('grouped'); setConfirmDelete(null) }}
                 className={`text-sm px-1 rounded transition-colors ${sortMode === 'grouped' ? 'text-white' : 'text-slate-600 hover:text-slate-400'}`}
                 title="Agrupar por suplemento"
               >📦</button>

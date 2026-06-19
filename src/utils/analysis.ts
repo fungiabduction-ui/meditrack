@@ -5,7 +5,7 @@ function isEnanthateEntry(e: LogEntry): boolean {
   const ingMatch = e.supplementSnapshot.activeIngredients.some(
     i =>
       i.name.toLowerCase().includes('testosterona') &&
-      i.form.toLowerCase().includes('enantato')
+      (i.form?.toLowerCase() ?? '').includes('enantato')
   )
   return ingMatch || e.supplementSnapshot.name.toLowerCase().includes('enantato')
 }
