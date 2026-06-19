@@ -2,8 +2,6 @@ import { describe, it, expect } from 'vitest'
 import { computeWellbeingTrend, computeTRTCycleData, computeSupplementCorrelations } from '../utils/analysis'
 import type { DailyLog, Supplement } from '../schema/types'
 
-const ENANTHATE_ID = 'a0000000-0000-4000-8000-000000000011'
-
 const makeLog = (date: string, overrides: Partial<DailyLog> = {}): DailyLog => ({
   id: date, date, entries: [], skipped: [], notes: [],
   sealed: false, checksum: '', createdAt: date, updatedAt: date,
@@ -56,7 +54,27 @@ describe('computeTRTCycleData', () => {
     const injectDate = '2026-06-01'
     const logs = {
       [injectDate]: makeLog(injectDate, {
-        entries: [{ id: 'e1', supplementId: ENANTHATE_ID, supplementSnapshot: { name: 'T', brand: undefined, doseUnit: 'ml', category: 'medication', activeIngredients: [], version: 0 }, quantity: 0.4, doseUnit: 'ml', timestamp: `${injectDate}T20:00:00Z`, recordedAt: `${injectDate}T20:00:00Z` }],
+        entries: [{
+          id: 'e1',
+          supplementId: 'some-random-uuid',
+          supplementSnapshot: {
+            name: 'Testenat Depot Enantato 250mg',
+            brand: 'Landerlan Gold',
+            doseUnit: 'ml',
+            category: 'medication' as const,
+            activeIngredients: [{
+              name: 'Enantato de testosterona',
+              form: 'éster de acción prolongada',
+              amount: 250,
+              unit: 'mg' as const,
+            }],
+            version: 0,
+          },
+          quantity: 0.4,
+          doseUnit: 'ml',
+          timestamp: `${injectDate}T20:00:00Z`,
+          recordedAt: `${injectDate}T20:00:00Z`,
+        }],
       }),
       '2026-06-03': makeLog('2026-06-03', { symptoms: makeSym(4, 4, 4, 4, 4) }),
     }
