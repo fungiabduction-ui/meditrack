@@ -1,8 +1,8 @@
 {
   "_version": 1,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-19T15:00:51.028Z",
-  "_checksum": "b2eda041",
+  "_updatedAt": "2026-06-19T15:18:05.668Z",
+  "_checksum": "57fb98a8",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -2416,6 +2416,46 @@
           "doseUnit": "cáps",
           "timestamp": "2026-06-19T15:00:00.000Z",
           "recordedAt": "2026-06-19T15:00:51.026Z"
+        },
+        {
+          "id": "8757ec4f-4555-4ef1-b33f-cbcceb2bc2a1",
+          "supplementId": "acbc2e1f-09b8-4459-bd0d-77a9290f0d14",
+          "supplementSnapshot": {
+            "name": "Premium Whey Protein",
+            "doseUnit": "medida (30g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Proteína de Suero (WPC 80 / WPI)",
+                "form": "concentrado + isolado de suero de leche",
+                "amount": 25,
+                "unit": "g"
+              },
+              {
+                "name": "L-Leucina (BCAA)",
+                "form": "L-Leucina",
+                "amount": 2.7,
+                "unit": "g"
+              },
+              {
+                "name": "L-Isoleucina (BCAA)",
+                "form": "L-Isoleucina",
+                "amount": 1.5,
+                "unit": "g"
+              },
+              {
+                "name": "L-Valina (BCAA)",
+                "form": "L-Valina",
+                "amount": 1.4,
+                "unit": "g"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "medida (30g)",
+          "timestamp": "2026-06-19T15:18:00.000Z",
+          "recordedAt": "2026-06-19T15:18:05.664Z"
         }
       ],
       "skipped": [],
@@ -2429,7 +2469,7 @@
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-19T04:12:32.892Z",
-      "updatedAt": "2026-06-19T15:00:51.026Z"
+      "updatedAt": "2026-06-19T15:18:05.664Z"
     }
   },
   "migrations": []
