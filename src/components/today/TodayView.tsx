@@ -63,15 +63,15 @@ export function TodayView() {
 
   const groupedEntries = useMemo(() => {
     const order: string[] = []
-    const groups: Record<string, typeof takenEntries> = {}
+    const buckets: Record<string, typeof takenEntries> = {}
     for (const e of [...takenEntries].sort((a, b) => a.timestamp.localeCompare(b.timestamp))) {
-      if (!groups[e.supplementId]) {
-        groups[e.supplementId] = []
+      if (!buckets[e.supplementId]) {
+        buckets[e.supplementId] = []
         order.push(e.supplementId)
       }
-      groups[e.supplementId].push(e)
+      buckets[e.supplementId].push(e)
     }
-    return order.map(id => ({ supplementId: id, entries: groups[id] }))
+    return order.map(id => ({ supplementId: id, entries: buckets[id] }))
   }, [takenEntries])
 
   const openEdit = (entryId: string, currentTs: string) => {
