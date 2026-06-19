@@ -1,7 +1,14 @@
-import type { DailyLog, Supplement } from '../schema/types'
+import type { DailyLog, LogEntry, Supplement } from '../schema/types'
 import { computeWellbeingScore } from './wellbeing'
 
-const ENANTHATE_ID = 'a0000000-0000-4000-8000-000000000011'
+function isEnanthateEntry(e: LogEntry): boolean {
+  const ingMatch = e.supplementSnapshot.activeIngredients.some(
+    i =>
+      i.name.toLowerCase().includes('testosterona') &&
+      i.form.toLowerCase().includes('enantato')
+  )
+  return ingMatch || e.supplementSnapshot.name.toLowerCase().includes('enantato')
+}
 
 function addDaysStr(dateStr: string, n: number): string {
   const [y, m, d] = dateStr.split('-').map(Number)
@@ -45,7 +52,7 @@ export function computeTRTCycleData(
 ): Array<{ dayInCycle: number; avgScore: number; count: number }> {
   let lastInj: string | null = null
   for (const log of Object.values(dailyLogs)) {
-    if (log.entries.some(e => e.supplementId === ENANTHATE_ID)) {
+    if (log.entries.some(isEnanthateEntry)) {
       if (!lastInj || log.date > lastInj) lastInj = log.date
     }
   }
