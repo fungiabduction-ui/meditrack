@@ -4,7 +4,7 @@ import { Modal } from '../shared/Modal'
 import { DoseInput } from '../shared/DoseInput'
 import { useStore } from '../../store'
 import type { Supplement } from '../../schema/types'
-import { formatTimestamp, getLocalHHMM } from '../../utils/date'
+import { formatTimestamp, getLocalHHMM, getLocalDateStr } from '../../utils/date'
 import { DailyNotes } from './DailyNotes'
 import { DailySymptoms } from './DailySymptoms'
 
@@ -18,10 +18,7 @@ function offsetDate(base: string, days: number): string {
 }
 
 export function TodayView() {
-  const [selectedDate, setSelectedDate] = useState(() => {
-    const d = new Date()
-    return d.toISOString().slice(0, 10)
-  })
+  const [selectedDate, setSelectedDate] = useState(() => getLocalDateStr())
   const { today, isToday, groups, takenIds, takenEntries, alerts, scheduledCount, takenCount, logItem, editTimestamp, removeEntry } = useToday(selectedDate)
   const supplements = useStore(s => s.supplements)
   const dailyLogs = useStore(s => s.dailyLogs)
@@ -30,6 +27,7 @@ export function TodayView() {
   const [editModal, setEditModal] = useState<EditModal | null>(null)
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
   const [search, setSearch] = useState('')
+  const [sortMode, setSortMode] = useState<'chronological' | 'grouped'>('chronological')
   const [dropdownOpen, setDropdownOpen] = useState(false)
   const searchRef = useRef<HTMLInputElement>(null)
 
@@ -62,6 +60,19 @@ export function TodayView() {
     for (const g of groups) pending.push(...g.items.filter(s => !takenIds.has(s.id)))
     return pending
   }, [groups, takenIds])
+
+  const groupedEntries = useMemo(() => {
+    const order: string[] = []
+    const groups: Record<string, typeof takenEntries> = {}
+    for (const e of [...takenEntries].sort((a, b) => a.timestamp.localeCompare(b.timestamp))) {
+      if (!groups[e.supplementId]) {
+        groups[e.supplementId] = []
+        order.push(e.supplementId)
+      }
+      groups[e.supplementId].push(e)
+    }
+    return order.map(id => ({ supplementId: id, entries: groups[id] }))
+  }, [takenEntries])
 
   const openEdit = (entryId: string, currentTs: string) => {
     setEditModal({ entryId, currentTs, value: formatTimestamp(currentTs) })
@@ -211,49 +222,117 @@ export function TodayView() {
       {/* tomados hoy */}
       {takenEntries.length > 0 && (
         <div className="px-4">
-          <p className="text-slate-500 text-xs uppercase tracking-widest mb-2 px-1">Tomados</p>
-          <div className="space-y-2">
-            {[...takenEntries]
-              .sort((a, b) => a.timestamp.localeCompare(b.timestamp))
-              .map(e => (
-                <div key={e.id} className="flex items-center gap-3 bg-slate-800 border border-slate-700 rounded-xl px-3 py-2.5">
-                  <div className="w-5 h-5 rounded-full bg-green-500/15 flex items-center justify-center flex-shrink-0">
-                    <span className="text-green-400 text-xs">✓</span>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <p className="text-white text-sm font-medium truncate">{e.supplementSnapshot.name}</p>
-                    <p className="text-slate-500 text-xs">{e.quantity} {e.doseUnit}</p>
-                  </div>
-                  <div className="flex items-center gap-2 flex-shrink-0">
-                    {e.timestampEditedFrom && (
-                      <span className="text-slate-600 text-xs line-through">{formatTimestamp(e.timestampEditedFrom)}</span>
-                    )}
-                    {isToday ? (
-                      <button onClick={() => openEdit(e.id, e.timestamp)} className="text-sky-400 text-xs underline">
-                        {formatTimestamp(e.timestamp)}
-                      </button>
-                    ) : (
-                      <span className="text-slate-500 text-xs">{formatTimestamp(e.timestamp)}</span>
-                    )}
-                    {confirmDelete === e.id ? (
-                      <>
-                        <button
-                          onClick={() => { removeEntry(e.id); setConfirmDelete(null) }}
-                          className="text-red-400 text-xs font-semibold"
-                        >
-                          ¿Borrar?
+          <div className="flex items-center justify-between mb-2 px-1">
+            <p className="text-slate-500 text-xs uppercase tracking-widest">Tomados</p>
+            <div className="flex gap-1">
+              <button
+                onClick={() => setSortMode('chronological')}
+                className={`text-sm px-1 rounded transition-colors ${sortMode === 'chronological' ? 'text-white' : 'text-slate-600 hover:text-slate-400'}`}
+                title="Orden cronológico"
+              >🕐</button>
+              <button
+                onClick={() => setSortMode('grouped')}
+                className={`text-sm px-1 rounded transition-colors ${sortMode === 'grouped' ? 'text-white' : 'text-slate-600 hover:text-slate-400'}`}
+                title="Agrupar por suplemento"
+              >📦</button>
+            </div>
+          </div>
+
+          {sortMode === 'chronological' && (
+            <div className="space-y-2">
+              {[...takenEntries]
+                .sort((a, b) => a.timestamp.localeCompare(b.timestamp))
+                .map(e => (
+                  <div key={e.id} className="flex items-center gap-3 bg-slate-800 border border-slate-700 rounded-xl px-3 py-2.5">
+                    <div className="w-5 h-5 rounded-full bg-green-500/15 flex items-center justify-center flex-shrink-0">
+                      <span className="text-green-400 text-xs">✓</span>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <p className="text-white text-sm font-medium truncate">{e.supplementSnapshot.name}</p>
+                      {e.supplementSnapshot.brand && (
+                        <p className="text-slate-500 text-xs">{e.supplementSnapshot.brand}</p>
+                      )}
+                      <p className="text-slate-400 text-xs">{e.quantity} {e.doseUnit}</p>
+                    </div>
+                    <div className="flex items-center gap-2 flex-shrink-0">
+                      {e.timestampEditedFrom && (
+                        <span className="text-slate-600 text-xs line-through">{formatTimestamp(e.timestampEditedFrom)}</span>
+                      )}
+                      {isToday ? (
+                        <button onClick={() => openEdit(e.id, e.timestamp)} className="text-sky-400 text-xs underline">
+                          {formatTimestamp(e.timestamp)}
                         </button>
-                        <button onClick={() => setConfirmDelete(null)} className="text-slate-500 text-xs">✕</button>
-                      </>
-                    ) : (
-                      <button onClick={() => setConfirmDelete(e.id)} className="text-slate-600 hover:text-red-400 text-xs transition-colors">
-                        🗑
-                      </button>
+                      ) : (
+                        <span className="text-slate-500 text-xs">{formatTimestamp(e.timestamp)}</span>
+                      )}
+                      {confirmDelete === e.id ? (
+                        <>
+                          <button
+                            onClick={() => { removeEntry(e.id); setConfirmDelete(null) }}
+                            className="text-red-400 text-xs font-semibold"
+                          >
+                            ¿Borrar?
+                          </button>
+                          <button onClick={() => setConfirmDelete(null)} className="text-slate-500 text-xs">✕</button>
+                        </>
+                      ) : (
+                        <button onClick={() => setConfirmDelete(e.id)} className="text-slate-600 hover:text-red-400 text-xs transition-colors">
+                          🗑
+                        </button>
+                      )}
+                    </div>
+                  </div>
+                ))}
+            </div>
+          )}
+
+          {sortMode === 'grouped' && (
+            <div className="space-y-3">
+              {groupedEntries.map(({ supplementId, entries }) => (
+                <div key={supplementId} className="bg-slate-800 border border-slate-700 rounded-xl overflow-hidden">
+                  <div className="px-3 pt-2.5 pb-2 border-b border-slate-700">
+                    <p className="text-white text-sm font-medium">{entries[0].supplementSnapshot.name}</p>
+                    {entries[0].supplementSnapshot.brand && (
+                      <p className="text-slate-500 text-xs">{entries[0].supplementSnapshot.brand}</p>
                     )}
+                    <p className="text-slate-600 text-xs mt-0.5">{entries.length} {entries.length === 1 ? 'toma' : 'tomas'}</p>
+                  </div>
+                  <div className="divide-y divide-slate-700/50">
+                    {entries.map(e => (
+                      <div key={e.id} className="flex items-center gap-2 px-3 py-2">
+                        <span className="text-green-400 text-xs flex-shrink-0">✓</span>
+                        <span className="text-slate-300 text-xs flex-1">{e.quantity} {e.doseUnit}</span>
+                        <div className="flex items-center gap-2 flex-shrink-0">
+                          {isToday ? (
+                            <button onClick={() => openEdit(e.id, e.timestamp)} className="text-sky-400 text-xs underline">
+                              {formatTimestamp(e.timestamp)}
+                            </button>
+                          ) : (
+                            <span className="text-slate-500 text-xs">{formatTimestamp(e.timestamp)}</span>
+                          )}
+                          {confirmDelete === e.id ? (
+                            <>
+                              <button
+                                onClick={() => { removeEntry(e.id); setConfirmDelete(null) }}
+                                className="text-red-400 text-xs font-semibold"
+                              >
+                                ¿Borrar?
+                              </button>
+                              <button onClick={() => setConfirmDelete(null)} className="text-slate-500 text-xs">✕</button>
+                            </>
+                          ) : (
+                            <button onClick={() => setConfirmDelete(e.id)} className="text-slate-600 hover:text-red-400 text-xs transition-colors">
+                              🗑
+                            </button>
+                          )}
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               ))}
-          </div>
+            </div>
+          )}
         </div>
       )}
 
