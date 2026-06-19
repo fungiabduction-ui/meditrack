@@ -1,8 +1,8 @@
 {
   "_version": 2,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-19T04:56:53.245Z",
-  "_checksum": "2e989252",
+  "_updatedAt": "2026-06-19T04:59:11.604Z",
+  "_checksum": "1db7da5e",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -2006,6 +2006,53 @@
           "doseUnit": "comprimidos",
           "timestamp": "2026-06-19T04:56:00.000Z",
           "recordedAt": "2026-06-19T04:56:53.242Z"
+        },
+        {
+          "id": "b0007cd8-b2a3-43a2-9245-170f6478b9ea",
+          "supplementId": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+          "supplementSnapshot": {
+            "name": "Melatol 3mg",
+            "brand": "Gramon",
+            "doseUnit": "comp.",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Melatonina",
+                "form": "sintética",
+                "amount": 3,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.5,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-19T04:58:00.000Z",
+          "recordedAt": "2026-06-19T04:59:01.339Z"
+        },
+        {
+          "id": "a127ccae-fb63-4984-a1d3-ef297c6c30bb",
+          "supplementId": "233194d7-f954-486a-99e0-9f21a091925b",
+          "supplementSnapshot": {
+            "name": "GHK-Cu (Péptido de Cobre)",
+            "brand": "Revolution Pharma",
+            "doseUnit": "ml",
+            "category": "other",
+            "activeIngredients": [
+              {
+                "name": "GHK-Cu",
+                "form": "péptido de cobre (GHK-Cu)",
+                "amount": 16.667,
+                "unit": "mg",
+                "source": "síntesis química"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.1,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-19T05:05:00.000Z",
+          "recordedAt": "2026-06-19T04:59:11.603Z"
         }
       ],
       "skipped": [],
@@ -2013,7 +2060,7 @@
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-19T04:12:32.892Z",
-      "updatedAt": "2026-06-19T04:56:53.242Z"
+      "updatedAt": "2026-06-19T04:59:11.603Z"
     }
   },
   "migrations": [],
