@@ -96,7 +96,6 @@ export function DayTimeline({ log }: Props) {
                           )}
                         </div>
                       </div>
-                      <p className="text-slate-700 text-xs mt-1 font-mono">id: {e.id.slice(0,8)}…</p>
                     </div>
                   </div>
                 ))}
