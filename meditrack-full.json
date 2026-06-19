@@ -1,8 +1,8 @@
 {
   "_version": 2,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-19T02:01:43.851Z",
-  "_checksum": "3c3d6b97",
+  "_updatedAt": "2026-06-19T04:12:32.896Z",
+  "_checksum": "6347c02f",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -1641,10 +1641,10 @@
         "nippleSensitivity": false,
         "orgasms": 4
       },
-      "sealed": false,
+      "sealed": true,
       "checksum": "",
       "createdAt": "2026-06-18T13:48:36.285Z",
-      "updatedAt": "2026-06-19T02:01:43.850Z"
+      "updatedAt": "2026-06-19T04:09:37.904Z"
     },
     "2026-06-17": {
       "id": "a99a4fe0-866a-4202-9992-c7af3b2d3fb6",
@@ -1956,6 +1956,41 @@
       "checksum": "",
       "createdAt": "2026-06-18T14:10:19.444Z",
       "updatedAt": "2026-06-18T15:13:01.640Z"
+    },
+    "2026-06-19": {
+      "id": "0a11222c-d9f4-4d6b-85a2-115804313be0",
+      "date": "2026-06-19",
+      "entries": [
+        {
+          "id": "5a06456d-ba7f-405c-a415-8fab54701a37",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "brand": "DBI",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-19T04:12:00.000Z",
+          "recordedAt": "2026-06-19T04:12:32.892Z"
+        }
+      ],
+      "skipped": [],
+      "notes": [],
+      "sealed": false,
+      "checksum": "",
+      "createdAt": "2026-06-19T04:12:32.892Z",
+      "updatedAt": "2026-06-19T04:12:32.892Z"
     }
   },
   "migrations": [],
