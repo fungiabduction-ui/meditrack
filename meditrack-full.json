@@ -1,8 +1,8 @@
 {
   "_version": 2,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-19T05:33:53.360Z",
-  "_checksum": "9dcd03cf",
+  "_updatedAt": "2026-06-19T05:42:57.386Z",
+  "_checksum": "e94ebd0b",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -1106,14 +1106,14 @@
       "schedule": {
         "kind": "as_needed"
       },
-      "defaultDose": 1,
-      "doseUnit": "gr",
+      "defaultDose": 1000,
+      "doseUnit": "mg",
       "doseStep": 1,
-      "timing": "morning",
+      "timing": null,
       "active": true,
       "createdAt": "2026-06-19T05:30:58.142Z",
-      "updatedAt": "2026-06-19T05:30:58.142Z",
-      "version": 0
+      "updatedAt": "2026-06-19T05:40:32.232Z",
+      "version": 1
     },
     "276c265c-030c-4a2b-bae0-476739cf2817": {
       "id": "276c265c-030c-4a2b-bae0-476739cf2817",
@@ -1134,14 +1134,71 @@
       "schedule": {
         "kind": "as_needed"
       },
-      "defaultDose": 1,
-      "doseUnit": "gr",
+      "defaultDose": 1000,
+      "doseUnit": "mg",
       "doseStep": 1,
       "timing": null,
       "active": true,
       "createdAt": "2026-06-19T05:33:40.510Z",
-      "updatedAt": "2026-06-19T05:33:40.510Z",
-      "version": 0
+      "updatedAt": "2026-06-19T05:40:12.264Z",
+      "version": 1
+    },
+    "03e5e96e-b194-4c0b-a3e1-9fab2577ea55": {
+      "id": "03e5e96e-b194-4c0b-a3e1-9fab2577ea55",
+      "name": "Acido hialuronico",
+      "brand": "BULK",
+      "category": "supplement",
+      "description": "",
+      "form": "",
+      "activeIngredients": [
+        {
+          "name": "Acido hialuronico",
+          "form": "",
+          "amount": 399,
+          "unit": "mg"
+        }
+      ],
+      "instructions": "",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 400,
+      "doseUnit": "mg",
+      "doseStep": 400,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-19T05:37:49.815Z",
+      "updatedAt": "2026-06-19T05:42:18.729Z",
+      "version": 1
+    },
+    "94a088f3-0a9e-47a9-a663-390cab17bcc9": {
+      "id": "94a088f3-0a9e-47a9-a663-390cab17bcc9",
+      "name": "Colageno hidrolizado",
+      "category": "supplement",
+      "description": "",
+      "form": "",
+      "activeIngredients": [
+        {
+          "name": "Colageno hidrolizado",
+          "form": "",
+          "amount": 10,
+          "unit": "g"
+        }
+      ],
+      "instructions": "",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 10,
+      "doseUnit": "g",
+      "doseStep": 10,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-19T05:39:52.264Z",
+      "updatedAt": "2026-06-19T05:41:26.864Z",
+      "version": 2
     }
   },
   "dailyLogs": {
@@ -2155,6 +2212,28 @@
           "doseUnit": "gr",
           "timestamp": "2026-06-19T05:33:00.000Z",
           "recordedAt": "2026-06-19T05:33:53.358Z"
+        },
+        {
+          "id": "59bd9150-b0c2-4417-8509-59d17d098f6c",
+          "supplementId": "94a088f3-0a9e-47a9-a663-390cab17bcc9",
+          "supplementSnapshot": {
+            "name": "Colageno hidrolizado",
+            "doseUnit": "g",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Colageno hidrolizado",
+                "form": "",
+                "amount": 10,
+                "unit": "g"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 1,
+          "doseUnit": "g",
+          "timestamp": "2026-06-19T05:41:00.000Z",
+          "recordedAt": "2026-06-19T05:41:42.241Z"
         }
       ],
       "skipped": [],
@@ -2162,7 +2241,7 @@
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-19T04:12:32.892Z",
-      "updatedAt": "2026-06-19T05:33:53.358Z"
+      "updatedAt": "2026-06-19T05:42:57.385Z"
     }
   },
   "migrations": [],
