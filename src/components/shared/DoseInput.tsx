@@ -9,10 +9,10 @@ type Props = {
   onChange: (v: number) => void
 }
 
-function buildQuickpicks(defaultDose: number, min: number): number[] {
+function buildQuickpicks(defaultDose: number): number[] {
   return [0.25, 0.5, 1, 2, 3, 4]
     .map(m => parseFloat((defaultDose * m).toFixed(6)))
-    .filter(v => v >= min)
+    .filter(v => v > 0)
     .filter((v, i, a) => a.indexOf(v) === i)
 }
 
@@ -20,7 +20,7 @@ export function DoseInput({ value, unit, step, defaultDose, min = 0, onChange }:
   const dec = () => onChange(Math.max(min, parseFloat((value - step).toFixed(6))))
   const inc = () => onChange(parseFloat((value + step).toFixed(6)))
 
-  const quickpicks = buildQuickpicks(defaultDose, min)
+  const quickpicks = buildQuickpicks(defaultDose)
 
   return (
     <div className="space-y-3">
