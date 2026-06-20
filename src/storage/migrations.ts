@@ -1,7 +1,9 @@
 import type { StorageSchema } from '../schema/types'
 import { computeChecksum } from './checksum'
 
-export const CURRENT_VERSION = 2
+export const CURRENT_VERSION = 3
+
+const MASS_UNITS = new Set(['mg', 'g', 'mcg'])
 
 export function createFreshSchema(): StorageSchema {
   const now = new Date().toISOString()
@@ -30,7 +32,6 @@ export function migrate(version: number, data: unknown): StorageSchema {
       migrated.supplements = raw.supplements as StorageSchema['supplements']
     }
     migrated._checksum = computeChecksum({ supplements: migrated.supplements, dailyLogs: migrated.dailyLogs })
-    // fall through to v1→v2
     return migrate(1, migrated)
   }
 
@@ -45,6 +46,46 @@ export function migrate(version: number, data: unknown): StorageSchema {
         { from: 1, to: 2, appliedAt: new Date().toISOString() },
       ],
     }
+    return migrate(2, migrated)
+  }
+
+  if (version === 2) {
+    const raw = data as StorageSchema
+    const now = new Date().toISOString()
+
+    // Corregir activeIngredients.amount donde doseUnit es unidad de masa
+    // y el ingrediente se mide en la misma unidad. En ese caso amount debe ser 1.
+    const supplements = Object.fromEntries(
+      Object.entries(raw.supplements).map(([id, supp]) => {
+        const needsFix = supp.activeIngredients.some(
+          ing => MASS_UNITS.has(ing.unit) && ing.unit === supp.doseUnit && ing.amount !== 1
+        )
+        if (!needsFix) return [id, supp]
+
+        return [id, {
+          ...supp,
+          activeIngredients: supp.activeIngredients.map(ing => {
+            if (MASS_UNITS.has(ing.unit) && ing.unit === supp.doseUnit && ing.amount !== 1) {
+              return { ...ing, amount: 1 }
+            }
+            return ing
+          }),
+          updatedAt: now,
+          version: supp.version + 1,
+        }]
+      })
+    )
+
+    const migrated: StorageSchema = {
+      ...raw,
+      supplements,
+      _version: 3,
+      migrations: [
+        ...(raw.migrations ?? []),
+        { from: 2, to: 3, appliedAt: now },
+      ],
+    }
+    migrated._checksum = computeChecksum({ supplements: migrated.supplements, dailyLogs: migrated.dailyLogs })
     return migrated
   }
 
