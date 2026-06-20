@@ -1,8 +1,8 @@
 {
   "_version": 1,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-20T02:20:48.803Z",
-  "_checksum": "1f030cd1",
+  "_updatedAt": "2026-06-20T04:16:26.679Z",
+  "_checksum": "32a14d71",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -2526,6 +2526,124 @@
       "checksum": "",
       "createdAt": "2026-06-19T04:12:32.892Z",
       "updatedAt": "2026-06-20T02:20:48.800Z"
+    },
+    "2026-06-20": {
+      "id": "4d24222c-6749-49c0-9225-b555de21a845",
+      "date": "2026-06-20",
+      "entries": [
+        {
+          "id": "5a8639db-6ae1-4b40-9efa-5d733c9d5f01",
+          "supplementId": "acbc2e1f-09b8-4459-bd0d-77a9290f0d14",
+          "supplementSnapshot": {
+            "name": "Premium Whey Protein",
+            "doseUnit": "medida (30g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Proteína de Suero (WPC 80 / WPI)",
+                "form": "concentrado + isolado de suero de leche",
+                "amount": 25,
+                "unit": "g"
+              },
+              {
+                "name": "L-Leucina (BCAA)",
+                "form": "L-Leucina",
+                "amount": 2.7,
+                "unit": "g"
+              },
+              {
+                "name": "L-Isoleucina (BCAA)",
+                "form": "L-Isoleucina",
+                "amount": 1.5,
+                "unit": "g"
+              },
+              {
+                "name": "L-Valina (BCAA)",
+                "form": "L-Valina",
+                "amount": 1.4,
+                "unit": "g"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "medida (30g)",
+          "timestamp": "2026-06-20T04:15:00.000Z",
+          "recordedAt": "2026-06-20T04:15:17.261Z"
+        },
+        {
+          "id": "724f1426-5d18-49ea-b8ab-8513538dca97",
+          "supplementId": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+          "supplementSnapshot": {
+            "name": "Melatol 3mg",
+            "doseUnit": "comp.",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Melatonina",
+                "form": "sintética",
+                "amount": 3,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.5,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-20T04:15:00.000Z",
+          "recordedAt": "2026-06-20T04:15:27.189Z"
+        },
+        {
+          "id": "4c2fcc37-b784-41ef-90f9-3f62eba4d6ad",
+          "supplementId": "94a088f3-0a9e-47a9-a663-390cab17bcc9",
+          "supplementSnapshot": {
+            "name": "Colageno hidrolizado",
+            "doseUnit": "g",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Colageno hidrolizado",
+                "form": "",
+                "amount": 10,
+                "unit": "g"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 10,
+          "doseUnit": "g",
+          "timestamp": "2026-06-20T05:00:00.000Z",
+          "recordedAt": "2026-06-20T04:15:38.237Z"
+        },
+        {
+          "id": "d94279d6-d897-4dfa-8a78-f6d05d1c3349",
+          "supplementId": "03e5e96e-b194-4c0b-a3e1-9fab2577ea55",
+          "supplementSnapshot": {
+            "name": "Acido hialuronico",
+            "doseUnit": "mg",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Acido hialuronico",
+                "form": "",
+                "amount": 399,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 400,
+          "doseUnit": "mg",
+          "timestamp": "2026-06-20T05:00:00.000Z",
+          "recordedAt": "2026-06-20T04:16:26.678Z"
+        }
+      ],
+      "skipped": [],
+      "notes": [],
+      "sealed": false,
+      "checksum": "",
+      "createdAt": "2026-06-20T04:15:17.261Z",
+      "updatedAt": "2026-06-20T04:16:26.678Z"
     }
   },
   "migrations": []
