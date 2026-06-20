@@ -1,8 +1,8 @@
 {
   "_version": 1,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-19T15:18:05.668Z",
-  "_checksum": "57fb98a8",
+  "_updatedAt": "2026-06-20T02:20:48.803Z",
+  "_checksum": "1f030cd1",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -2456,6 +2456,62 @@
           "doseUnit": "medida (30g)",
           "timestamp": "2026-06-19T15:18:00.000Z",
           "recordedAt": "2026-06-19T15:18:05.664Z"
+        },
+        {
+          "id": "fd4625b1-ec1b-463d-8dbb-15330756be2e",
+          "supplementId": "e99872f1-ccfd-4158-a412-d4b2ac4c20a8",
+          "supplementSnapshot": {
+            "name": "Lipodrene",
+            "doseUnit": "comp.",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Extracto de Efedra (Ma Huang)",
+                "form": "extracto estandarizado",
+                "amount": 25,
+                "unit": "mg"
+              },
+              {
+                "name": "Cafeína Anhidra",
+                "form": "anhidra",
+                "amount": 100,
+                "unit": "mg"
+              },
+              {
+                "name": "Lipodrene Proprietary Blend",
+                "form": "blend (DMHA/2-aminoisoheptano, PEA, sinefrina, acacia rigidula, yohimbina, EGCG, naringenin y otros)",
+                "amount": 560,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-19T21:20:00.000Z",
+          "recordedAt": "2026-06-20T02:20:36.377Z"
+        },
+        {
+          "id": "f98dea3c-66f1-4dec-8ffb-71580ae9ee65",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-20T02:20:00.000Z",
+          "recordedAt": "2026-06-20T02:20:48.800Z"
         }
       ],
       "skipped": [],
@@ -2469,7 +2525,7 @@
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-19T04:12:32.892Z",
-      "updatedAt": "2026-06-19T15:18:05.664Z"
+      "updatedAt": "2026-06-20T02:20:48.800Z"
     }
   },
   "migrations": []
