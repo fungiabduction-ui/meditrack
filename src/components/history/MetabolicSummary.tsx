@@ -1,4 +1,5 @@
 import type { LogEntry } from '../../schema/types'
+import { calcIngAmount } from '../../utils/units'
 
 type Props = { entries: LogEntry[] }
 
@@ -10,7 +11,7 @@ export function MetabolicSummary({ entries }: Props) {
       const key = `${ing.name}__${ing.unit}`
       const prev = totals.get(key)
       totals.set(key, {
-        amount: (prev?.amount ?? 0) + ing.amount * entry.quantity,
+        amount: (prev?.amount ?? 0) + calcIngAmount(ing.amount, ing.unit, entry.doseUnit, entry.quantity),
         unit: ing.unit,
       })
     }
