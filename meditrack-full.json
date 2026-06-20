@@ -1,8 +1,8 @@
 {
-  "_version": 1,
+  "_version": 3,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-20T05:03:03.485Z",
-  "_checksum": "11f83022",
+  "_updatedAt": "2026-06-20T05:08:41.712Z",
+  "_checksum": "a7eae4fc",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -774,7 +774,7 @@
         {
           "name": "GHK-Cu",
           "form": "Glicil-L-Histidil-L-Lisina-Cobre, péptido de cobre tripeptídico",
-          "amount": 50,
+          "amount": 1,
           "unit": "mg"
         }
       ],
@@ -791,8 +791,8 @@
       "timing": null,
       "active": false,
       "createdAt": "2026-06-18T13:42:59.962Z",
-      "updatedAt": "2026-06-18T14:29:04.202Z",
-      "version": 2
+      "updatedAt": "2026-06-20T05:08:41.699Z",
+      "version": 3
     },
     "233194d7-f954-486a-99e0-9f21a091925b": {
       "id": "233194d7-f954-486a-99e0-9f21a091925b",
@@ -1097,7 +1097,7 @@
         {
           "name": "HMB (Beta-hidroxi-beta-metilbutirato)",
           "form": "",
-          "amount": 1000,
+          "amount": 1,
           "unit": "mg"
         }
       ],
@@ -1112,8 +1112,8 @@
       "timing": null,
       "active": true,
       "createdAt": "2026-06-19T05:30:58.142Z",
-      "updatedAt": "2026-06-19T05:40:32.232Z",
-      "version": 1
+      "updatedAt": "2026-06-20T05:08:41.699Z",
+      "version": 2
     },
     "276c265c-030c-4a2b-bae0-476739cf2817": {
       "id": "276c265c-030c-4a2b-bae0-476739cf2817",
@@ -1125,7 +1125,7 @@
         {
           "name": "Magnesio citrato tribásico anhidro",
           "form": "",
-          "amount": 1000,
+          "amount": 1,
           "unit": "mg"
         }
       ],
@@ -1140,8 +1140,8 @@
       "timing": null,
       "active": true,
       "createdAt": "2026-06-19T05:33:40.510Z",
-      "updatedAt": "2026-06-19T05:40:12.264Z",
-      "version": 1
+      "updatedAt": "2026-06-20T05:08:41.699Z",
+      "version": 2
     },
     "03e5e96e-b194-4c0b-a3e1-9fab2577ea55": {
       "id": "03e5e96e-b194-4c0b-a3e1-9fab2577ea55",
@@ -1154,7 +1154,7 @@
         {
           "name": "Acido hialuronico",
           "form": "",
-          "amount": 399,
+          "amount": 1,
           "unit": "mg"
         }
       ],
@@ -1169,8 +1169,8 @@
       "timing": null,
       "active": true,
       "createdAt": "2026-06-19T05:37:49.815Z",
-      "updatedAt": "2026-06-19T05:42:18.729Z",
-      "version": 1
+      "updatedAt": "2026-06-20T05:08:41.699Z",
+      "version": 2
     },
     "94a088f3-0a9e-47a9-a663-390cab17bcc9": {
       "id": "94a088f3-0a9e-47a9-a663-390cab17bcc9",
@@ -1182,7 +1182,7 @@
         {
           "name": "Colageno hidrolizado",
           "form": "",
-          "amount": 10,
+          "amount": 1,
           "unit": "g"
         }
       ],
@@ -1197,8 +1197,8 @@
       "timing": null,
       "active": true,
       "createdAt": "2026-06-19T05:39:52.264Z",
-      "updatedAt": "2026-06-19T05:41:26.864Z",
-      "version": 2
+      "updatedAt": "2026-06-20T05:08:41.699Z",
+      "version": 3
     }
   },
   "dailyLogs": {
@@ -2522,10 +2522,10 @@
           "timestamp": "2026-06-19T14:32:01.379Z"
         }
       ],
-      "sealed": false,
+      "sealed": true,
       "checksum": "",
       "createdAt": "2026-06-19T04:12:32.892Z",
-      "updatedAt": "2026-06-20T02:20:48.800Z"
+      "updatedAt": "2026-06-20T05:08:41.709Z"
     },
     "2026-06-20": {
       "id": "4d24222c-6749-49c0-9225-b555de21a845",
@@ -2669,5 +2669,17 @@
       "updatedAt": "2026-06-20T05:03:03.484Z"
     }
   },
-  "migrations": []
+  "migrations": [
+    {
+      "from": 1,
+      "to": 2,
+      "appliedAt": "2026-06-20T05:08:41.699Z"
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "appliedAt": "2026-06-20T05:08:41.699Z"
+    }
+  ],
+  "bloodWork": []
 }
