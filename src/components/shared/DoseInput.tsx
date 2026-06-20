@@ -1,18 +1,26 @@
+const FRACTION_LABELS: Record<number, string> = { 0.25: '¼', 0.5: '½' }
+
 type Props = {
   value: number
   unit: string
   step: number
+  defaultDose: number
   min?: number
   onChange: (v: number) => void
 }
 
-const FRACTION_LABELS: Record<number, string> = { 0.25: '¼', 0.5: '½' }
+function buildQuickpicks(defaultDose: number, min: number): number[] {
+  return [0.25, 0.5, 1, 2, 3, 4]
+    .map(m => parseFloat((defaultDose * m).toFixed(6)))
+    .filter(v => v >= min)
+    .filter((v, i, a) => a.indexOf(v) === i)
+}
 
-export function DoseInput({ value, unit, step, min = 0, onChange }: Props) {
+export function DoseInput({ value, unit, step, defaultDose, min = 0, onChange }: Props) {
   const dec = () => onChange(Math.max(min, parseFloat((value - step).toFixed(6))))
   const inc = () => onChange(parseFloat((value + step).toFixed(6)))
 
-  const quickpicks = [0.25, 0.5, 1, 2, 3, 4]
+  const quickpicks = buildQuickpicks(defaultDose, min)
 
   return (
     <div className="space-y-3">
