@@ -1,8 +1,8 @@
 {
   "_version": 1,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-20T04:16:26.679Z",
-  "_checksum": "32a14d71",
+  "_updatedAt": "2026-06-20T05:03:03.485Z",
+  "_checksum": "11f83022",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -2636,6 +2636,29 @@
           "doseUnit": "mg",
           "timestamp": "2026-06-20T05:00:00.000Z",
           "recordedAt": "2026-06-20T04:16:26.678Z"
+        },
+        {
+          "id": "81e136c7-bf0e-420d-890c-01029bbe0d65",
+          "supplementId": "233194d7-f954-486a-99e0-9f21a091925b",
+          "supplementSnapshot": {
+            "name": "GHK-Cu (Péptido de Cobre)",
+            "doseUnit": "ml",
+            "category": "other",
+            "activeIngredients": [
+              {
+                "name": "GHK-Cu",
+                "form": "péptido de cobre (GHK-Cu)",
+                "amount": 16.667,
+                "unit": "mg",
+                "source": "síntesis química"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.1,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-20T05:03:00.000Z",
+          "recordedAt": "2026-06-20T05:03:03.484Z"
         }
       ],
       "skipped": [],
@@ -2643,7 +2666,7 @@
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-20T04:15:17.261Z",
-      "updatedAt": "2026-06-20T04:16:26.678Z"
+      "updatedAt": "2026-06-20T05:03:03.484Z"
     }
   },
   "migrations": []
