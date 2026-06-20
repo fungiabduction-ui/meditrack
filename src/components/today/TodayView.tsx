@@ -360,6 +360,7 @@ export function TodayView() {
               value={logModal.qty}
               unit={logModal.supplement.doseUnit}
               step={logModal.supplement.doseStep}
+              defaultDose={logModal.supplement.defaultDose}
               min={logModal.supplement.doseStep}
               onChange={qty => setLogModal(m => m ? { ...m, qty } : null)}
             />
