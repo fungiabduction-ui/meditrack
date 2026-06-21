@@ -26,6 +26,6 @@ export function getSuggestedRegulars(
       (dailyLogs[date]?.entries ?? []).some(e => e.supplementId === s.id)
     ).length
 
-    return daysAppeared >= 5
+    return daysAppeared >= 2
   })
 }
