@@ -1,8 +1,8 @@
 {
   "_version": 3,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-21T13:13:27.129Z",
-  "_checksum": "e1eb0017",
+  "_updatedAt": "2026-06-21T13:21:54.242Z",
+  "_checksum": "93226954",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -1199,6 +1199,35 @@
       "createdAt": "2026-06-19T05:39:52.264Z",
       "updatedAt": "2026-06-20T05:08:41.699Z",
       "version": 3
+    },
+    "969ab0cd-87ce-4036-a669-fc1e84382015": {
+      "id": "969ab0cd-87ce-4036-a669-fc1e84382015",
+      "name": "Clembuterol",
+      "brand": "FM",
+      "category": "medication",
+      "description": "El Clembuterol FM 0.08 mg es un fármaco broncodilatador de uso exclusivo veterinario (generalmente indicado para equinos). En Argentina, no está aprobado para consumo humano, pero es ilegalmente buscado para la oxidación de grasa y retención muscular en el culturismo.",
+      "form": "",
+      "activeIngredients": [
+        {
+          "name": "Clembuterol",
+          "form": "",
+          "amount": 0.08,
+          "unit": "mg"
+        }
+      ],
+      "instructions": "",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "ud",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-21T13:21:08.937Z",
+      "updatedAt": "2026-06-21T13:21:08.937Z",
+      "version": 0
     }
   },
   "dailyLogs": {
@@ -2898,6 +2927,133 @@
       "checksum": "",
       "createdAt": "2026-06-20T04:15:17.261Z",
       "updatedAt": "2026-06-21T13:13:27.128Z"
+    },
+    "2026-06-21": {
+      "id": "09d9de82-78b3-46e5-9228-571562d4d903",
+      "date": "2026-06-21",
+      "entries": [
+        {
+          "id": "460d0d22-8ac3-4d8f-9ae5-524c6994a06b",
+          "supplementId": "233194d7-f954-486a-99e0-9f21a091925b",
+          "supplementSnapshot": {
+            "name": "GHK-Cu (Péptido de Cobre)",
+            "brand": "Revolution Pharma",
+            "doseUnit": "ml",
+            "category": "other",
+            "activeIngredients": [
+              {
+                "name": "GHK-Cu",
+                "form": "péptido de cobre (GHK-Cu)",
+                "amount": 16.667,
+                "unit": "mg",
+                "source": "síntesis química"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.1,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-21T05:00:00.000Z",
+          "recordedAt": "2026-06-21T13:14:55.335Z"
+        },
+        {
+          "id": "37befd7b-d2dc-4a7b-bc45-2e7b9e37334b",
+          "supplementId": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+          "supplementSnapshot": {
+            "name": "Melatol 3mg",
+            "brand": "Gramon",
+            "doseUnit": "comp.",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Melatonina",
+                "form": "sintética",
+                "amount": 3,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 1,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-21T04:00:00.000Z",
+          "recordedAt": "2026-06-21T13:15:04.895Z"
+        },
+        {
+          "id": "140c101b-d9a3-4bd8-9b29-2ea952f9bff0",
+          "supplementId": "94a088f3-0a9e-47a9-a663-390cab17bcc9",
+          "supplementSnapshot": {
+            "name": "Colageno hidrolizado",
+            "doseUnit": "g",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Colageno hidrolizado",
+                "form": "",
+                "amount": 1,
+                "unit": "g"
+              }
+            ],
+            "version": 3
+          },
+          "quantity": 10,
+          "doseUnit": "g",
+          "timestamp": "2026-06-21T04:00:00.000Z",
+          "recordedAt": "2026-06-21T13:15:16.959Z"
+        },
+        {
+          "id": "2e2e3a45-0621-4f1b-9394-44f66136cf2f",
+          "supplementId": "03e5e96e-b194-4c0b-a3e1-9fab2577ea55",
+          "supplementSnapshot": {
+            "name": "Acido hialuronico",
+            "brand": "BULK",
+            "doseUnit": "mg",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Acido hialuronico",
+                "form": "",
+                "amount": 1,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 400,
+          "doseUnit": "mg",
+          "timestamp": "2026-06-21T04:00:00.000Z",
+          "recordedAt": "2026-06-21T13:15:25.022Z"
+        },
+        {
+          "id": "4bee8117-ca3b-4a87-833c-4eaf5301f488",
+          "supplementId": "969ab0cd-87ce-4036-a669-fc1e84382015",
+          "supplementSnapshot": {
+            "name": "Clembuterol",
+            "brand": "FM",
+            "doseUnit": "ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Clembuterol",
+                "form": "",
+                "amount": 0.08,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.25,
+          "doseUnit": "ud",
+          "timestamp": "2026-06-21T13:21:00.000Z",
+          "recordedAt": "2026-06-21T13:21:35.808Z"
+        }
+      ],
+      "skipped": [],
+      "notes": [],
+      "sealed": false,
+      "checksum": "",
+      "createdAt": "2026-06-21T13:14:55.335Z",
+      "updatedAt": "2026-06-21T13:21:54.241Z"
     }
   },
   "migrations": [
