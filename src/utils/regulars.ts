@@ -13,19 +13,28 @@ export function getSuggestedRegulars(
     last7.push(d.toISOString().slice(0, 10))
   }
 
-  const takenToday = new Set(
-    (dailyLogs[today]?.entries ?? []).map(e => e.supplementId)
-  )
+  // Conteo de tomas hoy por suplemento
+  const takenTodayCount: Record<string, number> = {}
+  for (const e of (dailyLogs[today]?.entries ?? [])) {
+    takenTodayCount[e.supplementId] = (takenTodayCount[e.supplementId] ?? 0) + 1
+  }
 
   return Object.values(supplements).filter(s => {
     if (!s.active || s.inStock === false) return false
     if (s.schedule.kind !== 'as_needed') return false
-    if (takenToday.has(s.id)) return false
 
-    const daysAppeared = last7.filter(date =>
+    // Días en los que apareció (para el threshold mínimo)
+    const daysWithEntries = last7.filter(date =>
       (dailyLogs[date]?.entries ?? []).some(e => e.supplementId === s.id)
-    ).length
+    )
+    if (daysWithEntries.length < 2) return false
 
-    return daysAppeared >= 2
+    // Frecuencia diaria típica: mediana de tomas en los días que aparece
+    const dailyCounts = daysWithEntries.map(date =>
+      (dailyLogs[date]?.entries ?? []).filter(e => e.supplementId === s.id).length
+    ).sort((a, b) => a - b)
+    const typicalDaily = dailyCounts[Math.floor(dailyCounts.length / 2)]
+
+    return (takenTodayCount[s.id] ?? 0) < typicalDaily
   })
 }
