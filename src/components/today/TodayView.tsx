@@ -7,9 +7,12 @@ import type { Supplement } from '../../schema/types'
 import { formatTimestamp, getLocalHHMM, getLocalDateStr } from '../../utils/date'
 import { DailyNotes } from './DailyNotes'
 import { DailySymptoms } from './DailySymptoms'
+import { QuickLogSheet } from './QuickLogSheet'
+import { getSuggestedRegulars } from '../../utils/regulars'
 
 type LogModal = { supplement: Supplement; qty: number; time: string }
 type EditModal = { entryId: string; currentTs: string; value: string }
+type QuickSheetState = { supplement: Supplement }
 
 function offsetDate(base: string, days: number): string {
   const d = new Date(`${base}T12:00:00`)
@@ -25,6 +28,7 @@ export function TodayView() {
 
   const [logModal, setLogModal] = useState<LogModal | null>(null)
   const [editModal, setEditModal] = useState<EditModal | null>(null)
+  const [quickSheet, setQuickSheet] = useState<QuickSheetState | null>(null)
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
   const [search, setSearch] = useState('')
   const [sortMode, setSortMode] = useState<'chronological' | 'grouped'>('chronological')
@@ -60,6 +64,11 @@ export function TodayView() {
     for (const g of groups) pending.push(...g.items.filter(s => !takenIds.has(s.id)))
     return pending
   }, [groups, takenIds])
+
+  const suggestedRegulars = useMemo(
+    () => getSuggestedRegulars(supplements, dailyLogs, today),
+    [supplements, dailyLogs, today]
+  )
 
   const groupedEntries = useMemo(() => {
     const order: string[] = []
@@ -208,10 +217,29 @@ export function TodayView() {
             {pendingSupplements.map(s => (
               <button
                 key={s.id}
-                onClick={() => setLogModal({ supplement: s, qty: s.defaultDose, time: defaultTime() })}
+                onClick={() => setQuickSheet({ supplement: s })}
                 className="flex items-center gap-1.5 bg-slate-800 border border-slate-700 hover:border-slate-500 rounded-full px-3 py-1.5 text-xs text-slate-300 transition-colors"
               >
                 <span className="w-1.5 h-1.5 rounded-full bg-slate-500 flex-shrink-0" />
+                {s.name}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* regulares sugeridos */}
+      {suggestedRegulars.length > 0 && (
+        <div className="px-4 mb-4">
+          <p className="text-slate-500 text-xs uppercase tracking-widest mb-2 px-1">Regulares sugeridos</p>
+          <div className="flex flex-wrap gap-2">
+            {suggestedRegulars.map(s => (
+              <button
+                key={s.id}
+                onClick={() => setQuickSheet({ supplement: s })}
+                className="flex items-center gap-1.5 bg-slate-800 border border-slate-600 hover:border-sky-600 rounded-full px-3 py-1.5 text-xs text-slate-300 transition-colors"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-sky-500 flex-shrink-0" />
                 {s.name}
               </button>
             ))}
@@ -350,6 +378,24 @@ export function TodayView() {
       <div className="px-4 mt-4">
         <DailySymptoms key={selectedDate} dateStr={selectedDate} isToday={isToday} />
       </div>
+
+      {/* quick log sheet */}
+      {quickSheet && (
+        <QuickLogSheet
+          supplement={quickSheet.supplement}
+          dailyLogs={dailyLogs}
+          onConfirm={(qty, time) => {
+            logItem(quickSheet.supplement.id, qty, time)
+            setQuickSheet(null)
+          }}
+          onOpenFull={(capturedTime) => {
+            const s = quickSheet.supplement
+            setQuickSheet(null)
+            setLogModal({ supplement: s, qty: s.defaultDose, time: capturedTime })
+          }}
+          onClose={() => setQuickSheet(null)}
+        />
+      )}
 
       {/* modal de log */}
       <Modal open={!!logModal} onClose={() => setLogModal(null)} title={logModal?.supplement.name ?? ''}>
