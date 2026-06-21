@@ -85,7 +85,7 @@ export function QuickLogSheet({ supplement, dailyLogs, onConfirm, onOpenFull, on
           <div>
             <p className="text-slate-500 text-xs uppercase tracking-widest mb-2">Cantidad</p>
             <div className="flex gap-2">
-              {quickpicks.map(({ value, label }) => {
+              {quickpicks.map(({ value }) => {
                 const isHabitual = value === historical.dose && historical.percent !== null
                 const isSelected = value === selectedQty
                 return (
