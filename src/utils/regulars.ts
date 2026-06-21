@@ -29,11 +29,10 @@ export function getSuggestedRegulars(
     )
     if (daysWithEntries.length < 2) return false
 
-    // Frecuencia diaria típica: mediana de tomas en los días que aparece
-    const dailyCounts = daysWithEntries.map(date =>
+    // Frecuencia diaria típica: máximo de tomas en los días recientes
+    const typicalDaily = Math.max(...daysWithEntries.map(date =>
       (dailyLogs[date]?.entries ?? []).filter(e => e.supplementId === s.id).length
-    ).sort((a, b) => a - b)
-    const typicalDaily = dailyCounts[Math.floor(dailyCounts.length / 2)]
+    ))
 
     return (takenTodayCount[s.id] ?? 0) < typicalDaily
   })
