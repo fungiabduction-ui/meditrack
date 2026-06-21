@@ -105,7 +105,7 @@ export function QuickLogSheet({ supplement, dailyLogs, onConfirm, onOpenFull, on
                         ★
                       </span>
                     )}
-                    <span className="block">{label}</span>
+                    <span className="block">{value}</span>
                     <span className="block text-[10px] opacity-60 mt-0.5">{supplement.doseUnit}</span>
                   </button>
                 )
