@@ -1,8 +1,8 @@
 {
   "_version": 3,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-22T01:35:12.986Z",
-  "_checksum": "c8f6440a",
+  "_updatedAt": "2026-06-22T03:39:08.955Z",
+  "_checksum": "4cab16a8",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -3390,10 +3390,80 @@
         "nippleSensitivity": false,
         "orgasms": 4
       },
-      "sealed": false,
+      "sealed": true,
       "checksum": "",
       "createdAt": "2026-06-21T13:14:55.335Z",
-      "updatedAt": "2026-06-22T01:35:12.983Z"
+      "updatedAt": "2026-06-22T03:16:56.596Z"
+    },
+    "2026-06-22": {
+      "id": "13756487-d830-4304-a7e4-54026c24dd1b",
+      "date": "2026-06-22",
+      "entries": [
+        {
+          "id": "c8c1dc98-4772-4b1f-938b-4b92049b1553",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "brand": "DBI",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-22T03:17:00.000Z",
+          "recordedAt": "2026-06-22T03:17:10.799Z"
+        },
+        {
+          "id": "6347b1e7-23f2-42db-b8ae-1d859ea48845",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "brand": "Viva Naturals",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-22T03:39:00.000Z",
+          "recordedAt": "2026-06-22T03:39:08.951Z"
+        }
+      ],
+      "skipped": [],
+      "notes": [],
+      "sealed": false,
+      "checksum": "",
+      "createdAt": "2026-06-22T03:17:10.799Z",
+      "updatedAt": "2026-06-22T03:39:08.951Z"
     }
   },
   "migrations": [
