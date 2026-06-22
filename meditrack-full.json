@@ -1,8 +1,8 @@
 {
   "_version": 3,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-21T17:51:26.232Z",
-  "_checksum": "b81d488a",
+  "_updatedAt": "2026-06-22T01:35:12.986Z",
+  "_checksum": "c8f6440a",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -3294,14 +3294,106 @@
           "doseUnit": "medida (5g)",
           "timestamp": "2026-06-21T17:51:00.000Z",
           "recordedAt": "2026-06-21T17:51:26.230Z"
+        },
+        {
+          "id": "a0cbd1a2-b4b4-412d-8f79-d8202c9ac308",
+          "supplementId": "acbc2e1f-09b8-4459-bd0d-77a9290f0d14",
+          "supplementSnapshot": {
+            "name": "Premium Whey Protein",
+            "brand": "Star Nutrition",
+            "doseUnit": "medida (30g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Proteína de Suero (WPC 80 / WPI)",
+                "form": "concentrado + isolado de suero de leche",
+                "amount": 25,
+                "unit": "g"
+              },
+              {
+                "name": "L-Leucina (BCAA)",
+                "form": "L-Leucina",
+                "amount": 2.7,
+                "unit": "g"
+              },
+              {
+                "name": "L-Isoleucina (BCAA)",
+                "form": "L-Isoleucina",
+                "amount": 1.5,
+                "unit": "g"
+              },
+              {
+                "name": "L-Valina (BCAA)",
+                "form": "L-Valina",
+                "amount": 1.4,
+                "unit": "g"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "medida (30g)",
+          "timestamp": "2026-06-21T21:29:00.000Z",
+          "recordedAt": "2026-06-21T21:29:46.189Z"
+        },
+        {
+          "id": "9980a232-6faf-468e-8c39-cae8cc0cc05a",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "brand": "Viva Naturals",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-21T23:58:00.000Z",
+          "recordedAt": "2026-06-21T23:58:44.020Z"
         }
       ],
       "skipped": [],
-      "notes": [],
+      "notes": [
+        {
+          "id": "ba5099b8-559c-48c9-aa9a-46080f6fde52",
+          "text": "Presión:  Sistólica 120 Diastólica  76 Latidos 84",
+          "timestamp": "2026-06-22T01:34:48.428Z"
+        }
+      ],
+      "symptoms": {
+        "energy": 3,
+        "libido": 3,
+        "sleep": 3,
+        "recovery": 3,
+        "mood": 3,
+        "erectionQuality": 3,
+        "nippleSensitivity": false,
+        "orgasms": 4
+      },
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-21T13:14:55.335Z",
-      "updatedAt": "2026-06-21T17:51:26.230Z"
+      "updatedAt": "2026-06-22T01:35:12.983Z"
     }
   },
   "migrations": [
