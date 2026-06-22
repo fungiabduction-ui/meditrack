@@ -1,7 +1,7 @@
 import type { StorageSchema } from '../schema/types'
 import { computeChecksum } from './checksum'
 
-export const CURRENT_VERSION = 3
+export const CURRENT_VERSION = 4
 
 const MASS_UNITS = new Set(['mg', 'g', 'mcg'])
 
@@ -16,6 +16,7 @@ export function createFreshSchema(): StorageSchema {
     dailyLogs: {},
     migrations: [],
     bloodWork: [],
+    bpReadings: [],
   }
   schema._checksum = computeChecksum({ supplements: schema.supplements, dailyLogs: schema.dailyLogs })
   return schema
@@ -86,6 +87,20 @@ export function migrate(version: number, data: unknown): StorageSchema {
       ],
     }
     migrated._checksum = computeChecksum({ supplements: migrated.supplements, dailyLogs: migrated.dailyLogs })
+    return migrate(3, migrated)  // Continue to v3→v4 if not at CURRENT_VERSION yet
+  }
+
+  if (version === 3) {
+    const raw = data as StorageSchema
+    const migrated: StorageSchema = {
+      ...raw,
+      _version: 4,
+      bpReadings: [],
+      migrations: [
+        ...(raw.migrations ?? []),
+        { from: 3, to: 4, appliedAt: new Date().toISOString() },
+      ],
+    }
     return migrated
   }
 

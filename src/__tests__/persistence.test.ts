@@ -1,13 +1,13 @@
 import { describe, it, expect, beforeEach } from 'vitest'
 import { read, write } from '../storage/persistence'
-import { createFreshSchema } from '../storage/migrations'
+import { createFreshSchema, CURRENT_VERSION } from '../storage/migrations'
 
 beforeEach(() => localStorage.clear())
 
 describe('read', () => {
   it('returns fresh schema when storage is empty', () => {
     const s = read()
-    expect(s._version).toBe(2)
+    expect(s._version).toBe(CURRENT_VERSION)
     expect(s.supplements).toEqual({})
   })
 })
