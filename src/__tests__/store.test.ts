@@ -186,3 +186,59 @@ describe('sealPastDays', () => {
     expect(log.skipped).toHaveLength(0)
   })
 })
+
+describe('addBPReading', () => {
+  it('adds reading to bpReadings and persists', () => {
+    const dateStr = getLocalDateStr()
+    const ts = new Date().toISOString()
+    const reading = useStore.getState().addBPReading({
+      date: dateStr,
+      timestamp: ts,
+      sys: 120,
+      dia: 80,
+      pulse: 72,
+    })
+    expect(reading.id).toBeDefined()
+    expect(reading.sys).toBe(120)
+    expect(reading.dia).toBe(80)
+    expect(reading.pulse).toBe(72)
+    expect(reading.recordedAt).toBeDefined()
+    const state = useStore.getState()
+    expect(state.bpReadings.some(r => r.id === reading.id)).toBe(true)
+    // persisted
+    useStore.getState().init()
+    expect(useStore.getState().bpReadings.some(r => r.id === reading.id)).toBe(true)
+  })
+
+  it('auto-generates a DayNote with the reading details', () => {
+    const dateStr = getLocalDateStr()
+    const ts = new Date().toISOString()
+    useStore.getState().addBPReading({ date: dateStr, timestamp: ts, sys: 130, dia: 85, pulse: 68 })
+    const log = useStore.getState().dailyLogs[dateStr]
+    expect(log).toBeDefined()
+    const note = log.notes.find(n => n.text.includes('130/85'))
+    expect(note).toBeDefined()
+    expect(note?.text).toContain('68 bpm')
+    expect(note?.text).toContain('Alta I')
+  })
+})
+
+describe('removeBPReading', () => {
+  it('removes reading from bpReadings', () => {
+    const dateStr = getLocalDateStr()
+    const ts = new Date().toISOString()
+    const reading = useStore.getState().addBPReading({ date: dateStr, timestamp: ts, sys: 115, dia: 75, pulse: 65 })
+    useStore.getState().removeBPReading(reading.id)
+    expect(useStore.getState().bpReadings.some(r => r.id === reading.id)).toBe(false)
+  })
+
+  it('removing a reading does not remove the auto-note', () => {
+    const dateStr = getLocalDateStr()
+    const ts = new Date().toISOString()
+    const reading = useStore.getState().addBPReading({ date: dateStr, timestamp: ts, sys: 115, dia: 75, pulse: 65 })
+    const notesBefore = useStore.getState().dailyLogs[dateStr]?.notes.length ?? 0
+    useStore.getState().removeBPReading(reading.id)
+    const notesAfter = useStore.getState().dailyLogs[dateStr]?.notes.length ?? 0
+    expect(notesAfter).toBe(notesBefore) // note survives
+  })
+})

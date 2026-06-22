@@ -1,9 +1,10 @@
 import { create } from 'zustand'
-import type { Supplement, LogEntry, DailyLog, StorageSchema, SkippedItem, DayNote, DailySymptoms, BloodWorkEntry } from '../schema/types'
+import type { Supplement, LogEntry, DailyLog, StorageSchema, SkippedItem, DayNote, DailySymptoms, BloodWorkEntry, BPReading } from '../schema/types'
 import { read, write } from '../storage/persistence'
 import { generateId } from '../utils/id'
 import { getLocalDateStr } from '../utils/date'
 import { calcNextDue, isScheduledToday } from '../utils/schedule'
+import { classifyBP } from '../utils/bp'
 
 type Store = {
   supplements: Record<string, Supplement>
@@ -25,23 +26,27 @@ type Store = {
   addBloodWork: (data: Omit<BloodWorkEntry, 'id' | 'createdAt'>) => void
   updateBloodWork: (id: string, partial: Partial<Omit<BloodWorkEntry, 'id' | 'createdAt'>>) => void
   removeBloodWork: (id: string) => void
+  bpReadings: BPReading[]
+  addBPReading: (data: { date: string; timestamp: string; sys: number; dia: number; pulse: number }) => BPReading
+  removeBPReading: (id: string) => void
 }
 
 function commitWrite(set: (s: Partial<Store>) => void, schema: StorageSchema) {
   write(schema) // throws on failure — never updates Zustand if write fails
-  set({ supplements: schema.supplements, dailyLogs: schema.dailyLogs, bloodWork: schema.bloodWork })
+  set({ supplements: schema.supplements, dailyLogs: schema.dailyLogs, bloodWork: schema.bloodWork, bpReadings: schema.bpReadings })
 }
 
 export const useStore = create<Store>((set, get) => ({
   supplements: {},
   dailyLogs: {},
   bloodWork: [],
+  bpReadings: [],
 
   init: () => {
     const schema = read()
     // Repair: rewrite with canonical key order so checksum always matches
     try { write(schema) } catch { /* ignore — state is loaded regardless */ }
-    set({ supplements: schema.supplements, dailyLogs: schema.dailyLogs, bloodWork: schema.bloodWork ?? [] })
+    set({ supplements: schema.supplements, dailyLogs: schema.dailyLogs, bloodWork: schema.bloodWork ?? [], bpReadings: schema.bpReadings ?? [] })
   },
 
   addSupplement: (data) => {
@@ -226,5 +231,41 @@ export const useStore = create<Store>((set, get) => ({
   removeBloodWork: (id) => {
     const bloodWork = get().bloodWork.filter(e => e.id !== id)
     commitWrite(set, { ...read(), bloodWork })
+  },
+
+  addBPReading: (data) => {
+    const { date, timestamp, sys, dia, pulse } = data
+    const now = new Date().toISOString()
+    const reading: BPReading = {
+      id: generateId(),
+      date,
+      timestamp,
+      sys,
+      dia,
+      pulse,
+      recordedAt: now,
+    }
+
+    // build auto-note atomically with the reading
+    const { label } = classifyBP(sys, dia)
+    const hhmm = new Date(timestamp).toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' })
+    const noteText = `🩺 PA: ${sys}/${dia} mmHg · Pulso: ${pulse} bpm · ${hhmm} [${label}]`
+    const note: DayNote = { id: generateId(), text: noteText, timestamp: now }
+
+    const existing = get().dailyLogs[date]
+    const log: DailyLog = existing
+      ? { ...existing, notes: [...(existing.notes ?? []), note], updatedAt: now }
+      : { id: generateId(), date, entries: [], skipped: [], notes: [note], sealed: false, checksum: '', createdAt: now, updatedAt: now }
+
+    const bpReadings = [...get().bpReadings, reading]
+    const dailyLogs = { ...get().dailyLogs, [date]: log }
+
+    commitWrite(set, { ...read(), bpReadings, dailyLogs })
+    return reading
+  },
+
+  removeBPReading: (id) => {
+    const bpReadings = get().bpReadings.filter(r => r.id !== id)
+    commitWrite(set, { ...read(), bpReadings })
   },
 }))
