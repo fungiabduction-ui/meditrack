@@ -1,8 +1,8 @@
 {
   "_version": 4,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-22T14:34:38.844Z",
-  "_checksum": "c57c57ff",
+  "_updatedAt": "2026-06-22T18:12:21.646Z",
+  "_checksum": "3333d0eb",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -3550,6 +3550,200 @@
           "doseUnit": "ml",
           "timestamp": "2026-06-22T05:56:00.000Z",
           "recordedAt": "2026-06-22T05:56:28.188Z"
+        },
+        {
+          "id": "bc534e54-822a-4134-af30-489f4121cbc7",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "brand": "Viva Naturals",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 2,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-22T16:57:00.000Z",
+          "recordedAt": "2026-06-22T16:57:55.649Z"
+        },
+        {
+          "id": "d47c7bf4-a16b-4074-abc1-b8ae4ad57587",
+          "supplementId": "8a6ac53c-5f38-4055-899d-5b5f77915005",
+          "supplementSnapshot": {
+            "name": "Methylated B Complex",
+            "brand": "NatureBell",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina C (Acerola)",
+                "form": "ácido ascórbico natural",
+                "amount": 45,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina E",
+                "form": "tocoferol mixto",
+                "amount": 18,
+                "unit": "mg"
+              },
+              {
+                "name": "Tiamina (B1)",
+                "form": "tiamina HCl",
+                "amount": 100,
+                "unit": "mg"
+              },
+              {
+                "name": "Riboflavina (B2)",
+                "form": "Riboflavina-5-fosfato (R5P)",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Niacina (B3)",
+                "form": "niacinamida",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Ácido pantoténico (B5)",
+                "form": "pantotenato de calcio",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina B6",
+                "form": "Piridoxal-5-fosfato (P5P)",
+                "amount": 20,
+                "unit": "mg"
+              },
+              {
+                "name": "Biotina (B7)",
+                "form": "D-Biotina",
+                "amount": 2000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Folato (B9)",
+                "form": "L-Metilfolato (Methyl Folate)",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Vitamina B12",
+                "form": "Metilcobalamina",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Colina",
+                "form": "bitartrato de colina",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Inositol",
+                "form": "mio-inositol",
+                "amount": 20,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-22T16:58:00.000Z",
+          "recordedAt": "2026-06-22T16:58:11.537Z"
+        },
+        {
+          "id": "b7333dc3-2046-4f43-b768-097032449e50",
+          "supplementId": "d5c408b9-acc2-48a2-bb0c-8f21fdf307af",
+          "supplementSnapshot": {
+            "name": "Ubiquinol 100mg",
+            "brand": "Nutricost",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Ubiquinol",
+                "form": "forma reducida activa de CoQ10",
+                "amount": 100,
+                "unit": "mg",
+                "brand": "Kaneka Ubiquinol®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-22T16:58:00.000Z",
+          "recordedAt": "2026-06-22T16:58:48.645Z"
+        },
+        {
+          "id": "18e572e7-f65f-4699-919c-bfd317967db4",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "brand": "DBI",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-22T16:59:00.000Z",
+          "recordedAt": "2026-06-22T16:59:07.510Z"
+        },
+        {
+          "id": "67c6b2ba-e33e-439a-81fb-b820e72b5ac6",
+          "supplementId": "784eff85-1b12-4ad5-a7c2-273edf5108ad",
+          "supplementSnapshot": {
+            "name": "Creatina Monohidrato",
+            "brand": "Star Nutrition",
+            "doseUnit": "medida (5g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Creatina Monohidrato",
+                "form": "monohidrato",
+                "amount": 5000,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "medida (5g)",
+          "timestamp": "2026-06-22T18:11:00.000Z",
+          "recordedAt": "2026-06-22T18:11:55.426Z"
         }
       ],
       "skipped": [],
@@ -3568,22 +3762,37 @@
           "id": "813f5666-1581-4104-a0d2-00748f352f28",
           "text": "🩺 PA: 132/89 mmHg · Pulso: 80 bpm · 02:49 a. m. [Alta I]",
           "timestamp": "2026-06-22T05:50:06.502Z"
+        },
+        {
+          "id": "574a3cdf-6ab4-4f34-a236-d2dca1ee9713",
+          "text": "🩺 PA: 126/86 mmHg · Pulso: 65 bpm · 12:12 p. m. [Alta I]",
+          "timestamp": "2026-06-22T15:13:14.283Z"
+        },
+        {
+          "id": "c20cb737-a70d-40e3-8e4f-1cc440dfa43f",
+          "text": "🩺 PA: 120/78 mmHg · Pulso: 72 bpm · 12:59 p. m. [Elevada] — Reposo",
+          "timestamp": "2026-06-22T16:00:03.636Z"
+        },
+        {
+          "id": "9fd78bc8-9a15-4bf5-a92e-8f04f622457f",
+          "text": "🩺 PA: 126/85 mmHg · Pulso: 89 bpm · 03:11 p. m. [Alta I]",
+          "timestamp": "2026-06-22T18:12:21.642Z"
         }
       ],
       "symptoms": {
-        "energy": 4,
-        "libido": 4,
-        "sleep": 3,
+        "energy": 3,
+        "libido": 3,
+        "sleep": 4,
         "recovery": 4,
-        "mood": 3,
+        "mood": 4,
         "erectionQuality": 4,
-        "nippleSensitivity": true,
-        "orgasms": 1
+        "nippleSensitivity": false,
+        "orgasms": 3
       },
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-22T03:17:10.799Z",
-      "updatedAt": "2026-06-22T05:56:28.188Z"
+      "updatedAt": "2026-06-22T18:12:21.642Z"
     }
   },
   "migrations": [
@@ -3631,6 +3840,33 @@
       "dia": 89,
       "pulse": 80,
       "recordedAt": "2026-06-22T05:50:06.502Z"
+    },
+    {
+      "id": "0e687eaa-ee4d-42d1-be4c-0b36609331f1",
+      "date": "2026-06-22",
+      "timestamp": "2026-06-22T15:12:00.000Z",
+      "sys": 126,
+      "dia": 86,
+      "pulse": 65,
+      "recordedAt": "2026-06-22T15:13:14.283Z"
+    },
+    {
+      "id": "1e12f892-791f-4d25-a3ef-d51720362ee1",
+      "date": "2026-06-22",
+      "timestamp": "2026-06-22T15:59:00.000Z",
+      "sys": 120,
+      "dia": 78,
+      "pulse": 72,
+      "recordedAt": "2026-06-22T16:00:03.636Z"
+    },
+    {
+      "id": "8c3bf96f-02d0-47fa-83dc-a13c27500810",
+      "date": "2026-06-22",
+      "timestamp": "2026-06-22T18:11:00.000Z",
+      "sys": 126,
+      "dia": 85,
+      "pulse": 89,
+      "recordedAt": "2026-06-22T18:12:21.642Z"
     }
   ]
 }
