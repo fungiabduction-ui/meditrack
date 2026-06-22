@@ -7,6 +7,7 @@ import type { Supplement } from '../../schema/types'
 import { formatTimestamp, getLocalHHMM, getLocalDateStr } from '../../utils/date'
 import { DailyNotes } from './DailyNotes'
 import { DailySymptoms } from './DailySymptoms'
+import { BloodPressureWidget } from './BloodPressureWidget'
 import { QuickLogSheet } from './QuickLogSheet'
 import { getSuggestedRegulars } from '../../utils/regulars'
 
@@ -378,6 +379,8 @@ export function TodayView() {
       <div className="px-4 mt-4">
         <DailySymptoms key={selectedDate} dateStr={selectedDate} isToday={isToday} />
       </div>
+
+      <BloodPressureWidget dateStr={selectedDate} isToday={isToday} />
 
       {/* quick log sheet */}
       {quickSheet && (
