@@ -1,0 +1,3636 @@
+{
+  "_version": 4,
+  "_createdAt": "2026-06-18T13:42:04.421Z",
+  "_updatedAt": "2026-06-22T14:34:38.844Z",
+  "_checksum": "c57c57ff",
+  "supplements": {
+    "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
+      "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+      "name": "Melatol 3mg",
+      "brand": "Gramon",
+      "category": "medication",
+      "description": "Inductor del sueño / regulador del ciclo sueño-vigilia. Melatonina sintética 3 mg por comprimido.",
+      "form": "comprimidos recubiertos",
+      "presentation": "Envase con 60 comprimidos",
+      "activeIngredients": [
+        {
+          "name": "Melatonina",
+          "form": "sintética",
+          "amount": 3,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Celulosa microcristalina, croscarmelosa sódica, estearato de magnesio, dióxido de silicio, colorantes (amarillo quinoleína, azul patente V), opadry.",
+      "benefits": "Alteraciones del sueño (insomnio ocasional). Jet-lag (viajes transmeridianos).",
+      "instructions": "1 comprimido 30-60 minutos antes de dormir. Máximo uso a corto plazo.",
+      "warnings": "Consultar médico si embarazo, lactancia, niños, enfermedades autoinmunes, depresión o uso de otros medicamentos. No conducir hasta conocer efecto.",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "comp.",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:15.768Z",
+      "updatedAt": "2026-06-18T13:51:20.638Z",
+      "version": 2
+    },
+    "8261b214-879c-44eb-bab8-f59cdf616b7b": {
+      "id": "8261b214-879c-44eb-bab8-f59cdf616b7b",
+      "name": "KSM-66 Ashwagandha Extract",
+      "brand": "Nootropics Depot",
+      "category": "adaptogen",
+      "description": "Extracto de raíz de Ashwagandha (Withania somnifera), adaptógeno full-spectrum para manejo de estrés, relajación y rendimiento.",
+      "form": "cápsulas vegetarianas",
+      "presentation": "frasco 60 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Extracto de raíz KSM-66 Ashwagandha",
+          "form": "estandarizado 5% withanolides, full-spectrum, Green Chemistry",
+          "amount": 300,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Reduce estrés y cortisol; promueve relajación y bienestar; mejora cognición, foco y memoria; soporta fuerza muscular, endurance y recuperación; efectos antiinflamatorios y antioxidantes. Efectos completos en 1-2 semanas.",
+      "instructions": "1 cápsula por noche, con o sin comida",
+      "certifications": [
+        "Non-GMO",
+        "USDA Organic",
+        "Gluten-Free",
+        "GMP"
+      ],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.936Z",
+      "updatedAt": "2026-06-18T13:51:20.645Z",
+      "version": 2
+    },
+    "3a00a5f5-a72d-496c-a94b-a77cd5a0c1e0": {
+      "id": "3a00a5f5-a72d-496c-a94b-a77cd5a0c1e0",
+      "name": "PrimaVie Purified Shilajit",
+      "brand": "Nootropics Depot",
+      "category": "supplement",
+      "description": "Resina purificada PrimaVie rica en ácidos fúlvicos y minerales del Himalaya. Mejora rendimiento físico, reduce fatiga, soporta función mitocondrial y producción de ATP.",
+      "form": "cápsulas",
+      "presentation": "frasco 60 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "PrimaVie Shilajit purificado",
+          "form": "ácidos fúlvicos, minerales traza, dibenzo-alfa-pironas",
+          "amount": 250,
+          "unit": "mg",
+          "brand": "PrimaVie®"
+        }
+      ],
+      "benefits": "Aumenta energía física, endurance y recuperación; propiedades antioxidantes y antiinflamatorias; reduce fatiga y estrés; soporta salud celular y respuesta adrenal. Efectos completos en 1-2 semanas.",
+      "instructions": "1 cápsula por la mañana, con o sin comida",
+      "certifications": [
+        "cGMP",
+        "FDA registered",
+        "ISO terceros"
+      ],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.938Z",
+      "updatedAt": "2026-06-18T13:51:20.647Z",
+      "version": 2
+    },
+    "b813883e-e61d-42d9-8787-55330721c26f": {
+      "id": "b813883e-e61d-42d9-8787-55330721c26f",
+      "name": "Tongkat Ali (2% Eurycomanone)",
+      "brand": "Nootropics Depot",
+      "category": "herb",
+      "description": "Extracto de raíz de Tongkat Ali (Eurycoma longifolia) full-spectrum, estandarizado a 2% eurycomanone, para vitalidad y fuerza.",
+      "form": "cápsulas",
+      "presentation": "frasco 60 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Extracto de raíz Tongkat Ali",
+          "form": "full-spectrum, estandarizado 2% eurycomanone",
+          "amount": 200,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Promueve testosterona, libido, masa muscular y endurance; reduce estrés y fatiga; mejora humor, energía y motivación. Efectos completos en 3-4 semanas.",
+      "instructions": "1 cápsula diaria con comida",
+      "certifications": [
+        "cGMP",
+        "ISO terceros"
+      ],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.939Z",
+      "updatedAt": "2026-06-18T13:51:20.649Z",
+      "version": 2
+    },
+    "798594ca-7df7-488e-ab7c-8f5d8e3ed2b2": {
+      "id": "798594ca-7df7-488e-ab7c-8f5d8e3ed2b2",
+      "name": "Tongkat Ali (10% Eurycomanone)",
+      "brand": "Nootropics Depot",
+      "category": "herb",
+      "description": "Extracto de raíz de Tongkat Ali (Eurycoma longifolia) estandarizado a 10% eurycomanone, para vitalidad, testosterona y rendimiento físico.",
+      "form": "tabletas",
+      "presentation": "frasco 60 tabletas",
+      "activeIngredients": [
+        {
+          "name": "Extracto de raíz Tongkat Ali",
+          "form": "estandarizado 10% eurycomanone",
+          "amount": 100,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Soporta testosterona, libido, masa muscular, endurance, energía y motivación; mejora rendimiento físico y bienestar. Efectos completos en 3-4 semanas.",
+      "instructions": "1 tableta diaria, con o sin comida",
+      "certifications": [
+        "cGMP",
+        "FDA registered",
+        "ISO terceros"
+      ],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "tabletas",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.939Z",
+      "updatedAt": "2026-06-18T13:51:20.652Z",
+      "version": 2
+    },
+    "2040933e-9dbc-48ee-a2a7-177c45f4a4db": {
+      "id": "2040933e-9dbc-48ee-a2a7-177c45f4a4db",
+      "name": "Cistanche tubulosa 700mg",
+      "brand": "Nootropics Depot",
+      "category": "herb",
+      "description": "Suplemento de espectro completo de Cistanche tubulosa (polvo de planta entera), estandarizado en glucósidos feniletanoides. Soporte a vitalidad, equilibrio hormonal y función cognitiva.",
+      "form": "cápsulas vegetales (hipromelosa)",
+      "presentation": "frasco 60 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Cistanche tubulosa",
+          "form": "polvo de planta entera, 5% Equinacósido (Echinacoside), 1% Acetósido (Verbascoside)",
+          "amount": 700,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Apoyo a recuperación muscular y resistencia física; mejora de claridad mental y enfoque; soporte a vitalidad y equilibrio hormonal; acción antioxidante celular.",
+      "instructions": "1 cápsula diaria con comida",
+      "warnings": "Consultar con profesional de la salud antes de usar, especialmente en embarazo, lactancia o si se toman medicamentos.",
+      "certifications": [
+        "Non-GMO",
+        "Gluten-Free",
+        "cGMP"
+      ],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.940Z",
+      "updatedAt": "2026-06-18T13:51:20.653Z",
+      "version": 2
+    },
+    "08993cc6-e9ba-498f-981e-fccdad9dddd3": {
+      "id": "08993cc6-e9ba-498f-981e-fccdad9dddd3",
+      "name": "Probiotics 200 Billion CFU",
+      "brand": "NatureBell",
+      "category": "supplement",
+      "description": "Fórmula digestiva 5-en-1: probióticos (40 cepas, 200 mil millones CFU), postbióticos, prebióticos, enzimas digestivas y fibra dietaria. Soporte completo al microbioma intestinal.",
+      "form": "cápsulas vegetarianas",
+      "presentation": "envase 240 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Mezcla probiótica y postbiótica (200 mil millones CFU)",
+          "form": "40 cepas: Bacillus spp., Bifidobacterium spp., Lactobacillus spp., Saccharomyces spp.",
+          "amount": 450,
+          "unit": "mg"
+        },
+        {
+          "name": "Mezcla prebiótica",
+          "form": "psyllium, fibra de acacia Senegal, inulina (raíz de achicoria)",
+          "amount": 150,
+          "unit": "mg"
+        },
+        {
+          "name": "Enzimas digestivas",
+          "form": "bromelina, papaína, amilasa, proteasa, lipasa",
+          "amount": 50,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Harina de arroz, estearato de magnesio, dióxido de silicio, celulosa vegetal (cápsula)",
+      "benefits": "Soporte a digestión y absorción de nutrientes; equilibrio de microbiota intestinal; reduce hinchazón; aporta fibra y enzimas complementarias.",
+      "instructions": "2 cápsulas diarias con alimentos",
+      "certifications": [
+        "Non-GMO",
+        "Gluten-Free",
+        "Sin soja",
+        "Sin lácteos",
+        "GMP"
+      ],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 2,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.942Z",
+      "updatedAt": "2026-06-18T13:51:20.655Z",
+      "version": 1
+    },
+    "33c9d1ad-d401-4ba0-9990-2950f4ac4972": {
+      "id": "33c9d1ad-d401-4ba0-9990-2950f4ac4972",
+      "name": "Fadogia Agrestis + Tongkat Ali",
+      "brand": "NatureBell",
+      "category": "supplement",
+      "description": "Fórmula 2-en-1 de alta concentración: 600mg Fadogia Agrestis (extracto tallo 20:1) + 400mg Tongkat Ali (extracto raíz 200:1). Soporte a rendimiento atlético, energía y salud masculina.",
+      "form": "cápsulas vegetarianas",
+      "presentation": "envase 240 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Fadogia Agrestis",
+          "form": "extracto de tallo 20:1",
+          "amount": 600,
+          "unit": "mg"
+        },
+        {
+          "name": "Tongkat Ali (Eurycoma longifolia)",
+          "form": "extracto de raíz 200:1, Indonesia",
+          "amount": 400,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Soporte a rendimiento atlético, energía, resistencia y salud masculina; posible soporte a testosterona (uso tradicional).",
+      "instructions": "2 cápsulas diarias (porción completa)",
+      "certifications": [
+        "Non-GMO",
+        "Gluten-Free",
+        "Sin soja",
+        "Sin lácteos",
+        "cGMP"
+      ],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 2,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.943Z",
+      "updatedAt": "2026-06-18T13:51:20.657Z",
+      "version": 1
+    },
+    "71e220f9-a1ff-4a2d-a263-3a78ca0a938f": {
+      "id": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+      "name": "Omega-3 Fish Oil Triple Strength",
+      "brand": "Viva Naturals",
+      "category": "supplement",
+      "description": "Aceite de pescado Omega-3 de alta concentración en forma de triglicéridos re-esterificados (rTG) para máxima biodisponibilidad. Certificación IFOS por lote.",
+      "form": "cápsulas blandas (softgels)",
+      "presentation": "envase 90 softgels",
+      "activeIngredients": [
+        {
+          "name": "EPA (ácido eicosapentaenoico)",
+          "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+          "amount": 1500,
+          "unit": "mg"
+        },
+        {
+          "name": "DHA (ácido docosahexaenoico)",
+          "form": "triglicéridos re-esterificados (rTG)",
+          "amount": 568,
+          "unit": "mg"
+        },
+        {
+          "name": "DPA (ácido docosapentaenoico)",
+          "form": "triglicéridos re-esterificados (rTG)",
+          "amount": 50,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Gelatina de pescado (tilapia), glicerina, agua purificada, tocoferoles mixtos (antioxidantes)",
+      "benefits": "Soporte cardiovascular; acción antiinflamatoria sistémica; apoyo a función cerebral y neurológica; salud visual; niveles saludables de triglicéridos; soporte articular.",
+      "instructions": "2 cápsulas diarias con alimentos para optimizar absorción",
+      "warnings": "Contiene pescado. Consultar profesional en embarazo, lactancia o uso de anticoagulantes.",
+      "certifications": [
+        "IFOS",
+        "GMP",
+        "Non-GMO",
+        "Gluten-Free",
+        "Sin lácteos"
+      ],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 2,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.945Z",
+      "updatedAt": "2026-06-18T13:51:20.658Z",
+      "version": 1
+    },
+    "d5c408b9-acc2-48a2-bb0c-8f21fdf307af": {
+      "id": "d5c408b9-acc2-48a2-bb0c-8f21fdf307af",
+      "name": "Ubiquinol 100mg",
+      "brand": "Nutricost",
+      "category": "supplement",
+      "description": "Ubiquinol (forma reducida y activa de CoQ10) de alta biodisponibilidad con materia prima Kaneka Ubiquinol® japonesa. Soporte cardiovascular y producción de energía celular.",
+      "form": "cápsulas blandas (softgels)",
+      "presentation": "frasco 120 softgels",
+      "activeIngredients": [
+        {
+          "name": "Ubiquinol",
+          "form": "forma reducida activa de CoQ10",
+          "amount": 100,
+          "unit": "mg",
+          "brand": "Kaneka Ubiquinol®"
+        }
+      ],
+      "excipients": "Aceite MCT, gelatina, glicerina, palmitato de ascorbilo, agua purificada, cera de abejas, lecitina de girasol, suspensión de annato en aceite de girasol",
+      "benefits": "Apoya salud cardiovascular; mejora producción de ATP; ayuda a reducir fatiga; soporte antioxidante; puede favorecer recuperación muscular.",
+      "instructions": "1 softgel al día con comida que contenga grasa",
+      "certifications": [
+        "Non-GMO",
+        "Gluten-Free",
+        "NSF",
+        "GMP"
+      ],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.946Z",
+      "updatedAt": "2026-06-18T13:51:20.660Z",
+      "version": 1
+    },
+    "e045d04e-ec55-47b1-bad7-5a5aa40be467": {
+      "id": "e045d04e-ec55-47b1-bad7-5a5aa40be467",
+      "name": "PQQ 20mg",
+      "brand": "Nutricost",
+      "category": "supplement",
+      "description": "Pirroloquinolina Quinona (PQQ) en dosis de 20mg — la dosis utilizada en estudios clínicos. Soporte mitocondrial, antioxidante celular y función cognitiva.",
+      "form": "cápsulas vegetales (hipromelosa)",
+      "presentation": "frasco 60 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Pirroloquinolina Quinona (PQQ)",
+          "form": "pura, alta pureza",
+          "amount": 20,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Harina de arroz, hipromelosa (cápsula vegetal)",
+      "benefits": "Favorece biogénesis mitocondrial; soporte antioxidante celular; apoyo a memoria, concentración y claridad mental; contribuye a producción de ATP; posible mejora de sensibilidad a la insulina.",
+      "instructions": "1 cápsula diaria con 240-350 ml de agua, preferentemente con comida",
+      "warnings": "Consultar profesional antes de usar en embarazo, lactancia o si se toman medicamentos.",
+      "certifications": [
+        "Vegano",
+        "Gluten-Free",
+        "Non-GMO",
+        "GMP",
+        "FDA registered",
+        "ISO terceros"
+      ],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "inStock": false,
+      "createdAt": "2026-06-18T13:42:59.947Z",
+      "updatedAt": "2026-06-22T05:57:06.999Z",
+      "version": 1
+    },
+    "6e8c4ee3-b0ad-403c-ae6f-7c0f65da65b0": {
+      "id": "6e8c4ee3-b0ad-403c-ae6f-7c0f65da65b0",
+      "name": "Mega D3 & MK-7",
+      "brand": "NOW Foods",
+      "category": "vitamin",
+      "description": "Combinación de Vitamina D3 (5.000 IU) y Vitamina K2 como MK-7 (MenaQ7® 180 mcg) para soporte óseo, cardiovascular y metabolismo del calcio.",
+      "form": "cápsulas vegetarianas",
+      "presentation": "frasco 60 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Vitamina D3",
+          "form": "Colecalciferol",
+          "amount": 5000,
+          "unit": "IU",
+          "source": "lanolina"
+        },
+        {
+          "name": "Vitamina K2 (MK-7)",
+          "form": "Menaquinona-7",
+          "amount": 180,
+          "unit": "mcg",
+          "brand": "MenaQ7®"
+        }
+      ],
+      "excipients": "Celulosa microcristalina, hipromelosa, almidón modificado, maltodextrina, dióxido de silicio",
+      "benefits": "Soporte óseo y dental; salud cardiovascular; metabolismo adecuado del calcio; apoyo inmune (D3); formación de huesos fuertes. MK-7 dirige el calcio a los huesos evitando acumulación en arterias.",
+      "instructions": "1 cápsula diaria con comida que contenga grasa",
+      "warnings": "Consultar profesional si se toman anticoagulantes o se tiene alguna condición médica.",
+      "certifications": [
+        "Non-GMO",
+        "Kosher",
+        "GMP",
+        "Sin soja"
+      ],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.949Z",
+      "updatedAt": "2026-06-18T13:51:20.663Z",
+      "version": 1
+    },
+    "8a6ac53c-5f38-4055-899d-5b5f77915005": {
+      "id": "8a6ac53c-5f38-4055-899d-5b5f77915005",
+      "name": "Methylated B Complex",
+      "brand": "NatureBell",
+      "category": "vitamin",
+      "description": "Complejo vitamínico B 12-en-1 con formas bioactivas y metiladas (metilfolato + metilcobalamina) más vitaminas C, E, inositol y colina. Alta biodisponibilidad.",
+      "form": "cápsulas vegetarianas",
+      "presentation": "envase 240 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Vitamina C (Acerola)",
+          "form": "ácido ascórbico natural",
+          "amount": 45,
+          "unit": "mg"
+        },
+        {
+          "name": "Vitamina E",
+          "form": "tocoferol mixto",
+          "amount": 18,
+          "unit": "mg"
+        },
+        {
+          "name": "Tiamina (B1)",
+          "form": "tiamina HCl",
+          "amount": 100,
+          "unit": "mg"
+        },
+        {
+          "name": "Riboflavina (B2)",
+          "form": "Riboflavina-5-fosfato (R5P)",
+          "amount": 30,
+          "unit": "mg"
+        },
+        {
+          "name": "Niacina (B3)",
+          "form": "niacinamida",
+          "amount": 50,
+          "unit": "mg"
+        },
+        {
+          "name": "Ácido pantoténico (B5)",
+          "form": "pantotenato de calcio",
+          "amount": 50,
+          "unit": "mg"
+        },
+        {
+          "name": "Vitamina B6",
+          "form": "Piridoxal-5-fosfato (P5P)",
+          "amount": 20,
+          "unit": "mg"
+        },
+        {
+          "name": "Biotina (B7)",
+          "form": "D-Biotina",
+          "amount": 2000,
+          "unit": "mcg"
+        },
+        {
+          "name": "Folato (B9)",
+          "form": "L-Metilfolato (Methyl Folate)",
+          "amount": 1000,
+          "unit": "mcg"
+        },
+        {
+          "name": "Vitamina B12",
+          "form": "Metilcobalamina",
+          "amount": 1000,
+          "unit": "mcg"
+        },
+        {
+          "name": "Colina",
+          "form": "bitartrato de colina",
+          "amount": 30,
+          "unit": "mg"
+        },
+        {
+          "name": "Inositol",
+          "form": "mio-inositol",
+          "amount": 20,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Harina de arroz, celulosa vegetal (cápsula). Libre de soja, lácteos, gluten, trigo, huevos, pescado.",
+      "benefits": "Soporte energético y metabólico; apoyo al sistema inmune; formas metiladas para alta absorción; reduce homocisteína; soporte prenatal y postnatal.",
+      "instructions": "2 cápsulas al día con alimentos",
+      "certifications": [
+        "Non-GMO",
+        "Gluten-Free",
+        "Sin soja",
+        "GMP"
+      ],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 2,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.951Z",
+      "updatedAt": "2026-06-18T13:51:20.665Z",
+      "version": 1
+    },
+    "ef98cba0-5c9f-4787-aed8-016b32cf9b15": {
+      "id": "ef98cba0-5c9f-4787-aed8-016b32cf9b15",
+      "name": "Omega-3 TG",
+      "brand": "Innovanaturals",
+      "category": "supplement",
+      "description": "Omega-3 en forma de triglicéridos (TG) con certificaciones IFOS y GOED 5 estrellas. Alta concentración EPA+DHA, libre de contaminantes y metales pesados.",
+      "form": "cápsulas",
+      "activeIngredients": [
+        {
+          "name": "EPA (ácido eicosapentaenoico)",
+          "form": "triglicéridos (TG)",
+          "amount": 1440,
+          "unit": "mg"
+        },
+        {
+          "name": "DHA (ácido docosahexaenoico)",
+          "form": "triglicéridos (TG)",
+          "amount": 960,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Potente efecto antiinflamatorio; mejora salud cardiovascular; contribuye a salud cerebral y del sistema nervioso; soporte inmunológico; reduce triglicéridos; alivia dolores articulares; mejora memoria y visión.",
+      "instructions": "4 cápsulas diarias con las comidas principales (o 2+2)",
+      "certifications": [
+        "IFOS 5 estrellas",
+        "GOED 5 estrellas",
+        "Gluten-Free"
+      ],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 4,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "inStock": false,
+      "createdAt": "2026-06-18T13:42:59.953Z",
+      "updatedAt": "2026-06-18T14:53:16.506Z",
+      "version": 1
+    },
+    "e15cc4fd-ad88-40ec-8cd1-cd1aa39a8479": {
+      "id": "e15cc4fd-ad88-40ec-8cd1-cd1aa39a8479",
+      "name": "DHEA 100mg",
+      "brand": "NatureBell",
+      "category": "hormone",
+      "description": "DHEA (dehidroepiandrosterona) micronizado de alta potencia y absorción. Fuente vegetal pura. Soporte a energía, metabolismo, envejecimiento saludable y función cerebral.",
+      "form": "cápsulas vegetarianas",
+      "presentation": "envase 240 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "DHEA (Dehidroepiandrosterona)",
+          "form": "micronizado, fuente vegetal",
+          "amount": 100,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Harina de arroz, celulosa vegetal (cápsula). Non-GMO, libre de soja, lácteos, gluten.",
+      "benefits": "Soporte energético, metabólico y antioxidante; promueve envejecimiento saludable; soporte hormonal general.",
+      "instructions": "2 cápsulas al día con alimentos",
+      "warnings": "Consultar profesional antes de usar, especialmente si se tienen condiciones médicas preexistentes o se utilizan medicamentos. No exceder la dosis recomendada.",
+      "certifications": [
+        "Non-GMO",
+        "Gluten-Free",
+        "GMP"
+      ],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 2,
+      "doseUnit": "cáps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.955Z",
+      "updatedAt": "2026-06-18T13:51:20.668Z",
+      "version": 1
+    },
+    "a0cadbb2-ae88-49fd-82ea-70a3edecdb69": {
+      "id": "a0cadbb2-ae88-49fd-82ea-70a3edecdb69",
+      "name": "Clomifeno Citrato 50mg",
+      "brand": "Genozym",
+      "category": "medication",
+      "description": "SERM (modulador selectivo de receptores de estrógeno). Uso off-label en hombres con hipogonadismo secundario para estimular producción endógena de testosterona (vía LH/FSH) preservando fertilidad.",
+      "form": "comprimidos recubiertos",
+      "presentation": "envase 20-60 comprimidos",
+      "activeIngredients": [
+        {
+          "name": "Clomifeno citrato",
+          "form": "SERM — estimulante del eje hipotálamo-hipófisis-gónadas",
+          "amount": 50,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Croscarmelosa sódica, estearato de magnesio y excipientes farmacéuticos estándar.",
+      "benefits": "Aumenta LH y FSH endógenas; eleva testosterona sin suprimir eje hormonal; preserva espermatogénesis y fertilidad.",
+      "instructions": "Según prescripción médica. Uso off-label en hombres: generalmente 25-50mg diarios o en días alternos bajo supervisión.",
+      "warnings": "Medicamento de venta bajo receta. Requiere monitoreo periódico de testosterona, estradiol y hematocrito. Posibles efectos: visión borrosa, cambios de humor, cefaleas, ginecomastia. No usar sin indicación profesional.",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "comprimidos",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.956Z",
+      "updatedAt": "2026-06-18T15:14:22.603Z",
+      "version": 2
+    },
+    "d52cd471-687a-4737-8c6f-cae1f4b605e5": {
+      "id": "d52cd471-687a-4737-8c6f-cae1f4b605e5",
+      "name": "Cabergolina 0.5mg",
+      "brand": "Lactamax",
+      "category": "medication",
+      "description": "Agonista dopaminérgico D2 de acción prolongada. Reduce eficazmente los niveles de prolactina sérica. Indicado para hiperprolactinemia y prolactinomas.",
+      "form": "comprimidos",
+      "presentation": "envase 2-8 comprimidos",
+      "activeIngredients": [
+        {
+          "name": "Cabergolina",
+          "form": "agonista selectivo de receptores dopaminérgicos D2",
+          "amount": 0.5,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Lactosa, celulosa microcristalina, estearato de magnesio.",
+      "benefits": "Reducción efectiva y sostenida de prolactina sérica; acción prolongada permite dosificación semanal.",
+      "instructions": "Hiperprolactinemia: 0.5mg/semana en 1-2 tomas, ajustando según respuesta clínica y niveles de prolactina.",
+      "warnings": "Solo bajo supervisión médica. Puede causar náuseas, mareos, hipotensión ortostática, cefalea y somnolencia. Uso prolongado puede asociarse a fibrosis valvular cardíaca. Requiere seguimiento clínico periódico.",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "comprimidos",
+      "doseStep": 0.5,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.958Z",
+      "updatedAt": "2026-06-18T15:14:22.601Z",
+      "version": 1
+    },
+    "648692e9-2786-47a7-8658-55fc1168e599": {
+      "id": "648692e9-2786-47a7-8658-55fc1168e599",
+      "name": "Testenat Depot Enantato 250mg",
+      "brand": "Landerlan Gold",
+      "category": "medication",
+      "description": "Enantato de testosterona inyectable (éster de acción prolongada). Terapia de reemplazo hormonal (TRT) para hombres con hipogonadismo diagnosticado. 250mg/ml, vial 10ml.",
+      "form": "solución inyectable intramuscular (vial)",
+      "presentation": "vial 10ml / 250mg por ml",
+      "activeIngredients": [
+        {
+          "name": "Enantato de testosterona",
+          "form": "éster de acción prolongada, liberación sostenida",
+          "amount": 250,
+          "unit": "mg"
+        }
+      ],
+      "excipients": "Aceite vehicular (aceite de semilla de uva o similar) y excipientes farmacéuticos.",
+      "benefits": "Mantiene niveles séricos de testosterona durante varios días; restaura vitalidad, masa muscular, libido y bienestar en hombres con hipogonadismo.",
+      "instructions": "Dosis y frecuencia según indicación médica y controles de laboratorio. Administración intramuscular.",
+      "warnings": "Medicamento controlado — solo bajo prescripción médica. Requiere monitoreo de testosterona, hematocrito, perfil lipídico y función prostática. Puede causar supresión del eje hormonal, acné, ginecomastia, retención de líquidos y eventos cardiovasculares.",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 0.4,
+      "doseUnit": "ml",
+      "doseStep": 0.05,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T13:42:59.960Z",
+      "updatedAt": "2026-06-18T13:52:03.856Z",
+      "version": 2
+    },
+    "3fdbf241-bf4a-4e78-b1b6-0100061c7063": {
+      "id": "3fdbf241-bf4a-4e78-b1b6-0100061c7063",
+      "name": "GHK-Cu (Péptido de Cobre)",
+      "brand": "Revolution Pharma",
+      "category": "other",
+      "description": "Péptido GHK-Cu (Glicil-L-Histidil-L-Lisina-Cobre) liofilizado para uso subcutáneo. Regeneración tisular, estimulación de colágeno y elastina, anti-envejecimiento y cicatrización. Polvo liofilizado 50mg/vial.",
+      "form": "polvo liofilizado para inyección subcutánea (vial)",
+      "presentation": "vial 50mg",
+      "activeIngredients": [
+        {
+          "name": "GHK-Cu",
+          "form": "Glicil-L-Histidil-L-Lisina-Cobre, péptido de cobre tripeptídico",
+          "amount": 1,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Regeneración tisular; estimulación de síntesis de colágeno y elastina; efecto antiaging; mejora de calidad capilar y textura de piel; cicatrización.",
+      "instructions": "1-2mg/día vía subcutánea, reconstituido con agua bacteriostática. Rotar sitios de inyección.",
+      "warnings": "Uso bajo supervisión médica. No aprobado por FDA para inyección. Evidencia clínica limitada en humanos para uso inyectable. Incertidumbre sobre pureza y esterilidad del producto.",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "mg",
+      "doseStep": 0.5,
+      "timing": null,
+      "active": false,
+      "createdAt": "2026-06-18T13:42:59.962Z",
+      "updatedAt": "2026-06-20T05:08:41.699Z",
+      "version": 3
+    },
+    "233194d7-f954-486a-99e0-9f21a091925b": {
+      "id": "233194d7-f954-486a-99e0-9f21a091925b",
+      "name": "GHK-Cu (Péptido de Cobre)",
+      "brand": "Revolution Pharma",
+      "category": "other",
+      "description": "Péptido GHK-Cu (Glicil-L-Histidil-L-Lisina-Cobre) para regeneración tisular, reparación de piel, estimulación de colágeno y elastina, anti-envejecimiento, mejora de cabello y cicatrización.",
+      "form": "polvo liofilizado para inyección subcutánea",
+      "presentation": "Vial 50 mg",
+      "activeIngredients": [
+        {
+          "name": "GHK-Cu",
+          "form": "péptido de cobre (GHK-Cu)",
+          "amount": 16.667,
+          "unit": "mg",
+          "source": "síntesis química"
+        }
+      ],
+      "benefits": "Mejora de la calidad de la piel, regeneración tisular y antiaging. Estimulación de colágeno y elastina. Cicatrización y calidad capilar.",
+      "instructions": "0.1 ml vía subcutánea con aguja de insulina. Reconstituido en 3 ml de agua bacteriostática (vial 50 mg → 16.67 mg/ml). Dosis 0.1 ml = 1.67 mg.",
+      "warnings": "Uso bajo supervisión médica. No aprobado por FDA para inyección en humanos. Incertidumbre sobre pureza, concentración real y esterilidad del producto. Evidencia clínica limitada en humanos para uso inyectable.",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 0.1,
+      "doseUnit": "ml",
+      "doseStep": 0.05,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T14:29:08.323Z",
+      "updatedAt": "2026-06-18T14:29:08.323Z",
+      "version": 0
+    },
+    "784eff85-1b12-4ad5-a7c2-273edf5108ad": {
+      "id": "784eff85-1b12-4ad5-a7c2-273edf5108ad",
+      "name": "Creatina Monohidrato",
+      "brand": "Star Nutrition",
+      "category": "supplement",
+      "description": "Creatina monohidrato pura 100%, sin aditivos. Aumenta la reserva de fosfocreatina intramuscular para mejorar fuerza, potencia y rendimiento en ejercicios explosivos.",
+      "form": "polvo micronizado",
+      "presentation": "Pote 1 kg (200 porciones de 5g)",
+      "activeIngredients": [
+        {
+          "name": "Creatina Monohidrato",
+          "form": "monohidrato",
+          "amount": 5000,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Aumento de fuerza y potencia en ejercicios de alta intensidad. Mejora la recuperación entre series. Contribuye a la hipertrofia muscular.",
+      "instructions": "1 medida (5g) disuelta en 200-300ml de agua o jugo. Sin fase de carga: 3-5g/día. Con fase de carga: 20g/día divididos en 4 tomas por 5 días, luego mantenimiento 5g/día.",
+      "warnings": "Hidratarse bien (mínimo 2L de agua/día). Consultar médico si hay antecedentes de enfermedad renal. La fase de carga puede causar leve retención hídrica inicial.",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "medida (5g)",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T15:11:45.706Z",
+      "updatedAt": "2026-06-18T15:14:22.599Z",
+      "version": 1
+    },
+    "486e193a-875d-430a-846d-760db7deba16": {
+      "id": "486e193a-875d-430a-846d-760db7deba16",
+      "name": "EPH 100",
+      "brand": "KN Nutrition",
+      "category": "supplement",
+      "description": "Termogénico estimulante con extracto de efedra (Ma Huang) de alta concentración + blend de estimulantes. Para quema de grasa y supresión del apetito.",
+      "form": "cápsulas",
+      "presentation": "Frasco 60 cápsulas",
+      "activeIngredients": [
+        {
+          "name": "Extracto de Efedra (Ma Huang)",
+          "form": "extracto estandarizado",
+          "amount": 100,
+          "unit": "mg"
+        },
+        {
+          "name": "EPH 100 Proprietary Blend",
+          "form": "blend de estimulantes (cafeína, sinefrina, guaraná y otros)",
+          "amount": 700,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Termogénesis aumentada. Supresión del apetito. Aumento de energía y foco para entrenamiento.",
+      "instructions": "1 cápsula con el desayuno. No exceder 2 cápsulas por día. No tomar después de las 14h para no interferir con el sueño. Ciclar: 8 semanas ON / 4 semanas OFF.",
+      "warnings": "PRODUCTO ESTIMULANTE FUERTE. No usar si hay problemas cardíacos, hipertensión, diabetes, hipertiroidismo, trastornos psiquiátricos o ansiedad. No combinar con IMAO, antidepresivos ni estimulantes adicionales. No apto para mujeres embarazadas o en lactancia. No conducir si hay sensación de mareo. La efedra puede ser restringida o prohibida en competiciones deportivas (verificar con WADA/AFAD).",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "caps",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T15:11:45.709Z",
+      "updatedAt": "2026-06-18T15:11:45.709Z",
+      "version": 0
+    },
+    "675619f0-9702-42c0-a5aa-4a043f9033f7": {
+      "id": "675619f0-9702-42c0-a5aa-4a043f9033f7",
+      "name": "Shilajit Extract",
+      "brand": "BulkSupplements",
+      "category": "adaptogen",
+      "description": "Extracto purificado de shilajit (resina mineral del Himalaya) en polvo. Rico en ácido fúlvico, ácido húmico y más de 84 minerales traza. Adaptógeno potente.",
+      "form": "polvo",
+      "presentation": "Bolsa 100g",
+      "activeIngredients": [
+        {
+          "name": "Extracto de Shilajit",
+          "form": "purificado y estandarizado (ácido fúlvico)",
+          "amount": 1,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Soporte energético mitocondrial (transportador de electrones vía ácido fúlvico). Potencial soporte en niveles de testosterona. Mejora la biodisponibilidad de otros nutrientes. Adaptógeno para resistencia al estrés.",
+      "instructions": "500mg (punta de cuchara pequeña) disuelta en agua tibia o leche. Tomar en ayunas o con el desayuno. Ciclar: 2-3 meses ON / 2-4 semanas OFF.",
+      "warnings": "Usar exclusivamente producto purificado (el shilajit crudo puede contener metales pesados). Puede interactuar con hipoglucemiantes. Consultar médico si hay hiperuricemia. Sabor y color fuertes, naturales del producto.",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 500,
+      "doseUnit": "mg",
+      "doseStep": 250,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T15:11:45.713Z",
+      "updatedAt": "2026-06-18T15:14:22.597Z",
+      "version": 1
+    },
+    "be516b47-20aa-4f1a-8182-e32f3e0b8b9c": {
+      "id": "be516b47-20aa-4f1a-8182-e32f3e0b8b9c",
+      "name": "NMN Powder",
+      "brand": "BulkSupplements",
+      "category": "supplement",
+      "description": "Nicotinamida Mononucleótido (NMN) en polvo. Precursor directo del NAD+. Soporte en la vía de sirtuin, metabolismo energético y potencial anti-envejecimiento celular.",
+      "form": "polvo",
+      "presentation": "Bolsa 25g o 100g",
+      "activeIngredients": [
+        {
+          "name": "NMN (Nicotinamida Mononucleótido)",
+          "form": "beta-NMN purificado",
+          "amount": 1,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Precursor del NAD+ para soporte mitocondrial y energético. Activación de sirtuinas (SIRT1/SIRT3). Potencial mejora de resistencia insulínica y función cognitiva. Anti-envejecimiento celular.",
+      "instructions": "500mg (punta de cuchara pequeña aprox.) disuelta en agua fría o a temperatura ambiente (evitar agua caliente). Tomar en ayunas o con el desayuno temprano. Almacenar en lugar fresco, seco y sin luz.",
+      "warnings": "Evitar dosis altas sin supervisión médica. Puede potenciar efectos de medicamentos que afecten el metabolismo del NAD+. No hay datos suficientes en embarazo/lactancia.",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 500,
+      "doseUnit": "mg",
+      "doseStep": 250,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T15:11:45.715Z",
+      "updatedAt": "2026-06-18T15:14:22.593Z",
+      "version": 1
+    },
+    "e99872f1-ccfd-4158-a412-d4b2ac4c20a8": {
+      "id": "e99872f1-ccfd-4158-a412-d4b2ac4c20a8",
+      "name": "Lipodrene",
+      "brand": "Hi-Tech Pharmaceuticals",
+      "category": "supplement",
+      "description": "Termogénico y quemador de grasa de alto espectro con efedra, cafeína y blend estimulante que incluye DMHA (2-aminoisoheptano). Uno de los termogénicos más potentes del mercado.",
+      "form": "comprimidos",
+      "presentation": "Frasco 90 comprimidos",
+      "activeIngredients": [
+        {
+          "name": "Extracto de Efedra (Ma Huang)",
+          "form": "extracto estandarizado",
+          "amount": 25,
+          "unit": "mg"
+        },
+        {
+          "name": "Cafeína Anhidra",
+          "form": "anhidra",
+          "amount": 100,
+          "unit": "mg"
+        },
+        {
+          "name": "Lipodrene Proprietary Blend",
+          "form": "blend (DMHA/2-aminoisoheptano, PEA, sinefrina, acacia rigidula, yohimbina, EGCG, naringenin y otros)",
+          "amount": 560,
+          "unit": "mg"
+        }
+      ],
+      "benefits": "Termogénesis potente. Supresión del apetito. Mejora del enfoque y energía para entrenamiento. Movilización de grasa vía beta-oxidación.",
+      "instructions": "1 comprimido con el desayuno. Máximo 2 comprimidos/día (separados por al menos 4h). No tomar después de las 13h. Ciclar: 8 semanas ON / 4 semanas OFF. No combinar con otros estimulantes.",
+      "warnings": "PRODUCTO ESTIMULANTE MUY FUERTE (efedra + cafeína + DMHA). No usar si hay problemas cardíacos, hipertensión, diabetes, hipertiroidismo, ansiedad o trastornos psiquiátricos. No usar con IMAO, antidepresivos, estimulantes adicionales ni alcohol. No conducir si hay mareo o palpitaciones. El DMHA puede estar prohibido en competiciones deportivas (WADA). Producto importado — consultar legalidad en Argentina.",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "comp.",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T15:11:45.718Z",
+      "updatedAt": "2026-06-18T15:11:45.718Z",
+      "version": 0
+    },
+    "acbc2e1f-09b8-4459-bd0d-77a9290f0d14": {
+      "id": "acbc2e1f-09b8-4459-bd0d-77a9290f0d14",
+      "name": "Premium Whey Protein",
+      "brand": "Star Nutrition",
+      "category": "supplement",
+      "description": "Proteína de suero de leche (WPC 80 + WPI) con perfil completo de aminoácidos esenciales. Alta concentración proteica y bajo contenido de carbohidratos y grasas.",
+      "form": "polvo (varios sabores)",
+      "presentation": "Pote 2 kg (~57 porciones) o 1 kg (~33 porciones)",
+      "activeIngredients": [
+        {
+          "name": "Proteína de Suero (WPC 80 / WPI)",
+          "form": "concentrado + isolado de suero de leche",
+          "amount": 25,
+          "unit": "g"
+        },
+        {
+          "name": "L-Leucina (BCAA)",
+          "form": "L-Leucina",
+          "amount": 2.7,
+          "unit": "g"
+        },
+        {
+          "name": "L-Isoleucina (BCAA)",
+          "form": "L-Isoleucina",
+          "amount": 1.5,
+          "unit": "g"
+        },
+        {
+          "name": "L-Valina (BCAA)",
+          "form": "L-Valina",
+          "amount": 1.4,
+          "unit": "g"
+        }
+      ],
+      "excipients": "Cocoa en polvo (sabor chocolate), lecitina de girasol, sucralosa, acesulfamo-K, sabores naturales y artificiales (varían según sabor).",
+      "benefits": "Soporte a la síntesis proteica muscular (MPS). Recuperación post-entrenamiento. Fuente de BCAAs de rápida absorción. Bajo aporte calórico relativo a la proteína.",
+      "instructions": "1 medida (30g) en 250-300ml de agua fría o leche. Tomar post-entrenamiento o como suplemento proteico entre comidas. Agitar bien en shaker.",
+      "warnings": "Contiene derivados de leche — no apto para intolerantes severos a lactosa o alérgicos a proteínas lácteas. No reemplaza una dieta balanceada.",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "medida (30g)",
+      "doseStep": 0.5,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T15:11:45.722Z",
+      "updatedAt": "2026-06-18T15:11:45.722Z",
+      "version": 0
+    },
+    "4fe9e257-e7be-4a34-8082-9680a6b3adbd": {
+      "id": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+      "name": "Metformina AP",
+      "brand": "DBI",
+      "category": "medication",
+      "description": "",
+      "form": "Comprimidos",
+      "presentation": "100",
+      "activeIngredients": [
+        {
+          "name": "Metformina",
+          "form": "",
+          "amount": 1000,
+          "unit": "mg"
+        }
+      ],
+      "instructions": "",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "Ud",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-18T17:01:35.312Z",
+      "updatedAt": "2026-06-18T17:01:35.312Z",
+      "version": 0
+    },
+    "e86d8a9c-e003-4989-8698-71a3b73e5ba5": {
+      "id": "e86d8a9c-e003-4989-8698-71a3b73e5ba5",
+      "name": "HMB",
+      "brand": "Natural Whey Suplementos",
+      "category": "supplement",
+      "description": "HMB (Beta-hidroxi-beta-metilbutirato) es un metabolito del aminoácido esencial leucina. Actúa como un potente escudo anticatabólico que frena la destrucción muscular, reduce el daño post-entrenamiento y optimiza los tiempos de recuperación, favoreciendo el mantenimiento de la masa magra",
+      "form": "Polvo",
+      "activeIngredients": [
+        {
+          "name": "HMB (Beta-hidroxi-beta-metilbutirato)",
+          "form": "",
+          "amount": 1,
+          "unit": "mg"
+        }
+      ],
+      "instructions": "",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1000,
+      "doseUnit": "mg",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-19T05:30:58.142Z",
+      "updatedAt": "2026-06-20T05:08:41.699Z",
+      "version": 2
+    },
+    "276c265c-030c-4a2b-bae0-476739cf2817": {
+      "id": "276c265c-030c-4a2b-bae0-476739cf2817",
+      "name": "Magnesio citrato tribásico anhidro",
+      "category": "supplement",
+      "description": "El citrato de magnesio tribásico anhidro es una sal de magnesio altamente biodisponible compuesta por ácido cítrico y magnesio. Se utiliza como suplemento dietario y aditivo alimentario (E 345) por su rápida absorción y eficacia.Usos y BeneficiosSalud Muscular y Nerviosa: Previene calambres, apoya la función neuromuscular y ayuda a reducir la fatiga.\n\nDigestión: En dosis adecuadas, funciona como un laxante osmótico que atrae agua a los intestinos, ablandando las heces y aliviando el estreñimiento ocasional.\n\nDescanso y Estrés: Promueve la relajación, ayudando a disminuir el estrés, la ansiedad y mejorando la calidad del sueño.\n\nSalud Ósea: Contribuye a fijar el calcio en los huesos y fortalece la estructura ósea.",
+      "form": "",
+      "activeIngredients": [
+        {
+          "name": "Magnesio citrato tribásico anhidro",
+          "form": "",
+          "amount": 1,
+          "unit": "mg"
+        }
+      ],
+      "instructions": "",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1000,
+      "doseUnit": "mg",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-19T05:33:40.510Z",
+      "updatedAt": "2026-06-20T05:08:41.699Z",
+      "version": 2
+    },
+    "03e5e96e-b194-4c0b-a3e1-9fab2577ea55": {
+      "id": "03e5e96e-b194-4c0b-a3e1-9fab2577ea55",
+      "name": "Acido hialuronico",
+      "brand": "BULK",
+      "category": "supplement",
+      "description": "",
+      "form": "",
+      "activeIngredients": [
+        {
+          "name": "Acido hialuronico",
+          "form": "",
+          "amount": 1,
+          "unit": "mg"
+        }
+      ],
+      "instructions": "",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 400,
+      "doseUnit": "mg",
+      "doseStep": 400,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-19T05:37:49.815Z",
+      "updatedAt": "2026-06-20T05:08:41.699Z",
+      "version": 2
+    },
+    "94a088f3-0a9e-47a9-a663-390cab17bcc9": {
+      "id": "94a088f3-0a9e-47a9-a663-390cab17bcc9",
+      "name": "Colageno hidrolizado",
+      "category": "supplement",
+      "description": "",
+      "form": "",
+      "activeIngredients": [
+        {
+          "name": "Colageno hidrolizado",
+          "form": "",
+          "amount": 1,
+          "unit": "g"
+        }
+      ],
+      "instructions": "",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 10,
+      "doseUnit": "g",
+      "doseStep": 10,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-19T05:39:52.264Z",
+      "updatedAt": "2026-06-20T05:08:41.699Z",
+      "version": 3
+    },
+    "969ab0cd-87ce-4036-a669-fc1e84382015": {
+      "id": "969ab0cd-87ce-4036-a669-fc1e84382015",
+      "name": "Clembuterol",
+      "brand": "FM",
+      "category": "medication",
+      "description": "El Clembuterol FM 0.08 mg es un fármaco broncodilatador de uso exclusivo veterinario (generalmente indicado para equinos). En Argentina, no está aprobado para consumo humano, pero es ilegalmente buscado para la oxidación de grasa y retención muscular en el culturismo.",
+      "form": "",
+      "activeIngredients": [
+        {
+          "name": "Clembuterol",
+          "form": "",
+          "amount": 0.08,
+          "unit": "mg"
+        }
+      ],
+      "instructions": "",
+      "certifications": [],
+      "schedule": {
+        "kind": "as_needed"
+      },
+      "defaultDose": 1,
+      "doseUnit": "ud",
+      "doseStep": 1,
+      "timing": null,
+      "active": true,
+      "createdAt": "2026-06-21T13:21:08.937Z",
+      "updatedAt": "2026-06-21T13:21:08.937Z",
+      "version": 0
+    }
+  },
+  "dailyLogs": {
+    "2026-06-18": {
+      "id": "234e2ab3-c208-4c56-ba7f-e5a75f3fe4cd",
+      "date": "2026-06-18",
+      "entries": [
+        {
+          "id": "b18fd63d-32e9-41e9-b4dd-e4730dd1c0b1",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-18T13:00:00.000Z",
+          "recordedAt": "2026-06-18T14:08:27.268Z"
+        },
+        {
+          "id": "916c5db5-025b-49ef-8259-e93e811cba96",
+          "supplementId": "6e8c4ee3-b0ad-403c-ae6f-7c0f65da65b0",
+          "supplementSnapshot": {
+            "name": "Mega D3 & MK-7",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina D3",
+                "form": "Colecalciferol",
+                "amount": 5000,
+                "unit": "IU",
+                "source": "lanolina"
+              },
+              {
+                "name": "Vitamina K2 (MK-7)",
+                "form": "Menaquinona-7",
+                "amount": 180,
+                "unit": "mcg",
+                "brand": "MenaQ7®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-18T13:00:00.000Z",
+          "recordedAt": "2026-06-18T14:09:14.164Z"
+        },
+        {
+          "id": "7248ceb2-c78d-4716-9504-b89308b9f9fe",
+          "supplementId": "d5c408b9-acc2-48a2-bb0c-8f21fdf307af",
+          "supplementSnapshot": {
+            "name": "Ubiquinol 100mg",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Ubiquinol",
+                "form": "forma reducida activa de CoQ10",
+                "amount": 100,
+                "unit": "mg",
+                "brand": "Kaneka Ubiquinol®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-18T13:00:00.000Z",
+          "recordedAt": "2026-06-18T14:09:26.180Z"
+        },
+        {
+          "id": "24719c5f-4737-4c18-a131-171f2988fcca",
+          "supplementId": "233194d7-f954-486a-99e0-9f21a091925b",
+          "supplementSnapshot": {
+            "name": "GHK-Cu (Péptido de Cobre)",
+            "doseUnit": "ml",
+            "category": "other",
+            "activeIngredients": [
+              {
+                "name": "GHK-Cu",
+                "form": "péptido de cobre (GHK-Cu)",
+                "amount": 16.667,
+                "unit": "mg",
+                "source": "síntesis química"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.1,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-18T05:00:00.000Z",
+          "recordedAt": "2026-06-18T14:29:37.763Z"
+        },
+        {
+          "id": "ff6a8bc9-0558-4b46-a6aa-76caa2d72d2d",
+          "supplementId": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+          "supplementSnapshot": {
+            "name": "Melatol 3mg",
+            "doseUnit": "comp.",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Melatonina",
+                "form": "sintética",
+                "amount": 3,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.5,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-18T05:00:00.000Z",
+          "recordedAt": "2026-06-18T14:29:59.355Z"
+        },
+        {
+          "id": "ac394081-ce64-4eeb-b614-22116a096d47",
+          "supplementId": "8261b214-879c-44eb-bab8-f59cdf616b7b",
+          "supplementSnapshot": {
+            "name": "KSM-66 Ashwagandha Extract",
+            "doseUnit": "cáps",
+            "category": "adaptogen",
+            "activeIngredients": [
+              {
+                "name": "Extracto de raíz KSM-66 Ashwagandha",
+                "form": "estandarizado 5% withanolides, full-spectrum, Green Chemistry",
+                "amount": 300,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-18T05:00:00.000Z",
+          "recordedAt": "2026-06-18T14:30:11.395Z"
+        },
+        {
+          "id": "81e5e1de-5641-46d7-adf8-adfc966abea6",
+          "supplementId": "675619f0-9702-42c0-a5aa-4a043f9033f7",
+          "supplementSnapshot": {
+            "name": "Shilajit Extract",
+            "doseUnit": "mg",
+            "category": "adaptogen",
+            "activeIngredients": [
+              {
+                "name": "Extracto de Shilajit",
+                "form": "purificado y estandarizado (ácido fúlvico)",
+                "amount": 1,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1000,
+          "doseUnit": "mg",
+          "timestamp": "2026-06-18T16:55:00.000Z",
+          "recordedAt": "2026-06-18T16:55:37.985Z"
+        },
+        {
+          "id": "5c9f4c6f-6994-4c30-b63e-1b4b0af13b7a",
+          "supplementId": "be516b47-20aa-4f1a-8182-e32f3e0b8b9c",
+          "supplementSnapshot": {
+            "name": "NMN Powder",
+            "doseUnit": "mg",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "NMN (Nicotinamida Mononucleótido)",
+                "form": "beta-NMN purificado",
+                "amount": 1,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1000,
+          "doseUnit": "mg",
+          "timestamp": "2026-06-18T16:55:00.000Z",
+          "recordedAt": "2026-06-18T16:55:51.839Z"
+        },
+        {
+          "id": "9dd018c5-29d8-4267-929b-05dc0d37c748",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-18T16:56:00.000Z",
+          "recordedAt": "2026-06-18T16:56:35.771Z"
+        },
+        {
+          "id": "e31e0d8a-b7ca-41b6-b996-ea6758f07a98",
+          "supplementId": "8a6ac53c-5f38-4055-899d-5b5f77915005",
+          "supplementSnapshot": {
+            "name": "Methylated B Complex",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina C (Acerola)",
+                "form": "ácido ascórbico natural",
+                "amount": 45,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina E",
+                "form": "tocoferol mixto",
+                "amount": 18,
+                "unit": "mg"
+              },
+              {
+                "name": "Tiamina (B1)",
+                "form": "tiamina HCl",
+                "amount": 100,
+                "unit": "mg"
+              },
+              {
+                "name": "Riboflavina (B2)",
+                "form": "Riboflavina-5-fosfato (R5P)",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Niacina (B3)",
+                "form": "niacinamida",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Ácido pantoténico (B5)",
+                "form": "pantotenato de calcio",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina B6",
+                "form": "Piridoxal-5-fosfato (P5P)",
+                "amount": 20,
+                "unit": "mg"
+              },
+              {
+                "name": "Biotina (B7)",
+                "form": "D-Biotina",
+                "amount": 2000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Folato (B9)",
+                "form": "L-Metilfolato (Methyl Folate)",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Vitamina B12",
+                "form": "Metilcobalamina",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Colina",
+                "form": "bitartrato de colina",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Inositol",
+                "form": "mio-inositol",
+                "amount": 20,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-18T16:57:00.000Z",
+          "recordedAt": "2026-06-18T16:57:08.409Z"
+        },
+        {
+          "id": "0123eb89-55f0-4024-8412-d6d8d0ee2c8c",
+          "supplementId": "e15cc4fd-ad88-40ec-8cd1-cd1aa39a8479",
+          "supplementSnapshot": {
+            "name": "DHEA 100mg",
+            "doseUnit": "cáps",
+            "category": "hormone",
+            "activeIngredients": [
+              {
+                "name": "DHEA (Dehidroepiandrosterona)",
+                "form": "micronizado, fuente vegetal",
+                "amount": 100,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 0.5,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-18T16:59:00.000Z",
+          "recordedAt": "2026-06-18T16:59:24.998Z"
+        },
+        {
+          "id": "51047e8e-ee46-4c8f-8699-318bcbdbb0ca",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-18T17:01:00.000Z",
+          "recordedAt": "2026-06-18T17:01:53.942Z"
+        },
+        {
+          "id": "f47b625e-a8c2-49bc-b8fc-3fdfe5e90aa3",
+          "supplementId": "b813883e-e61d-42d9-8787-55330721c26f",
+          "supplementSnapshot": {
+            "name": "Tongkat Ali (2% Eurycomanone)",
+            "doseUnit": "cáps",
+            "category": "herb",
+            "activeIngredients": [
+              {
+                "name": "Extracto de raíz Tongkat Ali",
+                "form": "full-spectrum, estandarizado 2% eurycomanone",
+                "amount": 200,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-18T20:16:00.000Z",
+          "recordedAt": "2026-06-18T20:16:10.240Z"
+        },
+        {
+          "id": "7edc094d-409d-48af-b860-30a4b4ce055f",
+          "supplementId": "784eff85-1b12-4ad5-a7c2-273edf5108ad",
+          "supplementSnapshot": {
+            "name": "Creatina Monohidrato",
+            "doseUnit": "medida (5g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Creatina Monohidrato",
+                "form": "monohidrato",
+                "amount": 5000,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "medida (5g)",
+          "timestamp": "2026-06-18T20:16:00.000Z",
+          "recordedAt": "2026-06-18T20:16:26.327Z"
+        },
+        {
+          "id": "ae12d6ce-596e-4d45-977b-a2013e45d683",
+          "supplementId": "8a6ac53c-5f38-4055-899d-5b5f77915005",
+          "supplementSnapshot": {
+            "name": "Methylated B Complex",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina C (Acerola)",
+                "form": "ácido ascórbico natural",
+                "amount": 45,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina E",
+                "form": "tocoferol mixto",
+                "amount": 18,
+                "unit": "mg"
+              },
+              {
+                "name": "Tiamina (B1)",
+                "form": "tiamina HCl",
+                "amount": 100,
+                "unit": "mg"
+              },
+              {
+                "name": "Riboflavina (B2)",
+                "form": "Riboflavina-5-fosfato (R5P)",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Niacina (B3)",
+                "form": "niacinamida",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Ácido pantoténico (B5)",
+                "form": "pantotenato de calcio",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina B6",
+                "form": "Piridoxal-5-fosfato (P5P)",
+                "amount": 20,
+                "unit": "mg"
+              },
+              {
+                "name": "Biotina (B7)",
+                "form": "D-Biotina",
+                "amount": 2000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Folato (B9)",
+                "form": "L-Metilfolato (Methyl Folate)",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Vitamina B12",
+                "form": "Metilcobalamina",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Colina",
+                "form": "bitartrato de colina",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Inositol",
+                "form": "mio-inositol",
+                "amount": 20,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-18T22:49:00.000Z",
+          "recordedAt": "2026-06-18T22:49:10.321Z"
+        },
+        {
+          "id": "1dcdc191-0dc9-4d51-a659-35e4cc26778d",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-19T02:00:00.000Z",
+          "recordedAt": "2026-06-19T02:00:37.411Z"
+        }
+      ],
+      "skipped": [],
+      "notes": [
+        {
+          "id": "b76c42c7-4a68-4ab8-9efe-8fed0c9b382b",
+          "text": "Hoy me levanté y algo no estaba. Sin erecciones matutinas, lo noté enseguida. Intenté masturbarme y mi pene no respondía como siempre — se mojó, sentí que había excitación, pero no se ponía duro. Raro. No me había pasado antes.  Lo que sí me llamó la atención, y eso fue positivo, es que la mastodontia del pezón derecho — esa sensibilidad que tengo desde chico, hace más de veinte años — estaba al mínimo. Casi nada. Como si algo hubiera cambiado ahí de un día para el otro.  Un día extraño. Me apliqué la testosterona ayer, corté el clomifeno al mismo tiempo, y hoy el cuerpo me habló diferente. No me asusté, entiendo que es una transición, que el sistema está recalibrándose. Pero lo sentí. El cuerpo en pausa, buscando su nuevo punto de equilibrio.",
+          "timestamp": "2026-06-18T23:07:53.804Z"
+        }
+      ],
+      "sealed": true,
+      "checksum": "",
+      "createdAt": "2026-06-18T13:48:36.285Z",
+      "updatedAt": "2026-06-19T04:09:37.904Z"
+    },
+    "2026-06-17": {
+      "id": "a99a4fe0-866a-4202-9992-c7af3b2d3fb6",
+      "date": "2026-06-17",
+      "entries": [
+        {
+          "id": "f05d66fa-7b13-46f2-901f-8cad32e2dc16",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 2,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-17T13:00:00.000Z",
+          "recordedAt": "2026-06-18T14:10:19.444Z"
+        },
+        {
+          "id": "4235923b-17ff-46f1-a515-ad3335290770",
+          "supplementId": "6e8c4ee3-b0ad-403c-ae6f-7c0f65da65b0",
+          "supplementSnapshot": {
+            "name": "Mega D3 & MK-7",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina D3",
+                "form": "Colecalciferol",
+                "amount": 5000,
+                "unit": "IU",
+                "source": "lanolina"
+              },
+              {
+                "name": "Vitamina K2 (MK-7)",
+                "form": "Menaquinona-7",
+                "amount": 180,
+                "unit": "mcg",
+                "brand": "MenaQ7®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-17T13:00:00.000Z",
+          "recordedAt": "2026-06-18T14:10:30.188Z"
+        },
+        {
+          "id": "4ffa2c80-9407-4c76-9124-2166196b53a4",
+          "supplementId": "d5c408b9-acc2-48a2-bb0c-8f21fdf307af",
+          "supplementSnapshot": {
+            "name": "Ubiquinol 100mg",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Ubiquinol",
+                "form": "forma reducida activa de CoQ10",
+                "amount": 100,
+                "unit": "mg",
+                "brand": "Kaneka Ubiquinol®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-17T13:00:00.000Z",
+          "recordedAt": "2026-06-18T14:10:41.884Z"
+        },
+        {
+          "id": "31735b29-1642-4205-9ddd-603c9798fe92",
+          "supplementId": "e15cc4fd-ad88-40ec-8cd1-cd1aa39a8479",
+          "supplementSnapshot": {
+            "name": "DHEA 100mg",
+            "doseUnit": "cáps",
+            "category": "hormone",
+            "activeIngredients": [
+              {
+                "name": "DHEA (Dehidroepiandrosterona)",
+                "form": "micronizado, fuente vegetal",
+                "amount": 100,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 0.5,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-17T15:00:00.000Z",
+          "recordedAt": "2026-06-18T14:11:00.532Z"
+        },
+        {
+          "id": "5549d48b-4937-4eda-8efb-adaa351b6263",
+          "supplementId": "a0cadbb2-ae88-49fd-82ea-70a3edecdb69",
+          "supplementSnapshot": {
+            "name": "Clomifeno Citrato 50mg",
+            "doseUnit": "comprimidos",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Clomifeno citrato",
+                "form": "SERM — estimulante del eje hipotálamo-hipófisis-gónadas",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "comprimidos",
+          "timestamp": "2026-06-17T12:00:00.000Z",
+          "recordedAt": "2026-06-18T14:11:43.212Z"
+        },
+        {
+          "id": "33b4c2b8-bfc8-4301-95cf-6de3d150b482",
+          "supplementId": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+          "supplementSnapshot": {
+            "name": "Melatol 3mg",
+            "doseUnit": "comp.",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Melatonina",
+                "form": "sintética",
+                "amount": 3,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.5,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-17T05:00:00.000Z",
+          "recordedAt": "2026-06-18T14:12:18.661Z"
+        },
+        {
+          "id": "5288d118-7d70-47f9-adfc-6cdfaf04b7d3",
+          "supplementId": "8261b214-879c-44eb-bab8-f59cdf616b7b",
+          "supplementSnapshot": {
+            "name": "KSM-66 Ashwagandha Extract",
+            "doseUnit": "cáps",
+            "category": "adaptogen",
+            "activeIngredients": [
+              {
+                "name": "Extracto de raíz KSM-66 Ashwagandha",
+                "form": "estandarizado 5% withanolides, full-spectrum, Green Chemistry",
+                "amount": 300,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-17T05:00:00.000Z",
+          "recordedAt": "2026-06-18T14:12:30.957Z"
+        },
+        {
+          "id": "c537bc2a-c530-426b-bb6b-ebf1fa82b73e",
+          "supplementId": "648692e9-2786-47a7-8658-55fc1168e599",
+          "supplementSnapshot": {
+            "name": "Testenat Depot Enantato 250mg",
+            "doseUnit": "ml",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Enantato de testosterona",
+                "form": "éster de acción prolongada, liberación sostenida",
+                "amount": 250,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.4,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-18T02:00:00.000Z",
+          "recordedAt": "2026-06-18T14:13:26.693Z"
+        },
+        {
+          "id": "fabef853-e6b0-42e3-806a-2392db5b14d6",
+          "supplementId": "acbc2e1f-09b8-4459-bd0d-77a9290f0d14",
+          "supplementSnapshot": {
+            "name": "Premium Whey Protein",
+            "doseUnit": "medida (30g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Proteína de Suero (WPC 80 / WPI)",
+                "form": "concentrado + isolado de suero de leche",
+                "amount": 25,
+                "unit": "g"
+              },
+              {
+                "name": "L-Leucina (BCAA)",
+                "form": "L-Leucina",
+                "amount": 2.7,
+                "unit": "g"
+              },
+              {
+                "name": "L-Isoleucina (BCAA)",
+                "form": "L-Isoleucina",
+                "amount": 1.5,
+                "unit": "g"
+              },
+              {
+                "name": "L-Valina (BCAA)",
+                "form": "L-Valina",
+                "amount": 1.4,
+                "unit": "g"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "medida (30g)",
+          "timestamp": "2026-06-17T17:00:00.000Z",
+          "recordedAt": "2026-06-18T15:12:06.504Z"
+        },
+        {
+          "id": "ce31e6cf-e713-46e3-b49e-97819697b3ab",
+          "supplementId": "acbc2e1f-09b8-4459-bd0d-77a9290f0d14",
+          "supplementSnapshot": {
+            "name": "Premium Whey Protein",
+            "doseUnit": "medida (30g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Proteína de Suero (WPC 80 / WPI)",
+                "form": "concentrado + isolado de suero de leche",
+                "amount": 25,
+                "unit": "g"
+              },
+              {
+                "name": "L-Leucina (BCAA)",
+                "form": "L-Leucina",
+                "amount": 2.7,
+                "unit": "g"
+              },
+              {
+                "name": "L-Isoleucina (BCAA)",
+                "form": "L-Isoleucina",
+                "amount": 1.5,
+                "unit": "g"
+              },
+              {
+                "name": "L-Valina (BCAA)",
+                "form": "L-Valina",
+                "amount": 1.4,
+                "unit": "g"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "medida (30g)",
+          "timestamp": "2026-06-18T02:00:00.000Z",
+          "recordedAt": "2026-06-18T15:12:42.256Z"
+        },
+        {
+          "id": "5f0f3bc8-d134-40b4-8525-f9f0d1cab1fb",
+          "supplementId": "784eff85-1b12-4ad5-a7c2-273edf5108ad",
+          "supplementSnapshot": {
+            "name": "Creatina Monohidrato",
+            "doseUnit": "medida (5g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Creatina Monohidrato",
+                "form": "monohidrato",
+                "amount": 5000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "medida (5g)",
+          "timestamp": "2026-06-17T19:00:00.000Z",
+          "recordedAt": "2026-06-18T15:13:01.640Z"
+        }
+      ],
+      "skipped": [],
+      "notes": [],
+      "sealed": true,
+      "checksum": "",
+      "createdAt": "2026-06-18T14:10:19.444Z",
+      "updatedAt": "2026-06-18T15:13:01.640Z"
+    },
+    "2026-06-19": {
+      "id": "0a11222c-d9f4-4d6b-85a2-115804313be0",
+      "date": "2026-06-19",
+      "entries": [
+        {
+          "id": "5a06456d-ba7f-405c-a415-8fab54701a37",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-19T04:12:00.000Z",
+          "recordedAt": "2026-06-19T04:12:32.892Z"
+        },
+        {
+          "id": "c410bfc2-77c0-472f-a433-d55d1334ba5e",
+          "supplementId": "d52cd471-687a-4737-8c6f-cae1f4b605e5",
+          "supplementSnapshot": {
+            "name": "Cabergolina 0.5mg",
+            "doseUnit": "comprimidos",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Cabergolina",
+                "form": "agonista selectivo de receptores dopaminérgicos D2",
+                "amount": 0.5,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 0.5,
+          "doseUnit": "comprimidos",
+          "timestamp": "2026-06-19T04:56:00.000Z",
+          "recordedAt": "2026-06-19T04:56:53.242Z"
+        },
+        {
+          "id": "b0007cd8-b2a3-43a2-9245-170f6478b9ea",
+          "supplementId": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+          "supplementSnapshot": {
+            "name": "Melatol 3mg",
+            "doseUnit": "comp.",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Melatonina",
+                "form": "sintética",
+                "amount": 3,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.5,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-19T04:58:00.000Z",
+          "recordedAt": "2026-06-19T04:59:01.339Z"
+        },
+        {
+          "id": "a127ccae-fb63-4984-a1d3-ef297c6c30bb",
+          "supplementId": "233194d7-f954-486a-99e0-9f21a091925b",
+          "supplementSnapshot": {
+            "name": "GHK-Cu (Péptido de Cobre)",
+            "doseUnit": "ml",
+            "category": "other",
+            "activeIngredients": [
+              {
+                "name": "GHK-Cu",
+                "form": "péptido de cobre (GHK-Cu)",
+                "amount": 16.667,
+                "unit": "mg",
+                "source": "síntesis química"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.1,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-19T05:05:00.000Z",
+          "recordedAt": "2026-06-19T04:59:11.603Z"
+        },
+        {
+          "id": "cf725f68-b8fb-4f12-995e-a0a0bc1a9b10",
+          "supplementId": "e86d8a9c-e003-4989-8698-71a3b73e5ba5",
+          "supplementSnapshot": {
+            "name": "HMB",
+            "doseUnit": "gr",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "HMB (Beta-hidroxi-beta-metilbutirato)",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 2,
+          "doseUnit": "gr",
+          "timestamp": "2026-06-19T05:31:00.000Z",
+          "recordedAt": "2026-06-19T05:31:15.389Z"
+        },
+        {
+          "id": "11ba7776-3400-480a-bb64-c3a7d709c77b",
+          "supplementId": "276c265c-030c-4a2b-bae0-476739cf2817",
+          "supplementSnapshot": {
+            "name": "Magnesio citrato tribásico anhidro",
+            "doseUnit": "gr",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Magnesio citrato tribásico anhidro",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "gr",
+          "timestamp": "2026-06-19T05:33:00.000Z",
+          "recordedAt": "2026-06-19T05:33:53.358Z"
+        },
+        {
+          "id": "59bd9150-b0c2-4417-8509-59d17d098f6c",
+          "supplementId": "94a088f3-0a9e-47a9-a663-390cab17bcc9",
+          "supplementSnapshot": {
+            "name": "Colageno hidrolizado",
+            "doseUnit": "g",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Colageno hidrolizado",
+                "form": "",
+                "amount": 10,
+                "unit": "g"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 1,
+          "doseUnit": "g",
+          "timestamp": "2026-06-19T05:41:00.000Z",
+          "recordedAt": "2026-06-19T05:41:42.241Z"
+        },
+        {
+          "id": "cca1f076-493f-4a21-99d1-02c5782ab3c6",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-19T14:31:00.000Z",
+          "recordedAt": "2026-06-19T14:31:27.345Z"
+        },
+        {
+          "id": "3e546185-877d-4d36-9988-c50bf61a309e",
+          "supplementId": "d5c408b9-acc2-48a2-bb0c-8f21fdf307af",
+          "supplementSnapshot": {
+            "name": "Ubiquinol 100mg",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Ubiquinol",
+                "form": "forma reducida activa de CoQ10",
+                "amount": 100,
+                "unit": "mg",
+                "brand": "Kaneka Ubiquinol®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-19T14:31:00.000Z",
+          "recordedAt": "2026-06-19T14:31:35.389Z"
+        },
+        {
+          "id": "9ae949bc-d09a-46aa-a039-2bfecf778cca",
+          "supplementId": "6e8c4ee3-b0ad-403c-ae6f-7c0f65da65b0",
+          "supplementSnapshot": {
+            "name": "Mega D3 & MK-7",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina D3",
+                "form": "Colecalciferol",
+                "amount": 5000,
+                "unit": "IU",
+                "source": "lanolina"
+              },
+              {
+                "name": "Vitamina K2 (MK-7)",
+                "form": "Menaquinona-7",
+                "amount": 180,
+                "unit": "mcg",
+                "brand": "MenaQ7®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-19T14:31:00.000Z",
+          "recordedAt": "2026-06-19T14:31:48.373Z"
+        },
+        {
+          "id": "837bf97f-675a-40c0-adcc-eb84d49caaed",
+          "supplementId": "e15cc4fd-ad88-40ec-8cd1-cd1aa39a8479",
+          "supplementSnapshot": {
+            "name": "DHEA 100mg",
+            "doseUnit": "cáps",
+            "category": "hormone",
+            "activeIngredients": [
+              {
+                "name": "DHEA (Dehidroepiandrosterona)",
+                "form": "micronizado, fuente vegetal",
+                "amount": 100,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 0.5,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-19T15:00:00.000Z",
+          "recordedAt": "2026-06-19T15:00:15.617Z"
+        },
+        {
+          "id": "eb8a7cba-ec77-48ca-a3d8-440b21f659b8",
+          "supplementId": "8a6ac53c-5f38-4055-899d-5b5f77915005",
+          "supplementSnapshot": {
+            "name": "Methylated B Complex",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina C (Acerola)",
+                "form": "ácido ascórbico natural",
+                "amount": 45,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina E",
+                "form": "tocoferol mixto",
+                "amount": 18,
+                "unit": "mg"
+              },
+              {
+                "name": "Tiamina (B1)",
+                "form": "tiamina HCl",
+                "amount": 100,
+                "unit": "mg"
+              },
+              {
+                "name": "Riboflavina (B2)",
+                "form": "Riboflavina-5-fosfato (R5P)",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Niacina (B3)",
+                "form": "niacinamida",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Ácido pantoténico (B5)",
+                "form": "pantotenato de calcio",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina B6",
+                "form": "Piridoxal-5-fosfato (P5P)",
+                "amount": 20,
+                "unit": "mg"
+              },
+              {
+                "name": "Biotina (B7)",
+                "form": "D-Biotina",
+                "amount": 2000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Folato (B9)",
+                "form": "L-Metilfolato (Methyl Folate)",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Vitamina B12",
+                "form": "Metilcobalamina",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Colina",
+                "form": "bitartrato de colina",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Inositol",
+                "form": "mio-inositol",
+                "amount": 20,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-19T15:00:00.000Z",
+          "recordedAt": "2026-06-19T15:00:51.026Z"
+        },
+        {
+          "id": "8757ec4f-4555-4ef1-b33f-cbcceb2bc2a1",
+          "supplementId": "acbc2e1f-09b8-4459-bd0d-77a9290f0d14",
+          "supplementSnapshot": {
+            "name": "Premium Whey Protein",
+            "doseUnit": "medida (30g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Proteína de Suero (WPC 80 / WPI)",
+                "form": "concentrado + isolado de suero de leche",
+                "amount": 25,
+                "unit": "g"
+              },
+              {
+                "name": "L-Leucina (BCAA)",
+                "form": "L-Leucina",
+                "amount": 2.7,
+                "unit": "g"
+              },
+              {
+                "name": "L-Isoleucina (BCAA)",
+                "form": "L-Isoleucina",
+                "amount": 1.5,
+                "unit": "g"
+              },
+              {
+                "name": "L-Valina (BCAA)",
+                "form": "L-Valina",
+                "amount": 1.4,
+                "unit": "g"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "medida (30g)",
+          "timestamp": "2026-06-19T15:18:00.000Z",
+          "recordedAt": "2026-06-19T15:18:05.664Z"
+        },
+        {
+          "id": "fd4625b1-ec1b-463d-8dbb-15330756be2e",
+          "supplementId": "e99872f1-ccfd-4158-a412-d4b2ac4c20a8",
+          "supplementSnapshot": {
+            "name": "Lipodrene",
+            "doseUnit": "comp.",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Extracto de Efedra (Ma Huang)",
+                "form": "extracto estandarizado",
+                "amount": 25,
+                "unit": "mg"
+              },
+              {
+                "name": "Cafeína Anhidra",
+                "form": "anhidra",
+                "amount": 100,
+                "unit": "mg"
+              },
+              {
+                "name": "Lipodrene Proprietary Blend",
+                "form": "blend (DMHA/2-aminoisoheptano, PEA, sinefrina, acacia rigidula, yohimbina, EGCG, naringenin y otros)",
+                "amount": 560,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-19T21:20:00.000Z",
+          "recordedAt": "2026-06-20T02:20:36.377Z"
+        },
+        {
+          "id": "f98dea3c-66f1-4dec-8ffb-71580ae9ee65",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-20T02:20:00.000Z",
+          "recordedAt": "2026-06-20T02:20:48.800Z"
+        }
+      ],
+      "skipped": [],
+      "notes": [
+        {
+          "id": "f3b12e34-4d7f-48ac-90f9-9e6359fd34ab",
+          "text": "Me levanté con erecciones por suerte",
+          "timestamp": "2026-06-19T14:32:01.379Z"
+        }
+      ],
+      "sealed": true,
+      "checksum": "",
+      "createdAt": "2026-06-19T04:12:32.892Z",
+      "updatedAt": "2026-06-20T05:08:41.709Z"
+    },
+    "2026-06-20": {
+      "id": "4d24222c-6749-49c0-9225-b555de21a845",
+      "date": "2026-06-20",
+      "entries": [
+        {
+          "id": "5a8639db-6ae1-4b40-9efa-5d733c9d5f01",
+          "supplementId": "acbc2e1f-09b8-4459-bd0d-77a9290f0d14",
+          "supplementSnapshot": {
+            "name": "Premium Whey Protein",
+            "doseUnit": "medida (30g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Proteína de Suero (WPC 80 / WPI)",
+                "form": "concentrado + isolado de suero de leche",
+                "amount": 25,
+                "unit": "g"
+              },
+              {
+                "name": "L-Leucina (BCAA)",
+                "form": "L-Leucina",
+                "amount": 2.7,
+                "unit": "g"
+              },
+              {
+                "name": "L-Isoleucina (BCAA)",
+                "form": "L-Isoleucina",
+                "amount": 1.5,
+                "unit": "g"
+              },
+              {
+                "name": "L-Valina (BCAA)",
+                "form": "L-Valina",
+                "amount": 1.4,
+                "unit": "g"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "medida (30g)",
+          "timestamp": "2026-06-20T04:15:00.000Z",
+          "recordedAt": "2026-06-20T04:15:17.261Z"
+        },
+        {
+          "id": "724f1426-5d18-49ea-b8ab-8513538dca97",
+          "supplementId": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+          "supplementSnapshot": {
+            "name": "Melatol 3mg",
+            "doseUnit": "comp.",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Melatonina",
+                "form": "sintética",
+                "amount": 3,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.5,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-20T04:15:00.000Z",
+          "recordedAt": "2026-06-20T04:15:27.189Z"
+        },
+        {
+          "id": "4c2fcc37-b784-41ef-90f9-3f62eba4d6ad",
+          "supplementId": "94a088f3-0a9e-47a9-a663-390cab17bcc9",
+          "supplementSnapshot": {
+            "name": "Colageno hidrolizado",
+            "doseUnit": "g",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Colageno hidrolizado",
+                "form": "",
+                "amount": 10,
+                "unit": "g"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 10,
+          "doseUnit": "g",
+          "timestamp": "2026-06-20T05:00:00.000Z",
+          "recordedAt": "2026-06-20T04:15:38.237Z"
+        },
+        {
+          "id": "d94279d6-d897-4dfa-8a78-f6d05d1c3349",
+          "supplementId": "03e5e96e-b194-4c0b-a3e1-9fab2577ea55",
+          "supplementSnapshot": {
+            "name": "Acido hialuronico",
+            "doseUnit": "mg",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Acido hialuronico",
+                "form": "",
+                "amount": 399,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 400,
+          "doseUnit": "mg",
+          "timestamp": "2026-06-20T05:00:00.000Z",
+          "recordedAt": "2026-06-20T04:16:26.678Z"
+        },
+        {
+          "id": "81e136c7-bf0e-420d-890c-01029bbe0d65",
+          "supplementId": "233194d7-f954-486a-99e0-9f21a091925b",
+          "supplementSnapshot": {
+            "name": "GHK-Cu (Péptido de Cobre)",
+            "doseUnit": "ml",
+            "category": "other",
+            "activeIngredients": [
+              {
+                "name": "GHK-Cu",
+                "form": "péptido de cobre (GHK-Cu)",
+                "amount": 16.667,
+                "unit": "mg",
+                "source": "síntesis química"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.1,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-20T05:03:00.000Z",
+          "recordedAt": "2026-06-20T05:03:03.484Z"
+        },
+        {
+          "id": "c1b37cd6-bb97-4030-9666-117418369a08",
+          "supplementId": "8a6ac53c-5f38-4055-899d-5b5f77915005",
+          "supplementSnapshot": {
+            "name": "Methylated B Complex",
+            "brand": "NatureBell",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina C (Acerola)",
+                "form": "ácido ascórbico natural",
+                "amount": 45,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina E",
+                "form": "tocoferol mixto",
+                "amount": 18,
+                "unit": "mg"
+              },
+              {
+                "name": "Tiamina (B1)",
+                "form": "tiamina HCl",
+                "amount": 100,
+                "unit": "mg"
+              },
+              {
+                "name": "Riboflavina (B2)",
+                "form": "Riboflavina-5-fosfato (R5P)",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Niacina (B3)",
+                "form": "niacinamida",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Ácido pantoténico (B5)",
+                "form": "pantotenato de calcio",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina B6",
+                "form": "Piridoxal-5-fosfato (P5P)",
+                "amount": 20,
+                "unit": "mg"
+              },
+              {
+                "name": "Biotina (B7)",
+                "form": "D-Biotina",
+                "amount": 2000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Folato (B9)",
+                "form": "L-Metilfolato (Methyl Folate)",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Vitamina B12",
+                "form": "Metilcobalamina",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Colina",
+                "form": "bitartrato de colina",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Inositol",
+                "form": "mio-inositol",
+                "amount": 20,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-20T13:00:00.000Z",
+          "recordedAt": "2026-06-20T19:05:28.375Z"
+        },
+        {
+          "id": "710e141e-38ed-4d1a-8c35-5c45fef026dd",
+          "supplementId": "acbc2e1f-09b8-4459-bd0d-77a9290f0d14",
+          "supplementSnapshot": {
+            "name": "Premium Whey Protein",
+            "brand": "Star Nutrition",
+            "doseUnit": "medida (30g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Proteína de Suero (WPC 80 / WPI)",
+                "form": "concentrado + isolado de suero de leche",
+                "amount": 25,
+                "unit": "g"
+              },
+              {
+                "name": "L-Leucina (BCAA)",
+                "form": "L-Leucina",
+                "amount": 2.7,
+                "unit": "g"
+              },
+              {
+                "name": "L-Isoleucina (BCAA)",
+                "form": "L-Isoleucina",
+                "amount": 1.5,
+                "unit": "g"
+              },
+              {
+                "name": "L-Valina (BCAA)",
+                "form": "L-Valina",
+                "amount": 1.4,
+                "unit": "g"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "medida (30g)",
+          "timestamp": "2026-06-20T19:05:00.000Z",
+          "recordedAt": "2026-06-20T19:05:40.146Z"
+        },
+        {
+          "id": "13c92836-4cad-4de0-85e1-e7b7536d94ad",
+          "supplementId": "e15cc4fd-ad88-40ec-8cd1-cd1aa39a8479",
+          "supplementSnapshot": {
+            "name": "DHEA 100mg",
+            "brand": "NatureBell",
+            "doseUnit": "cáps",
+            "category": "hormone",
+            "activeIngredients": [
+              {
+                "name": "DHEA (Dehidroepiandrosterona)",
+                "form": "micronizado, fuente vegetal",
+                "amount": 100,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 0.5,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-20T19:00:00.000Z",
+          "recordedAt": "2026-06-20T23:09:09.506Z"
+        },
+        {
+          "id": "ffe269c1-69ab-44c6-8dbc-1385267a96a0",
+          "supplementId": "6e8c4ee3-b0ad-403c-ae6f-7c0f65da65b0",
+          "supplementSnapshot": {
+            "name": "Mega D3 & MK-7",
+            "brand": "NOW Foods",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina D3",
+                "form": "Colecalciferol",
+                "amount": 5000,
+                "unit": "IU",
+                "source": "lanolina"
+              },
+              {
+                "name": "Vitamina K2 (MK-7)",
+                "form": "Menaquinona-7",
+                "amount": 180,
+                "unit": "mcg",
+                "brand": "MenaQ7®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-20T19:00:00.000Z",
+          "recordedAt": "2026-06-20T23:09:40.289Z"
+        },
+        {
+          "id": "067c7bbf-28c8-461c-917b-a9585d370d6b",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "brand": "DBI",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-19T19:10:00.000Z",
+          "timestampEditedFrom": "2026-06-20T23:09:00.000Z",
+          "recordedAt": "2026-06-20T23:10:03.158Z"
+        },
+        {
+          "id": "369ba4a7-ed3f-4aa7-ae54-a75da295d44c",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "brand": "DBI",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-21T01:35:00.000Z",
+          "recordedAt": "2026-06-21T01:35:11.671Z"
+        }
+      ],
+      "skipped": [],
+      "notes": [],
+      "sealed": true,
+      "checksum": "",
+      "createdAt": "2026-06-20T04:15:17.261Z",
+      "updatedAt": "2026-06-21T13:13:27.128Z"
+    },
+    "2026-06-21": {
+      "id": "09d9de82-78b3-46e5-9228-571562d4d903",
+      "date": "2026-06-21",
+      "entries": [
+        {
+          "id": "460d0d22-8ac3-4d8f-9ae5-524c6994a06b",
+          "supplementId": "233194d7-f954-486a-99e0-9f21a091925b",
+          "supplementSnapshot": {
+            "name": "GHK-Cu (Péptido de Cobre)",
+            "brand": "Revolution Pharma",
+            "doseUnit": "ml",
+            "category": "other",
+            "activeIngredients": [
+              {
+                "name": "GHK-Cu",
+                "form": "péptido de cobre (GHK-Cu)",
+                "amount": 16.667,
+                "unit": "mg",
+                "source": "síntesis química"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.1,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-21T05:00:00.000Z",
+          "recordedAt": "2026-06-21T13:14:55.335Z"
+        },
+        {
+          "id": "37befd7b-d2dc-4a7b-bc45-2e7b9e37334b",
+          "supplementId": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+          "supplementSnapshot": {
+            "name": "Melatol 3mg",
+            "brand": "Gramon",
+            "doseUnit": "comp.",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Melatonina",
+                "form": "sintética",
+                "amount": 3,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 1,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-21T04:00:00.000Z",
+          "recordedAt": "2026-06-21T13:15:04.895Z"
+        },
+        {
+          "id": "140c101b-d9a3-4bd8-9b29-2ea952f9bff0",
+          "supplementId": "94a088f3-0a9e-47a9-a663-390cab17bcc9",
+          "supplementSnapshot": {
+            "name": "Colageno hidrolizado",
+            "doseUnit": "g",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Colageno hidrolizado",
+                "form": "",
+                "amount": 1,
+                "unit": "g"
+              }
+            ],
+            "version": 3
+          },
+          "quantity": 10,
+          "doseUnit": "g",
+          "timestamp": "2026-06-21T04:00:00.000Z",
+          "recordedAt": "2026-06-21T13:15:16.959Z"
+        },
+        {
+          "id": "2e2e3a45-0621-4f1b-9394-44f66136cf2f",
+          "supplementId": "03e5e96e-b194-4c0b-a3e1-9fab2577ea55",
+          "supplementSnapshot": {
+            "name": "Acido hialuronico",
+            "brand": "BULK",
+            "doseUnit": "mg",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Acido hialuronico",
+                "form": "",
+                "amount": 1,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 400,
+          "doseUnit": "mg",
+          "timestamp": "2026-06-21T04:00:00.000Z",
+          "recordedAt": "2026-06-21T13:15:25.022Z"
+        },
+        {
+          "id": "4bee8117-ca3b-4a87-833c-4eaf5301f488",
+          "supplementId": "969ab0cd-87ce-4036-a669-fc1e84382015",
+          "supplementSnapshot": {
+            "name": "Clembuterol",
+            "brand": "FM",
+            "doseUnit": "ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Clembuterol",
+                "form": "",
+                "amount": 0.08,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.25,
+          "doseUnit": "ud",
+          "timestamp": "2026-06-21T13:21:00.000Z",
+          "recordedAt": "2026-06-21T13:21:35.808Z"
+        },
+        {
+          "id": "2852b797-94e3-4907-9f35-57995ecefe31",
+          "supplementId": "e15cc4fd-ad88-40ec-8cd1-cd1aa39a8479",
+          "supplementSnapshot": {
+            "name": "DHEA 100mg",
+            "brand": "NatureBell",
+            "doseUnit": "cáps",
+            "category": "hormone",
+            "activeIngredients": [
+              {
+                "name": "DHEA (Dehidroepiandrosterona)",
+                "form": "micronizado, fuente vegetal",
+                "amount": 100,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 0.5,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-21T17:50:00.000Z",
+          "recordedAt": "2026-06-21T17:51:06.086Z"
+        },
+        {
+          "id": "fcdf34a5-4418-4a9e-b485-294de2e9812e",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "brand": "DBI",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-21T17:51:00.000Z",
+          "recordedAt": "2026-06-21T17:51:10.926Z"
+        },
+        {
+          "id": "d82d7205-00d5-42de-8675-e48d2d01fa3c",
+          "supplementId": "d5c408b9-acc2-48a2-bb0c-8f21fdf307af",
+          "supplementSnapshot": {
+            "name": "Ubiquinol 100mg",
+            "brand": "Nutricost",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Ubiquinol",
+                "form": "forma reducida activa de CoQ10",
+                "amount": 100,
+                "unit": "mg",
+                "brand": "Kaneka Ubiquinol®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-21T17:51:00.000Z",
+          "recordedAt": "2026-06-21T17:51:13.829Z"
+        },
+        {
+          "id": "39128db2-4385-4490-8008-5c6b3f88783f",
+          "supplementId": "6e8c4ee3-b0ad-403c-ae6f-7c0f65da65b0",
+          "supplementSnapshot": {
+            "name": "Mega D3 & MK-7",
+            "brand": "NOW Foods",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina D3",
+                "form": "Colecalciferol",
+                "amount": 5000,
+                "unit": "IU",
+                "source": "lanolina"
+              },
+              {
+                "name": "Vitamina K2 (MK-7)",
+                "form": "Menaquinona-7",
+                "amount": 180,
+                "unit": "mcg",
+                "brand": "MenaQ7®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-21T17:51:00.000Z",
+          "recordedAt": "2026-06-21T17:51:15.813Z"
+        },
+        {
+          "id": "387e9be8-bdf6-4ee4-a55b-935d3e98f44d",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "brand": "Viva Naturals",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-21T17:51:00.000Z",
+          "recordedAt": "2026-06-21T17:51:20.357Z"
+        },
+        {
+          "id": "b29344a6-d74f-41d8-aefe-edc51e653626",
+          "supplementId": "8a6ac53c-5f38-4055-899d-5b5f77915005",
+          "supplementSnapshot": {
+            "name": "Methylated B Complex",
+            "brand": "NatureBell",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina C (Acerola)",
+                "form": "ácido ascórbico natural",
+                "amount": 45,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina E",
+                "form": "tocoferol mixto",
+                "amount": 18,
+                "unit": "mg"
+              },
+              {
+                "name": "Tiamina (B1)",
+                "form": "tiamina HCl",
+                "amount": 100,
+                "unit": "mg"
+              },
+              {
+                "name": "Riboflavina (B2)",
+                "form": "Riboflavina-5-fosfato (R5P)",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Niacina (B3)",
+                "form": "niacinamida",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Ácido pantoténico (B5)",
+                "form": "pantotenato de calcio",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina B6",
+                "form": "Piridoxal-5-fosfato (P5P)",
+                "amount": 20,
+                "unit": "mg"
+              },
+              {
+                "name": "Biotina (B7)",
+                "form": "D-Biotina",
+                "amount": 2000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Folato (B9)",
+                "form": "L-Metilfolato (Methyl Folate)",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Vitamina B12",
+                "form": "Metilcobalamina",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Colina",
+                "form": "bitartrato de colina",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Inositol",
+                "form": "mio-inositol",
+                "amount": 20,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-21T17:51:00.000Z",
+          "recordedAt": "2026-06-21T17:51:22.949Z"
+        },
+        {
+          "id": "ebf9c5b5-f706-445c-9706-8b80f370c001",
+          "supplementId": "784eff85-1b12-4ad5-a7c2-273edf5108ad",
+          "supplementSnapshot": {
+            "name": "Creatina Monohidrato",
+            "brand": "Star Nutrition",
+            "doseUnit": "medida (5g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Creatina Monohidrato",
+                "form": "monohidrato",
+                "amount": 5000,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "medida (5g)",
+          "timestamp": "2026-06-21T17:51:00.000Z",
+          "recordedAt": "2026-06-21T17:51:26.230Z"
+        },
+        {
+          "id": "a0cbd1a2-b4b4-412d-8f79-d8202c9ac308",
+          "supplementId": "acbc2e1f-09b8-4459-bd0d-77a9290f0d14",
+          "supplementSnapshot": {
+            "name": "Premium Whey Protein",
+            "brand": "Star Nutrition",
+            "doseUnit": "medida (30g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Proteína de Suero (WPC 80 / WPI)",
+                "form": "concentrado + isolado de suero de leche",
+                "amount": 25,
+                "unit": "g"
+              },
+              {
+                "name": "L-Leucina (BCAA)",
+                "form": "L-Leucina",
+                "amount": 2.7,
+                "unit": "g"
+              },
+              {
+                "name": "L-Isoleucina (BCAA)",
+                "form": "L-Isoleucina",
+                "amount": 1.5,
+                "unit": "g"
+              },
+              {
+                "name": "L-Valina (BCAA)",
+                "form": "L-Valina",
+                "amount": 1.4,
+                "unit": "g"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "medida (30g)",
+          "timestamp": "2026-06-21T21:29:00.000Z",
+          "recordedAt": "2026-06-21T21:29:46.189Z"
+        },
+        {
+          "id": "9980a232-6faf-468e-8c39-cae8cc0cc05a",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "brand": "Viva Naturals",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-21T23:58:00.000Z",
+          "recordedAt": "2026-06-21T23:58:44.020Z"
+        }
+      ],
+      "skipped": [],
+      "notes": [
+        {
+          "id": "ba5099b8-559c-48c9-aa9a-46080f6fde52",
+          "text": "Presión:  Sistólica 120 Diastólica  76 Latidos 84",
+          "timestamp": "2026-06-22T01:34:48.428Z"
+        }
+      ],
+      "symptoms": {
+        "energy": 3,
+        "libido": 3,
+        "sleep": 3,
+        "recovery": 3,
+        "mood": 3,
+        "erectionQuality": 3,
+        "nippleSensitivity": false,
+        "orgasms": 4
+      },
+      "sealed": true,
+      "checksum": "",
+      "createdAt": "2026-06-21T13:14:55.335Z",
+      "updatedAt": "2026-06-22T03:16:56.596Z"
+    },
+    "2026-06-22": {
+      "id": "13756487-d830-4304-a7e4-54026c24dd1b",
+      "date": "2026-06-22",
+      "entries": [
+        {
+          "id": "c8c1dc98-4772-4b1f-938b-4b92049b1553",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "brand": "DBI",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-22T03:17:00.000Z",
+          "recordedAt": "2026-06-22T03:17:10.799Z"
+        },
+        {
+          "id": "6347b1e7-23f2-42db-b8ae-1d859ea48845",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "brand": "Viva Naturals",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-22T03:39:00.000Z",
+          "recordedAt": "2026-06-22T03:39:08.951Z"
+        },
+        {
+          "id": "79b7343f-a9a9-4a64-ac82-247f9f750205",
+          "supplementId": "d52cd471-687a-4737-8c6f-cae1f4b605e5",
+          "supplementSnapshot": {
+            "name": "Cabergolina 0.5mg",
+            "brand": "Lactamax",
+            "doseUnit": "comprimidos",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Cabergolina",
+                "form": "agonista selectivo de receptores dopaminérgicos D2",
+                "amount": 0.5,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 0.5,
+          "doseUnit": "comprimidos",
+          "timestamp": "2026-06-22T05:02:00.000Z",
+          "recordedAt": "2026-06-22T05:02:22.064Z"
+        },
+        {
+          "id": "1e9092f6-6d31-4261-9f25-680ce517ddce",
+          "supplementId": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+          "supplementSnapshot": {
+            "name": "Melatol 3mg",
+            "brand": "Gramon",
+            "doseUnit": "comp.",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Melatonina",
+                "form": "sintética",
+                "amount": 3,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.5,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-22T05:05:00.000Z",
+          "recordedAt": "2026-06-22T05:05:13.704Z"
+        },
+        {
+          "id": "ccdf67c8-06d2-407d-ac30-49fd2eecf760",
+          "supplementId": "648692e9-2786-47a7-8658-55fc1168e599",
+          "supplementSnapshot": {
+            "name": "Testenat Depot Enantato 250mg",
+            "brand": "Landerlan Gold",
+            "doseUnit": "ml",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Enantato de testosterona",
+                "form": "éster de acción prolongada, liberación sostenida",
+                "amount": 250,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.2,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-22T05:47:00.000Z",
+          "recordedAt": "2026-06-22T05:47:57.611Z"
+        },
+        {
+          "id": "4341bf0e-e0f1-4880-97b0-7fac63931648",
+          "supplementId": "233194d7-f954-486a-99e0-9f21a091925b",
+          "supplementSnapshot": {
+            "name": "GHK-Cu (Péptido de Cobre)",
+            "brand": "Revolution Pharma",
+            "doseUnit": "ml",
+            "category": "other",
+            "activeIngredients": [
+              {
+                "name": "GHK-Cu",
+                "form": "péptido de cobre (GHK-Cu)",
+                "amount": 16.667,
+                "unit": "mg",
+                "source": "síntesis química"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.1,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-22T05:56:00.000Z",
+          "recordedAt": "2026-06-22T05:56:28.188Z"
+        }
+      ],
+      "skipped": [],
+      "notes": [
+        {
+          "id": "c371fa11-8ad0-4dde-acf2-da66fb4072bd",
+          "text": "🩺 PA: 120/76 mmHg · Pulso: 81 bpm · 12:59 a. m. [Elevada]",
+          "timestamp": "2026-06-22T03:59:43.144Z"
+        },
+        {
+          "id": "bf8399d4-a11d-4675-8bc8-bca6905ccf9b",
+          "text": "🩺 PA: 135/86 mmHg · Pulso: 87 bpm · 01:34 a. m. [Alta I]",
+          "timestamp": "2026-06-22T04:34:36.407Z"
+        },
+        {
+          "id": "813f5666-1581-4104-a0d2-00748f352f28",
+          "text": "🩺 PA: 132/89 mmHg · Pulso: 80 bpm · 02:49 a. m. [Alta I]",
+          "timestamp": "2026-06-22T05:50:06.502Z"
+        }
+      ],
+      "symptoms": {
+        "energy": 4,
+        "libido": 4,
+        "sleep": 3,
+        "recovery": 4,
+        "mood": 3,
+        "erectionQuality": 4,
+        "nippleSensitivity": true,
+        "orgasms": 1
+      },
+      "sealed": false,
+      "checksum": "",
+      "createdAt": "2026-06-22T03:17:10.799Z",
+      "updatedAt": "2026-06-22T05:56:28.188Z"
+    }
+  },
+  "migrations": [
+    {
+      "from": 1,
+      "to": 2,
+      "appliedAt": "2026-06-20T05:08:41.699Z"
+    },
+    {
+      "from": 2,
+      "to": 3,
+      "appliedAt": "2026-06-20T05:08:41.699Z"
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "appliedAt": "2026-06-22T03:59:26.793Z"
+    }
+  ],
+  "bloodWork": [],
+  "bpReadings": [
+    {
+      "id": "f028ce71-9b23-475d-bd45-bdbbc428ad29",
+      "date": "2026-06-22",
+      "timestamp": "2026-06-22T03:59:00.000Z",
+      "sys": 120,
+      "dia": 76,
+      "pulse": 81,
+      "recordedAt": "2026-06-22T03:59:43.144Z"
+    },
+    {
+      "id": "2a948639-ea6a-435b-958d-2b1084563dc4",
+      "date": "2026-06-22",
+      "timestamp": "2026-06-22T04:34:00.000Z",
+      "sys": 135,
+      "dia": 86,
+      "pulse": 87,
+      "recordedAt": "2026-06-22T04:34:36.407Z"
+    },
+    {
+      "id": "3615a675-478e-4ab8-a75e-9309bae10bed",
+      "date": "2026-06-22",
+      "timestamp": "2026-06-22T05:49:00.000Z",
+      "sys": 132,
+      "dia": 89,
+      "pulse": 80,
+      "recordedAt": "2026-06-22T05:50:06.502Z"
+    }
+  ]
+}
