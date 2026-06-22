@@ -234,7 +234,7 @@ export const useStore = create<Store>((set, get) => ({
   },
 
   addBPReading: (data) => {
-    const { date, timestamp, sys, dia, pulse, note } = data
+    const { date, timestamp, sys, dia, pulse, note: userNote } = data
     const now = new Date().toISOString()
     const reading: BPReading = {
       id: generateId(),
@@ -249,7 +249,7 @@ export const useStore = create<Store>((set, get) => ({
     // build auto-note atomically with the reading
     const { label } = classifyBP(sys, dia)
     const hhmm = new Date(timestamp).toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' })
-    const noteText = `🩺 PA: ${sys}/${dia} mmHg · Pulso: ${pulse} bpm · ${hhmm} [${label}]${note ? ` — ${note}` : ''}`
+    const noteText = `🩺 PA: ${sys}/${dia} mmHg · Pulso: ${pulse} bpm · ${hhmm} [${label}]${userNote ? ` — ${userNote}` : ''}`
     const note: DayNote = { id: generateId(), text: noteText, timestamp: now }
 
     const existing = get().dailyLogs[date]
