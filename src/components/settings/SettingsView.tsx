@@ -184,6 +184,19 @@ export function SettingsView() {
     setLoading(null)
   }
 
+  // ── Hard refresh ──────────────────────────────────────────────
+  async function handleHardRefresh() {
+    if ('caches' in window) {
+      const names = await caches.keys()
+      await Promise.all(names.map(n => caches.delete(n)))
+    }
+    if ('serviceWorker' in navigator) {
+      const regs = await navigator.serviceWorker.getRegistrations()
+      await Promise.all(regs.map(r => r.unregister()))
+    }
+    window.location.reload()
+  }
+
   // ── Reset ─────────────────────────────────────────────────────
   function handleReset() {
     if (resetPhrase !== 'RESET') return
@@ -390,7 +403,20 @@ export function SettingsView() {
             <span>⚠️</span>
             <span className="font-semibold text-red-400 text-sm">Zona de riesgo</span>
           </div>
-          <div className="p-4">
+          <div className="p-4 space-y-3">
+            <div className="flex items-center justify-between gap-3">
+              <div>
+                <p className="text-white text-sm">Actualizar app</p>
+                <p className="text-slate-500 text-xs">Limpia caché del navegador y recarga. No borra datos.</p>
+              </div>
+              <button
+                onClick={handleHardRefresh}
+                className="flex-shrink-0 bg-slate-700 hover:bg-slate-600 text-slate-200 text-xs font-bold px-3 py-2 rounded-lg transition-colors border border-slate-600"
+              >
+                ↺ Refresh
+              </button>
+            </div>
+            <div className="border-t border-red-900/30" />
             {!resetOpen ? (
               <div className="flex items-center justify-between gap-3">
                 <div>
