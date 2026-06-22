@@ -4,7 +4,7 @@ import { classifyBP } from '../../utils/bp'
 import { getLocalHHMM } from '../../utils/date'
 
 type Props = { dateStr: string; isToday: boolean }
-type Draft = { sys: number; dia: number; pulse: number; time: string }
+type Draft = { sys: number; dia: number; pulse: number; time: string; note: string }
 
 const FIELDS = [
   { key: 'sys',   label: 'SYS (mmHg)',  min: 60,  max: 250 },
@@ -18,7 +18,7 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
   const removeBPReading = useStore(s => s.removeBPReading)
 
   const [showForm, setShowForm] = useState(false)
-  const [draft, setDraft] = useState<Draft>({ sys: 120, dia: 80, pulse: 72, time: getLocalHHMM() })
+  const [draft, setDraft] = useState<Draft>({ sys: 120, dia: 80, pulse: 72, time: getLocalHHMM(), note: '' })
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
 
   const dayReadings = bpReadings
@@ -31,9 +31,9 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
     const [h, m] = draft.time.split(':').map(Number)
     const base = new Date(`${dateStr}T12:00:00`)
     base.setHours(h, m, 0, 0)
-    addBPReading({ date: dateStr, timestamp: base.toISOString(), sys: draft.sys, dia: draft.dia, pulse: draft.pulse })
+    addBPReading({ date: dateStr, timestamp: base.toISOString(), sys: draft.sys, dia: draft.dia, pulse: draft.pulse, note: draft.note.trim() || undefined })
     setShowForm(false)
-    setDraft({ sys: 120, dia: 80, pulse: 72, time: getLocalHHMM() })
+    setDraft({ sys: 120, dia: 80, pulse: 72, time: getLocalHHMM(), note: '' })
     setConfirmDelete(null)
   }
 
@@ -102,12 +102,22 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
                   <div className="flex items-center justify-center gap-1">
                     <button
                       onClick={() => setDraft(d => ({ ...d, [key]: Math.max(min, d[key] - 1) }))}
-                      className="w-6 h-6 rounded-full bg-slate-700 text-slate-300 flex items-center justify-center hover:bg-slate-600 text-sm"
+                      className="w-6 h-6 rounded-full bg-slate-700 text-slate-300 flex items-center justify-center hover:bg-slate-600 text-sm flex-shrink-0"
                     >−</button>
-                    <span className="text-white text-base font-bold w-8 text-center tabular-nums">{draft[key]}</span>
+                    <input
+                      type="number"
+                      min={min}
+                      max={max}
+                      value={draft[key]}
+                      onChange={e => {
+                        const v = parseInt(e.target.value, 10)
+                        if (!isNaN(v)) setDraft(d => ({ ...d, [key]: Math.max(min, Math.min(max, v)) }))
+                      }}
+                      className="w-12 bg-transparent text-white text-base font-bold text-center tabular-nums outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                    />
                     <button
                       onClick={() => setDraft(d => ({ ...d, [key]: Math.min(max, d[key] + 1) }))}
-                      className="w-6 h-6 rounded-full bg-slate-700 text-slate-300 flex items-center justify-center hover:bg-slate-600 text-sm"
+                      className="w-6 h-6 rounded-full bg-slate-700 text-slate-300 flex items-center justify-center hover:bg-slate-600 text-sm flex-shrink-0"
                     >+</button>
                   </div>
                 </div>
@@ -118,6 +128,13 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
               value={draft.time}
               onChange={e => setDraft(d => ({ ...d, time: e.target.value }))}
               className="w-full bg-slate-900 text-white rounded-xl px-4 py-2.5 text-center text-base outline-none"
+            />
+            <input
+              type="text"
+              placeholder="Nota (opcional) — ej: después del gym, en reposo..."
+              value={draft.note}
+              onChange={e => setDraft(d => ({ ...d, note: e.target.value }))}
+              className="w-full bg-slate-900 text-white placeholder-slate-600 rounded-xl px-4 py-2.5 text-sm outline-none"
             />
             <div className="flex gap-2">
               <button

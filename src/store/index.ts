@@ -27,7 +27,7 @@ type Store = {
   updateBloodWork: (id: string, partial: Partial<Omit<BloodWorkEntry, 'id' | 'createdAt'>>) => void
   removeBloodWork: (id: string) => void
   bpReadings: BPReading[]
-  addBPReading: (data: { date: string; timestamp: string; sys: number; dia: number; pulse: number }) => BPReading
+  addBPReading: (data: { date: string; timestamp: string; sys: number; dia: number; pulse: number; note?: string }) => BPReading
   removeBPReading: (id: string) => void
 }
 
@@ -234,7 +234,7 @@ export const useStore = create<Store>((set, get) => ({
   },
 
   addBPReading: (data) => {
-    const { date, timestamp, sys, dia, pulse } = data
+    const { date, timestamp, sys, dia, pulse, note } = data
     const now = new Date().toISOString()
     const reading: BPReading = {
       id: generateId(),
@@ -249,7 +249,7 @@ export const useStore = create<Store>((set, get) => ({
     // build auto-note atomically with the reading
     const { label } = classifyBP(sys, dia)
     const hhmm = new Date(timestamp).toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' })
-    const noteText = `🩺 PA: ${sys}/${dia} mmHg · Pulso: ${pulse} bpm · ${hhmm} [${label}]`
+    const noteText = `🩺 PA: ${sys}/${dia} mmHg · Pulso: ${pulse} bpm · ${hhmm} [${label}]${note ? ` — ${note}` : ''}`
     const note: DayNote = { id: generateId(), text: noteText, timestamp: now }
 
     const existing = get().dailyLogs[date]
