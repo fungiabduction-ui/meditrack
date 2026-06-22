@@ -31,7 +31,10 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
     const [h, m] = draft.time.split(':').map(Number)
     const base = new Date(`${dateStr}T12:00:00`)
     base.setHours(h, m, 0, 0)
-    addBPReading({ date: dateStr, timestamp: base.toISOString(), sys: draft.sys, dia: draft.dia, pulse: draft.pulse, note: draft.note.trim() || undefined })
+    const sys   = Math.max(60,  Math.min(250, draft.sys))
+    const dia   = Math.max(30,  Math.min(150, draft.dia))
+    const pulse = Math.max(30,  Math.min(220, draft.pulse))
+    addBPReading({ date: dateStr, timestamp: base.toISOString(), sys, dia, pulse, note: draft.note.trim() || undefined })
     setShowForm(false)
     setDraft({ sys: 120, dia: 80, pulse: 72, time: getLocalHHMM(), note: '' })
     setConfirmDelete(null)
@@ -111,7 +114,11 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
                       value={draft[key]}
                       onChange={e => {
                         const v = parseInt(e.target.value, 10)
-                        if (!isNaN(v)) setDraft(d => ({ ...d, [key]: Math.max(min, Math.min(max, v)) }))
+                        if (!isNaN(v)) setDraft(d => ({ ...d, [key]: v }))
+                      }}
+                      onBlur={e => {
+                        const v = parseInt(e.target.value, 10)
+                        setDraft(d => ({ ...d, [key]: isNaN(v) ? min : Math.max(min, Math.min(max, v)) }))
                       }}
                       className="w-12 bg-transparent text-white text-base font-bold text-center tabular-nums outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
                     />
