@@ -3,8 +3,9 @@ import { WellbeingTrend } from './WellbeingTrend'
 import { TRTCycleHeatmap } from './TRTCycleHeatmap'
 import { SupplementCorrelation } from './SupplementCorrelation'
 import { LaboratorioView } from './LaboratorioView'
+import { BPChart } from './BPChart'
 
-type SubTab = 'symptoms' | 'lab'
+type SubTab = 'symptoms' | 'lab' | 'bp'
 
 export function AnalysisView() {
   const [subTab, setSubTab] = useState<SubTab>('symptoms')
@@ -36,6 +37,16 @@ export function AnalysisView() {
           >
             Laboratorio
           </button>
+          <button
+            onClick={() => setSubTab('bp')}
+            className={`flex-1 py-2 text-sm font-semibold rounded-lg transition-colors ${
+              subTab === 'bp'
+                ? 'bg-violet-600 text-white'
+                : 'text-slate-400 hover:text-slate-300'
+            }`}
+          >
+            ❤ Presión
+          </button>
         </div>
 
         {subTab === 'symptoms' && (
@@ -47,6 +58,8 @@ export function AnalysisView() {
         )}
 
         {subTab === 'lab' && <LaboratorioView />}
+
+        {subTab === 'bp' && <BPChart />}
       </div>
     </div>
   )
