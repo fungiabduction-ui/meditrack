@@ -12,6 +12,18 @@ const zBloodWorkEntry = z.object({
   createdAt: z.string(),
 })
 
+const zBPReading = z.object({
+  id: z.string().uuid(),
+  date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  timestamp: z.string(),
+  sys: z.number().int().min(60).max(250),
+  dia: z.number().int().min(30).max(150),
+  pulse: z.number().int().min(30).max(220),
+  recordedAt: z.string(),
+})
+
+export const BPReadingSchema = zBPReading
+
 export const UnitTypeSchema = z.enum(['IU', 'mcg', 'mg', 'ml', 'g', 'caps', 'custom'])
 
 export const ActiveIngredientSchema = z.object({
@@ -130,6 +142,7 @@ export const StorageSchemaSchema = z.object({
     appliedAt: z.string(),
   })),
   bloodWork: z.array(zBloodWorkEntry).default([]),
+  bpReadings: z.array(zBPReading).default([]),
 })
 
 export const CabinetExportSchema = z.object({

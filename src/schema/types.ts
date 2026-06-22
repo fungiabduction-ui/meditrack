@@ -142,6 +142,16 @@ export type BloodWorkEntry = {
   createdAt: string
 }
 
+export type BPReading = {
+  id: string
+  date: string        // YYYY-MM-DD
+  timestamp: string   // ISO8601 — time of actual measurement, editable
+  sys: number         // mmHg, 60–250
+  dia: number         // mmHg, 30–150
+  pulse: number       // bpm, 30–220
+  recordedAt: string  // ISO8601 — when button pressed, never editable
+}
+
 export type StorageSchema = {
   _version: number
   _createdAt: string
@@ -151,6 +161,7 @@ export type StorageSchema = {
   dailyLogs: Record<string, DailyLog>
   migrations: MigrationRecord[]
   bloodWork: BloodWorkEntry[]
+  bpReadings: BPReading[]
 }
 
 export type CabinetExport = {
