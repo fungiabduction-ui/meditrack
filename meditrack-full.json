@@ -1,8 +1,8 @@
 {
   "_version": 4,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-22T18:12:21.646Z",
-  "_checksum": "3333d0eb",
+  "_updatedAt": "2026-06-22T22:57:09.006Z",
+  "_checksum": "64065db9",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -3744,6 +3744,35 @@
           "doseUnit": "medida (5g)",
           "timestamp": "2026-06-22T18:11:00.000Z",
           "recordedAt": "2026-06-22T18:11:55.426Z"
+        },
+        {
+          "id": "0795d1a2-5f6c-4a7f-8daa-830670d177e7",
+          "supplementId": "486e193a-875d-430a-846d-760db7deba16",
+          "supplementSnapshot": {
+            "name": "EPH 100",
+            "brand": "KN Nutrition",
+            "doseUnit": "caps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Extracto de Efedra (Ma Huang)",
+                "form": "extracto estandarizado",
+                "amount": 100,
+                "unit": "mg"
+              },
+              {
+                "name": "EPH 100 Proprietary Blend",
+                "form": "blend de estimulantes (cafeína, sinefrina, guaraná y otros)",
+                "amount": 700,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "caps",
+          "timestamp": "2026-06-22T22:56:00.000Z",
+          "recordedAt": "2026-06-22T22:56:32.585Z"
         }
       ],
       "skipped": [],
@@ -3777,6 +3806,11 @@
           "id": "9fd78bc8-9a15-4bf5-a92e-8f04f622457f",
           "text": "🩺 PA: 126/85 mmHg · Pulso: 89 bpm · 03:11 p. m. [Alta I]",
           "timestamp": "2026-06-22T18:12:21.642Z"
+        },
+        {
+          "id": "5663d3e7-ba77-4b83-b0f7-eaf95bd0403c",
+          "text": "🩺 PA: 124/75 mmHg · Pulso: 79 bpm · 07:56 p. m. [Elevada] — Antes de ir al gym tranqui en casa después de haber tomado cafe",
+          "timestamp": "2026-06-22T22:57:09.002Z"
         }
       ],
       "symptoms": {
@@ -3792,7 +3826,7 @@
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-22T03:17:10.799Z",
-      "updatedAt": "2026-06-22T18:12:21.642Z"
+      "updatedAt": "2026-06-22T22:57:09.002Z"
     }
   },
   "migrations": [
@@ -3867,6 +3901,15 @@
       "dia": 85,
       "pulse": 89,
       "recordedAt": "2026-06-22T18:12:21.642Z"
+    },
+    {
+      "id": "a0ae223c-d8ae-44c2-bd37-04f559b7d920",
+      "date": "2026-06-22",
+      "timestamp": "2026-06-22T22:56:00.000Z",
+      "sys": 124,
+      "dia": 75,
+      "pulse": 79,
+      "recordedAt": "2026-06-22T22:57:09.002Z"
     }
   ]
 }
