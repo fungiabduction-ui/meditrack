@@ -1,8 +1,8 @@
 {
-  "_version": 3,
+  "_version": 4,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-22T03:39:08.955Z",
-  "_checksum": "4cab16a8",
+  "_updatedAt": "2026-06-22T05:54:17.811Z",
+  "_checksum": "37be1cbe",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -3456,14 +3456,109 @@
           "doseUnit": "cáps",
           "timestamp": "2026-06-22T03:39:00.000Z",
           "recordedAt": "2026-06-22T03:39:08.951Z"
+        },
+        {
+          "id": "79b7343f-a9a9-4a64-ac82-247f9f750205",
+          "supplementId": "d52cd471-687a-4737-8c6f-cae1f4b605e5",
+          "supplementSnapshot": {
+            "name": "Cabergolina 0.5mg",
+            "brand": "Lactamax",
+            "doseUnit": "comprimidos",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Cabergolina",
+                "form": "agonista selectivo de receptores dopaminérgicos D2",
+                "amount": 0.5,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 0.5,
+          "doseUnit": "comprimidos",
+          "timestamp": "2026-06-22T05:02:00.000Z",
+          "recordedAt": "2026-06-22T05:02:22.064Z"
+        },
+        {
+          "id": "1e9092f6-6d31-4261-9f25-680ce517ddce",
+          "supplementId": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+          "supplementSnapshot": {
+            "name": "Melatol 3mg",
+            "brand": "Gramon",
+            "doseUnit": "comp.",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Melatonina",
+                "form": "sintética",
+                "amount": 3,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.5,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-22T05:05:00.000Z",
+          "recordedAt": "2026-06-22T05:05:13.704Z"
+        },
+        {
+          "id": "ccdf67c8-06d2-407d-ac30-49fd2eecf760",
+          "supplementId": "648692e9-2786-47a7-8658-55fc1168e599",
+          "supplementSnapshot": {
+            "name": "Testenat Depot Enantato 250mg",
+            "brand": "Landerlan Gold",
+            "doseUnit": "ml",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Enantato de testosterona",
+                "form": "éster de acción prolongada, liberación sostenida",
+                "amount": 250,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.2,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-22T05:47:00.000Z",
+          "recordedAt": "2026-06-22T05:47:57.611Z"
         }
       ],
       "skipped": [],
-      "notes": [],
+      "notes": [
+        {
+          "id": "c371fa11-8ad0-4dde-acf2-da66fb4072bd",
+          "text": "🩺 PA: 120/76 mmHg · Pulso: 81 bpm · 12:59 a. m. [Elevada]",
+          "timestamp": "2026-06-22T03:59:43.144Z"
+        },
+        {
+          "id": "bf8399d4-a11d-4675-8bc8-bca6905ccf9b",
+          "text": "🩺 PA: 135/86 mmHg · Pulso: 87 bpm · 01:34 a. m. [Alta I]",
+          "timestamp": "2026-06-22T04:34:36.407Z"
+        },
+        {
+          "id": "813f5666-1581-4104-a0d2-00748f352f28",
+          "text": "🩺 PA: 132/89 mmHg · Pulso: 80 bpm · 02:49 a. m. [Alta I]",
+          "timestamp": "2026-06-22T05:50:06.502Z"
+        }
+      ],
+      "symptoms": {
+        "energy": 4,
+        "libido": 4,
+        "sleep": 3,
+        "recovery": 4,
+        "mood": 3,
+        "erectionQuality": 4,
+        "nippleSensitivity": true,
+        "orgasms": 1
+      },
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-22T03:17:10.799Z",
-      "updatedAt": "2026-06-22T03:39:08.951Z"
+      "updatedAt": "2026-06-22T05:54:17.807Z"
     }
   },
   "migrations": [
@@ -3476,7 +3571,41 @@
       "from": 2,
       "to": 3,
       "appliedAt": "2026-06-20T05:08:41.699Z"
+    },
+    {
+      "from": 3,
+      "to": 4,
+      "appliedAt": "2026-06-22T03:59:26.793Z"
     }
   ],
-  "bloodWork": []
+  "bloodWork": [],
+  "bpReadings": [
+    {
+      "id": "f028ce71-9b23-475d-bd45-bdbbc428ad29",
+      "date": "2026-06-22",
+      "timestamp": "2026-06-22T03:59:00.000Z",
+      "sys": 120,
+      "dia": 76,
+      "pulse": 81,
+      "recordedAt": "2026-06-22T03:59:43.144Z"
+    },
+    {
+      "id": "2a948639-ea6a-435b-958d-2b1084563dc4",
+      "date": "2026-06-22",
+      "timestamp": "2026-06-22T04:34:00.000Z",
+      "sys": 135,
+      "dia": 86,
+      "pulse": 87,
+      "recordedAt": "2026-06-22T04:34:36.407Z"
+    },
+    {
+      "id": "3615a675-478e-4ab8-a75e-9309bae10bed",
+      "date": "2026-06-22",
+      "timestamp": "2026-06-22T05:49:00.000Z",
+      "sys": 132,
+      "dia": 89,
+      "pulse": 80,
+      "recordedAt": "2026-06-22T05:50:06.502Z"
+    }
+  ]
 }
