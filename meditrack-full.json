@@ -1,8 +1,8 @@
 {
   "_version": 4,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-22T05:54:17.811Z",
-  "_checksum": "37be1cbe",
+  "_updatedAt": "2026-06-22T14:34:38.844Z",
+  "_checksum": "c57c57ff",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -432,8 +432,9 @@
       "doseStep": 1,
       "timing": null,
       "active": true,
+      "inStock": false,
       "createdAt": "2026-06-18T13:42:59.947Z",
-      "updatedAt": "2026-06-18T13:51:20.662Z",
+      "updatedAt": "2026-06-22T05:57:06.999Z",
       "version": 1
     },
     "6e8c4ee3-b0ad-403c-ae6f-7c0f65da65b0": {
@@ -3525,6 +3526,30 @@
           "doseUnit": "ml",
           "timestamp": "2026-06-22T05:47:00.000Z",
           "recordedAt": "2026-06-22T05:47:57.611Z"
+        },
+        {
+          "id": "4341bf0e-e0f1-4880-97b0-7fac63931648",
+          "supplementId": "233194d7-f954-486a-99e0-9f21a091925b",
+          "supplementSnapshot": {
+            "name": "GHK-Cu (Péptido de Cobre)",
+            "brand": "Revolution Pharma",
+            "doseUnit": "ml",
+            "category": "other",
+            "activeIngredients": [
+              {
+                "name": "GHK-Cu",
+                "form": "péptido de cobre (GHK-Cu)",
+                "amount": 16.667,
+                "unit": "mg",
+                "source": "síntesis química"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.1,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-22T05:56:00.000Z",
+          "recordedAt": "2026-06-22T05:56:28.188Z"
         }
       ],
       "skipped": [],
@@ -3558,7 +3583,7 @@
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-22T03:17:10.799Z",
-      "updatedAt": "2026-06-22T05:54:17.807Z"
+      "updatedAt": "2026-06-22T05:56:28.188Z"
     }
   },
   "migrations": [
