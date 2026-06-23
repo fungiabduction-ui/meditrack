@@ -1,8 +1,8 @@
 {
   "_version": 4,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-22T22:57:09.006Z",
-  "_checksum": "64065db9",
+  "_updatedAt": "2026-06-23T02:59:57.981Z",
+  "_checksum": "c92e2642",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -3773,6 +3773,70 @@
           "doseUnit": "caps",
           "timestamp": "2026-06-22T22:56:00.000Z",
           "recordedAt": "2026-06-22T22:56:32.585Z"
+        },
+        {
+          "id": "6d8ea562-b48f-4aa6-87ef-ab07f7fc98a5",
+          "supplementId": "acbc2e1f-09b8-4459-bd0d-77a9290f0d14",
+          "supplementSnapshot": {
+            "name": "Premium Whey Protein",
+            "brand": "Star Nutrition",
+            "doseUnit": "medida (30g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Proteína de Suero (WPC 80 / WPI)",
+                "form": "concentrado + isolado de suero de leche",
+                "amount": 25,
+                "unit": "g"
+              },
+              {
+                "name": "L-Leucina (BCAA)",
+                "form": "L-Leucina",
+                "amount": 2.7,
+                "unit": "g"
+              },
+              {
+                "name": "L-Isoleucina (BCAA)",
+                "form": "L-Isoleucina",
+                "amount": 1.5,
+                "unit": "g"
+              },
+              {
+                "name": "L-Valina (BCAA)",
+                "form": "L-Valina",
+                "amount": 1.4,
+                "unit": "g"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "medida (30g)",
+          "timestamp": "2026-06-23T02:31:00.000Z",
+          "recordedAt": "2026-06-23T02:31:01.722Z"
+        },
+        {
+          "id": "96b94e64-c7ed-4bd5-9430-c6a9421c01a0",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "brand": "DBI",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-23T02:31:00.000Z",
+          "recordedAt": "2026-06-23T02:31:09.511Z"
         }
       ],
       "skipped": [],
@@ -3811,22 +3875,27 @@
           "id": "5663d3e7-ba77-4b83-b0f7-eaf95bd0403c",
           "text": "🩺 PA: 124/75 mmHg · Pulso: 79 bpm · 07:56 p. m. [Elevada] — Antes de ir al gym tranqui en casa después de haber tomado cafe",
           "timestamp": "2026-06-22T22:57:09.002Z"
+        },
+        {
+          "id": "6b58c776-ebdb-4d0c-a877-6679b84229cb",
+          "text": "🩺 PA: 132/89 mmHg · Pulso: 220 bpm · 11:59 p. m. [Alta I]",
+          "timestamp": "2026-06-23T02:59:57.975Z"
         }
       ],
       "symptoms": {
-        "energy": 3,
-        "libido": 3,
-        "sleep": 4,
+        "energy": 4,
+        "libido": 4,
+        "sleep": 3,
         "recovery": 4,
-        "mood": 4,
-        "erectionQuality": 4,
-        "nippleSensitivity": false,
-        "orgasms": 3
+        "mood": 3,
+        "erectionQuality": 3,
+        "nippleSensitivity": true,
+        "orgasms": 4
       },
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-22T03:17:10.799Z",
-      "updatedAt": "2026-06-22T22:57:09.002Z"
+      "updatedAt": "2026-06-23T02:59:57.975Z"
     }
   },
   "migrations": [
@@ -3910,6 +3979,15 @@
       "dia": 75,
       "pulse": 79,
       "recordedAt": "2026-06-22T22:57:09.002Z"
+    },
+    {
+      "id": "45dbe714-e241-4a5a-8f85-a0709a0c77a4",
+      "date": "2026-06-22",
+      "timestamp": "2026-06-23T02:59:00.000Z",
+      "sys": 132,
+      "dia": 89,
+      "pulse": 220,
+      "recordedAt": "2026-06-23T02:59:57.975Z"
     }
   ]
 }
