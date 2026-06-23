@@ -1,8 +1,8 @@
 {
   "_version": 4,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-23T02:59:57.981Z",
-  "_checksum": "c92e2642",
+  "_updatedAt": "2026-06-23T05:29:41.582Z",
+  "_checksum": "a319fea2",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -3892,10 +3892,125 @@
         "nippleSensitivity": true,
         "orgasms": 4
       },
-      "sealed": false,
+      "sealed": true,
       "checksum": "",
       "createdAt": "2026-06-22T03:17:10.799Z",
-      "updatedAt": "2026-06-23T02:59:57.975Z"
+      "updatedAt": "2026-06-23T05:28:49.316Z"
+    },
+    "2026-06-23": {
+      "id": "4cab8626-8783-4cda-81fb-c97e093347d8",
+      "date": "2026-06-23",
+      "entries": [
+        {
+          "id": "2dd65c59-1f8c-464d-94dd-e4eba660c8b8",
+          "supplementId": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+          "supplementSnapshot": {
+            "name": "Melatol 3mg",
+            "brand": "Gramon",
+            "doseUnit": "comp.",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Melatonina",
+                "form": "sintética",
+                "amount": 3,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.5,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-23T05:29:00.000Z",
+          "recordedAt": "2026-06-23T05:29:23.250Z"
+        },
+        {
+          "id": "a3a04637-4360-4a35-9ad3-f47565d2117e",
+          "supplementId": "94a088f3-0a9e-47a9-a663-390cab17bcc9",
+          "supplementSnapshot": {
+            "name": "Colageno hidrolizado",
+            "doseUnit": "g",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Colageno hidrolizado",
+                "form": "",
+                "amount": 1,
+                "unit": "g"
+              }
+            ],
+            "version": 3
+          },
+          "quantity": 10,
+          "doseUnit": "g",
+          "timestamp": "2026-06-23T05:29:00.000Z",
+          "recordedAt": "2026-06-23T05:29:29.799Z"
+        },
+        {
+          "id": "730c71ff-e986-428c-afe4-8dd5e52838ba",
+          "supplementId": "03e5e96e-b194-4c0b-a3e1-9fab2577ea55",
+          "supplementSnapshot": {
+            "name": "Acido hialuronico",
+            "brand": "BULK",
+            "doseUnit": "mg",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Acido hialuronico",
+                "form": "",
+                "amount": 1,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 400,
+          "doseUnit": "mg",
+          "timestamp": "2026-06-23T05:29:00.000Z",
+          "recordedAt": "2026-06-23T05:29:33.390Z"
+        },
+        {
+          "id": "8489a526-f6ba-4327-899a-c30bad74fae3",
+          "supplementId": "233194d7-f954-486a-99e0-9f21a091925b",
+          "supplementSnapshot": {
+            "name": "GHK-Cu (Péptido de Cobre)",
+            "brand": "Revolution Pharma",
+            "doseUnit": "ml",
+            "category": "other",
+            "activeIngredients": [
+              {
+                "name": "GHK-Cu",
+                "form": "péptido de cobre (GHK-Cu)",
+                "amount": 16.667,
+                "unit": "mg",
+                "source": "síntesis química"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.1,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-23T05:29:00.000Z",
+          "recordedAt": "2026-06-23T05:29:41.580Z"
+        }
+      ],
+      "skipped": [],
+      "notes": [
+        {
+          "id": "82375563-9003-4504-8bd5-cc5a7a04a296",
+          "text": "🩺 PA: 120/80 mmHg · Pulso: 80 bpm · 01:12 a. m. [Alta I] — Reposo",
+          "timestamp": "2026-06-23T04:13:21.485Z"
+        },
+        {
+          "id": "bf1c0aca-ae0e-42d9-8cda-92659bb6c0f8",
+          "text": "🩺 PA: 128/78 mmHg · Pulso: 73 bpm · 02:28 a. m. [Elevada]",
+          "timestamp": "2026-06-23T05:29:07.101Z"
+        }
+      ],
+      "sealed": false,
+      "checksum": "",
+      "createdAt": "2026-06-23T04:13:21.485Z",
+      "updatedAt": "2026-06-23T05:29:41.580Z"
     }
   },
   "migrations": [
@@ -3988,6 +4103,24 @@
       "dia": 89,
       "pulse": 220,
       "recordedAt": "2026-06-23T02:59:57.975Z"
+    },
+    {
+      "id": "46e780bd-2b2d-446d-8928-ff5cbac92ec5",
+      "date": "2026-06-23",
+      "timestamp": "2026-06-23T04:12:00.000Z",
+      "sys": 120,
+      "dia": 80,
+      "pulse": 80,
+      "recordedAt": "2026-06-23T04:13:21.485Z"
+    },
+    {
+      "id": "9f9ddb6c-9a91-44f1-8e14-76c13182ba03",
+      "date": "2026-06-23",
+      "timestamp": "2026-06-23T05:28:00.000Z",
+      "sys": 128,
+      "dia": 78,
+      "pulse": 73,
+      "recordedAt": "2026-06-23T05:29:07.101Z"
     }
   ]
 }
