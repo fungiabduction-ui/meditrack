@@ -130,7 +130,7 @@ export function migrate(version: number, data: unknown): StorageSchema {
         { from: 4, to: 5, appliedAt: now },
       ],
     }
-    return migrated
+    return migrate(5, migrated)  // continue chain
   }
 
   throw new Error(`Unknown schema version: ${version}`)
