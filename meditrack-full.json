@@ -1,8 +1,8 @@
 {
   "_version": 4,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-23T16:49:06.543Z",
-  "_checksum": "a8e562a8",
+  "_updatedAt": "2026-06-24T04:56:44.003Z",
+  "_checksum": "8a90125f",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -392,8 +392,9 @@
       "doseStep": 1,
       "timing": null,
       "active": true,
+      "inStock": false,
       "createdAt": "2026-06-18T13:42:59.946Z",
-      "updatedAt": "2026-06-18T13:51:20.660Z",
+      "updatedAt": "2026-06-24T04:52:32.369Z",
       "version": 1
     },
     "e045d04e-ec55-47b1-bad7-5a5aa40be467": {
@@ -4056,6 +4057,231 @@
           "doseUnit": "medida (5g)",
           "timestamp": "2026-06-23T16:49:00.000Z",
           "recordedAt": "2026-06-23T16:49:06.540Z"
+        },
+        {
+          "id": "f51596c6-b1ac-49e9-b32b-d9ad723f9325",
+          "supplementId": "6e8c4ee3-b0ad-403c-ae6f-7c0f65da65b0",
+          "supplementSnapshot": {
+            "name": "Mega D3 & MK-7",
+            "brand": "NOW Foods",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina D3",
+                "form": "Colecalciferol",
+                "amount": 5000,
+                "unit": "IU",
+                "source": "lanolina"
+              },
+              {
+                "name": "Vitamina K2 (MK-7)",
+                "form": "Menaquinona-7",
+                "amount": 180,
+                "unit": "mcg",
+                "brand": "MenaQ7®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-23T19:26:00.000Z",
+          "recordedAt": "2026-06-23T19:26:22.148Z"
+        },
+        {
+          "id": "ab9aff7f-82b5-488d-890d-230b38a752f0",
+          "supplementId": "d5c408b9-acc2-48a2-bb0c-8f21fdf307af",
+          "supplementSnapshot": {
+            "name": "Ubiquinol 100mg",
+            "brand": "Nutricost",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Ubiquinol",
+                "form": "forma reducida activa de CoQ10",
+                "amount": 100,
+                "unit": "mg",
+                "brand": "Kaneka Ubiquinol®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-23T19:26:00.000Z",
+          "recordedAt": "2026-06-23T19:26:31.068Z"
+        },
+        {
+          "id": "e9935176-1e32-455e-bcac-beeee5598a4d",
+          "supplementId": "8a6ac53c-5f38-4055-899d-5b5f77915005",
+          "supplementSnapshot": {
+            "name": "Methylated B Complex",
+            "brand": "NatureBell",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina C (Acerola)",
+                "form": "ácido ascórbico natural",
+                "amount": 45,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina E",
+                "form": "tocoferol mixto",
+                "amount": 18,
+                "unit": "mg"
+              },
+              {
+                "name": "Tiamina (B1)",
+                "form": "tiamina HCl",
+                "amount": 100,
+                "unit": "mg"
+              },
+              {
+                "name": "Riboflavina (B2)",
+                "form": "Riboflavina-5-fosfato (R5P)",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Niacina (B3)",
+                "form": "niacinamida",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Ácido pantoténico (B5)",
+                "form": "pantotenato de calcio",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina B6",
+                "form": "Piridoxal-5-fosfato (P5P)",
+                "amount": 20,
+                "unit": "mg"
+              },
+              {
+                "name": "Biotina (B7)",
+                "form": "D-Biotina",
+                "amount": 2000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Folato (B9)",
+                "form": "L-Metilfolato (Methyl Folate)",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Vitamina B12",
+                "form": "Metilcobalamina",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Colina",
+                "form": "bitartrato de colina",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Inositol",
+                "form": "mio-inositol",
+                "amount": 20,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-23T19:26:00.000Z",
+          "recordedAt": "2026-06-23T19:26:35.669Z"
+        },
+        {
+          "id": "7d088ce4-d035-4a05-b4fd-e4ea71c98d88",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "brand": "DBI",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-23T19:26:00.000Z",
+          "recordedAt": "2026-06-23T19:26:39.523Z"
+        },
+        {
+          "id": "7b946e4e-0224-4928-8cfc-057819c5565e",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "brand": "Viva Naturals",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 2,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-23T19:26:00.000Z",
+          "recordedAt": "2026-06-23T19:26:42.223Z"
+        },
+        {
+          "id": "44a3367b-6b70-432c-b915-e00e5c6ca1bb",
+          "supplementId": "e15cc4fd-ad88-40ec-8cd1-cd1aa39a8479",
+          "supplementSnapshot": {
+            "name": "DHEA 100mg",
+            "brand": "NatureBell",
+            "doseUnit": "cáps",
+            "category": "hormone",
+            "activeIngredients": [
+              {
+                "name": "DHEA (Dehidroepiandrosterona)",
+                "form": "micronizado, fuente vegetal",
+                "amount": 100,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 0.5,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-23T19:26:00.000Z",
+          "recordedAt": "2026-06-23T19:26:58.629Z"
         }
       ],
       "skipped": [],
@@ -4079,6 +4305,16 @@
           "id": "1ae09276-c78d-483c-86ce-7c30971cb2d7",
           "text": "🩺 PA: 124/84 mmHg · Pulso: 68 bpm · 01:48 p. m. [Alta I]",
           "timestamp": "2026-06-23T16:48:59.834Z"
+        },
+        {
+          "id": "97dd6f2d-ede0-4f0b-b50f-3cfe19acbf9e",
+          "text": "🩺 PA: 123/79 mmHg · Pulso: 78 bpm · 07:48 p. m. [Elevada]",
+          "timestamp": "2026-06-23T22:49:09.104Z"
+        },
+        {
+          "id": "40d359ed-fc25-45a2-92e4-743c3a0d2403",
+          "text": "🩺 PA: 118/76 mmHg · Pulso: 98 bpm · 10:13 p. m. [Normal] — Después de entrenar",
+          "timestamp": "2026-06-24T01:13:48.760Z"
         }
       ],
       "symptoms": {
@@ -4091,10 +4327,120 @@
         "nippleSensitivity": false,
         "orgasms": 0
       },
-      "sealed": false,
+      "sealed": true,
       "checksum": "",
       "createdAt": "2026-06-23T04:13:21.485Z",
-      "updatedAt": "2026-06-23T16:49:06.540Z"
+      "updatedAt": "2026-06-24T04:08:25.490Z"
+    },
+    "2026-06-24": {
+      "id": "54c18fce-d4f0-4a10-99dd-55ecbc47f2cf",
+      "date": "2026-06-24",
+      "entries": [
+        {
+          "id": "7c8b8379-23ea-4404-b78a-45fb97066239",
+          "supplementId": "03e5e96e-b194-4c0b-a3e1-9fab2577ea55",
+          "supplementSnapshot": {
+            "name": "Acido hialuronico",
+            "brand": "BULK",
+            "doseUnit": "mg",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Acido hialuronico",
+                "form": "",
+                "amount": 1,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 400,
+          "doseUnit": "mg",
+          "timestamp": "2026-06-24T04:52:00.000Z",
+          "recordedAt": "2026-06-24T04:52:07.011Z"
+        },
+        {
+          "id": "d08ad64d-ab5d-4c56-9606-1761feacf9b8",
+          "supplementId": "94a088f3-0a9e-47a9-a663-390cab17bcc9",
+          "supplementSnapshot": {
+            "name": "Colageno hidrolizado",
+            "doseUnit": "g",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Colageno hidrolizado",
+                "form": "",
+                "amount": 1,
+                "unit": "g"
+              }
+            ],
+            "version": 3
+          },
+          "quantity": 10,
+          "doseUnit": "g",
+          "timestamp": "2026-06-24T04:52:00.000Z",
+          "recordedAt": "2026-06-24T04:52:09.178Z"
+        },
+        {
+          "id": "8d329133-d149-4ff6-b3a7-1bb905f5f4fe",
+          "supplementId": "233194d7-f954-486a-99e0-9f21a091925b",
+          "supplementSnapshot": {
+            "name": "GHK-Cu (Péptido de Cobre)",
+            "brand": "Revolution Pharma",
+            "doseUnit": "ml",
+            "category": "other",
+            "activeIngredients": [
+              {
+                "name": "GHK-Cu",
+                "form": "péptido de cobre (GHK-Cu)",
+                "amount": 16.667,
+                "unit": "mg",
+                "source": "síntesis química"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.1,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-24T04:52:00.000Z",
+          "recordedAt": "2026-06-24T04:52:12.364Z"
+        },
+        {
+          "id": "86a81220-f43b-430f-b2f4-237e44ef128d",
+          "supplementId": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+          "supplementSnapshot": {
+            "name": "Melatol 3mg",
+            "brand": "Gramon",
+            "doseUnit": "comp.",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Melatonina",
+                "form": "sintética",
+                "amount": 3,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.5,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-24T04:52:00.000Z",
+          "recordedAt": "2026-06-24T04:52:22.397Z"
+        }
+      ],
+      "skipped": [],
+      "notes": [
+        {
+          "id": "37aaf4b6-e3c4-4366-971f-0bd65a1722bd",
+          "text": "🩺 PA: 119/73 mmHg · Pulso: 80 bpm · 01:08 a. m. [Normal] — Reposo",
+          "timestamp": "2026-06-24T04:08:41.330Z"
+        }
+      ],
+      "sealed": false,
+      "checksum": "",
+      "createdAt": "2026-06-24T04:08:41.330Z",
+      "updatedAt": "2026-06-24T04:52:22.397Z"
     }
   },
   "migrations": [
@@ -4223,6 +4569,33 @@
       "dia": 84,
       "pulse": 68,
       "recordedAt": "2026-06-23T16:48:59.834Z"
+    },
+    {
+      "id": "0d9d2405-8ef4-403e-94c9-5dac2ac8fbde",
+      "date": "2026-06-23",
+      "timestamp": "2026-06-23T22:48:00.000Z",
+      "sys": 123,
+      "dia": 79,
+      "pulse": 78,
+      "recordedAt": "2026-06-23T22:49:09.104Z"
+    },
+    {
+      "id": "121cf337-21b9-4590-8e0a-c5fe6ef2e4ee",
+      "date": "2026-06-23",
+      "timestamp": "2026-06-24T01:13:00.000Z",
+      "sys": 118,
+      "dia": 76,
+      "pulse": 98,
+      "recordedAt": "2026-06-24T01:13:48.760Z"
+    },
+    {
+      "id": "ffe2bc1a-6fd2-4a0a-a7cd-2ba6786666b4",
+      "date": "2026-06-24",
+      "timestamp": "2026-06-24T04:08:00.000Z",
+      "sys": 119,
+      "dia": 73,
+      "pulse": 80,
+      "recordedAt": "2026-06-24T04:08:41.330Z"
     }
   ]
 }
