@@ -30,6 +30,7 @@ export function DailySymptoms({ dateStr, isToday }: Props) {
   if (!isToday && !saved) return null
 
   const readOnly = !isToday && !!saved
+  const display = readOnly && saved ? saved : local
 
   const setNum = (key: keyof Pick<DailySymptoms, 'energy' | 'libido' | 'sleep' | 'recovery' | 'mood' | 'erectionQuality'>, val: 1 | 2 | 3 | 4 | 5) =>
     setLocal(p => ({ ...p, [key]: val }))
@@ -76,7 +77,7 @@ export function DailySymptoms({ dateStr, isToday }: Props) {
                 disabled={readOnly}
                 onClick={() => setNum(key, n)}
                 className={`w-7 h-7 rounded-full text-xs font-semibold transition-colors ${
-                  local[key] === n
+                  display[key] === n
                     ? 'bg-violet-600 text-white'
                     : 'bg-slate-800 text-slate-400 hover:bg-slate-700 border border-slate-700'
                 } ${readOnly ? 'cursor-default' : ''}`}
@@ -94,10 +95,10 @@ export function DailySymptoms({ dateStr, isToday }: Props) {
           disabled={readOnly}
           onClick={() => !readOnly && setLocal(p => ({ ...p, nippleSensitivity: !p.nippleSensitivity }))}
           className={`w-10 h-6 rounded-full transition-colors relative ${
-            local.nippleSensitivity ? 'bg-violet-600' : 'bg-slate-700'
+            display.nippleSensitivity ? 'bg-violet-600' : 'bg-slate-700'
           } ${readOnly ? 'cursor-default' : ''}`}
         >
-          <span className={`absolute top-1 w-4 h-4 rounded-full bg-white transition-all ${local.nippleSensitivity ? 'left-5' : 'left-1'}`} />
+          <span className={`absolute top-1 w-4 h-4 rounded-full bg-white transition-all ${display.nippleSensitivity ? 'left-5' : 'left-1'}`} />
         </button>
       </div>
 
@@ -110,7 +111,7 @@ export function DailySymptoms({ dateStr, isToday }: Props) {
               className="w-7 h-7 rounded-full bg-slate-700 text-slate-300 text-lg flex items-center justify-center hover:bg-slate-600"
             >−</button>
           )}
-          <span className="text-white text-sm w-4 text-center">{local.orgasms}</span>
+          <span className="text-white text-sm w-4 text-center">{display.orgasms}</span>
           {!readOnly && (
             <button
               onClick={() => setLocal(p => ({ ...p, orgasms: p.orgasms + 1 }))}
