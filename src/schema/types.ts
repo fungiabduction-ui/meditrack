@@ -104,6 +104,12 @@ export type DailySymptoms = {
   orgasms: number
 }
 
+export type SymptomLogEntry = {
+  id: string
+  timestamp: string  // ISO8601 — momento del registro individual
+  symptoms: DailySymptoms
+}
+
 export type DailyLog = {
   id: string
   date: string  // YYYY-MM-DD
@@ -111,6 +117,7 @@ export type DailyLog = {
   skipped: SkippedItem[]
   notes: DayNote[]
   symptoms?: DailySymptoms
+  symptomLog?: SymptomLogEntry[]  // múltiples registros del día; symptoms = promedio calculado
   sealed: boolean
   checksum: string
   createdAt: string

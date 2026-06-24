@@ -112,6 +112,12 @@ export const DailySymptomsSchema = z.object({
   orgasms: z.number().int().min(0),
 })
 
+export const SymptomLogEntrySchema = z.object({
+  id: z.string().uuid(),
+  timestamp: z.string(),
+  symptoms: DailySymptomsSchema,
+})
+
 export const DailyLogSchema = z.object({
   id: z.string().uuid(),
   date: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
@@ -123,6 +129,7 @@ export const DailyLogSchema = z.object({
   })),
   notes: z.array(DayNoteSchema).default([]),
   symptoms: DailySymptomsSchema.optional(),
+  symptomLog: z.array(SymptomLogEntrySchema).optional(),
   sealed: z.boolean(),
   checksum: z.string(),
   createdAt: z.string(),
