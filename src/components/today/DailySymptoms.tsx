@@ -4,14 +4,8 @@ import type { DailySymptoms } from '../../schema/types'
 import { computeWellbeingScore } from '../../utils/wellbeing'
 
 const DEFAULTS: DailySymptoms = {
-  energy: 3,
-  libido: 3,
-  sleep: 3,
-  recovery: 3,
-  mood: 3,
-  erectionQuality: 3,
-  nippleSensitivity: false,
-  orgasms: 0,
+  energy: 3, libido: 3, sleep: 3, recovery: 3, mood: 3,
+  erectionQuality: 3, nippleSensitivity: false, orgasms: 0,
 }
 
 const LABELS: { key: keyof Pick<DailySymptoms, 'energy' | 'libido' | 'sleep' | 'recovery' | 'mood' | 'erectionQuality'>; label: string }[] = [
@@ -27,10 +21,11 @@ type Props = { dateStr: string; isToday: boolean }
 
 export function DailySymptoms({ dateStr, isToday }: Props) {
   const dailyLog = useStore(s => s.dailyLogs[dateStr])
-  const updateSymptoms = useStore(s => s.updateSymptoms)
+  const addSymptomEntry = useStore(s => s.addSymptomEntry)
 
   const saved = dailyLog?.symptoms ?? null
-  const [local, setLocal] = useState<DailySymptoms>(saved ?? DEFAULTS)
+  const symptomLog = dailyLog?.symptomLog ?? []
+  const [local, setLocal] = useState<DailySymptoms>(DEFAULTS)
 
   if (!isToday && !saved) return null
 
@@ -39,6 +34,11 @@ export function DailySymptoms({ dateStr, isToday }: Props) {
   const setNum = (key: keyof Pick<DailySymptoms, 'energy' | 'libido' | 'sleep' | 'recovery' | 'mood' | 'erectionQuality'>, val: 1 | 2 | 3 | 4 | 5) =>
     setLocal(p => ({ ...p, [key]: val }))
 
+  const handleSave = () => {
+    addSymptomEntry(dateStr, local)
+    setLocal(DEFAULTS)
+  }
+
   return (
     <div className="bg-slate-800 border border-slate-700 rounded-2xl p-4 space-y-4">
       <div className="flex items-center justify-between">
@@ -46,9 +46,25 @@ export function DailySymptoms({ dateStr, isToday }: Props) {
         {saved && (
           <span className="text-xs font-bold text-violet-400 bg-violet-500/10 border border-violet-500/20 px-2 py-0.5 rounded-full">
             {computeWellbeingScore(saved)}/100
+            {symptomLog.length > 1 && <span className="opacity-60 ml-1">· {symptomLog.length} reg.</span>}
           </span>
         )}
       </div>
+
+      {isToday && symptomLog.length > 0 && (
+        <div className="space-y-1">
+          {symptomLog.map(entry => (
+            <div key={entry.id} className="flex justify-between items-center text-xs bg-slate-900 rounded-lg px-3 py-1.5">
+              <span className="text-slate-500">
+                {new Date(entry.timestamp).toLocaleTimeString('es-AR', { hour: '2-digit', minute: '2-digit' })}
+              </span>
+              <span className="text-violet-400 font-semibold">
+                {computeWellbeingScore(entry.symptoms)}/100
+              </span>
+            </div>
+          ))}
+        </div>
+      )}
 
       {LABELS.map(({ key, label }) => (
         <div key={key} className="flex items-center justify-between gap-2">
@@ -106,10 +122,10 @@ export function DailySymptoms({ dateStr, isToday }: Props) {
 
       {!readOnly && (
         <button
-          onClick={() => updateSymptoms(dateStr, local)}
+          onClick={handleSave}
           className="bg-violet-600 hover:bg-violet-500 text-white rounded-xl py-2.5 w-full text-sm font-semibold transition-colors"
         >
-          Guardar síntomas
+          {symptomLog.length === 0 ? 'Guardar síntomas' : 'Agregar entrada'}
         </button>
       )}
     </div>
