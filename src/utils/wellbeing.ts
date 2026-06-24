@@ -10,6 +10,7 @@ export function computeWellbeingScore(s: DailySymptoms): number {
 }
 
 export function computeAvgSymptoms(entries: DailySymptoms[]): DailySymptoms {
+  if (entries.length === 0) throw new Error('computeAvgSymptoms requires at least one entry')
   if (entries.length === 1) return entries[0]
   const n = entries.length
   const clamp = (v: number): 1 | 2 | 3 | 4 | 5 =>
