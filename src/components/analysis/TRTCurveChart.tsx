@@ -90,7 +90,7 @@ export function TRTCurveChart() {
         return `${x.toFixed(1)},${toY(p.level).toFixed(1)}`
       })
       .join(' ')
-  }, [injections, origin, windowStart, windowEnd, dim])
+  }, [injections, origin, windowStart, windowEnd, dim, month])
 
   // Injection markers within this month
   const injectionMarkers = useMemo(() => {
