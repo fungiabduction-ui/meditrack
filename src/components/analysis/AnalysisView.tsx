@@ -4,8 +4,10 @@ import { TRTCycleHeatmap } from './TRTCycleHeatmap'
 import { SupplementCorrelation } from './SupplementCorrelation'
 import { LaboratorioView } from './LaboratorioView'
 import { BPChart } from './BPChart'
+import { TRTCurveChart } from './TRTCurveChart'
+import { ProtocolComparator } from './ProtocolComparator'
 
-type SubTab = 'symptoms' | 'lab' | 'bp'
+type SubTab = 'symptoms' | 'lab' | 'bp' | 'trt'
 
 export function AnalysisView() {
   const [subTab, setSubTab] = useState<SubTab>('symptoms')
@@ -47,6 +49,16 @@ export function AnalysisView() {
           >
             ❤ Presión
           </button>
+          <button
+            onClick={() => setSubTab('trt')}
+            className={`flex-1 py-2 text-sm font-semibold rounded-lg transition-colors ${
+              subTab === 'trt'
+                ? 'bg-violet-600 text-white'
+                : 'text-slate-400 hover:text-slate-300'
+            }`}
+          >
+            TRT
+          </button>
         </div>
 
         {subTab === 'symptoms' && (
@@ -60,6 +72,13 @@ export function AnalysisView() {
         {subTab === 'lab' && <LaboratorioView />}
 
         {subTab === 'bp' && <BPChart />}
+
+        {subTab === 'trt' && (
+          <div className="space-y-4">
+            <TRTCurveChart />
+            <ProtocolComparator />
+          </div>
+        )}
       </div>
     </div>
   )
