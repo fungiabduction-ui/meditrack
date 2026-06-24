@@ -1,10 +1,11 @@
 import { create } from 'zustand'
-import type { Supplement, LogEntry, DailyLog, StorageSchema, SkippedItem, DayNote, DailySymptoms, BloodWorkEntry, BPReading } from '../schema/types'
+import type { Supplement, LogEntry, DailyLog, StorageSchema, SkippedItem, DayNote, DailySymptoms, BloodWorkEntry, BPReading, SymptomLogEntry } from '../schema/types'
 import { read, write } from '../storage/persistence'
 import { generateId } from '../utils/id'
 import { getLocalDateStr } from '../utils/date'
 import { calcNextDue, isScheduledToday } from '../utils/schedule'
 import { classifyBP } from '../utils/bp'
+import { computeAvgSymptoms } from '../utils/wellbeing'
 
 type Store = {
   supplements: Record<string, Supplement>
@@ -23,6 +24,7 @@ type Store = {
   editDayNote: (dateStr: string, noteId: string, text: string) => void
   removeDayNote: (dateStr: string, noteId: string) => void
   updateSymptoms: (dateStr: string, symptoms: DailySymptoms) => void
+  addSymptomEntry: (dateStr: string, symptoms: DailySymptoms) => void
   addBloodWork: (data: Omit<BloodWorkEntry, 'id' | 'createdAt'>) => void
   updateBloodWork: (id: string, partial: Partial<Omit<BloodWorkEntry, 'id' | 'createdAt'>>) => void
   removeBloodWork: (id: string) => void
@@ -210,6 +212,23 @@ export const useStore = create<Store>((set, get) => ({
     const log: DailyLog = existing
       ? { ...existing, symptoms, updatedAt: now }
       : { id: generateId(), date: dateStr, entries: [], skipped: [], notes: [], symptoms, sealed: false, checksum: '', createdAt: now, updatedAt: now }
+    const dailyLogs = { ...get().dailyLogs, [dateStr]: log }
+    commitWrite(set, { ...read(), dailyLogs })
+  },
+
+  addSymptomEntry: (dateStr, symptomsData) => {
+    const now = new Date().toISOString()
+    const existing = get().dailyLogs[dateStr]
+    const entry: SymptomLogEntry = { id: generateId(), timestamp: now, symptoms: symptomsData }
+    const prevLog: DailyLog = existing ?? {
+      id: generateId(), date: dateStr, entries: [], skipped: [], notes: [],
+      sealed: false, checksum: '', createdAt: now, updatedAt: now,
+    }
+    const symptomLog = [...(prevLog.symptomLog ?? []), entry]
+    const symptoms = symptomLog.length === 1
+      ? symptomsData
+      : computeAvgSymptoms(symptomLog.map(e => e.symptoms))
+    const log: DailyLog = { ...prevLog, symptomLog, symptoms, updatedAt: now }
     const dailyLogs = { ...get().dailyLogs, [dateStr]: log }
     commitWrite(set, { ...read(), dailyLogs })
   },

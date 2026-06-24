@@ -242,3 +242,40 @@ describe('removeBPReading', () => {
     expect(notesAfter).toBe(notesBefore) // note survives
   })
 })
+
+describe('addSymptomEntry', () => {
+  it('creates symptomLog and sets symptoms as first entry', () => {
+    const today = getLocalDateStr()
+    const sym = {
+      energy: 4 as const, libido: 4 as const, sleep: 4 as const,
+      recovery: 4 as const, mood: 4 as const, erectionQuality: 4 as const,
+      nippleSensitivity: false, orgasms: 0,
+    }
+    useStore.getState().addSymptomEntry(today, sym)
+    const log = useStore.getState().dailyLogs[today]
+    expect(log.symptomLog).toHaveLength(1)
+    expect(log.symptomLog![0].symptoms.energy).toBe(4)
+    expect(log.symptoms?.energy).toBe(4)
+  })
+
+  it('second entry updates symptoms to average', () => {
+    const today = getLocalDateStr()
+    const low = { energy: 2 as const, libido: 2 as const, sleep: 2 as const, recovery: 2 as const, mood: 2 as const, erectionQuality: 2 as const, nippleSensitivity: false, orgasms: 0 }
+    const high = { energy: 4 as const, libido: 4 as const, sleep: 4 as const, recovery: 4 as const, mood: 4 as const, erectionQuality: 4 as const, nippleSensitivity: false, orgasms: 0 }
+    useStore.getState().addSymptomEntry(today, low)
+    useStore.getState().addSymptomEntry(today, high)
+    const log = useStore.getState().dailyLogs[today]
+    expect(log.symptomLog).toHaveLength(2)
+    expect(log.symptoms?.energy).toBe(3)  // avg(2,4) = 3
+  })
+
+  it('persists across init', () => {
+    const today = getLocalDateStr()
+    const sym = { energy: 5 as const, libido: 5 as const, sleep: 5 as const, recovery: 5 as const, mood: 5 as const, erectionQuality: 5 as const, nippleSensitivity: false, orgasms: 0 }
+    useStore.getState().addSymptomEntry(today, sym)
+    useStore.getState().init()
+    const log = useStore.getState().dailyLogs[today]
+    expect(log.symptomLog).toHaveLength(1)
+    expect(log.symptoms?.energy).toBe(5)
+  })
+})
