@@ -91,7 +91,7 @@ export function findReinjectionWindows(
   let inWindow = false
   let tStart = 0
   for (const pt of curve) {
-    if (!inWindow && pt.level <= threshold) { inWindow = true; tStart = pt.t }
+    if (!inWindow && pt.level < threshold) { inWindow = true; tStart = pt.t }
     else if (inWindow && pt.level > threshold) { windows.push({ tStart, tEnd: pt.t }); inWindow = false }
   }
   if (inWindow) windows.push({ tStart, tEnd: curve[curve.length - 1].t })
