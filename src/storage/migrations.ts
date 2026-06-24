@@ -1,7 +1,8 @@
 import type { StorageSchema } from '../schema/types'
 import { computeChecksum } from './checksum'
+import { generateId } from '../utils/id'
 
-export const CURRENT_VERSION = 4
+export const CURRENT_VERSION = 5
 
 const MASS_UNITS = new Set(['mg', 'g', 'mcg'])
 
@@ -99,6 +100,34 @@ export function migrate(version: number, data: unknown): StorageSchema {
       migrations: [
         ...(raw.migrations ?? []),
         { from: 3, to: 4, appliedAt: new Date().toISOString() },
+      ],
+    }
+    return migrate(4, migrated)  // continue chain
+  }
+
+  if (version === 4) {
+    const raw = data as StorageSchema
+    const now = new Date().toISOString()
+    const dailyLogs = Object.fromEntries(
+      Object.entries(raw.dailyLogs).map(([date, log]) => {
+        if (!log.symptoms || log.symptomLog) return [date, log]
+        return [date, {
+          ...log,
+          symptomLog: [{
+            id: generateId(),
+            timestamp: `${date}T12:00:00.000Z`,
+            symptoms: log.symptoms,
+          }],
+        }]
+      })
+    )
+    const migrated: StorageSchema = {
+      ...raw,
+      _version: 5,
+      dailyLogs,
+      migrations: [
+        ...(raw.migrations ?? []),
+        { from: 4, to: 5, appliedAt: now },
       ],
     }
     return migrated
