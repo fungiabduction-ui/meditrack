@@ -1,8 +1,8 @@
 {
   "_version": 5,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-25T01:21:18.026Z",
-  "_checksum": "ace51f78",
+  "_updatedAt": "2026-06-25T03:31:04.679Z",
+  "_checksum": "3e0c0c05",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -720,16 +720,20 @@
       "warnings": "Solo bajo supervisión médica. Puede causar náuseas, mareos, hipotensión ortostática, cefalea y somnolencia. Uso prolongado puede asociarse a fibrosis valvular cardíaca. Requiere seguimiento clínico periódico.",
       "certifications": [],
       "schedule": {
-        "kind": "as_needed"
+        "kind": "weekdays",
+        "days": [
+          0,
+          3
+        ]
       },
       "defaultDose": 1,
       "doseUnit": "comprimidos",
       "doseStep": 0.5,
-      "timing": null,
+      "timing": "night",
       "active": true,
       "createdAt": "2026-06-18T13:42:59.958Z",
-      "updatedAt": "2026-06-18T15:14:22.601Z",
-      "version": 1
+      "updatedAt": "2026-06-25T03:31:04.672Z",
+      "version": 2
     },
     "648692e9-2786-47a7-8658-55fc1168e599": {
       "id": "648692e9-2786-47a7-8658-55fc1168e599",
@@ -753,16 +757,20 @@
       "warnings": "Medicamento controlado — solo bajo prescripción médica. Requiere monitoreo de testosterona, hematocrito, perfil lipídico y función prostática. Puede causar supresión del eje hormonal, acné, ginecomastia, retención de líquidos y eventos cardiovasculares.",
       "certifications": [],
       "schedule": {
-        "kind": "as_needed"
+        "kind": "weekdays",
+        "days": [
+          0,
+          3
+        ]
       },
-      "defaultDose": 0.4,
+      "defaultDose": 0.2,
       "doseUnit": "ml",
       "doseStep": 0.05,
-      "timing": null,
+      "timing": "night",
       "active": true,
       "createdAt": "2026-06-18T13:42:59.960Z",
-      "updatedAt": "2026-06-18T13:52:03.856Z",
-      "version": 2
+      "updatedAt": "2026-06-25T03:29:24.936Z",
+      "version": 3
     },
     "3fdbf241-bf4a-4e78-b1b6-0100061c7063": {
       "id": "3fdbf241-bf4a-4e78-b1b6-0100061c7063",
@@ -4845,6 +4853,17 @@
       "checksum": "",
       "createdAt": "2026-06-24T04:08:41.330Z",
       "updatedAt": "2026-06-25T01:21:18.017Z"
+    },
+    "2026-06-25": {
+      "id": "1d6274b4-91b9-4271-b9a0-04c0238ef184",
+      "date": "2026-06-25",
+      "entries": [],
+      "skipped": [],
+      "notes": [],
+      "sealed": false,
+      "checksum": "",
+      "createdAt": "2026-06-25T03:29:42.328Z",
+      "updatedAt": "2026-06-25T03:30:24.368Z"
     }
   },
   "migrations": [
