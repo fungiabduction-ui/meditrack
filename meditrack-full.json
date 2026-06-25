@@ -1,8 +1,8 @@
 {
   "_version": 5,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-25T04:56:09.320Z",
-  "_checksum": "4a97d80c",
+  "_updatedAt": "2026-06-25T18:15:35.899Z",
+  "_checksum": "ede1d0eb",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -4995,6 +4995,52 @@
           "doseUnit": "comprimidos",
           "timestamp": "2026-06-25T04:56:00.000Z",
           "recordedAt": "2026-06-25T04:56:09.317Z"
+        },
+        {
+          "id": "47cc636f-5f35-40e5-9055-4ef596823f70",
+          "supplementId": "969ab0cd-87ce-4036-a669-fc1e84382015",
+          "supplementSnapshot": {
+            "name": "Clembuterol",
+            "brand": "FM",
+            "doseUnit": "ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Clembuterol",
+                "form": "",
+                "amount": 0.08,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.25,
+          "doseUnit": "ud",
+          "timestamp": "2026-06-25T18:15:00.000Z",
+          "recordedAt": "2026-06-25T18:15:21.318Z"
+        },
+        {
+          "id": "ddae9186-7e0c-44ba-bf55-8bf42afcbc6e",
+          "supplementId": "784eff85-1b12-4ad5-a7c2-273edf5108ad",
+          "supplementSnapshot": {
+            "name": "Creatina Monohidrato",
+            "brand": "Star Nutrition",
+            "doseUnit": "medida (5g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Creatina Monohidrato",
+                "form": "monohidrato",
+                "amount": 5000,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "medida (5g)",
+          "timestamp": "2026-06-25T18:15:00.000Z",
+          "recordedAt": "2026-06-25T18:15:35.894Z"
         }
       ],
       "skipped": [],
@@ -5002,7 +5048,7 @@
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-25T03:29:42.328Z",
-      "updatedAt": "2026-06-25T04:56:09.317Z"
+      "updatedAt": "2026-06-25T18:15:35.894Z"
     }
   },
   "migrations": [
