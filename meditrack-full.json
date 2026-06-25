@@ -1,8 +1,8 @@
 {
-  "_version": 4,
+  "_version": 5,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-24T04:56:44.003Z",
-  "_checksum": "8a90125f",
+  "_updatedAt": "2026-06-25T01:21:18.026Z",
+  "_checksum": "ace51f78",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -3392,6 +3392,22 @@
         "nippleSensitivity": false,
         "orgasms": 4
       },
+      "symptomLog": [
+        {
+          "id": "c406a3d5-3068-4d13-82bc-1fdff983b31f",
+          "timestamp": "2026-06-21T12:00:00.000Z",
+          "symptoms": {
+            "energy": 3,
+            "libido": 3,
+            "sleep": 3,
+            "recovery": 3,
+            "mood": 3,
+            "erectionQuality": 3,
+            "nippleSensitivity": false,
+            "orgasms": 4
+          }
+        }
+      ],
       "sealed": true,
       "checksum": "",
       "createdAt": "2026-06-21T13:14:55.335Z",
@@ -3893,6 +3909,22 @@
         "nippleSensitivity": true,
         "orgasms": 4
       },
+      "symptomLog": [
+        {
+          "id": "026e55b1-87e5-4d50-9e87-b629ac4f59dc",
+          "timestamp": "2026-06-22T12:00:00.000Z",
+          "symptoms": {
+            "energy": 4,
+            "libido": 4,
+            "sleep": 3,
+            "recovery": 4,
+            "mood": 3,
+            "erectionQuality": 3,
+            "nippleSensitivity": true,
+            "orgasms": 4
+          }
+        }
+      ],
       "sealed": true,
       "checksum": "",
       "createdAt": "2026-06-22T03:17:10.799Z",
@@ -4327,6 +4359,22 @@
         "nippleSensitivity": false,
         "orgasms": 0
       },
+      "symptomLog": [
+        {
+          "id": "267c1435-21e8-4e36-a04c-0edc2c6c34b0",
+          "timestamp": "2026-06-23T12:00:00.000Z",
+          "symptoms": {
+            "energy": 4,
+            "libido": 3,
+            "sleep": 5,
+            "recovery": 5,
+            "mood": 4,
+            "erectionQuality": 3,
+            "nippleSensitivity": false,
+            "orgasms": 0
+          }
+        }
+      ],
       "sealed": true,
       "checksum": "",
       "createdAt": "2026-06-23T04:13:21.485Z",
@@ -4427,6 +4475,312 @@
           "doseUnit": "comp.",
           "timestamp": "2026-06-24T04:52:00.000Z",
           "recordedAt": "2026-06-24T04:52:22.397Z"
+        },
+        {
+          "id": "1062ec95-78ce-4018-98b8-e9e49f7de478",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "brand": "Viva Naturals",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 2,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-24T18:58:00.000Z",
+          "recordedAt": "2026-06-24T18:59:00.996Z"
+        },
+        {
+          "id": "d74a879b-ac2a-403d-9a04-cb3a6238d332",
+          "supplementId": "6e8c4ee3-b0ad-403c-ae6f-7c0f65da65b0",
+          "supplementSnapshot": {
+            "name": "Mega D3 & MK-7",
+            "brand": "NOW Foods",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina D3",
+                "form": "Colecalciferol",
+                "amount": 5000,
+                "unit": "IU",
+                "source": "lanolina"
+              },
+              {
+                "name": "Vitamina K2 (MK-7)",
+                "form": "Menaquinona-7",
+                "amount": 180,
+                "unit": "mcg",
+                "brand": "MenaQ7®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-24T18:59:00.000Z",
+          "recordedAt": "2026-06-24T18:59:02.581Z"
+        },
+        {
+          "id": "ed31af38-03fd-45dd-9185-891b960af855",
+          "supplementId": "e15cc4fd-ad88-40ec-8cd1-cd1aa39a8479",
+          "supplementSnapshot": {
+            "name": "DHEA 100mg",
+            "brand": "NatureBell",
+            "doseUnit": "cáps",
+            "category": "hormone",
+            "activeIngredients": [
+              {
+                "name": "DHEA (Dehidroepiandrosterona)",
+                "form": "micronizado, fuente vegetal",
+                "amount": 100,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 0.5,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-24T18:59:00.000Z",
+          "recordedAt": "2026-06-24T18:59:05.900Z"
+        },
+        {
+          "id": "2ad1d720-b740-4804-a120-df35459d5b9e",
+          "supplementId": "8a6ac53c-5f38-4055-899d-5b5f77915005",
+          "supplementSnapshot": {
+            "name": "Methylated B Complex",
+            "brand": "NatureBell",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina C (Acerola)",
+                "form": "ácido ascórbico natural",
+                "amount": 45,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina E",
+                "form": "tocoferol mixto",
+                "amount": 18,
+                "unit": "mg"
+              },
+              {
+                "name": "Tiamina (B1)",
+                "form": "tiamina HCl",
+                "amount": 100,
+                "unit": "mg"
+              },
+              {
+                "name": "Riboflavina (B2)",
+                "form": "Riboflavina-5-fosfato (R5P)",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Niacina (B3)",
+                "form": "niacinamida",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Ácido pantoténico (B5)",
+                "form": "pantotenato de calcio",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina B6",
+                "form": "Piridoxal-5-fosfato (P5P)",
+                "amount": 20,
+                "unit": "mg"
+              },
+              {
+                "name": "Biotina (B7)",
+                "form": "D-Biotina",
+                "amount": 2000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Folato (B9)",
+                "form": "L-Metilfolato (Methyl Folate)",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Vitamina B12",
+                "form": "Metilcobalamina",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Colina",
+                "form": "bitartrato de colina",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Inositol",
+                "form": "mio-inositol",
+                "amount": 20,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-24T18:59:00.000Z",
+          "recordedAt": "2026-06-24T18:59:08.518Z"
+        },
+        {
+          "id": "99cbadb3-a413-4f93-ac1c-e2c92c961ca1",
+          "supplementId": "784eff85-1b12-4ad5-a7c2-273edf5108ad",
+          "supplementSnapshot": {
+            "name": "Creatina Monohidrato",
+            "brand": "Star Nutrition",
+            "doseUnit": "medida (5g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Creatina Monohidrato",
+                "form": "monohidrato",
+                "amount": 5000,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "medida (5g)",
+          "timestamp": "2026-06-24T13:59:00.000Z",
+          "recordedAt": "2026-06-24T18:59:27.057Z"
+        },
+        {
+          "id": "5cffce3e-7233-4bca-8c92-66a5bdeb9225",
+          "supplementId": "acbc2e1f-09b8-4459-bd0d-77a9290f0d14",
+          "supplementSnapshot": {
+            "name": "Premium Whey Protein",
+            "brand": "Star Nutrition",
+            "doseUnit": "medida (30g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Proteína de Suero (WPC 80 / WPI)",
+                "form": "concentrado + isolado de suero de leche",
+                "amount": 25,
+                "unit": "g"
+              },
+              {
+                "name": "L-Leucina (BCAA)",
+                "form": "L-Leucina",
+                "amount": 2.7,
+                "unit": "g"
+              },
+              {
+                "name": "L-Isoleucina (BCAA)",
+                "form": "L-Isoleucina",
+                "amount": 1.5,
+                "unit": "g"
+              },
+              {
+                "name": "L-Valina (BCAA)",
+                "form": "L-Valina",
+                "amount": 1.4,
+                "unit": "g"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "medida (30g)",
+          "timestamp": "2026-06-24T18:59:00.000Z",
+          "recordedAt": "2026-06-24T18:59:39.679Z"
+        },
+        {
+          "id": "11f7d8bc-c27c-4c9c-b83c-d0d861498749",
+          "supplementId": "784eff85-1b12-4ad5-a7c2-273edf5108ad",
+          "supplementSnapshot": {
+            "name": "Creatina Monohidrato",
+            "brand": "Star Nutrition",
+            "doseUnit": "medida (5g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Creatina Monohidrato",
+                "form": "monohidrato",
+                "amount": 5000,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "medida (5g)",
+          "timestamp": "2026-06-24T23:30:00.000Z",
+          "recordedAt": "2026-06-25T00:30:27.192Z"
+        },
+        {
+          "id": "c41b0816-4299-40e7-8cc0-9697e8bda235",
+          "supplementId": "acbc2e1f-09b8-4459-bd0d-77a9290f0d14",
+          "supplementSnapshot": {
+            "name": "Premium Whey Protein",
+            "brand": "Star Nutrition",
+            "doseUnit": "medida (30g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Proteína de Suero (WPC 80 / WPI)",
+                "form": "concentrado + isolado de suero de leche",
+                "amount": 25,
+                "unit": "g"
+              },
+              {
+                "name": "L-Leucina (BCAA)",
+                "form": "L-Leucina",
+                "amount": 2.7,
+                "unit": "g"
+              },
+              {
+                "name": "L-Isoleucina (BCAA)",
+                "form": "L-Isoleucina",
+                "amount": 1.5,
+                "unit": "g"
+              },
+              {
+                "name": "L-Valina (BCAA)",
+                "form": "L-Valina",
+                "amount": 1.4,
+                "unit": "g"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 1,
+          "doseUnit": "medida (30g)",
+          "timestamp": "2026-06-25T01:21:00.000Z",
+          "recordedAt": "2026-06-25T01:21:18.017Z"
         }
       ],
       "skipped": [],
@@ -4435,12 +4789,62 @@
           "id": "37aaf4b6-e3c4-4366-971f-0bd65a1722bd",
           "text": "🩺 PA: 119/73 mmHg · Pulso: 80 bpm · 01:08 a. m. [Normal] — Reposo",
           "timestamp": "2026-06-24T04:08:41.330Z"
+        },
+        {
+          "id": "8d6e69b1-871c-4db0-a2e4-ae32ef04be3a",
+          "text": "🩺 PA: 110/79 mmHg · Pulso: 104 bpm · 11:10 a. m. [Normal]",
+          "timestamp": "2026-06-24T14:10:34.103Z"
+        },
+        {
+          "id": "38df783c-97a6-4412-8279-d514ef98c475",
+          "text": "🩺 PA: 130/86 mmHg · Pulso: 92 bpm · 10:07 p. m. [Alta I] — Despues de entrenar",
+          "timestamp": "2026-06-25T01:07:28.891Z"
+        }
+      ],
+      "symptoms": {
+        "energy": 4,
+        "libido": 2,
+        "sleep": 3,
+        "recovery": 5,
+        "mood": 3,
+        "erectionQuality": 2,
+        "nippleSensitivity": false,
+        "orgasms": 4
+      },
+      "symptomLog": [
+        {
+          "id": "96996523-1f82-4396-b65c-a513bf35f20c",
+          "timestamp": "2026-06-25T00:31:01.824Z",
+          "symptoms": {
+            "energy": 3,
+            "libido": 2,
+            "sleep": 4,
+            "recovery": 5,
+            "mood": 2,
+            "erectionQuality": 2,
+            "nippleSensitivity": false,
+            "orgasms": 4
+          }
+        },
+        {
+          "id": "e95a6b95-8e53-411a-b27c-8e619281888f",
+          "timestamp": "2026-06-25T00:31:20.330Z",
+          "symptoms": {
+            "energy": 4,
+            "libido": 1,
+            "sleep": 1,
+            "recovery": 4,
+            "mood": 3,
+            "erectionQuality": 1,
+            "nippleSensitivity": false,
+            "orgasms": 0
+          }
         }
       ],
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-24T04:08:41.330Z",
-      "updatedAt": "2026-06-24T04:52:22.397Z"
+      "updatedAt": "2026-06-25T01:21:18.017Z"
     }
   },
   "migrations": [
@@ -4458,6 +4862,11 @@
       "from": 3,
       "to": 4,
       "appliedAt": "2026-06-22T03:59:26.793Z"
+    },
+    {
+      "from": 4,
+      "to": 5,
+      "appliedAt": "2026-06-24T06:23:49.140Z"
     }
   ],
   "bloodWork": [],
@@ -4596,6 +5005,24 @@
       "dia": 73,
       "pulse": 80,
       "recordedAt": "2026-06-24T04:08:41.330Z"
+    },
+    {
+      "id": "5f730d77-4e6e-4a6d-bb5c-2da8651d5d0e",
+      "date": "2026-06-24",
+      "timestamp": "2026-06-24T14:10:00.000Z",
+      "sys": 110,
+      "dia": 79,
+      "pulse": 104,
+      "recordedAt": "2026-06-24T14:10:34.103Z"
+    },
+    {
+      "id": "8be09e7b-84cc-4b10-8b7e-db85cabca9af",
+      "date": "2026-06-24",
+      "timestamp": "2026-06-25T01:07:00.000Z",
+      "sys": 130,
+      "dia": 86,
+      "pulse": 92,
+      "recordedAt": "2026-06-25T01:07:28.891Z"
     }
   ]
 }
