@@ -1,8 +1,8 @@
 {
   "_version": 5,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-25T03:31:04.679Z",
-  "_checksum": "3e0c0c05",
+  "_updatedAt": "2026-06-25T04:56:09.320Z",
+  "_checksum": "4a97d80c",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -4849,21 +4849,160 @@
           }
         }
       ],
-      "sealed": false,
+      "sealed": true,
       "checksum": "",
       "createdAt": "2026-06-24T04:08:41.330Z",
-      "updatedAt": "2026-06-25T01:21:18.017Z"
+      "updatedAt": "2026-06-25T03:39:05.486Z"
     },
     "2026-06-25": {
       "id": "1d6274b4-91b9-4271-b9a0-04c0238ef184",
       "date": "2026-06-25",
-      "entries": [],
+      "entries": [
+        {
+          "id": "a106a3ee-bf3e-4e32-8188-de671855c222",
+          "supplementId": "94a088f3-0a9e-47a9-a663-390cab17bcc9",
+          "supplementSnapshot": {
+            "name": "Colageno hidrolizado",
+            "doseUnit": "g",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Colageno hidrolizado",
+                "form": "",
+                "amount": 1,
+                "unit": "g"
+              }
+            ],
+            "version": 3
+          },
+          "quantity": 10,
+          "doseUnit": "g",
+          "timestamp": "2026-06-25T04:41:00.000Z",
+          "recordedAt": "2026-06-25T04:41:21.512Z"
+        },
+        {
+          "id": "d91d2f7e-65fe-4eb4-8ad1-b94dd561399f",
+          "supplementId": "03e5e96e-b194-4c0b-a3e1-9fab2577ea55",
+          "supplementSnapshot": {
+            "name": "Acido hialuronico",
+            "brand": "BULK",
+            "doseUnit": "mg",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Acido hialuronico",
+                "form": "",
+                "amount": 1,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 400,
+          "doseUnit": "mg",
+          "timestamp": "2026-06-25T04:41:00.000Z",
+          "recordedAt": "2026-06-25T04:41:23.359Z"
+        },
+        {
+          "id": "0063fb83-6471-4bb2-b5c4-3cb83e2c0b0c",
+          "supplementId": "233194d7-f954-486a-99e0-9f21a091925b",
+          "supplementSnapshot": {
+            "name": "GHK-Cu (Péptido de Cobre)",
+            "brand": "Revolution Pharma",
+            "doseUnit": "ml",
+            "category": "other",
+            "activeIngredients": [
+              {
+                "name": "GHK-Cu",
+                "form": "péptido de cobre (GHK-Cu)",
+                "amount": 16.667,
+                "unit": "mg",
+                "source": "síntesis química"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.1,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-25T04:41:00.000Z",
+          "recordedAt": "2026-06-25T04:41:26.984Z"
+        },
+        {
+          "id": "8d17feb8-0b9f-4d59-9d73-7884fb84a58b",
+          "supplementId": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+          "supplementSnapshot": {
+            "name": "Melatol 3mg",
+            "brand": "Gramon",
+            "doseUnit": "comp.",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Melatonina",
+                "form": "sintética",
+                "amount": 3,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.5,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-25T04:41:00.000Z",
+          "recordedAt": "2026-06-25T04:41:32.624Z"
+        },
+        {
+          "id": "d24d00ba-b968-42bf-8ff4-8cec0e12d37c",
+          "supplementId": "648692e9-2786-47a7-8658-55fc1168e599",
+          "supplementSnapshot": {
+            "name": "Testenat Depot Enantato 250mg",
+            "brand": "Landerlan Gold",
+            "doseUnit": "ml",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Enantato de testosterona",
+                "form": "éster de acción prolongada, liberación sostenida",
+                "amount": 250,
+                "unit": "mg"
+              }
+            ],
+            "version": 3
+          },
+          "quantity": 0.2,
+          "doseUnit": "ml",
+          "timestamp": "2026-06-25T04:56:00.000Z",
+          "recordedAt": "2026-06-25T04:56:05.157Z"
+        },
+        {
+          "id": "f3b2be28-64ee-4284-b8b8-80acaf1cf0dd",
+          "supplementId": "d52cd471-687a-4737-8c6f-cae1f4b605e5",
+          "supplementSnapshot": {
+            "name": "Cabergolina 0.5mg",
+            "brand": "Lactamax",
+            "doseUnit": "comprimidos",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Cabergolina",
+                "form": "agonista selectivo de receptores dopaminérgicos D2",
+                "amount": 0.5,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 1,
+          "doseUnit": "comprimidos",
+          "timestamp": "2026-06-25T04:56:00.000Z",
+          "recordedAt": "2026-06-25T04:56:09.317Z"
+        }
+      ],
       "skipped": [],
       "notes": [],
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-25T03:29:42.328Z",
-      "updatedAt": "2026-06-25T03:30:24.368Z"
+      "updatedAt": "2026-06-25T04:56:09.317Z"
     }
   },
   "migrations": [
