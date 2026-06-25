@@ -1,4 +1,4 @@
-const FRACTION_LABELS: Record<number, string> = { 0.25: '¼', 0.5: '½' }
+const MULTIPLIER_LABELS: Record<number, string> = { 0.25: '¼', 0.5: '½' }
 
 type Props = {
   value: number
@@ -9,11 +9,20 @@ type Props = {
   onChange: (v: number) => void
 }
 
-function buildQuickpicks(defaultDose: number): number[] {
+type Quickpick = { value: number; label: string }
+
+function buildQuickpicks(defaultDose: number): Quickpick[] {
+  const seen = new Set<number>()
   return [0.25, 0.5, 1, 2, 3, 4]
-    .map(m => parseFloat((defaultDose * m).toFixed(6)))
-    .filter(v => v > 0)
-    .filter((v, i, a) => a.indexOf(v) === i)
+    .map(m => ({
+      value: parseFloat((defaultDose * m).toFixed(6)),
+      label: MULTIPLIER_LABELS[m] ?? String(parseFloat((defaultDose * m).toFixed(6))),
+    }))
+    .filter(({ value }) => {
+      if (value <= 0 || seen.has(value)) return false
+      seen.add(value)
+      return true
+    })
 }
 
 export function DoseInput({ value, unit, step, defaultDose, min = 0, onChange }: Props) {
@@ -51,7 +60,7 @@ export function DoseInput({ value, unit, step, defaultDose, min = 0, onChange }:
         </button>
       </div>
       <div className="flex gap-2 flex-wrap">
-        {quickpicks.map(qp => (
+        {quickpicks.map(({ value: qp, label }) => (
           <button
             key={qp}
             onClick={() => onChange(qp)}
@@ -61,7 +70,7 @@ export function DoseInput({ value, unit, step, defaultDose, min = 0, onChange }:
                 : 'bg-slate-700 border-slate-600 text-slate-300 hover:border-slate-400'
             }`}
           >
-            {FRACTION_LABELS[qp] ?? qp}
+            {label}
           </button>
         ))}
       </div>

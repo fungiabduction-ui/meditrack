@@ -47,7 +47,7 @@ export function AnalysisView() {
                 : 'text-slate-400 hover:text-slate-300'
             }`}
           >
-            ❤ Presión
+            Presión
           </button>
           <button
             onClick={() => setSubTab('trt')}

@@ -219,9 +219,15 @@ export function TodayView() {
               <button
                 key={s.id}
                 onClick={() => setQuickSheet({ supplement: s })}
-                className="flex items-center gap-1.5 bg-slate-800 border border-slate-700 hover:border-slate-500 rounded-full px-3 py-1.5 text-xs text-slate-300 transition-colors"
+                className={`flex items-center gap-1.5 bg-slate-800 rounded-full px-3 py-1.5 text-xs transition-colors ${
+                  s.schedule.kind === 'weekdays'
+                    ? 'border border-yellow-500/60 hover:border-yellow-400 text-yellow-300'
+                    : 'border border-slate-700 hover:border-slate-500 text-slate-300'
+                }`}
               >
-                <span className="w-1.5 h-1.5 rounded-full bg-slate-500 flex-shrink-0" />
+                <span className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${
+                  s.schedule.kind === 'weekdays' ? 'bg-yellow-400' : 'bg-slate-500'
+                }`} />
                 {s.name}
               </button>
             ))}
