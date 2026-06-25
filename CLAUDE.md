@@ -34,12 +34,16 @@ meditrack/
 │   │   ├── id.ts                        ← generateId() = crypto.randomUUID()
 │   │   ├── date.ts                      ← getLocalDateStr(), getLocalHHMM(), formatTimestamp()
 │   │   ├── schedule.ts                  ← isScheduledToday(), calcNextDue(), isAlertActive()
+│   │   ├── units.ts                     ← MASS_UNITS, calcIngAmount() — fuente de verdad para cálculo de ingredientes
+│   │   ├── wellbeing.ts                 ← computeWellbeingScore(), computeAvgSymptoms()
+│   │   ├── trt-pk.ts                    ← modelo Bateman PK: computePKCurve(), generateSteadyState(), findReinjectionWindows()
 │   │   ├── github.ts                    ← push/pull/test GitHub, encToken/decToken
 │   │   └── importCabinet.ts             ← dedup-import de suplementos desde JSON
 │   └── components/
 │       ├── shared/DoseInput.tsx         ← botones +/− + quickpicks ¼ ½ 1 2 3 4
 │       ├── shared/Modal.tsx             ← overlay con Escape to close
 │       ├── today/TodayView.tsx          ← píldoras pendientes + buscador + navegación de fechas
+│       ├── today/DailySymptoms.tsx      ← multi-entry síntomas del día con promedio; usa addSymptomEntry
 │       ├── cabinet/CabinetView.tsx      ← botiquín con dashboard KPI + búsqueda
 │       ├── cabinet/SupplementCard.tsx   ← card expandible, soporta modo selección
 │       ├── cabinet/SupplementForm.tsx   ← modal crear/editar suplemento
@@ -47,6 +51,9 @@ meditrack/
 │       ├── history/HistoryView.tsx      ← navegación ← → por día
 │       ├── history/DayTimeline.tsx      ← timeline cronológico, badge "eliminado" si el suplemento fue borrado
 │       ├── history/MetabolicSummary.tsx ← suma de ingredientes activos del día
+│       ├── analysis/AnalysisView.tsx    ← sub-tabs: Síntomas / Laboratorio / Presión / TRT
+│       ├── analysis/TRTCurveChart.tsx   ← curva PK SVG con inyecciones reales + overlay bienestar
+│       ├── analysis/ProtocolComparator.tsx ← comparador steady-state: 1x/14d, 1x/7d, 2x/7d
 │       └── settings/SettingsView.tsx    ← backup local, GitHub sync, danger zone reset
 ```
 
@@ -108,14 +115,17 @@ type Supplement = {
 
 ### CRÍTICO: `activeIngredients.amount` es por 1 unidad de `doseUnit`
 
-`MetabolicSummary` calcula `ing.amount × entry.quantity`. Por lo tanto:
+`MetabolicSummary` usa `calcIngAmount(ing.amount, ing.unit, entry.doseUnit, entry.quantity)` de `utils/units.ts`. La regla:
 
-- Si `doseUnit = "cáps"` → `ing.amount` = mg/IU/etc. por 1 cápsula
-- Si `doseUnit = "ml"` → `ing.amount` = mg/etc. por 1 ml
+- Si `ing.unit === doseUnit && ing.unit ∈ MASS_UNITS` → resultado = `quantity` (el suplemento ES la dosis, ratio trivial)
+- En todos los demás casos → resultado = `ing.amount × quantity`
 
-**Ejemplo GHK-Cu**: vial 50 mg en 3 ml → `ing.amount = 16.667` (mg/ml), no 50.  
-Si se pone 50 y el usuario loguea 0.1 ml → 50 × 0.1 = 5 mg (INCORRECTO).  
-Correcto: 16.667 × 0.1 = 1.67 mg.
+Esto cubre tanto datos correctos como datos legacy donde `amount` era el total de porción en vez de 1.
+
+**Ejemplo GHK-Cu** (doseUnit="ml", ing.unit="mg"): `ing.amount = 16.667` mg/ml → `16.667 × 0.1 = 1.67 mg` ✓  
+**Ejemplo NMN** (doseUnit="mg", ing.unit="mg"): `ing.amount = 1` → `quantity` directamente (500 mg) ✓
+
+Migrations v2→v3 normalizó suplementos legacy con `amount ≠ 1` cuando `ing.unit === doseUnit ∈ MASS_UNITS`.
 
 ## Store API
 
@@ -145,6 +155,9 @@ useStore.getState().removeLogEntry(dateStr, entryId)
 
 // Sellar días pasados + detectar omisiones (se llama en init)
 useStore.getState().sealPastDays()
+
+// Agregar entrada de síntomas (acumula en symptomLog[], recalcula symptoms como promedio)
+useStore.getState().addSymptomEntry(dateStr, symptomsData)
 ```
 
 ## Persistencia y checksums
@@ -189,6 +202,38 @@ La dedup es por `name|brand` considerando solo suplementos activos (los soft-del
 - `DayTimeline` y `MetabolicSummary` leen **solo el snapshot**, nunca hacen lookup al store.
 - Eliminar un suplemento del Botiquín **no afecta** los `dailyLogs`. Las entradas históricas muestran badge "eliminado" en gris si el suplemento fue soft-deleted.
 - `sealPastDays` detecta omisiones (weekday supplements no logueados) y los agrega a `DailyLog.skipped[]`.
+
+## Schema versión actual: 5
+
+| Versión | Cambio |
+|---------|--------|
+| v1→v2 | índices de schedule |
+| v2→v3 | normalización activeIngredients.amount |
+| v3→v4 | agrega bpReadings[] |
+| v4→v5 | agrega symptomLog[] en DailyLog (envuelve symptoms legado en symptomLog[0]) |
+
+### DailyLog — campos relevantes TRT
+
+```ts
+type SymptomLogEntry = { id: string; timestamp: string; symptoms: DailySymptoms }
+
+type DailyLog = {
+  // ...
+  symptoms?: DailySymptoms       // promedio calculado de symptomLog, o registro único legacy
+  symptomLog?: SymptomLogEntry[] // múltiples registros del día
+}
+```
+
+## TRT — Modelo PK
+
+`src/utils/trt-pk.ts` implementa el modelo Bateman para enantato de testosterona:
+- `KA = ln2/1.5` (absorción, Tmax ~2.7d)
+- `KE = ln2/4.5` (eliminación, t½ = 4.5d)
+- Normalización: eje Y 0–100% relativo al pico global
+- `computePKCurve(injections, totalDays)` — curva real desde inyecciones históricas
+- `generateSteadyState(intervalDays, mgDose, cycles)` — comparador hipotético
+- `findReinjectionWindows(curve, threshold=30)` — detecta cuando level < 30%
+- Conversión Testenat: `quantity × 250 mg/ml` (MG_PER_ML = 250)
 
 ## Notas clínicas del usuario
 
