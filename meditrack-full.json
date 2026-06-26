@@ -1,8 +1,8 @@
 {
   "_version": 5,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-25T23:48:49.113Z",
-  "_checksum": "1de66a76",
+  "_updatedAt": "2026-06-26T05:24:05.060Z",
+  "_checksum": "e73db4f4",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -5242,6 +5242,41 @@
           "doseUnit": "Ud",
           "timestamp": "2026-06-25T20:32:00.000Z",
           "recordedAt": "2026-06-25T20:32:05.915Z"
+        },
+        {
+          "id": "1ca39d9b-961f-4549-9dcc-01dc0070d2ea",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "brand": "Viva Naturals",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-26T02:51:00.000Z",
+          "recordedAt": "2026-06-26T02:51:25.933Z"
         }
       ],
       "skipped": [],
@@ -5252,10 +5287,100 @@
           "timestamp": "2026-06-25T23:48:49.105Z"
         }
       ],
-      "sealed": false,
+      "symptoms": {
+        "energy": 3,
+        "libido": 3,
+        "sleep": 4,
+        "recovery": 5,
+        "mood": 3,
+        "erectionQuality": 3,
+        "nippleSensitivity": false,
+        "orgasms": 3
+      },
+      "symptomLog": [
+        {
+          "id": "e11b49b3-26b3-4d76-b558-13b880b9b3f9",
+          "timestamp": "2026-06-25T23:49:31.238Z",
+          "symptoms": {
+            "energy": 3,
+            "libido": 3,
+            "sleep": 4,
+            "recovery": 5,
+            "mood": 3,
+            "erectionQuality": 3,
+            "nippleSensitivity": false,
+            "orgasms": 3
+          }
+        }
+      ],
+      "sealed": true,
       "checksum": "",
       "createdAt": "2026-06-25T03:29:42.328Z",
-      "updatedAt": "2026-06-25T23:48:49.105Z"
+      "updatedAt": "2026-06-26T03:23:24.716Z"
+    },
+    "2026-06-26": {
+      "id": "170238c0-7d44-4efe-9f3c-8b527c985e06",
+      "date": "2026-06-26",
+      "entries": [
+        {
+          "id": "7370223b-3c8b-4bd1-b186-4fee76445ef7",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "brand": "DBI",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-26T03:23:00.000Z",
+          "recordedAt": "2026-06-26T03:23:31.502Z"
+        },
+        {
+          "id": "ef186f5e-4f8c-4e66-a592-5fe9b13cc9cf",
+          "supplementId": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
+          "supplementSnapshot": {
+            "name": "Melatol 3mg",
+            "brand": "Gramon",
+            "doseUnit": "comp.",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Melatonina",
+                "form": "sintética",
+                "amount": 3,
+                "unit": "mg"
+              }
+            ],
+            "version": 2
+          },
+          "quantity": 0.5,
+          "doseUnit": "comp.",
+          "timestamp": "2026-06-26T05:23:00.000Z",
+          "recordedAt": "2026-06-26T05:23:42.151Z"
+        }
+      ],
+      "skipped": [],
+      "notes": [
+        {
+          "id": "705b457a-5f12-419d-9073-da47de7448e4",
+          "text": "🩺 PA: 121/79 mmHg · Pulso: 80 bpm · 02:23 a. m. [Elevada]",
+          "timestamp": "2026-06-26T05:24:05.056Z"
+        }
+      ],
+      "sealed": false,
+      "checksum": "",
+      "createdAt": "2026-06-26T03:23:31.502Z",
+      "updatedAt": "2026-06-26T05:24:05.056Z"
     }
   },
   "migrations": [
@@ -5443,6 +5568,15 @@
       "dia": 77,
       "pulse": 99,
       "recordedAt": "2026-06-25T23:48:49.105Z"
+    },
+    {
+      "id": "c1d1b656-f319-4c1b-896e-f9232c5701c9",
+      "date": "2026-06-26",
+      "timestamp": "2026-06-26T05:23:00.000Z",
+      "sys": 121,
+      "dia": 79,
+      "pulse": 80,
+      "recordedAt": "2026-06-26T05:24:05.056Z"
     }
   ]
 }
