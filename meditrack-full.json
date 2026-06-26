@@ -1,8 +1,8 @@
 {
   "_version": 5,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-26T05:24:05.060Z",
-  "_checksum": "e73db4f4",
+  "_updatedAt": "2026-06-26T14:49:26.398Z",
+  "_checksum": "97ad2ff3",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -5367,6 +5367,37 @@
           "doseUnit": "comp.",
           "timestamp": "2026-06-26T05:23:00.000Z",
           "recordedAt": "2026-06-26T05:23:42.151Z"
+        },
+        {
+          "id": "54213d5f-3fad-4278-93c6-f5c23c3dd40b",
+          "supplementId": "6e8c4ee3-b0ad-403c-ae6f-7c0f65da65b0",
+          "supplementSnapshot": {
+            "name": "Mega D3 & MK-7",
+            "brand": "NOW Foods",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina D3",
+                "form": "Colecalciferol",
+                "amount": 5000,
+                "unit": "IU",
+                "source": "lanolina"
+              },
+              {
+                "name": "Vitamina K2 (MK-7)",
+                "form": "Menaquinona-7",
+                "amount": 180,
+                "unit": "mcg",
+                "brand": "MenaQ7®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-26T14:49:00.000Z",
+          "recordedAt": "2026-06-26T14:49:26.393Z"
         }
       ],
       "skipped": [],
@@ -5380,7 +5411,7 @@
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-26T03:23:31.502Z",
-      "updatedAt": "2026-06-26T05:24:05.056Z"
+      "updatedAt": "2026-06-26T14:49:26.393Z"
     }
   },
   "migrations": [
