@@ -1,8 +1,8 @@
 {
   "_version": 5,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-26T14:49:26.398Z",
-  "_checksum": "97ad2ff3",
+  "_updatedAt": "2026-06-26T20:51:48.693Z",
+  "_checksum": "322ca75b",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -5398,6 +5398,176 @@
           "doseUnit": "cáps",
           "timestamp": "2026-06-26T14:49:00.000Z",
           "recordedAt": "2026-06-26T14:49:26.393Z"
+        },
+        {
+          "id": "326b8e1c-6861-4dad-b2b5-68ce8c5bbd60",
+          "supplementId": "e15cc4fd-ad88-40ec-8cd1-cd1aa39a8479",
+          "supplementSnapshot": {
+            "name": "DHEA 100mg",
+            "brand": "NatureBell",
+            "doseUnit": "cáps",
+            "category": "hormone",
+            "activeIngredients": [
+              {
+                "name": "DHEA (Dehidroepiandrosterona)",
+                "form": "micronizado, fuente vegetal",
+                "amount": 100,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-26T17:29:00.000Z",
+          "recordedAt": "2026-06-26T17:29:46.709Z"
+        },
+        {
+          "id": "302c878c-4601-484c-885e-15c63fc26205",
+          "supplementId": "8a6ac53c-5f38-4055-899d-5b5f77915005",
+          "supplementSnapshot": {
+            "name": "Methylated B Complex",
+            "brand": "NatureBell",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina C (Acerola)",
+                "form": "ácido ascórbico natural",
+                "amount": 45,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina E",
+                "form": "tocoferol mixto",
+                "amount": 18,
+                "unit": "mg"
+              },
+              {
+                "name": "Tiamina (B1)",
+                "form": "tiamina HCl",
+                "amount": 100,
+                "unit": "mg"
+              },
+              {
+                "name": "Riboflavina (B2)",
+                "form": "Riboflavina-5-fosfato (R5P)",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Niacina (B3)",
+                "form": "niacinamida",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Ácido pantoténico (B5)",
+                "form": "pantotenato de calcio",
+                "amount": 50,
+                "unit": "mg"
+              },
+              {
+                "name": "Vitamina B6",
+                "form": "Piridoxal-5-fosfato (P5P)",
+                "amount": 20,
+                "unit": "mg"
+              },
+              {
+                "name": "Biotina (B7)",
+                "form": "D-Biotina",
+                "amount": 2000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Folato (B9)",
+                "form": "L-Metilfolato (Methyl Folate)",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Vitamina B12",
+                "form": "Metilcobalamina",
+                "amount": 1000,
+                "unit": "mcg"
+              },
+              {
+                "name": "Colina",
+                "form": "bitartrato de colina",
+                "amount": 30,
+                "unit": "mg"
+              },
+              {
+                "name": "Inositol",
+                "form": "mio-inositol",
+                "amount": 20,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-26T17:29:00.000Z",
+          "recordedAt": "2026-06-26T17:29:55.714Z"
+        },
+        {
+          "id": "507b00fa-1850-437b-8f41-5016f6bafdf6",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "brand": "Viva Naturals",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-26T17:29:00.000Z",
+          "recordedAt": "2026-06-26T17:29:57.197Z"
+        },
+        {
+          "id": "856034ca-329e-4617-a1ea-35840711bf2a",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "brand": "DBI",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-26T17:30:00.000Z",
+          "recordedAt": "2026-06-26T17:30:05.816Z"
         }
       ],
       "skipped": [],
@@ -5406,12 +5576,53 @@
           "id": "705b457a-5f12-419d-9073-da47de7448e4",
           "text": "🩺 PA: 121/79 mmHg · Pulso: 80 bpm · 02:23 a. m. [Elevada]",
           "timestamp": "2026-06-26T05:24:05.056Z"
+        },
+        {
+          "id": "9ecbd370-104d-4666-9fbe-a90bc8d16049",
+          "text": "🩺 PA: 108/65 mmHg · Pulso: 91 bpm · 02:06 p. m. [Normal]",
+          "timestamp": "2026-06-26T17:06:54.062Z"
+        },
+        {
+          "id": "b8d2459d-a133-4a84-b807-8834748dad9e",
+          "text": "🩺 PA: 125/86 mmHg · Pulso: 72 bpm · 02:08 p. m. [Alta I]",
+          "timestamp": "2026-06-26T17:08:47.993Z"
+        },
+        {
+          "id": "7e9e9300-e121-4731-b256-cde38585b275",
+          "text": "🩺 PA: 123/78 mmHg · Pulso: 99 bpm · 05:51 p. m. [Elevada]",
+          "timestamp": "2026-06-26T20:51:48.686Z"
+        }
+      ],
+      "symptoms": {
+        "energy": 3,
+        "libido": 3,
+        "sleep": 2,
+        "recovery": 4,
+        "mood": 3,
+        "erectionQuality": 3,
+        "nippleSensitivity": true,
+        "orgasms": 3
+      },
+      "symptomLog": [
+        {
+          "id": "bdbb3c40-a6fd-4f70-ab5a-1aa9996664c8",
+          "timestamp": "2026-06-26T17:30:37.478Z",
+          "symptoms": {
+            "energy": 3,
+            "libido": 3,
+            "sleep": 2,
+            "recovery": 4,
+            "mood": 3,
+            "erectionQuality": 3,
+            "nippleSensitivity": true,
+            "orgasms": 3
+          }
         }
       ],
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-26T03:23:31.502Z",
-      "updatedAt": "2026-06-26T14:49:26.393Z"
+      "updatedAt": "2026-06-26T20:51:48.686Z"
     }
   },
   "migrations": [
@@ -5608,6 +5819,33 @@
       "dia": 79,
       "pulse": 80,
       "recordedAt": "2026-06-26T05:24:05.056Z"
+    },
+    {
+      "id": "d36c6261-5cae-471c-958a-0e6fc1a66711",
+      "date": "2026-06-26",
+      "timestamp": "2026-06-26T17:06:00.000Z",
+      "sys": 108,
+      "dia": 65,
+      "pulse": 91,
+      "recordedAt": "2026-06-26T17:06:54.062Z"
+    },
+    {
+      "id": "ce393462-4473-4a54-b0f7-30b3932306f9",
+      "date": "2026-06-26",
+      "timestamp": "2026-06-26T17:08:00.000Z",
+      "sys": 125,
+      "dia": 86,
+      "pulse": 72,
+      "recordedAt": "2026-06-26T17:08:47.993Z"
+    },
+    {
+      "id": "540cf1e7-ef8c-4210-b4e8-0e2de9aa6f38",
+      "date": "2026-06-26",
+      "timestamp": "2026-06-26T20:51:00.000Z",
+      "sys": 123,
+      "dia": 78,
+      "pulse": 99,
+      "recordedAt": "2026-06-26T20:51:48.686Z"
     }
   ]
 }
