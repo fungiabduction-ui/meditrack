@@ -19,6 +19,7 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
 
   const [showForm, setShowForm] = useState(false)
   const [draft, setDraft] = useState<Draft>({ sys: 120, dia: 80, pulse: 72, time: getLocalHHMM(), note: '' })
+  const [rawValues, setRawValues] = useState<Record<string, string>>({ sys: '120', dia: '80', pulse: '72' })
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
 
   const dayReadings = bpReadings
@@ -37,6 +38,7 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
     addBPReading({ date: dateStr, timestamp: base.toISOString(), sys, dia, pulse, note: draft.note.trim() || undefined })
     setShowForm(false)
     setDraft({ sys: 120, dia: 80, pulse: 72, time: getLocalHHMM(), note: '' })
+    setRawValues({ sys: '120', dia: '80', pulse: '72' })
     setConfirmDelete(null)
   }
 
@@ -104,26 +106,37 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
                   <p className="text-slate-500 text-xs mb-1.5 leading-tight">{label}</p>
                   <div className="flex items-center justify-center gap-1">
                     <button
-                      onClick={() => setDraft(d => ({ ...d, [key]: Math.max(min, d[key] - 1) }))}
+                      onClick={() => {
+                        const next = Math.max(min, draft[key] - 1)
+                        setDraft(d => ({ ...d, [key]: next }))
+                        setRawValues(r => ({ ...r, [key]: String(next) }))
+                      }}
                       className="w-6 h-6 rounded-full bg-slate-700 text-slate-300 flex items-center justify-center hover:bg-slate-600 text-sm flex-shrink-0"
                     >−</button>
                     <input
                       type="number"
                       min={min}
                       max={max}
-                      value={draft[key]}
+                      value={rawValues[key] ?? draft[key]}
                       onChange={e => {
+                        setRawValues(r => ({ ...r, [key]: e.target.value }))
                         const v = parseInt(e.target.value, 10)
                         if (!isNaN(v)) setDraft(d => ({ ...d, [key]: v }))
                       }}
                       onBlur={e => {
                         const v = parseInt(e.target.value, 10)
-                        setDraft(d => ({ ...d, [key]: isNaN(v) ? min : Math.max(min, Math.min(max, v)) }))
+                        const clamped = isNaN(v) ? min : Math.max(min, Math.min(max, v))
+                        setDraft(d => ({ ...d, [key]: clamped }))
+                        setRawValues(r => ({ ...r, [key]: String(clamped) }))
                       }}
                       className="w-12 bg-transparent text-white text-base font-bold text-center tabular-nums outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
                     />
                     <button
-                      onClick={() => setDraft(d => ({ ...d, [key]: Math.min(max, d[key] + 1) }))}
+                      onClick={() => {
+                        const next = Math.min(max, draft[key] + 1)
+                        setDraft(d => ({ ...d, [key]: next }))
+                        setRawValues(r => ({ ...r, [key]: String(next) }))
+                      }}
                       className="w-6 h-6 rounded-full bg-slate-700 text-slate-300 flex items-center justify-center hover:bg-slate-600 text-sm flex-shrink-0"
                     >+</button>
                   </div>
@@ -145,7 +158,7 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
             />
             <div className="flex gap-2">
               <button
-                onClick={() => setShowForm(false)}
+                onClick={() => { setShowForm(false); setRawValues({ sys: '120', dia: '80', pulse: '72' }) }}
                 className="flex-1 bg-slate-700 hover:bg-slate-600 text-slate-300 rounded-xl py-2.5 text-sm font-semibold transition-colors"
               >Cancelar</button>
               <button
