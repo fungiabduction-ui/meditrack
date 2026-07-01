@@ -1,8 +1,8 @@
 {
   "_version": 5,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-06-30T05:09:15.449Z",
-  "_checksum": "b1b45900",
+  "_updatedAt": "2026-07-01T01:52:02.756Z",
+  "_checksum": "01c28288",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -7068,6 +7068,213 @@
           "doseUnit": "ml",
           "timestamp": "2026-06-30T05:07:00.000Z",
           "recordedAt": "2026-06-30T05:07:46.880Z"
+        },
+        {
+          "id": "7decbd14-ba77-4ea5-a77d-dcecf6dacdcf",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "brand": "Viva Naturals",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-30T14:07:00.000Z",
+          "recordedAt": "2026-06-30T14:07:59.178Z"
+        },
+        {
+          "id": "c1533857-29ea-404e-a331-a99fda3173c0",
+          "supplementId": "784eff85-1b12-4ad5-a7c2-273edf5108ad",
+          "supplementSnapshot": {
+            "name": "Creatina Monohidrato",
+            "brand": "Star Nutrition",
+            "doseUnit": "medida (5g)",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Creatina Monohidrato",
+                "form": "monohidrato",
+                "amount": 5000,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "medida (5g)",
+          "timestamp": "2026-06-30T14:08:00.000Z",
+          "recordedAt": "2026-06-30T14:08:01.312Z"
+        },
+        {
+          "id": "c15650ee-77ae-4db5-8936-68f81abb92f2",
+          "supplementId": "6e8c4ee3-b0ad-403c-ae6f-7c0f65da65b0",
+          "supplementSnapshot": {
+            "name": "Mega D3 & MK-7",
+            "brand": "NOW Foods",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina D3",
+                "form": "Colecalciferol",
+                "amount": 5000,
+                "unit": "IU",
+                "source": "lanolina"
+              },
+              {
+                "name": "Vitamina K2 (MK-7)",
+                "form": "Menaquinona-7",
+                "amount": 180,
+                "unit": "mcg",
+                "brand": "MenaQ7®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-30T14:08:00.000Z",
+          "recordedAt": "2026-06-30T14:08:03.564Z"
+        },
+        {
+          "id": "66d3b860-8879-419e-bdf7-fd38f1431b1a",
+          "supplementId": "6e8c4ee3-b0ad-403c-ae6f-7c0f65da65b0",
+          "supplementSnapshot": {
+            "name": "Mega D3 & MK-7",
+            "brand": "NOW Foods",
+            "doseUnit": "cáps",
+            "category": "vitamin",
+            "activeIngredients": [
+              {
+                "name": "Vitamina D3",
+                "form": "Colecalciferol",
+                "amount": 5000,
+                "unit": "IU",
+                "source": "lanolina"
+              },
+              {
+                "name": "Vitamina K2 (MK-7)",
+                "form": "Menaquinona-7",
+                "amount": 180,
+                "unit": "mcg",
+                "brand": "MenaQ7®"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-06-30T16:01:00.000Z",
+          "recordedAt": "2026-06-30T16:02:01.041Z"
+        },
+        {
+          "id": "09dfe1ae-ad0a-4359-9e4f-84cbffcf18e4",
+          "supplementId": "4fe9e257-e7be-4a34-8082-9680a6b3adbd",
+          "supplementSnapshot": {
+            "name": "Metformina AP",
+            "brand": "DBI",
+            "doseUnit": "Ud",
+            "category": "medication",
+            "activeIngredients": [
+              {
+                "name": "Metformina",
+                "form": "",
+                "amount": 1000,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "Ud",
+          "timestamp": "2026-06-30T16:02:00.000Z",
+          "recordedAt": "2026-06-30T16:02:07.127Z"
+        },
+        {
+          "id": "80f83b4d-3342-4aa3-8394-4231c7a50b0f",
+          "supplementId": "486e193a-875d-430a-846d-760db7deba16",
+          "supplementSnapshot": {
+            "name": "EPH 100",
+            "brand": "KN Nutrition",
+            "doseUnit": "caps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "Extracto de Efedra (Ma Huang)",
+                "form": "extracto estandarizado",
+                "amount": 100,
+                "unit": "mg"
+              },
+              {
+                "name": "EPH 100 Proprietary Blend",
+                "form": "blend de estimulantes (cafeína, sinefrina, guaraná y otros)",
+                "amount": 700,
+                "unit": "mg"
+              }
+            ],
+            "version": 0
+          },
+          "quantity": 0.5,
+          "doseUnit": "caps",
+          "timestamp": "2026-06-30T23:53:00.000Z",
+          "recordedAt": "2026-06-30T23:53:27.987Z"
+        },
+        {
+          "id": "a11b916e-a12d-4089-b813-dbf309daca51",
+          "supplementId": "71e220f9-a1ff-4a2d-a263-3a78ca0a938f",
+          "supplementSnapshot": {
+            "name": "Omega-3 Fish Oil Triple Strength",
+            "brand": "Viva Naturals",
+            "doseUnit": "cáps",
+            "category": "supplement",
+            "activeIngredients": [
+              {
+                "name": "EPA (ácido eicosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG), aceite de anchoa/sardina/caballa salvaje",
+                "amount": 1500,
+                "unit": "mg"
+              },
+              {
+                "name": "DHA (ácido docosahexaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 568,
+                "unit": "mg"
+              },
+              {
+                "name": "DPA (ácido docosapentaenoico)",
+                "form": "triglicéridos re-esterificados (rTG)",
+                "amount": 50,
+                "unit": "mg"
+              }
+            ],
+            "version": 1
+          },
+          "quantity": 1,
+          "doseUnit": "cáps",
+          "timestamp": "2026-07-01T01:51:00.000Z",
+          "recordedAt": "2026-07-01T01:51:48.539Z"
         }
       ],
       "skipped": [],
@@ -7076,6 +7283,21 @@
           "id": "62cfa004-9159-4153-8b61-b0129cca1ade",
           "text": "🩺 PA: 129/84 mmHg · Pulso: 72 bpm · 02:09 a. m. [Alta I]",
           "timestamp": "2026-06-30T05:09:15.445Z"
+        },
+        {
+          "id": "9243fed0-1443-46a5-abaf-5fa27f7e8058",
+          "text": "🩺 PA: 120/80 mmHg · Pulso: 72 bpm · 11:07 a. m. [Alta I]",
+          "timestamp": "2026-06-30T14:07:48.128Z"
+        },
+        {
+          "id": "0154e370-3e91-427a-a90e-475442c7d75d",
+          "text": "🩺 PA: 140/90 mmHg · Pulso: 90 bpm · 08:53 p. m. [Alta II]",
+          "timestamp": "2026-06-30T23:53:44.873Z"
+        },
+        {
+          "id": "4b5db66d-4da5-48f5-9092-1e13cce0c2ea",
+          "text": "🩺 PA: 140/88 mmHg · Pulso: 90 bpm · 10:51 p. m. [Alta II]",
+          "timestamp": "2026-07-01T01:52:02.751Z"
         }
       ],
       "symptoms": {
@@ -7107,7 +7329,7 @@
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-06-30T05:07:38.841Z",
-      "updatedAt": "2026-06-30T05:09:15.445Z"
+      "updatedAt": "2026-07-01T01:52:02.751Z"
     }
   },
   "migrations": [
@@ -7439,6 +7661,33 @@
       "dia": 84,
       "pulse": 72,
       "recordedAt": "2026-06-30T05:09:15.445Z"
+    },
+    {
+      "id": "5c84d329-9d91-426d-a1bb-113cb34ef649",
+      "date": "2026-06-30",
+      "timestamp": "2026-06-30T14:07:00.000Z",
+      "sys": 120,
+      "dia": 80,
+      "pulse": 72,
+      "recordedAt": "2026-06-30T14:07:48.128Z"
+    },
+    {
+      "id": "5b24f17a-91b9-41cc-94c9-c9264d7dd1ee",
+      "date": "2026-06-30",
+      "timestamp": "2026-06-30T23:53:00.000Z",
+      "sys": 140,
+      "dia": 90,
+      "pulse": 90,
+      "recordedAt": "2026-06-30T23:53:44.873Z"
+    },
+    {
+      "id": "ab077a7b-de27-4dba-8330-e3acc0777468",
+      "date": "2026-06-30",
+      "timestamp": "2026-07-01T01:51:00.000Z",
+      "sys": 140,
+      "dia": 88,
+      "pulse": 90,
+      "recordedAt": "2026-07-01T01:52:02.751Z"
     }
   ]
 }
