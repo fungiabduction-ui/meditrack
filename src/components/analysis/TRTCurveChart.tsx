@@ -155,10 +155,6 @@ export function TRTCurveChart() {
     )
   }
 
-  const periodLabel = period === 'all'
-    ? 'Todo el período'
-    : new Date(`${period}-15`).toLocaleDateString('es-AR', { month: 'long', year: 'numeric' })
-
   return (
     <div className="bg-slate-800 border border-slate-700 rounded-2xl p-4 space-y-3">
       <select
