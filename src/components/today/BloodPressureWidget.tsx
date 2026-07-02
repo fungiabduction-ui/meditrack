@@ -19,7 +19,7 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
 
   const [showForm, setShowForm] = useState(false)
   const [draft, setDraft] = useState<Draft>({ sys: 120, dia: 80, pulse: 72, time: getLocalHHMM(), note: '' })
-  const [rawValues, setRawValues] = useState<Record<string, string>>({ sys: '120', dia: '80', pulse: '72' })
+  const [rawValues, setRawValues] = useState<Record<string, string>>({ sys: '', dia: '', pulse: '' })
   const [confirmDelete, setConfirmDelete] = useState<string | null>(null)
 
   const dayReadings = bpReadings
@@ -27,6 +27,8 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
     .sort((a, b) => a.timestamp.localeCompare(b.timestamp))
 
   if (!isToday && dayReadings.length === 0) return null
+
+  const canSave = rawValues.sys !== '' && rawValues.dia !== '' && rawValues.pulse !== ''
 
   const save = () => {
     const [h, m] = draft.time.split(':').map(Number)
@@ -38,7 +40,7 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
     addBPReading({ date: dateStr, timestamp: base.toISOString(), sys, dia, pulse, note: draft.note.trim() || undefined })
     setShowForm(false)
     setDraft({ sys: 120, dia: 80, pulse: 72, time: getLocalHHMM(), note: '' })
-    setRawValues({ sys: '120', dia: '80', pulse: '72' })
+    setRawValues({ sys: '', dia: '', pulse: '' })
     setConfirmDelete(null)
   }
 
@@ -49,7 +51,7 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
           <p className="text-slate-500 text-xs uppercase tracking-widest">Presión Arterial</p>
           {isToday && !showForm && (
             <button
-              onClick={() => { setShowForm(true); setDraft(d => ({ ...d, time: getLocalHHMM() })) }}
+              onClick={() => { setShowForm(true); setDraft(d => ({ ...d, time: getLocalHHMM() })); setRawValues({ sys: '', dia: '', pulse: '' }) }}
               className="text-xs bg-sky-600 hover:bg-sky-500 text-white rounded-lg px-3 py-1 transition-colors"
             >
               + Registrar
@@ -158,12 +160,13 @@ export function BloodPressureWidget({ dateStr, isToday }: Props) {
             />
             <div className="flex gap-2">
               <button
-                onClick={() => { setShowForm(false); setRawValues({ sys: '120', dia: '80', pulse: '72' }) }}
+                onClick={() => { setShowForm(false); setRawValues({ sys: '', dia: '', pulse: '' }) }}
                 className="flex-1 bg-slate-700 hover:bg-slate-600 text-slate-300 rounded-xl py-2.5 text-sm font-semibold transition-colors"
               >Cancelar</button>
               <button
                 onClick={save}
-                className="flex-[2] bg-green-600 hover:bg-green-500 text-white rounded-xl py-2.5 text-sm font-semibold transition-colors"
+                disabled={!canSave}
+                className="flex-[2] bg-green-600 hover:bg-green-500 disabled:opacity-40 disabled:cursor-not-allowed text-white rounded-xl py-2.5 text-sm font-semibold transition-colors"
               >Guardar</button>
             </div>
           </div>
