@@ -32,6 +32,12 @@ function monthLabel(m: string): string {
   return new Date(`${m}-15`).toLocaleDateString('es-AR', { month: 'long', year: 'numeric' })
 }
 
+function nDaysAgoStr(n: number): string {
+  const d = new Date()
+  d.setDate(d.getDate() - n)
+  return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`
+}
+
 export function BPChart() {
   const bpReadings = useStore(s => s.bpReadings)
   const [month, setMonth] = useState<string>('all')
@@ -46,7 +52,11 @@ export function BPChart() {
   }, [bpReadings])
 
   const data = useMemo(() => {
-    const filtered = month === 'all' ? [...bpReadings] : bpReadings.filter(r => r.date.startsWith(month))
+    const filtered = month === 'all'
+      ? [...bpReadings]
+      : month === 'last15'
+        ? bpReadings.filter(r => r.date >= nDaysAgoStr(14))
+        : bpReadings.filter(r => r.date.startsWith(month))
     const byDate = new Map<string, { sys: number[]; dia: number[]; pulse: number[] }>()
     for (const r of filtered) {
       if (!byDate.has(r.date)) byDate.set(r.date, { sys: [], dia: [], pulse: [] })
@@ -80,6 +90,12 @@ export function BPChart() {
     data.dates.map((_, i) => `${toX(i)},${toY(series[i])}`).join(' ')
 
   const xLabels = useMemo(() => {
+    if (month === 'last15') {
+      return data.dates.map((d, i) => ({
+        i,
+        label: `${parseInt(d.slice(-2), 10)}/${parseInt(d.slice(5, 7), 10)}`,
+      }))
+    }
     if (month !== 'all') {
       return data.dates
         .map((d, i) => ({ i, label: String(parseInt(d.slice(-2), 10)) }))
@@ -105,6 +121,7 @@ export function BPChart() {
       className="w-full bg-slate-700 text-white text-sm font-semibold rounded-xl px-3 py-2 outline-none capitalize"
     >
       <option value="all">Todo el período</option>
+      <option value="last15">Últimos 15 días</option>
       {availableMonths.map(m => (
         <option key={m} value={m}>{monthLabel(m)}</option>
       ))}

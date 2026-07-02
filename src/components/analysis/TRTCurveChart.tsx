@@ -36,6 +36,12 @@ function diffDays(origin: string, date: string): number {
   )
 }
 
+function tToDateLabel(origin: string, t: number): string {
+  const d = new Date(origin + 'T00:00:00')
+  d.setDate(d.getDate() + t)
+  return `${d.getDate()}/${d.getMonth() + 1}`
+}
+
 function daysInMonth(month: string): number {
   const [y, m] = month.split('-').map(Number)
   return new Date(y, m, 0).getDate()
@@ -78,6 +84,10 @@ export function TRTCurveChart() {
   const tRange = useMemo<{ start: number; end: number }>(() => {
     if (!origin) return { start: 0, end: 0 }
     if (period === 'all') return { start: 0, end: diffDays(origin, today) + 8 }
+    if (period === 'last15') {
+      const end = diffDays(origin, today) + 1
+      return { start: Math.max(0, end - 15), end }
+    }
     const dim = daysInMonth(period)
     const wStart = diffDays(origin, `${period}-01`)
     return { start: wStart, end: wStart + dim }
@@ -125,6 +135,14 @@ export function TRTCurveChart() {
   // X-axis labels
   const xLabels = useMemo(() => {
     if (!origin) return []
+    if (period === 'last15') {
+      const step = Math.ceil((tRange.end - tRange.start) / 5)
+      const labels = []
+      for (let t = tRange.start; t <= tRange.end; t += step) {
+        labels.push({ t, label: tToDateLabel(origin, t) })
+      }
+      return labels
+    }
     if (period !== 'all') {
       const dim = daysInMonth(period)
       return [1, 8, 15, 22, dim].filter(d => d <= dim).map(day => ({
@@ -163,6 +181,7 @@ export function TRTCurveChart() {
         className="w-full bg-slate-700 text-white text-sm font-semibold rounded-xl px-3 py-2 outline-none capitalize"
       >
         <option value="all">Todo el período</option>
+        <option value="last15">Últimos 15 días</option>
         {availableMonths.map(m => (
           <option key={m} value={m}>
             {new Date(`${m}-15`).toLocaleDateString('es-AR', { month: 'long', year: 'numeric' })}
