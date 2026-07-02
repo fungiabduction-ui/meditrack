@@ -1,8 +1,8 @@
 {
   "_version": 5,
   "_createdAt": "2026-06-18T13:42:04.421Z",
-  "_updatedAt": "2026-07-02T19:49:51.930Z",
-  "_checksum": "f548393f",
+  "_updatedAt": "2026-07-02T20:10:11.411Z",
+  "_checksum": "67346f94",
   "supplements": {
     "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37": {
       "id": "9b776c70-ef3d-4096-87ba-d4ccb4e1ca37",
@@ -8273,6 +8273,16 @@
           "id": "8a18b0a7-89f2-4b94-9690-ee0c83a1925f",
           "text": "🩺 PA: 119/74 mmHg · Pulso: 88 bpm · 01:25 p. m. [Normal]",
           "timestamp": "2026-07-02T16:25:16.377Z"
+        },
+        {
+          "id": "c6a8327b-9237-435f-adad-6c49dcbadbb9",
+          "text": "🩺 PA: 112/84 mmHg · Pulso: 64 bpm · 05:08 p. m. [Alta I]",
+          "timestamp": "2026-07-02T20:09:41.557Z"
+        },
+        {
+          "id": "353b4436-42e5-448c-8a84-ecaa004cea7f",
+          "text": "🩺 PA: 112/84 mmHg · Pulso: 64 bpm · 05:09 p. m. [Alta I]",
+          "timestamp": "2026-07-02T20:10:11.405Z"
         }
       ],
       "symptoms": {
@@ -8304,7 +8314,7 @@
       "sealed": false,
       "checksum": "",
       "createdAt": "2026-07-02T03:10:48.513Z",
-      "updatedAt": "2026-07-02T19:49:51.927Z"
+      "updatedAt": "2026-07-02T20:10:11.405Z"
     }
   },
   "migrations": [
@@ -8717,6 +8727,15 @@
       "dia": 74,
       "pulse": 88,
       "recordedAt": "2026-07-02T16:25:16.377Z"
+    },
+    {
+      "id": "292b55e5-7c11-43a6-8dec-d84a5c64c992",
+      "date": "2026-07-02",
+      "timestamp": "2026-07-02T20:09:00.000Z",
+      "sys": 112,
+      "dia": 84,
+      "pulse": 64,
+      "recordedAt": "2026-07-02T20:10:11.405Z"
     }
   ]
 }
